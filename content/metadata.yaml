@@ -1,26 +1,42 @@
 ---
-title: "Manuscript Title"
+title: "Placeholder Title"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - machine learning
+  - functional genomics
+  - gene expression
+  - epigenetics
+  - cancer
+  - pan-cancer
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+  - github: jjc2718
+    name: Jake Crawford
+    initials: JC
+    orcid: 0000-0001-6207-0782
+    twitter: jjc2718
+    email: jcra@pennmedicine.upenn.edu
     affiliations:
-      - Department of Something, University of Whatever
+      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
     funders:
       - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+  - name: Brock C. Christensen
+    initials: BCC
+    orcid: 0000-0003-3022-426X
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
+    funders:
+      - Grant XXXXXXXX
+  - github: cgreene
+    name: Casey S. Greene
+    initials: CSG
+    orcid: 0000-0001-8713-9213
+    twitter: GreeneScientist
+    email: casey@greenelab.com
+    affiliations:
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+      - Childhood Cancer Data Lab, Alex's Lemonade Stand Foundation, Philadelphia, PA, USA
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, USA
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO, USA
+    funders:
+      - Grant XXXXXXXX
