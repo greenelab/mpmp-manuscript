@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2021-03-29'
+date-meta: '2021-04-07'
 author-meta:
 - John Doe
 - Jane Roe
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-03-29" />
-  <meta name="citation_publication_date" content="2021-03-29" />
+  <meta name="dc.date" content="2021-04-07" />
+  <meta name="citation_publication_date" content="2021-04-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/f09ce13278540620afe5a67840ef23284d4d83f9/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f09ce13278540620afe5a67840ef23284d4d83f9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f09ce13278540620afe5a67840ef23284d4d83f9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/f09ce13278540620afe5a67840ef23284d4d83f9/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/))
 was automatically generated
-from [greenelab/mpmp-manuscript@f09ce13](https://github.com/greenelab/mpmp-manuscript/tree/f09ce13278540620afe5a67840ef23284d4d83f9)
-on March 29, 2021.
+from [greenelab/mpmp-manuscript@296df81](https://github.com/greenelab/mpmp-manuscript/tree/296df815ee993739f3e34e72f0bae27f5c20ab41)
+on April 7, 2021.
 </em></small>
 
 ## Authors
@@ -103,300 +103,38 @@ on March 29, 2021.
 
 
 
-This manuscript is a template (aka "rootstock") for [Manubot](https://manubot.org/ "Manubot"), a tool for writing scholarly manuscripts.
-Use this template as a starting point for your manuscript.
+## Introduction
+
+Although cancer can be initiated and driven by many different genetic alterations, these tend to converge on a limited number of pathways or signaling processes [@doi:10.1016/j.cell.2018.03.035].
+A comprehensive understanding of how diverse genetic alterations perturb these central pathways is vital to precision medicine and biomarker identification efforts, as driver mutation status alone confers limited prognostic information [@doi:10.7554/eLife.39217; @doi:10.1038/ncomms12096].
+While many methods exist to distinguish driver mutations from passenger mutations based on genomic sequence characteristics [@doi:10.1073/pnas.1616440113; @doi:10.1038/s41467-019-11284-9; @doi:10.1371/journal.pcbi.1006658], until recently it has been a challenge to connect driver mutations to downstream changes in gene expression and cellular function within individual tumor samples.
+
+The Cancer Genome Atlas (TCGA) Pan-Cancer Atlas provides uniformly processed, multi-platform -omics measurements across tens of thousands of samples from 33 cancer types [@doi:10.1038/ng.2764].
+Enabled by this publicly available data, a growing body of work on linking the presence of driving genetic alterations in cancer to downstream gene expression changes has emerged.
+Recent studies have considered Ras pathway alteration status in colorectal cancer [@doi:10.1158/1078-0432.CCR-13-1943], alteration status across many cancer types in Ras genes [@doi:10.1016/j.celrep.2018.03.046; @doi:10.1093/bib/bbaa258], TP53 [@doi:10.1016/j.celrep.2018.03.076], and PIK3CA [@doi:10.1371/journal.pone.0241514], and alteration status across cancer types in frequently mutated genes [@doi:10.1186/s13059-020-02021-3].
+More broadly, other groups have drawn on similar ideas to distinguish between the functional effects of different alterations in the same driver gene [@doi:10.1101/2020.06.02.128850], to link alterations with similar gene expression signatures within cancer types [@doi:10.1142/9789811215636_0031], and to identify trans-acting expression quantitative trait loci (trans-eQTLs) in germline genetic studies [@doi:10.1101/2020.05.07.083386].
+
+These studies share a common thread: they each combine genomic (point mutation and copy number variation) data with transcriptomic (RNA sequencing) data within samples to interrogate the functional effects of genetic variation.
+RNA sequencing is ubiquitous and cheap, and its experimental and computational methods are relatively mature, making it a vital tool for generating insight into cancer pathology [@doi:10.1038/nrg.2017.96].
+Some driver mutations, however, are known to act indirectly on gene expression through varying mechanisms.
+For example, oncogenic IDH1 and IDH2 mutations in glioma have been shown to interfere with histone demethylation, which results in increased DNA methylation and blocked cell differentiation [@doi:10.1056/NEJMoa0808710; @doi:10.1038/nature10860].
+Other genes implicated in aberrant DNA methylation in cancer include the TET family of genes [@doi:10.1016/j.tig.2014.07.005] and SETD2 [@doi:10.1101/cshperspect.a026468].
+Certain driver mutations, such as those in DNA damage repair genes, may lead to detectable patterns of somatic mutation [@doi:10.1038/nrg3729].
+Additionally, correlation between gene expression and protein abundance in cancer cell lines is limited, and proteomics data could correspond more directly to certain cancer phenotypes and pathway perturbations [@doi:10.1016/j.cell.2019.12.023].
+In these contexts and others, integrating different data modalities or combining multiple data modalities could be more effective than relying solely on gene expression as a functional signature.
+
+Here, we seek to compare -omics data types profiled in the TCGA Pan-Cancer Atlas for use as a multivariate functional readout of genetic alterations in cancer.
+We focus on DNA methylation (27K and 450K probe chips), reverse phase protein array (RPPA), and mutational signatures data [@doi:10.1038/s41586-020-1943-3] as alternative readouts.
+Prior studies have identified univariate correlations of CpG site methylation [@doi:10.1371/journal.pcbi.1005840; @doi:10.1186/s12920-018-0425-z] and correlations of RPPA protein profiles [@doi:10.1186/s13073-018-0591-9] with the presence or absence of certain driver mutations.
+Other relevant past work includes linking point mutations and copy number variants (CNVs) with changes in methylation and expression at individual genes [@doi:10.1093/bioinformatics/btr019; @doi:10.1093/bib/bbw037] and identifying functional modules that are perturbed by somatic mutations [@doi:10.1093/bioinformatics/btq182; @doi:10.1038/ncomms9554].
+However, no direct comparison has been made between different data types for this application, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.
+
+We select a wide-ranging collection of potential cancer drivers with varying functions and roles in cancer development [@doi:10.1126/science.1235122].
+We use mutation status in these genes as labels to train classifiers, using each of the data types listed as training data, in a pan-cancer setting; we follow similar methods to the elastic net logistic regression approach described in Way et al. 2018 [@doi:10.1016/j.celrep.2018.03.046] and Way et al. 2020 [@doi:10.1186/s13059-020-02021-3].
+We show that although there is considerable predictive signal for many genes in each dataset relative to a random baseline, gene expression data tends to provide more effective predictions than the other data types in the vast majority of cases.
+In addition, we observe that combining data types into a single multi-omics model provides little, if any, performance benefit over the most performant model using a single data type.
+Our results will help to inform the design of future functional genomics studies in cancer, suggesting that RNA sequencing can serve as a broadly effective first-line readout for a variety of genetic alterations.
 
-The rest of this document is a full list of formatting elements/features supported by Manubot.
-Compare the input (`.md` files in the `/content` directory) to the output you see below.
-
-## Basic formatting
-
-**Bold** __text__
-
-[Semi-bold text]{.semibold}
-
-[Centered text]{.center}
-
-[Right-aligned text]{.right}
-
-*Italic* _text_
-
-Combined *italics and __bold__*
-
-~~Strikethrough~~
-
-1. Ordered list item
-2. Ordered list item
-    a. Sub-item
-    b. Sub-item
-        i. Sub-sub-item
-3. Ordered list item
-    a. Sub-item
-
-- List item
-- List item
-- List item
-
-subscript: H~2~O is a liquid
-
-superscript: 2^10^ is 1024.
-
-[unicode superscripts](https://www.google.com/search?q=superscript+generator)⁰¹²³⁴⁵⁶⁷⁸⁹
-
-[unicode subscripts](https://www.google.com/search?q=superscript+generator)₀₁₂₃₄₅₆₇₈₉
-
-A long paragraph of text.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Putting each sentence on its own line has numerous benefits with regard to [editing](https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line) and [version control](https://rhodesmill.org/brandon/2012/one-sentence-per-line/).
-
-Line break without starting a new paragraph by putting  
-two spaces at end of line.
-
-## Document organization
-
-Document section headings:
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-### A heading centered on its own printed page{.center .page_center}
-
-<!-- an arbitrary comment. visible in input, but not visible in output. -->
-
-Horizontal rule:
-
----
-
-`Heading 1`'s are recommended to be reserved for the title of the manuscript.
-
-`Heading 2`'s are recommended for broad sections such as *Abstract*, *Methods*, *Conclusion*, etc.
-
-`Heading 3`'s and `Heading 4`'s are recommended for sub-sections.
-
-## Links
-
-Bare URL link: <https://manubot.org>
-
-[Long link with lots of words and stuff and junk and bleep and blah and stuff and other stuff and more stuff yeah](https://manubot.org)
-
-[Link with text](https://manubot.org)
-
-[Link with hover text](https://manubot.org "Manubot Homepage")
-
-[Link by reference][manubot homepage]
-
-[Manubot Homepage]: https://manubot.org
-
-## Citations
-
-Citation by DOI [@doi:10.7554/eLife.32822].
-
-Citation by PubMed Central ID [@pmc:PMC6103790].
-
-Citation by PubMed ID [@pubmed:30718888].
-
-Citation by Wikidata ID [@wikidata:Q56458321].
-
-Citation by ISBN [@isbn:9780262517638].
-
-Citation by URL [@https://greenelab.github.io/meta-review/].
-
-Citation by alias [@deep-review].
-
-Multiple citations can be put inside the same set of brackets [@doi:10.7554/eLife.32822; @deep-review; @isbn:9780262517638].
-Manubot plugins provide easier, more convenient visualization of and navigation between citations [@doi:10.1371/journal.pcbi.1007128; @pubmed:30718888; @pmc:PMC6103790; @deep-review].
-
-Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown's reference link syntax:
-
-[@deep-review]: doi:10.1098/rsif.2017.0387
-
-## Referencing figures, tables, equations
-
-Figure @fig:square-image
-
-Figure @fig:wide-image
-
-Figure @fig:tall-image
-
-Figure @fig:vector-image
-
-Table @tbl:bowling-scores
-
-Equation @eq:regular-equation
-
-Equation @eq:long-equation
-
-## Quotes and code
-
-> Quoted text
-
-> Quoted block of text
->
-> Two roads diverged in a wood, and I—  
-> I took the one less traveled by,  
-> And that has made all the difference.
-
-Code `in the middle` of normal text, aka `inline code`.
-
-Code block with Python syntax highlighting:
-
-```python
-from manubot.cite.doi import expand_short_doi
-
-def test_expand_short_doi():
-    doi = expand_short_doi("10/c3bp")
-    # a string too long to fit within page:
-    assert doi == "10.25313/2524-2695-2018-3-vliyanie-enhansera-copia-i-insulyatora-gypsy-na-sintez-ernk-modifikatsii-hromatina-i-svyazyvanie-insulyatornyh-belkov-vtransfetsirovannyh-geneticheskih-konstruktsiyah"
-```
-
-Code block with no syntax highlighting:
-
-```
-Exporting HTML manuscript
-Exporting DOCX manuscript
-Exporting PDF manuscript
-```
-
-## Figures
-
-![
-**A square image at actual size and with a bottom caption.**
-Loaded from the latest version of image on GitHub.
-](https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png "Square image"){#fig:square-image}
-
-![
-**An image too wide to fit within page at full size.**
-Loaded from a specific (hashed) version of the image on GitHub.
-](https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png "Wide image"){#fig:wide-image}
-
-![
-**A tall image with a specified height.**
-Loaded from a specific (hashed) version of the image on GitHub.
-](https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png "Tall image"){#fig:tall-image height=3in}
-
-![
-**A vector `.svg` image loaded from GitHub.**
-The parameter `sanitize=true` is necessary to properly load SVGs hosted via GitHub URLs.
-White background specified to serve as a backdrop for transparent sections of the image.
-](https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true "Vector image"){#fig:vector-image height=2.5in .white}
-
-## Tables
-
-| *Bowling Scores* | Jane          | John          | Alice         | Bob           |
-|:-----------------|:-------------:|:-------------:|:-------------:|:-------------:|
-| Game 1 | 150 | 187 | 210 | 105 |
-| Game 2 |  98 | 202 | 197 | 102 |
-| Game 3 | 123 | 180 | 238 | 134 |
-
-Table: A table with a top caption and specified relative column widths.
-{#tbl:bowling-scores}
-
-|         | Digits 1-33                        | Digits 34-66                      | Digits 67-99                      | Ref.                                                        |
-|:--------|:-----------------------------------|:----------------------------------|:----------------------------------|:------------------------------------------------------------|
-| pi      | 3.14159265358979323846264338327950 | 288419716939937510582097494459230 | 781640628620899862803482534211706 | [`piday.org`](https://www.piday.org/million/)               |
-| e       | 2.71828182845904523536028747135266 | 249775724709369995957496696762772 | 407663035354759457138217852516642 | [`nasa.gov`](https://apod.nasa.gov/htmltest/gifcity/e.2mil) |
-
-Table: A table too wide to fit within page.
-{#tbl:constant-digits}
-
-|          | **Colors** <!-- $colspan="2" --> |                      |
-|:--------:|:--------------------------------:|:--------------------:|
-| **Size** | **Text Color**                   | **Background Color** |
-| big      | blue                             | orange               |
-| small    | black                            | white                |
-
-Table: A table with merged cells using the `attributes` plugin.
-{#tbl: merged-cells}
-
-## Equations
-
-A LaTeX equation:
-
-$$\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}$$ {#eq:regular-equation}
-
-An equation too long to fit within page:
-
-$$x = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9$$ {#eq:long-equation}
-
-## Special
-
-<i class="fas fa-exclamation-triangle"></i> [WARNING]{.semibold} _The following features are only supported and intended for `.html` and `.pdf` exports._
-_Journals are not likely to support them, and they may not display correctly when converted to other formats such as `.docx`._
-
-[Link styled as a button](https://manubot.org "Manubot Homepage"){.button}
-
-Adding arbitrary HTML attributes to an element using Pandoc's attribute syntax:
-
-::: {#some_id_1 .some_class style="background: #ad1457; color: white; margin-left: 40px;" title="a paragraph of text" data-color="white" disabled="true"}
-Manubot Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot.
-Manubot Manubot.
-Manubot.
-:::
-
-Adding arbitrary HTML attributes to an element with the Manubot `attributes` plugin (more flexible than Pandoc's method in terms of which elements you can add attributes to):
-
-Manubot Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot Manubot.
-Manubot Manubot Manubot.
-Manubot Manubot.
-Manubot.
-<!-- $id="element_id" class="some_class" $style="color: #ad1457; margin-left: 40px;" $disabled="true" $title="a paragraph of text" $data-color="red" -->
-
-Available background colors for text, images, code, banners, etc:  
-
-`white`{.white}
-`lightgrey`{.lightgrey}
-`grey`{.grey}
-`darkgrey`{.darkgrey}
-`black`{.black}
-`lightred`{.lightred}
-`lightyellow`{.lightyellow}
-`lightgreen`{.lightgreen}
-`lightblue`{.lightblue}
-`lightpurple`{.lightpurple}
-`red`{.red}
-`orange`{.orange}
-`yellow`{.yellow}
-`green`{.green}
-`blue`{.blue}
-`purple`{.purple}
-
-Using the [Font Awesome](https://fontawesome.com/) icon set:
-
-<!-- include the Font Awesome library, per: https://fontawesome.com/start -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
-<i class="fas fa-check"></i> <i class="fas fa-question"></i> <i class="fas fa-star"></i> <i class="fas fa-bell"></i> <i class="fas fa-times-circle"></i> <i class="fas fa-ellipsis-h"></i>
-
-[
-<i class="fas fa-scroll fa-lg"></i> **Light Grey Banner**<br>
-useful for *general information* - [manubot.org](https://manubot.org/)
-]{.banner .lightgrey}
-
-[
-<i class="fas fa-info-circle fa-lg"></i> **Blue Banner**<br>
-useful for *important information* - [manubot.org](https://manubot.org/)
-]{.banner .lightblue}
-
-[
-<i class="fas fa-ban fa-lg"></i> **Light Red Banner**<br>
-useful for *warnings* - [manubot.org](https://manubot.org/)
-]{.banner .lightred}
 
 
 ## References {.page_break_before}
