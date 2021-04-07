@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,9 +67,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/296df815ee993739f3e34e72f0bae27f5c20ab41/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/296df815ee993739f3e34e72f0bae27f5c20ab41">greenelab/mpmp-manuscript@296df81</a>
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/abbfb1c85b1a4fd80792af650eb5ab6891ef5312">greenelab/mpmp-manuscript@abbfb1c</a>
 on April 7, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -121,6 +121,35 @@ We use mutation status in these genes as labels to train classifiers, using each
 We show that although there is considerable predictive signal for many genes in each dataset relative to a random baseline, gene expression data tends to provide more effective predictions than the other data types in the vast majority of cases.
 In addition, we observe that combining data types into a single multi-omics model provides little, if any, performance benefit over the most performant model using a single data type.
 Our results will help to inform the design of future functional genomics studies in cancer, suggesting that RNA sequencing can serve as a broadly effective first-line readout for a variety of genetic alterations.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="mutation-data-download-and-preprocessing">Mutation data download and preprocessing</h3>
+<p>To generate binary mutated/non-mutated gene labels for our machine learning model, we used mutation calls for TCGA samples from MC3 <span class="citation" data-cites="cDnF3a5Q">[<a href="#ref-cDnF3a5Q" role="doc-biblioref">33</a>]</span> and copy number threshold calls from GISTIC2.0 <span class="citation" data-cites="rDV1hhfF">[<a href="#ref-rDV1hhfF" role="doc-biblioref">34</a>]</span>.
+MC3 mutation calls were downloaded from the Genome Data Commons (GDC) of the National Cancer Institute, at <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas"><code>https://gdc.cancer.gov/about-data/publications/pancanatlas</code></a>.
+Copy number threshold calls are from an older version of PanCanAtlas, and are available here: <a href="https://figshare.com/articles/dataset/TCGA_PanCanAtlas_Copy_Number_Data/6144122"><code>https://figshare.com/articles/dataset/TCGA_PanCanAtlas_Copy_Number_Data/6144122</code></a>.
+We removed hypermutated samples (defined as five or more standard deviations above the mean non-silent somatic mutation count) from our dataset to reduce the number of false positives (i.e., non-driver mutations).
+In total, this resulted in 9,074 TCGA samples with mutation and copy number data.
+Any sample with a non-silent somatic variant in the target gene was included in the positive set.
+We also included copy number gains in the target gene for oncogenes, and copy number losses in the target gene for tumor suppressor genes, in the positive set; all remaining samples were considered negative for mutation in the target gene.</p>
+<h3 id="omics-data-download-and-preprocessing">Omics data download and preprocessing</h3>
+<p>RNA sequencing, 27K and 450K methylation array, and RPPA datasets for TCGA samples were all downloaded from GDC, at the same link provided above.
+Mutational signatures information for TCGA samples with whole-exome sequencing data was downloaded from the International Cancer Genome Consortium (ICGC) data portal, at <a href="https://dcc.icgc.org/releases/PCAWG/mutational_signatures/Signatures_in_Samples/SP_Signatures_in_Samples"><code>https://dcc.icgc.org/releases/PCAWG/mutational_signatures/Signatures_in_Samples/SP_Signatures_in_Samples</code></a>.
+For our experiments, we used only the “single base signature” (SBS) mutational signatures, generated in <span class="citation" data-cites="11yRODwNY">[<a href="#ref-11yRODwNY" role="doc-biblioref">24</a>]</span>.
+We standardized (took z-scores of) each column of RNA sequencing and RPPA data; methylation data and mutational signatures data were left untransformed (beta values and mutation counts respectively), except in multi-omics experiments where all data types were standardized.
+For the RNA sequencing dataset, we used only the top 8,000 gene features by mean absolute deviation as predictors in our models, except in multi-omics experiments where all 15,639 genes were used.</p>
+<p>In order to remove missing values from the methylation datasets, we removed the 10 samples with the most missing values, then performed mean imputation for probes with 1 or 2 values missing.
+All probes with missing values remaining after sample filtering and imputation were dropped from the analysis.
+This left us with 20,040 CpG probes in the 27K methylation dataset, and 370,961 CpG probes in the 450K methylation dataset.
+For experiments where “raw” methylation data was used, we used the top 100,000 probes in the 450K dataset by mean absolute deviation for computational efficiency, and we used all of the 20,040 probes in the 27K dataset.
+For experiments where “compressed” methylation data was used, we used principal component analysis (PCA), as implemented in the <code>scikit-learn</code> Python library <span class="citation" data-cites="lF0Fr9LL">[<a href="#ref-lF0Fr9LL" role="doc-biblioref">35</a>]</span>, to extract the top 5,000 principal components from the methylation datasets.
+We initially applied the beta-mixture quantile normalization (BMIQ) method <span class="citation" data-cites="Zg2jmD6p">[<a href="#ref-Zg2jmD6p" role="doc-biblioref">36</a>]</span> to correct for variability in signal intensity between type I and type II probes, but we observed that this had no effect on our results.
+We report uncorrected results in the main paper for simplicity.</p>
+<p>To make a fair comparison in each of the experiments displayed in the results, we used the intersection of TCGA samples having measurements for all of the datasets being compared in that experiment.
+This resulted in 3 distinct sets of samples: 9,074 samples shared between expression and mutation data, 7,981 samples shared between expression/mutation/27K methylation/450K methylation, and 5,282 samples shared between expression/mutation/27K methylation/450K methylation/RPPA/mutational signatures.
+When we dropped samples between experiments as progressively more data types were added, we observed that the dropped samples had approximately the same cancer type proportions as the dataset as a whole.
+In other words, samples that were profiled for one data type but not another did not tend to come exclusively from one or a few cancer types.
+Exceptions included acute myeloid leukemia (LAML) which had no samples profiled in the RPPA data, and ovarian cancer (OV) which had only 8 samples with 450K methylation data.
+More detailed information on cancer type proportions profiled for each data type is provided in (the supplement).</p>
+<p>(Include Venn diagrams of samples in supplement)</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
@@ -315,6 +344,29 @@ DOI: <a href="https://doi.org/10.1038/ncomms9554">10.1038/ncomms9554</a> · PMID
 B. Vogelstein, N. Papadopoulos, V. E. Velculescu, S. Zhou, L. A. Diaz, K. W. Kinzler<br />
 <em>Science</em> (2013-03-28) <a href="https://doi.org/6rg">https://doi.org/6rg</a> <br />
 DOI: <a href="https://doi.org/10.1126/science.1235122">10.1126/science.1235122</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539594">23539594</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3749880">PMC3749880</a></p>
+</div>
+<div id="ref-cDnF3a5Q">
+<p>33. <strong>Scalable Open Science Approach for Mutation Calling of Tumor Exomes Using Multiple Genomic Pipelines</strong> <br />
+Kyle Ellrott, Matthew H. Bailey, Gordon Saksena, Kyle R. Covington, Cyriac Kandoth, Chip Stewart, Julian Hess, Singer Ma, Kami E. Chiotti, Michael McLellan, … Armaz Mariamidze<br />
+<em>Cell Systems</em> (2018-03) <a href="https://doi.org/gf9twn">https://doi.org/gf9twn</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.cels.2018.03.002">10.1016/j.cels.2018.03.002</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29596782">29596782</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6075717">PMC6075717</a></p>
+</div>
+<div id="ref-rDV1hhfF">
+<p>34. <strong>GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers</strong> <br />
+Craig H Mermel, Steven E Schumacher, Barbara Hill, Matthew L Meyerson, Rameen Beroukhim, Gad Getz<br />
+<em>Genome Biology</em> (2011-04-28) <a href="https://doi.org/dzhjqh">https://doi.org/dzhjqh</a> <br />
+DOI: <a href="https://doi.org/10.1186/gb-2011-12-4-r41">10.1186/gb-2011-12-4-r41</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21527027">21527027</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3218867">PMC3218867</a></p>
+</div>
+<div id="ref-lF0Fr9LL">
+<p>35. <strong>Scikit-learn: Machine Learning in Python</strong> <br />
+Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, … Édouard Duchesnay<br />
+<em>Journal of Machine Learning Research</em> (2011) <a href="http://jmlr.org/papers/v12/pedregosa11a.html">http://jmlr.org/papers/v12/pedregosa11a.html</a></p>
+</div>
+<div id="ref-Zg2jmD6p">
+<p>36. <strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <br />
+Andrew E. Teschendorff, Francesco Marabita, Matthias Lechner, Thomas Bartlett, Jesper Tegner, David Gomez-Cabrero, Stephan Beck<br />
+<em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/f25mvt">https://doi.org/f25mvt</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/bts680">10.1093/bioinformatics/bts680</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23175756">23175756</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546795">PMC3546795</a></p>
 </div>
 </div>
 <!-- default theme -->
