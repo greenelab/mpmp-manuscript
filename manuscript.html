@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2021-04-07" />
+  <meta name="dcterms.date" content="2021-04-14" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-07" />
-  <meta name="citation_publication_date" content="2021-04-07" />
+  <meta name="dc.date" content="2021-04-14" />
+  <meta name="citation_publication_date" content="2021-04-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,10 +67,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/abbfb1c85b1a4fd80792af650eb5ab6891ef5312/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/abbfb1c85b1a4fd80792af650eb5ab6891ef5312">greenelab/mpmp-manuscript@abbfb1c</a>
-on April 7, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/fe526f0fc9c058e553920cf4bf196e3a778b6a1f">greenelab/mpmp-manuscript@fe526f0</a>
+on April 14, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -144,12 +144,48 @@ For experiments where “compressed” methylation data was used, we used princi
 We initially applied the beta-mixture quantile normalization (BMIQ) method <span class="citation" data-cites="Zg2jmD6p">[<a href="#ref-Zg2jmD6p" role="doc-biblioref">36</a>]</span> to correct for variability in signal intensity between type I and type II probes, but we observed that this had no effect on our results.
 We report uncorrected results in the main paper for simplicity.</p>
 <p>To make a fair comparison in each of the experiments displayed in the results, we used the intersection of TCGA samples having measurements for all of the datasets being compared in that experiment.
-This resulted in 3 distinct sets of samples: 9,074 samples shared between expression and mutation data, 7,981 samples shared between expression/mutation/27K methylation/450K methylation, and 5,282 samples shared between expression/mutation/27K methylation/450K methylation/RPPA/mutational signatures.
+This resulted in 3 distinct sets of samples: 9,074 samples shared between {expression, mutation} data, 7,981 samples shared between {expression, mutation, 27K methylation, 450K methylation}, and 5,282 samples shared between {expression, mutation, 27K methylation, 450K methylation, RPPA, mutational signatures}.
 When we dropped samples between experiments as progressively more data types were added, we observed that the dropped samples had approximately the same cancer type proportions as the dataset as a whole.
 In other words, samples that were profiled for one data type but not another did not tend to come exclusively from one or a few cancer types.
 Exceptions included acute myeloid leukemia (LAML) which had no samples profiled in the RPPA data, and ovarian cancer (OV) which had only 8 samples with 450K methylation data.
 More detailed information on cancer type proportions profiled for each data type is provided in (the supplement).</p>
-<p>(Include Venn diagrams of samples in supplement)</p>
+<h3 id="training-classifiers-to-detect-cancer-mutations">Training classifiers to detect cancer mutations</h3>
+<p>We trained logistic regression classifiers to predict whether or not a given sample has a mutational event in a given target gene, using data from various -omics datasets as explanatory variables.
+We explored mutation prediction from gene expression alone using 3 gene sets of equal size: a cancer-related gene dataset of 124 genes described in Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>, the most mutated genes in TCGA in descending order, and a set of random genes with mutations profiled by MC3.
+For each target gene, in order to ensure that the training dataset was reasonably balanced (i.e. that there would be enough mutated samples to train a classifier), we included only cancer types with at least 15 mutated samples and at least 5% mutated samples.
+After filtering for sufficient mutated samples, 17 of the genes from the Vogelstein et al. gene set had no valid cancer types remaining, leaving 107 genes with one or more valid cancer types to use in further analyses.
+To match the size of this gene set, we took the 107 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
+For our random gene set, we first filtered to the set of all genes with 2 or more valid cancer types by the above criteria, then sampled 107 of these genes uniformly at random.
+Based on the results of the gene expression experiments, we used the Vogelstein et al. cancer gene set for all subsequent experiments comparing -omics data types.</p>
+<p>Since our -omics datasets tend to have many dimensions and comparatively few samples, we applied an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">37</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span>.
+Elastic net logistic regression finds the feature weights <span class="math inline">\(\hat{w}\)</span> solving the following optimization problem:<br />
+<span class="math display">\[\hat{w} = \text{argmin}_{w} \ \ell(X, y; w) + \alpha \lambda||w||_1 + \frac{1}{2}\alpha (1 - \lambda) ||w||_2\]</span></p>
+<p>where <span class="math inline">\(i\)</span> denotes a given sample, <span class="math inline">\(X_i\)</span> denote features (omics measurements) and <span class="math inline">\(y_i \in \{0, 1\}\)</span> denote labels (mutation presence/absence), and <span class="math inline">\(\ell(\cdot)\)</span> denotes the negative log-likelihood of the observed data given a choice of feature weights, e.g.<br />
+<span class="math display">\[\ell(X, y; w) = -\sum_{i=1}^{n} y_i \log\left(\frac{1}{1 + e^{-wX_i}}\right) + (1 - y_i) \log\left(1 - \frac{1}{1 + e^{-wX_i}}\right)\]</span></p>
+<p>This optimization problem leaves two hyperparameters to select: <span class="math inline">\(\alpha\)</span> (controlling the tradeoff between the data likelihood and the penalty on large feature weight values), and <span class="math inline">\(\lambda\)</span> (controlling the tradeoff between the L1 penalty and L2 penalty on the weight values).
+Although the elastic net loss function does not have a closed form solution, it is convex, and iterative optimization algorithms are commonly used for finding reasonable solutions.
+For fixed values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\lambda\)</span>, we solved for <span class="math inline">\(\hat{w}\)</span> using stochastic gradient descent, as implemented in <code>scikit-learn</code>’s <code>SGDClassifier</code> method.</p>
+<p>Given weight values <span class="math inline">\(\hat{w}\)</span>, it is straightforward to predict the probability of a positive label (mutation in the target gene) <span class="math inline">\(P(y^{*} = 1 \mid X^{*}; \hat{w})\)</span> for a test sample <span class="math inline">\(X^{*}\)</span>:<br />
+<span class="math display">\[P(y^{*} = 1 \mid X^{*}; \hat{w}) = \frac{1}{1 + e^{-(\hat{w}^{\top}X^{*})}\]</span></p>
+<p>and the probability of no mutation in the target gene, <span class="math inline">\(P(y^{*} = 0 \mid X^{*}; \hat{w})\)</span>, is given by (1 - the above quantity).</p>
+<p>For each target gene, we evaluated model performance using 2 replicates of 4-fold cross-validation, where train and test splits were stratified by cancer type and sample type.
+That is, each training set/test set combination had equal proportions of each cancer type (BRCA, SKCM, COAD, etc) and each sample type (primary tumor, recurrent tumor, etc).
+To choose the elastic net hyperparameters, we used 3-fold nested cross-validation, with a grid search over the same hyperparameter ranges used in Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>: <span class="math inline">\(\lambda\)</span> = [0.15, 0.16, 0.2, 0.25, 0.3, 0.4] and <span class="math inline">\(\alpha\)</span> = [0.1, 0.13, 0.15, 0.2, 0.25, 0.3].
+Using the grid search results, for each evaluation fold we selected the set of hyperparameters with the optimal area under the receiver-operator curve (AUROC), averaged over the three inner folds.</p>
+<h3 id="evaluating-mutation-prediction-classifiers">Evaluating mutation prediction classifiers</h3>
+<p>To quantify classification performance for a continuous or probabilistic output, such as that provided by logistic regression, the area under the receiver-operator curve (AUROC) <span class="citation" data-cites="WTSzUd5Y">[<a href="#ref-WTSzUd5Y" role="doc-biblioref">38</a>]</span> and the area under the precision-recall curve (AUPR) <span class="citation" data-cites="pazxvNcz">[<a href="#ref-pazxvNcz" role="doc-biblioref">39</a>]</span> metrics are frequently used.
+These metrics summarize performance across a variety of binary label thresholds, rather than requiring choice of a single threshold to determine positive or negative predictions.
+In the main text, we report results using AUPR, summarized using average precision.
+AUPR has been shown to distinguish between models more accurately than AUROC when there are few positively labeled samples <span class="citation" data-cites="LB4mDas6 lWf6zHNO">[<a href="#ref-LB4mDas6" role="doc-biblioref">40</a>,<a href="#ref-lWf6zHNO" role="doc-biblioref">41</a>]</span>.
+As an additional correction for imbalanced labels, in many of the results in the main text we report the difference in AUPR between a classifier fit to true mutation labels, and a classifier fit to data where the mutation labels are randomly shuffled.
+In cases where mutation labels are highly imbalanced (very few mutated samples and many non-mutated samples), a classifier with shuffled labels may perform well simply by chance, e.g. by predicting the negative/non-mutated class for most samples.</p>
+<p>Recall that for each target gene and each -omics dataset, we ran 2 replicates of 4-fold cross-validation, for a total of 8 performance results.
+To make a statistical comparison between two models using these performance distributions, we used paired-sample <em>t</em>-tests, where performance measurements derived from the same cross-validation fold are considered paired measurements.
+We used this approach to compare a model trained on true labels with a model trained on shuffled labels (addressing the question, “for the given gene using the given data type, can we predict mutation status better than random”), and to compare a model trained on data type A with a model trained on data type B (addressing the question, “for the given gene, can we make more effective mutation status predictions using data type A or data type B”).
+We corrected for multiple tests using a Benjamini-Hochberg false discovery rate correction.
+For all of our experiments, we set a conservative corrected <em>p</em>-value threshold of <span class="math inline">\(\alpha = 0.001\)</span>; we were able to estimate the number of false positives by examining genes with better performance for shuffled mutation labels than true labels.
+We chose our threshold to ensure that none of these genes were considered significant, since we would never expect permuting labels to improve performance.
+However, our results were not sensitive to the choice of this threshold.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
@@ -367,6 +403,35 @@ Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand 
 Andrew E. Teschendorff, Francesco Marabita, Matthias Lechner, Thomas Bartlett, Jesper Tegner, David Gomez-Cabrero, Stephan Beck<br />
 <em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/f25mvt">https://doi.org/f25mvt</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bts680">10.1093/bioinformatics/bts680</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23175756">23175756</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546795">PMC3546795</a></p>
+</div>
+<div id="ref-JZNkB8d7">
+<p>37. <strong>Regularization and variable selection via the elastic net</strong> <br />
+Hui Zou, Trevor Hastie<br />
+<em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em> (2005-04) <a href="https://doi.org/b8cwwr">https://doi.org/b8cwwr</a> <br />
+DOI: <a href="https://doi.org/10.1111/j.1467-9868.2005.00503.x">10.1111/j.1467-9868.2005.00503.x</a></p>
+</div>
+<div id="ref-WTSzUd5Y">
+<p>38. <strong>An introduction to ROC analysis</strong> <br />
+Tom Fawcett<br />
+<em>Pattern Recognition Letters</em> (2006-06) <a href="https://doi.org/bpsghb">https://doi.org/bpsghb</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.patrec.2005.10.010">10.1016/j.patrec.2005.10.010</a></p>
+</div>
+<div id="ref-pazxvNcz">
+<p>39. <strong>A critical investigation of recall and precision as measures of retrieval system performance</strong> <br />
+Vijay Raghavan, Peter Bollmann, Gwang S. Jung<br />
+<em>ACM Transactions on Information Systems</em> (1989-07) <a href="https://doi.org/bg4tps">https://doi.org/bg4tps</a> <br />
+DOI: <a href="https://doi.org/10.1145/65943.65945">10.1145/65943.65945</a></p>
+</div>
+<div id="ref-LB4mDas6">
+<p>40. <strong>The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</strong> <br />
+Takaya Saito, Marc Rehmsmeier<br />
+<em>PLOS ONE</em> (2015-03-04) <a href="https://doi.org/f69237">https://doi.org/f69237</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pone.0118432">10.1371/journal.pone.0118432</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25738806">25738806</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4349800">PMC4349800</a></p>
+</div>
+<div id="ref-lWf6zHNO">
+<p>41. <strong>The MCC-F1 curve: a performance evaluation technique for binary classification</strong> <br />
+Chang Cao, Davide Chicco, Michael M. Hoffman<br />
+<em>arXiv</em> (2020-06-23) <a href="https://arxiv.org/abs/2006.11278">https://arxiv.org/abs/2006.11278</a></p>
 </div>
 </div>
 <!-- default theme -->
