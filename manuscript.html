@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2021-04-14" />
+  <meta name="dcterms.date" content="2021-04-16" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-14" />
-  <meta name="citation_publication_date" content="2021-04-14" />
+  <meta name="dc.date" content="2021-04-16" />
+  <meta name="citation_publication_date" content="2021-04-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,10 +67,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/fe526f0fc9c058e553920cf4bf196e3a778b6a1f/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/fe526f0fc9c058e553920cf4bf196e3a778b6a1f">greenelab/mpmp-manuscript@fe526f0</a>
-on April 14, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/b269becbbf5efe5e8c30961c1ddae1393994625f">greenelab/mpmp-manuscript@b269bec</a>
+on April 16, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -157,16 +157,18 @@ After filtering for sufficient mutated samples, 17 of the genes from the Vogelst
 To match the size of this gene set, we took the 107 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
 For our random gene set, we first filtered to the set of all genes with 2 or more valid cancer types by the above criteria, then sampled 107 of these genes uniformly at random.
 Based on the results of the gene expression experiments, we used the Vogelstein et al. cancer gene set for all subsequent experiments comparing -omics data types.</p>
-<p>Since our -omics datasets tend to have many dimensions and comparatively few samples, we applied an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">37</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span>.
-Elastic net logistic regression finds the feature weights <span class="math inline">\(\hat{w}\)</span> solving the following optimization problem:<br />
+<p>Our model is trained on -omics data (<span class="math inline">\(X\)</span>) to predict mutation presence or absence (<span class="math inline">\(y\)</span>) in a target gene.
+To control for varying mutation burden per sample, and to adjust for potential cancer type-specific expression patterns, we included one-hot encoded cancer type and log<sub>10</sub>(sample mutation count) in the model as covariates.
+Since our -omics datasets tend to have many dimensions and comparatively few samples, we used logistic regression with an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">37</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
+Elastic net logistic regression finds the feature weights <span class="math inline">\(\hat{w} \in \mathbb{R}^{p}\)</span> solving the following optimization problem:<br />
 <span class="math display">\[\hat{w} = \text{argmin}_{w} \ \ell(X, y; w) + \alpha \lambda||w||_1 + \frac{1}{2}\alpha (1 - \lambda) ||w||_2\]</span></p>
-<p>where <span class="math inline">\(i\)</span> denotes a given sample, <span class="math inline">\(X_i\)</span> denote features (omics measurements) and <span class="math inline">\(y_i \in \{0, 1\}\)</span> denote labels (mutation presence/absence), and <span class="math inline">\(\ell(\cdot)\)</span> denotes the negative log-likelihood of the observed data given a choice of feature weights, e.g.<br />
-<span class="math display">\[\ell(X, y; w) = -\sum_{i=1}^{n} y_i \log\left(\frac{1}{1 + e^{-wX_i}}\right) + (1 - y_i) \log\left(1 - \frac{1}{1 + e^{-wX_i}}\right)\]</span></p>
-<p>This optimization problem leaves two hyperparameters to select: <span class="math inline">\(\alpha\)</span> (controlling the tradeoff between the data likelihood and the penalty on large feature weight values), and <span class="math inline">\(\lambda\)</span> (controlling the tradeoff between the L1 penalty and L2 penalty on the weight values).
+<p>where <span class="math inline">\(i \in \{1, \dots, n\}\)</span> denotes a sample in the dataset, <span class="math inline">\(X_i \in \mathbb{R}^{p}\)</span> denotes features (omics measurements) from the given sample, <span class="math inline">\(y_i \in \{0, 1\}\)</span> denotes the label (mutation presence/absence) for the given sample, and <span class="math inline">\(\ell(\cdot)\)</span> denotes the negative log-likelihood of the observed data given a particular choice of feature weights, i.e.<br />
+<span class="math display">\[\ell(X, y; w) = -\sum_{i=1}^{n} y_i \log\left(\frac{1}{1 + e^{-w^{\top}X_i}}\right) + (1 - y_i) \log\left(1 - \frac{1}{1 + e^{-w^{\top}X_i}}\right)\]</span></p>
+<p>This optimization problem leaves two hyperparameters to select: <span class="math inline">\(\alpha\)</span> (controlling the tradeoff between the data log-likelihood and the penalty on large feature weight values), and <span class="math inline">\(\lambda\)</span> (controlling the tradeoff between the L1 penalty and L2 penalty on the weight values).
 Although the elastic net loss function does not have a closed form solution, it is convex, and iterative optimization algorithms are commonly used for finding reasonable solutions.
 For fixed values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\lambda\)</span>, we solved for <span class="math inline">\(\hat{w}\)</span> using stochastic gradient descent, as implemented in <code>scikit-learn</code>’s <code>SGDClassifier</code> method.</p>
 <p>Given weight values <span class="math inline">\(\hat{w}\)</span>, it is straightforward to predict the probability of a positive label (mutation in the target gene) <span class="math inline">\(P(y^{*} = 1 \mid X^{*}; \hat{w})\)</span> for a test sample <span class="math inline">\(X^{*}\)</span>:<br />
-<span class="math display">\[P(y^{*} = 1 \mid X^{*}; \hat{w}) = \frac{1}{1 + e^{-(\hat{w}^{\top}X^{*})}\]</span></p>
+<span class="math display">\[P(y^{*} = 1 \mid X^{*}; \hat{w}) = \frac{1}{1 + e^{-\hat{w}^{\top}X^{*}}}\]</span></p>
 <p>and the probability of no mutation in the target gene, <span class="math inline">\(P(y^{*} = 0 \mid X^{*}; \hat{w})\)</span>, is given by (1 - the above quantity).</p>
 <p>For each target gene, we evaluated model performance using 2 replicates of 4-fold cross-validation, where train and test splits were stratified by cancer type and sample type.
 That is, each training set/test set combination had equal proportions of each cancer type (BRCA, SKCM, COAD, etc) and each sample type (primary tumor, recurrent tumor, etc).
@@ -183,9 +185,21 @@ In cases where mutation labels are highly imbalanced (very few mutated samples a
 To make a statistical comparison between two models using these performance distributions, we used paired-sample <em>t</em>-tests, where performance measurements derived from the same cross-validation fold are considered paired measurements.
 We used this approach to compare a model trained on true labels with a model trained on shuffled labels (addressing the question, “for the given gene using the given data type, can we predict mutation status better than random”), and to compare a model trained on data type A with a model trained on data type B (addressing the question, “for the given gene, can we make more effective mutation status predictions using data type A or data type B”).
 We corrected for multiple tests using a Benjamini-Hochberg false discovery rate correction.
-For all of our experiments, we set a conservative corrected <em>p</em>-value threshold of <span class="math inline">\(\alpha = 0.001\)</span>; we were able to estimate the number of false positives by examining genes with better performance for shuffled mutation labels than true labels.
+For all of our experiments, we set a conservative corrected threshold of <span class="math inline">\(p = 0.001\)</span>; we were able to estimate the number of false positives by examining genes with better performance for shuffled mutation labels than true labels.
 We chose our threshold to ensure that none of these genes were considered significant, since we would never expect permuting labels to improve performance.
 However, our results were not sensitive to the choice of this threshold.</p>
+<h3 id="multi-omics-prediction-experiments">Multi-omics prediction experiments</h3>
+<p>To predict mutation presence or absence in cancer genes using multiple data types simultaneously, we concatenated individual datasets into a large feature matrix, then used the same elastic net logistic regression method described previously.
+For this task, we considered only the gene expression, 27K methylation, and 450K methylation datasets.
+We used only these data types to limit the number of multi-omics combinations: the expression and methylation datasets resulted in the best overall performance across the single-omics experiments so we limited combinations to those datasets here.
+For gene expression we used all 15,639 genes available in our RNA sequencing dataset, for the 27K methylation dataset we used all 20,040 CpG probes, and for the 450K methylation dataset we used the top 5,000 principal components.</p>
+<p>To construct the multi-omics models, we considered each of the pairwise combinations of the datasets listed above, as well as a combination of all 3 datasets.
+When combining multiple datasets, we concatenated along the column axis, including covariates for cancer type and sample mutation burden as before.
+For all multi-omics experiments, we used only the samples from TCGA with data for all three data types (i.e. the same 7,981 samples used in the single-omics experiments comparing expression and methylation data types).
+Due to computational demands, we considered only a limited subset of the Vogelstein et al. genes as target genes, including EGFR, IDH1, KRAS, PIK3CA, SETD2 and TP53.
+We selected these genes because we have previously observed that they have good predictive performance, and they represent a combination of alterations that have strong gene expression signatures (KRAS, EGFR, IDH1, TP53) and strong DNA methylation signatures (IDH1, SETD2, TP53 to some degree).</p>
+<h3 id="data-and-code-availability">Data and code availability</h3>
+<p>All analyses were implemented in the Python programming language and are available in the following GitHub repository: <a href="https://github.com/greenelab/mpmp"><code>https://github.com/greenelab/mpmp</code></a>, under the open-source BSD 3-clause license. Scripts to download large data files from GDC and other sources are located in the <code>00_download_data</code> directory. Scripts to run experiments comparing data modalities used individually are located in the <code>02_classify_mutations</code> directory, and scripts to run multi-omics experiments are located in the <code>05_classify_mutations_multimodal</code> directory. The Python environment was managed using <code>conda</code>, and directions for setting up the environment can be found in the <code>README.md</code> file. All analyses were run locally on a CPU.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">

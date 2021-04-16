@@ -8,10 +8,12 @@ BRCA
 CNVs
 COAD
 colorectal
+covariates
 CpG
 dataset
 datasets
 demethylation
+EGFR
 eQTLs
 exome
 GDC
@@ -28,6 +30,7 @@ ICGC
 IDH
 janeroe
 johndoe
+KRAS
 LAML
 methylation
 myeloid
