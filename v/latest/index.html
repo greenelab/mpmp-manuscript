@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2021-04-16" />
+  <meta name="dcterms.date" content="2021-04-19" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-16" />
-  <meta name="citation_publication_date" content="2021-04-16" />
+  <meta name="dc.date" content="2021-04-19" />
+  <meta name="citation_publication_date" content="2021-04-19" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,10 +67,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/b269becbbf5efe5e8c30961c1ddae1393994625f">greenelab/mpmp-manuscript@b269bec</a>
-on April 16, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/a6ff04c450348abc1ae2e216732a47be92129bc4">greenelab/mpmp-manuscript@a6ff04c</a>
+on April 19, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -200,6 +200,28 @@ Due to computational demands, we considered only a limited subset of the Vogelst
 We selected these genes because we have previously observed that they have good predictive performance, and they represent a combination of alterations that have strong gene expression signatures (KRAS, EGFR, IDH1, TP53) and strong DNA methylation signatures (IDH1, SETD2, TP53 to some degree).</p>
 <h3 id="data-and-code-availability">Data and code availability</h3>
 <p>All analyses were implemented in the Python programming language and are available in the following GitHub repository: <a href="https://github.com/greenelab/mpmp"><code>https://github.com/greenelab/mpmp</code></a>, under the open-source BSD 3-clause license. Scripts to download large data files from GDC and other sources are located in the <code>00_download_data</code> directory. Scripts to run experiments comparing data modalities used individually are located in the <code>02_classify_mutations</code> directory, and scripts to run multi-omics experiments are located in the <code>05_classify_mutations_multimodal</code> directory. The Python environment was managed using <code>conda</code>, and directions for setting up the environment can be found in the <code>README.md</code> file. All analyses were run locally on a CPU.</p>
+<h2 id="results">Results</h2>
+<h3 id="using-diverse-data-modalities-to-predict-cancer-alterations">Using diverse data modalities to predict cancer alterations</h3>
+<p>We collected four different readouts from cancer samples in the TCGA Pan-Cancer Atlas, capturing four steps of cellular function that are perturbed by genetic alterations in cancer (Figure <a href="#fig:overview">1</a>A).
+These included gene expression (RNA-seq data), DNA methylation (27K and 450K Illumina BeadChip arrays), protein abundance (RPPA data), and patterns of somatic mutation (mutational signatures).
+To link these diverse data modalities to changes in mutation status, we used elastic net logistic regression to predict the presence or absence of mutations in cancer genes, using these readouts as predictive features (Figure <a href="#fig:overview">1</a>B).
+We evaluated the resulting mutation status classifiers in a pan-cancer setting, preserving the proportions of each of the 33 cancer types in TCGA for 8 train/test splits (4 folds x 2 replicates) in each of 107 cancer genes (Figure <a href="#fig:overview">1</a>C).</p>
+<p>We sought to compare classifiers against a baseline where mutation labels are shuffled (to identify genes whose mutation status correlates strongly with a functional signature in a given data type), and also to compare classifiers trained on true labels across different data types (to identify data types that are more or less predictive of mutations in a given gene).
+To account for variation between dataset splits in making these comparisons, we treat classification metrics from the 8 train/test splits as performance distributions, which we compare using <em>t</em>-tests.
+We summarize performance across all genes in our cancer gene set using a similar approach to a volcano plot, in which each point is a gene.
+In our summary plots, the x-axis shows the magnitude of the change in the classification metric between conditions, and the y-axis shows the <em>p</em>-value for the associated <em>t</em>-test.
+Figure <a href="#fig:overview">1</a>C illustrates this evaluation pipeline.</p>
+<div id="fig:overview" class="fignos">
+<figure>
+<img src="images/figure_1.png" alt="" /><figcaption><span>Figure 1:</span> <strong>A.</strong> Cancer mutations can perturb cellular function via a variety of cellular processes.
+Arrows represent major potential paths of information flow from a somatic mutation in DNA to its resulting cell phenotype; circular arrow represents the ability of certain mutations (e.g. in DNA damage repair genes) to alter somatic mutation patterns.
+Note that this does not reflect all possible relationships between cellular processes: for instance, changes in gene expression can lead to changes in somatic mutation rates.
+<strong>B.</strong> Predicting presence/absence of somatic alterations in cancer from diverse data modalities.
+In this study, we use functional readouts from TCGA as predictive features and the presence or absence of mutation in a given gene as labels.
+This reverses the primary direction of information flow shown in Panel A.
+<strong>C.</strong> Schematic of evaluation pipeline.</figcaption>
+</figure>
+</div>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
