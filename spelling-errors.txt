@@ -1,6 +1,7 @@
 arxiv
 AUPR
 AUROC
+BeadChip
 Benjamini
 biomarker
 BMIQ
@@ -28,6 +29,7 @@ hyperparameter
 hyperparameters
 ICGC
 IDH
+Illumina
 janeroe
 johndoe
 KRAS

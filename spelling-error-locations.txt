@@ -164,3 +164,11 @@ content/03.methods.md:97:KRAS
 content/03.methods.md:97:methylation
 content/03.methods.md:101:GDC
 content/03.methods.md:101:omics
+content/04.results.md:5:TCGA
+content/04.results.md:6:BeadChip
+content/04.results.md:6:Illumina
+content/04.results.md:6:methylation
+content/04.results.md:6:RPPA
+content/04.results.md:8:TCGA
+content/04.results.md:11:dataset
+content/04.results.md:21:TCGA

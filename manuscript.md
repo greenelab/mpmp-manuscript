@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2021-04-16'
+date-meta: '2021-04-19'
 author-meta:
 - John Doe
 - Jane Roe
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-16" />
-  <meta name="citation_publication_date" content="2021-04-16" />
+  <meta name="dc.date" content="2021-04-19" />
+  <meta name="citation_publication_date" content="2021-04-19" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/b269becbbf5efe5e8c30961c1ddae1393994625f/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/))
 was automatically generated
-from [greenelab/mpmp-manuscript@b269bec](https://github.com/greenelab/mpmp-manuscript/tree/b269becbbf5efe5e8c30961c1ddae1393994625f)
-on April 16, 2021.
+from [greenelab/mpmp-manuscript@a6ff04c](https://github.com/greenelab/mpmp-manuscript/tree/a6ff04c450348abc1ae2e216732a47be92129bc4)
+on April 19, 2021.
 </em></small>
 
 ## Authors
@@ -238,6 +238,33 @@ We selected these genes because we have previously observed that they have good 
 ### Data and code availability
 
 All analyses were implemented in the Python programming language and are available in the following GitHub repository: [`https://github.com/greenelab/mpmp`](https://github.com/greenelab/mpmp), under the open-source BSD 3-clause license. Scripts to download large data files from GDC and other sources are located in the `00_download_data` directory. Scripts to run experiments comparing data modalities used individually are located in the `02_classify_mutations` directory, and scripts to run multi-omics experiments are located in the `05_classify_mutations_multimodal` directory. The Python environment was managed using `conda`, and directions for setting up the environment can be found in the `README.md` file. All analyses were run locally on a CPU.
+
+
+## Results
+
+### Using diverse data modalities to predict cancer alterations
+
+We collected four different readouts from cancer samples in the TCGA Pan-Cancer Atlas, capturing four steps of cellular function that are perturbed by genetic alterations in cancer (Figure {@fig:overview}A).
+These included gene expression (RNA-seq data), DNA methylation (27K and 450K Illumina BeadChip arrays), protein abundance (RPPA data), and patterns of somatic mutation (mutational signatures).
+To link these diverse data modalities to changes in mutation status, we used elastic net logistic regression to predict the presence or absence of mutations in cancer genes, using these readouts as predictive features (Figure {@fig:overview}B).
+We evaluated the resulting mutation status classifiers in a pan-cancer setting, preserving the proportions of each of the 33 cancer types in TCGA for 8 train/test splits (4 folds x 2 replicates) in each of 107 cancer genes (Figure {@fig:overview}C).
+
+We sought to compare classifiers against a baseline where mutation labels are shuffled (to identify genes whose mutation status correlates strongly with a functional signature in a given data type), and also to compare classifiers trained on true labels across different data types (to identify data types that are more or less predictive of mutations in a given gene).
+To account for variation between dataset splits in making these comparisons, we treat classification metrics from the 8 train/test splits as performance distributions, which we compare using _t_-tests.
+We summarize performance across all genes in our cancer gene set using a similar approach to a volcano plot, in which each point is a gene.
+In our summary plots, the x-axis shows the magnitude of the change in the classification metric between conditions, and the y-axis shows the _p_-value for the associated _t_-test.
+Figure {@fig:overview}C illustrates this evaluation pipeline.
+
+![
+**A.** Cancer mutations can perturb cellular function via a variety of cellular processes.
+Arrows represent major potential paths of information flow from a somatic mutation in DNA to its resulting cell phenotype; circular arrow represents the ability of certain mutations (e.g. in DNA damage repair genes) to alter somatic mutation patterns.
+Note that this does not reflect all possible relationships between cellular processes: for instance, changes in gene expression can lead to changes in somatic mutation rates.
+**B.** Predicting presence/absence of somatic alterations in cancer from diverse data modalities.
+In this study, we use functional readouts from TCGA as predictive features and the presence or absence of mutation in a given gene as labels.
+This reverses the primary direction of information flow shown in Panel A.
+**C.** Schematic of evaluation pipeline.
+](images/figure_1.png){#fig:overview}
+
 
 
 ## References {.page_break_before}
