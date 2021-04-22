@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2021-04-19'
+date-meta: '2021-04-22'
 author-meta:
 - John Doe
 - Jane Roe
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-19" />
-  <meta name="citation_publication_date" content="2021-04-19" />
+  <meta name="dc.date" content="2021-04-22" />
+  <meta name="citation_publication_date" content="2021-04-22" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/a6ff04c450348abc1ae2e216732a47be92129bc4/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/))
 was automatically generated
-from [greenelab/mpmp-manuscript@a6ff04c](https://github.com/greenelab/mpmp-manuscript/tree/a6ff04c450348abc1ae2e216732a47be92129bc4)
-on April 19, 2021.
+from [greenelab/mpmp-manuscript@38817bf](https://github.com/greenelab/mpmp-manuscript/tree/38817bf4d9bf57508304a70c7adf1dda305458ed)
+on April 22, 2021.
 </em></small>
 
 ## Authors
