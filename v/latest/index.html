@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2021-04-22" />
+  <meta name="dcterms.date" content="2021-04-29" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-22" />
-  <meta name="citation_publication_date" content="2021-04-22" />
+  <meta name="dc.date" content="2021-04-29" />
+  <meta name="citation_publication_date" content="2021-04-29" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,10 +67,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/38817bf4d9bf57508304a70c7adf1dda305458ed">greenelab/mpmp-manuscript@38817bf</a>
-on April 22, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/72f9388df2d6cf52c01611d344a85ca2c88993be">greenelab/mpmp-manuscript@72f9388</a>
+on April 29, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -222,6 +222,28 @@ This reverses the primary direction of information flow shown in Panel A.
 <strong>C.</strong> Schematic of evaluation pipeline.</figcaption>
 </figure>
 </div>
+<h3 id="selection-of-cancer-related-genes-improves-predictive-signal">Selection of cancer-related genes improves predictive signal</h3>
+<p>As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
+Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>, and we sought to extend this to a broader list of gene sets.
+We compared a set of cancer-related genes from Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span> with a set of random genes having equal size, and a set of the most mutated genes in TCGA having equal size.
+For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples from all 33 cancer types (Figure <a href="#fig:expression_gene_sets">2</a>A).
+This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
+We then evaluated the performance for each target gene in each of the three gene sets.</p>
+<p>Figure <a href="#fig:expression_gene_sets">2</a>B summarizes performance for all genes in each gene set.
+Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count.
+Figures <a href="#fig:expression_gene_sets">2</a>C, <a href="#fig:expression_gene_sets">2</a>D, and <a href="#fig:expression_gene_sets">2</a>E show performance for each gene in the random gene set, most mutated gene set, and Vogelstein et al. gene set respectively.
+<!-- TODO: I'll fix these numbers once the missing genes stuff gets figured out/finishes running (gene counts for all three datasets will be the same then) -->
+<!-- https://github.com/greenelab/mpmp/issues/44 -->
+In total, for a significance threshold of <span class="math inline">\(\alpha = 0.001\)</span>, 60/98 genes (61.2%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 10/107 genes (9.35%) in the random gene set and 43/107 genes (40.2%) in the most mutated gene set.
+Additionally, Figure <a href="#fig:expression_gene_sets">2</a>D shows that many of the significant genes in the most mutated gene set are clustered close to the significance threshold, while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold in Figure <a href="#fig:expression_gene_sets">2</a>E (i.e. higher AUPR differences and lower <em>p</em>-values).
+These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.</p>
+<div id="fig:expression_gene_sets" class="fignos">
+<figure>
+<img src="images/figure_2.png" style="width:90.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>A.</strong> Overlap of TCGA samples between gene expression and MC3 somatic mutation data.
+<strong>B.</strong> Overall distribution of performance across 3 gene sets. Each data point represents mean cross-validated AUPR difference, compared with a baseline model trained on shuffled mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals. “random” = 107 random genes, “most mutated” = 107 most mutated genes, “Vogelstein et al.” = 107 cancer related genes from Vogelstein et al. 2013 gene set.
+<strong>C, D, E.</strong> Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the 3 gene sets. The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on shuffled labels, and the <em>y</em>-axis shows <em>p</em>-values for an unpaired <em>t</em>-test comparing cross-validated AUPR values.</figcaption>
+</figure>
+</div>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
@@ -324,7 +346,7 @@ DOI: <a href="https://doi.org/10.1101/2020.05.07.083386">10.1101/2020.05.07.0833
 <div id="ref-1z8H2EME">
 <p>17. <strong>Cancer transcriptome profiling at the juncture of clinical translation</strong> <br />
 Marcin Cieślik, Arul M. Chinnaiyan<br />
-<em>Nature Reviews Genetics</em> (2017-12-27) <a href="https://doi.org/gcsmnr">https://doi.org/gcsmnr</a> <br />
+<em>Nature Reviews Genetics</em> (2018-02) <a href="https://doi.org/gcsmnr">https://doi.org/gcsmnr</a> <br />
 DOI: <a href="https://doi.org/10.1038/nrg.2017.96">10.1038/nrg.2017.96</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29279605">29279605</a></p>
 </div>
 <div id="ref-Sp8RO1w7">
