@@ -36,7 +36,7 @@ KRAS
 LAML
 methylation
 myeloid
-omics
+Omics
 oncogenic
 OV
 overfitting

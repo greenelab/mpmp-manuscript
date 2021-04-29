@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2021-04-22'
+date-meta: '2021-04-29'
 author-meta:
 - John Doe
 - Jane Roe
@@ -19,8 +19,8 @@ header-includes: |-
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-04-22" />
-  <meta name="citation_publication_date" content="2021-04-22" />
+  <meta name="dc.date" content="2021-04-29" />
+  <meta name="citation_publication_date" content="2021-04-29" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/38817bf4d9bf57508304a70c7adf1dda305458ed/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/72f9388df2d6cf52c01611d344a85ca2c88993be/))
 was automatically generated
-from [greenelab/mpmp-manuscript@38817bf](https://github.com/greenelab/mpmp-manuscript/tree/38817bf4d9bf57508304a70c7adf1dda305458ed)
-on April 22, 2021.
+from [greenelab/mpmp-manuscript@72f9388](https://github.com/greenelab/mpmp-manuscript/tree/72f9388df2d6cf52c01611d344a85ca2c88993be)
+on April 29, 2021.
 </em></small>
 
 ## Authors
@@ -265,6 +265,29 @@ This reverses the primary direction of information flow shown in Panel A.
 **C.** Schematic of evaluation pipeline.
 ](images/figure_1.png){#fig:overview}
 
+### Selection of cancer-related genes improves predictive signal
+
+As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
+Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA [@doi:10.1186/s13059-020-02021-3], and we sought to extend this to a broader list of gene sets.
+We compared a set of cancer-related genes from Vogelstein et al. 2013 [@doi:10.1126/science.1235122] with a set of random genes having equal size, and a set of the most mutated genes in TCGA having equal size.
+For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples from all 33 cancer types (Figure {@fig:expression_gene_sets}A).
+This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
+We then evaluated the performance for each target gene in each of the three gene sets.
+
+Figure {@fig:expression_gene_sets}B summarizes performance for all genes in each gene set.
+Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count.
+Figures {@fig:expression_gene_sets}C, {@fig:expression_gene_sets}D, and {@fig:expression_gene_sets}E show performance for each gene in the random gene set, most mutated gene set, and Vogelstein et al. gene set respectively.
+<!-- TODO: I'll fix these numbers once the missing genes stuff gets figured out/finishes running (gene counts for all three datasets will be the same then) -->
+<!-- https://github.com/greenelab/mpmp/issues/44 -->
+In total, for a significance threshold of $\alpha = 0.001$, 60/98 genes (61.2%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 10/107 genes (9.35%) in the random gene set and 43/107 genes (40.2%) in the most mutated gene set.
+Additionally, Figure {@fig:expression_gene_sets}D shows that many of the significant genes in the most mutated gene set are clustered close to the significance threshold, while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold in Figure {@fig:expression_gene_sets}E (i.e. higher AUPR differences and lower _p_-values).
+These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.
+
+![
+**A.** Overlap of TCGA samples between gene expression and MC3 somatic mutation data.
+**B.** Overall distribution of performance across 3 gene sets. Each data point represents mean cross-validated AUPR difference, compared with a baseline model trained on shuffled mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals. "random" = 107 random genes, "most mutated" = 107 most mutated genes, "Vogelstein et al." = 107 cancer related genes from Vogelstein et al. 2013 gene set.
+**C, D, E.** Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the 3 gene sets. The _x_-axis shows the difference in mean AUPR compared with a baseline model trained on shuffled labels, and the _y_-axis shows _p_-values for an unpaired _t_-test comparing cross-validated AUPR values.
+](images/figure_2.png){#fig:expression_gene_sets width="90%"}
 
 
 ## References {.page_break_before}
