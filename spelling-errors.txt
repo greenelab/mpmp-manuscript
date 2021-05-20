@@ -14,6 +14,7 @@ CpG
 dataset
 datasets
 demethylation
+dimensionality
 EGFR
 eQTLs
 exome
@@ -32,11 +33,13 @@ IDH
 Illumina
 janeroe
 johndoe
+kinases
 KRAS
 LAML
 methylation
+microRNA
 myeloid
-Omics
+omics
 oncogenic
 OV
 overfitting
