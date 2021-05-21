@@ -23,6 +23,7 @@ genomic
 germline
 GISTIC
 glioma
+heatmap
 histone
 Hochberg
 hypermutated
@@ -60,6 +61,7 @@ TCGA
 TP
 tradeoff
 transcriptomic
+TSC
 univariate
 untransformed
 Vogelstein

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2021-05-20" />
+  <meta name="dcterms.date" content="2021-05-21" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-05-20" />
-  <meta name="citation_publication_date" content="2021-05-20" />
+  <meta name="dc.date" content="2021-05-21" />
+  <meta name="citation_publication_date" content="2021-05-21" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/0146d1530e9ee906d634dd42aadc0545aba0d77c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/0146d1530e9ee906d634dd42aadc0545aba0d77c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/0146d1530e9ee906d634dd42aadc0545aba0d77c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,10 +67,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/0146d1530e9ee906d634dd42aadc0545aba0d77c/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/0146d1530e9ee906d634dd42aadc0545aba0d77c">greenelab/mpmp-manuscript@0146d15</a>
-on May 20, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/35793a190dc0946a927c66733d5f18030f648ec7">greenelab/mpmp-manuscript@35793a1</a>
+on May 21, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -258,6 +258,11 @@ Performance using RPPA data is notable because of its drastically smaller dimens
 Mutations that are more predictable using RPPA data include <em>PIK3R1</em> and <em>MAP2K1</em> (Figure <a href="#fig:all_data">3</a>G).
 Both genes are kinases involved in phosphorylation-mediated signal transduction.
 The ability of RPPA technology to quantify protein phosphorylation status may thus provide an advantage in identifying mutations in these genes, relative to the other data types we used that cannot directly measure protein phosphorylation.</p>
+<p>When we constructed a heatmap depicting predictive performance for each gene across data types, we found that very few genes tended to be well-predicted exclusively by one or two data types (Figure <a href="#fig:heatmap">4</a>).
+Of the 39 genes that are well-predicted using at least one data type (blue or red highlighted boxes in Figure <a href="#fig:heatmap">4</a>), only three of them are well-predicted exclusively by a single data type, meaning that mutations in the other 37 genes can be predicted effectively using at least two different data sources.
+This supports our observation that choosing the “correct” data modality is often unimportant for driver genes with strong functional signatures.
+Notable exceptions included <em>NF1</em> (only well-predicted using gene expression data), <em>SETD2</em> (only well-predicted using the two methylation datasets), and <em>TSC1</em> (only well-predicted using gene expression data).
+Gene expression provided the best performance in 25/39 genes with at least one significant data type (red highlighted boxes in Figure <a href="#fig:heatmap">4</a>), but only 2 of those 25 genes did not have any other significantly predictive data types (<em>NF1</em> and <em>TSC1</em>); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.</p>
 <div id="fig:all_data" class="fignos">
 <figure>
 <img src="images/figure_5.png" style="width:90.0%" alt="" /><figcaption><span>Figure 3:</span> <strong>A.</strong> Overlap of TCGA samples between data types used in mutation prediction comparisons. Only overlaps with more than 100 samples are shown.
@@ -265,6 +270,11 @@ The ability of RPPA technology to quantify protein phosphorylation status may th
 <strong>C.</strong> Overall performance distribution per data type for genes where the permuted baseline model is significantly outperformed for one or more data types, resulting in a total of 39 genes.
 <strong>D, E, F.</strong> Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set, in each of the added data types (RPPA, microRNA, mutational signatures). The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds.
 <strong>G, H, I.</strong> Volcano-like plots comparing predictive performance between data types for each gene in the Vogelstein et al. gene set. The <em>x</em>-axis shows the difference in mean AUPR between gene expression and another data type (positive values = better mean performance using gene expression features), and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds.</figcaption>
+</figure>
+</div>
+<div id="fig:heatmap" class="fignos">
+<figure>
+<img src="images/figure_6.png" style="width:90.0%" alt="" /><figcaption><span>Figure 4:</span> Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides the best performance for the given gene, relative to other data types.</figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="references">References</h2>
