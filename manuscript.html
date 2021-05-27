@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2021-05-21" />
+  <meta name="dcterms.date" content="2021-05-27" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Manuscript Title</title>
   <style>
@@ -29,8 +29,8 @@
   <meta name="citation_title" content="Manuscript Title" />
   <meta property="og:title" content="Manuscript Title" />
   <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-05-21" />
-  <meta name="citation_publication_date" content="2021-05-21" />
+  <meta name="dc.date" content="2021-05-27" />
+  <meta name="citation_publication_date" content="2021-05-27" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -51,9 +51,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/f567ead9a855ddaccf68e1eb97e59dfa3cbb1920/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f567ead9a855ddaccf68e1eb97e59dfa3cbb1920/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f567ead9a855ddaccf68e1eb97e59dfa3cbb1920/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -67,10 +67,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/35793a190dc0946a927c66733d5f18030f648ec7/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/f567ead9a855ddaccf68e1eb97e59dfa3cbb1920/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/35793a190dc0946a927c66733d5f18030f648ec7">greenelab/mpmp-manuscript@35793a1</a>
-on May 21, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/f567ead9a855ddaccf68e1eb97e59dfa3cbb1920">greenelab/mpmp-manuscript@f567ead</a>
+on May 27, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -116,11 +116,12 @@ We focus on DNA methylation (27K and 450K probe chips), reverse phase protein ar
 Prior studies have identified univariate correlations of CpG site methylation <span class="citation" data-cites="UTtkLysq YBXY18s4">[<a href="#ref-UTtkLysq" role="doc-biblioref">25</a>,<a href="#ref-YBXY18s4" role="doc-biblioref">26</a>]</span> and correlations of RPPA protein profiles <span class="citation" data-cites="pRTkOXGI">[<a href="#ref-pRTkOXGI" role="doc-biblioref">27</a>]</span> with the presence or absence of certain driver mutations.
 Other relevant past work includes linking point mutations and copy number variants (CNVs) with changes in methylation and expression at individual genes <span class="citation" data-cites="ZuUqcptb lQ8oalgu">[<a href="#ref-ZuUqcptb" role="doc-biblioref">28</a>,<a href="#ref-lQ8oalgu" role="doc-biblioref">29</a>]</span> and identifying functional modules that are perturbed by somatic mutations <span class="citation" data-cites="StwDSCo7 1BMNB7BTo">[<a href="#ref-StwDSCo7" role="doc-biblioref">30</a>,<a href="#ref-1BMNB7BTo" role="doc-biblioref">31</a>]</span>.
 However, no direct comparison has been made between different data types for this application, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.</p>
-<p>We select a wide-ranging collection of potential cancer drivers with varying functions and roles in cancer development <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>.
+<p>We select a collection of potential cancer drivers with varying functions and roles in cancer development <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>.
 We use mutation status in these genes as labels to train classifiers, using each of the data types listed as training data, in a pan-cancer setting; we follow similar methods to the elastic net logistic regression approach described in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
-We show that although there is considerable predictive signal for many genes in each dataset relative to a random baseline, gene expression data tends to provide more effective predictions than the other data types in the vast majority of cases.
+We show that there is considerable predictive signal for many genes relative to a random baseline, and that gene expression and DNA methylation generally provide the best predictions of mutation state.
+Surprisingly, we find that across a variety of target genes, they are approximately equally effective predictors; the target gene, rather than the data type, is the primary determinant of performance.
 In addition, we observe that combining data types into a single multi-omics model provides little, if any, performance benefit over the most performant model using a single data type.
-Our results will help to inform the design of future functional genomics studies in cancer, suggesting that RNA sequencing can serve as a broadly effective first-line readout for a variety of genetic alterations.</p>
+Our results will help to inform the design of future functional genomics studies in cancer, suggesting that for many strong drivers with clear functional signatures, gene expression and DNA methylation measurements provide similar information content.</p>
 <h2 id="methods">Methods</h2>
 <h3 id="mutation-data-download-and-preprocessing">Mutation data download and preprocessing</h3>
 <p>To generate binary mutated/non-mutated gene labels for our machine learning model, we used mutation calls for TCGA samples from MC3 <span class="citation" data-cites="cDnF3a5Q">[<a href="#ref-cDnF3a5Q" role="doc-biblioref">33</a>]</span> and copy number threshold calls from GISTIC2.0 <span class="citation" data-cites="rDV1hhfF">[<a href="#ref-rDV1hhfF" role="doc-biblioref">34</a>]</span>.
@@ -143,44 +144,54 @@ For experiments where “raw” methylation data was used, we used the top 100,0
 For experiments where “compressed” methylation data was used, we used principal component analysis (PCA), as implemented in the <code>scikit-learn</code> Python library <span class="citation" data-cites="lF0Fr9LL">[<a href="#ref-lF0Fr9LL" role="doc-biblioref">35</a>]</span>, to extract the top 5,000 principal components from the methylation datasets.
 We initially applied the beta-mixture quantile normalization (BMIQ) method <span class="citation" data-cites="Zg2jmD6p">[<a href="#ref-Zg2jmD6p" role="doc-biblioref">36</a>]</span> to correct for variability in signal intensity between type I and type II probes, but we observed that this had no effect on our results.
 We report uncorrected results in the main paper for simplicity.</p>
-<p>To make a fair comparison in each of the experiments displayed in the results, we used the intersection of TCGA samples having measurements for all of the datasets being compared in that experiment.
-This resulted in 3 distinct sets of samples: 9,074 samples shared between {expression, mutation} data, 7,981 samples shared between {expression, mutation, 27K methylation, 450K methylation}, and 5,282 samples shared between {expression, mutation, 27K methylation, 450K methylation, RPPA, mutational signatures}.
+<h3 id="comparing-data-modalities">Comparing data modalities</h3>
+<p>We made three main comparisons in this study, listed in the results section: one between different sets of genes using only expression data, one comparing expression and DNA methylation data types, and one comparing all data types.
+This was mainly due to sample size limitations – running a single comparison using all data types would force us to use only samples that are profiled for every data type, which would discard a large number of samples that lack profiling on only one or a few data types.
+Thus, for each of the three comparisons, we used the intersection of TCGA samples having measurements for all of the datasets being compared in that experiment.
+This resulted in three distinct sets of samples: 9,074 samples shared between {expression, mutation} data, 7,981 samples shared between {expression, mutation, 27K methylation, 450K methylation}, and 5,226 samples shared between {expression, mutation, 27K methylation, 450K methylation, RPPA, microRNA, mutational signatures}.
 When we dropped samples between experiments as progressively more data types were added, we observed that the dropped samples had approximately the same cancer type proportions as the dataset as a whole.
 In other words, samples that were profiled for one data type but not another did not tend to come exclusively from one or a few cancer types.
 Exceptions included acute myeloid leukemia (LAML) which had no samples profiled in the RPPA data, and ovarian cancer (OV) which had only 8 samples with 450K methylation data.
 More detailed information on cancer type proportions profiled for each data type is provided in (the supplement).</p>
+<p>For each target gene, in order to ensure that the training dataset was reasonably balanced (i.e. that there would be enough mutated samples to train an effective classifier), we included only cancer types with at least 15 mutated samples and at least 5% mutated samples, which we refer to here as “valid” cancer types.
+After applying these filters, the number of valid cancer types remaining for each gene varied based on the set of samples used: more data types resulted in fewer shared samples, and fewer samples generally meant fewer valid cancer types.
+In some cases, this resulted in genes with no valid cancer types, which we dropped from the analysis.
+Out of the 127 genes from the original cancer gene set described in Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>, for the analysis using {expression, mutation} data we retained 85 target genes, for the {expression, mutation, 27k methylation, 450k methylation} analysis we retained 84 genes, and for the analysis using all data types we retained 75 genes.</p>
+<p>We additionally explored mutation prediction from gene expression alone using 3 gene sets of equal size: the cancer-related genes from Vogelstein et al. 2013 described above, a set of frequently mutated genes in TCGA, and a set of random genes with mutations profiled by MC3.
+To match the size of the Vogelstein et al. gene set, we took the 85 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
+For the random gene set, we first filtered to the set of all genes with 2 or more valid cancer types by the above criteria, then sampled 85 of these genes uniformly at random.
+Based on the results of the gene expression experiments, we used the Vogelstein et al. gene set for all subsequent experiments comparing -omics data types.</p>
 <h3 id="training-classifiers-to-detect-cancer-mutations">Training classifiers to detect cancer mutations</h3>
 <p>We trained logistic regression classifiers to predict whether or not a given sample has a mutational event in a given target gene, using data from various -omics datasets as explanatory variables.
-We explored mutation prediction from gene expression alone using 3 gene sets of equal size: a cancer-related gene dataset of 124 genes described in Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>, the most mutated genes in TCGA in descending order, and a set of random genes with mutations profiled by MC3.
-For each target gene, in order to ensure that the training dataset was reasonably balanced (i.e. that there would be enough mutated samples to train a classifier), we included only cancer types with at least 15 mutated samples and at least 5% mutated samples.
-After filtering for sufficient mutated samples, 17 of the genes from the Vogelstein et al. gene set had no valid cancer types remaining, leaving 107 genes with one or more valid cancer types to use in further analyses.
-To match the size of this gene set, we took the 107 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
-For our random gene set, we first filtered to the set of all genes with 2 or more valid cancer types by the above criteria, then sampled 107 of these genes uniformly at random.
-Based on the results of the gene expression experiments, we used the Vogelstein et al. cancer gene set for all subsequent experiments comparing -omics data types.</p>
-<p>Our model is trained on -omics data (<span class="math inline">\(X\)</span>) to predict mutation presence or absence (<span class="math inline">\(y\)</span>) in a target gene.
+Our model is trained on -omics data (<span class="math inline">\(X\)</span>) to predict mutation presence or absence (<span class="math inline">\(y\)</span>) in a target gene.
 To control for varying mutation burden per sample, and to adjust for potential cancer type-specific expression patterns, we included one-hot encoded cancer type and log<sub>10</sub>(sample mutation count) in the model as covariates.
-Since our -omics datasets tend to have many dimensions and comparatively few samples, we used logistic regression with an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">37</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
-Elastic net logistic regression finds the feature weights <span class="math inline">\(\hat{w} \in \mathbb{R}^{p}\)</span> solving the following optimization problem:<br />
-<span class="math display">\[\hat{w} = \text{argmin}_{w} \ \ell(X, y; w) + \alpha \lambda||w||_1 + \frac{1}{2}\alpha (1 - \lambda) ||w||_2\]</span></p>
-<p>where <span class="math inline">\(i \in \{1, \dots, n\}\)</span> denotes a sample in the dataset, <span class="math inline">\(X_i \in \mathbb{R}^{p}\)</span> denotes features (omics measurements) from the given sample, <span class="math inline">\(y_i \in \{0, 1\}\)</span> denotes the label (mutation presence/absence) for the given sample, and <span class="math inline">\(\ell(\cdot)\)</span> denotes the negative log-likelihood of the observed data given a particular choice of feature weights, i.e.<br />
-<span class="math display">\[\ell(X, y; w) = -\sum_{i=1}^{n} y_i \log\left(\frac{1}{1 + e^{-w^{\top}X_i}}\right) + (1 - y_i) \log\left(1 - \frac{1}{1 + e^{-w^{\top}X_i}}\right)\]</span></p>
+Since our -omics datasets tend to have many dimensions and comparatively few samples, we used an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">37</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
+Elastic net logistic regression finds the feature weights <span class="math inline">\(\hat{w} \in \mathbb{R}^{p}\)</span> solving the following optimization problem:</p>
+<p><span class="math display">\[\hat{w} = \text{argmin}_{w} \ \ell(X, y; w) + \alpha \lambda||w||_1 + \frac{1}{2}\alpha (1 - \lambda) ||w||_2\]</span></p>
+<p>where <span class="math inline">\(i \in \{1, \dots, n\}\)</span> denotes a sample in the dataset, <span class="math inline">\(X_i \in \mathbb{R}^{p}\)</span> denotes features (omics measurements) from the given sample, <span class="math inline">\(y_i \in \{0, 1\}\)</span> denotes the label (mutation presence/absence) for the given sample, and <span class="math inline">\(\ell(\cdot)\)</span> denotes the negative log-likelihood of the observed data given a particular choice of feature weights, i.e.</p>
+<p><span class="math display">\[\ell(X, y; w) = -\sum_{i=1}^{n} y_i \log\left(\frac{1}{1 + e^{-w^{\top}X_i}}\right) + (1 - y_i) \log\left(1 - \frac{1}{1 + e^{-w^{\top}X_i}}\right)\]</span></p>
 <p>This optimization problem leaves two hyperparameters to select: <span class="math inline">\(\alpha\)</span> (controlling the tradeoff between the data log-likelihood and the penalty on large feature weight values), and <span class="math inline">\(\lambda\)</span> (controlling the tradeoff between the L1 penalty and L2 penalty on the weight values).
-Although the elastic net loss function does not have a closed form solution, it is convex, and iterative optimization algorithms are commonly used for finding reasonable solutions.
+Although the elastic net optimization problem does not have a closed form solution, the loss function is convex, and iterative optimization algorithms are commonly used for finding reasonable solutions.
 For fixed values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\lambda\)</span>, we solved for <span class="math inline">\(\hat{w}\)</span> using stochastic gradient descent, as implemented in <code>scikit-learn</code>’s <code>SGDClassifier</code> method.</p>
-<p>Given weight values <span class="math inline">\(\hat{w}\)</span>, it is straightforward to predict the probability of a positive label (mutation in the target gene) <span class="math inline">\(P(y^{*} = 1 \mid X^{*}; \hat{w})\)</span> for a test sample <span class="math inline">\(X^{*}\)</span>:<br />
-<span class="math display">\[P(y^{*} = 1 \mid X^{*}; \hat{w}) = \frac{1}{1 + e^{-\hat{w}^{\top}X^{*}}}\]</span></p>
+<p>Given weight values <span class="math inline">\(\hat{w}\)</span>, it is straightforward to predict the probability of a positive label (mutation in the target gene) <span class="math inline">\(P(y^{*} = 1 \mid X^{*}; \hat{w})\)</span> for a test sample <span class="math inline">\(X^{*}\)</span>:</p>
+<p><span class="math display">\[P(y^{*} = 1 \mid X^{*}; \hat{w}) = \frac{1}{1 + e^{-\hat{w}^{\top}X^{*}}}\]</span></p>
 <p>and the probability of no mutation in the target gene, <span class="math inline">\(P(y^{*} = 0 \mid X^{*}; \hat{w})\)</span>, is given by (1 - the above quantity).</p>
 <p>For each target gene, we evaluated model performance using 2 replicates of 4-fold cross-validation, where train and test splits were stratified by cancer type and sample type.
 That is, each training set/test set combination had equal proportions of each cancer type (BRCA, SKCM, COAD, etc) and each sample type (primary tumor, recurrent tumor, etc).
-To choose the elastic net hyperparameters, we used 3-fold nested cross-validation, with a grid search over the same hyperparameter ranges used in Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>: <span class="math inline">\(\lambda\)</span> = [0.15, 0.16, 0.2, 0.25, 0.3, 0.4] and <span class="math inline">\(\alpha\)</span> = [0.1, 0.13, 0.15, 0.2, 0.25, 0.3].
-Using the grid search results, for each evaluation fold we selected the set of hyperparameters with the optimal area under the receiver-operator curve (AUROC), averaged over the three inner folds.</p>
+To choose the elastic net hyperparameters, we used 3-fold nested cross-validation, with a grid search over the following hyperparameter ranges: <span class="math inline">\(\lambda\)</span> = [0.0, 0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0] and <span class="math inline">\(\alpha\)</span> = [0.0001, 0.001, 0.01, 0.1, 1, 10].
+Using the grid search results, for each evaluation fold we selected the set of hyperparameters with the optimal area under the precision-recall curve (AUPR), averaged over the three inner folds.</p>
+<p>Although we stratified our train and test datasets for cancer type and sample type, we opted not to stratify by label.
+In other words, we did not ensure that cross-validation splits had proportions of positive (mutated) and negative (non-mutated) samples that were exactly equal to each other; we instead sampled randomly with respect to labels.
+Label-stratified cross-validation chooses test sets that have exactly the same label balance as the training set, which could select a model that is less robust to shifts in the label proportion than one that is trained and evaluated without controlling label balance.
+Particularly for the problem of mutation prediction, the proportion of samples that are mutated in a given cancer type or subtype often varies considerably, which makes robustness across variation in label proportions important.</p>
 <h3 id="evaluating-mutation-prediction-classifiers">Evaluating mutation prediction classifiers</h3>
 <p>To quantify classification performance for a continuous or probabilistic output, such as that provided by logistic regression, the area under the receiver-operator curve (AUROC) <span class="citation" data-cites="WTSzUd5Y">[<a href="#ref-WTSzUd5Y" role="doc-biblioref">38</a>]</span> and the area under the precision-recall curve (AUPR) <span class="citation" data-cites="pazxvNcz">[<a href="#ref-pazxvNcz" role="doc-biblioref">39</a>]</span> metrics are frequently used.
 These metrics summarize performance across a variety of binary label thresholds, rather than requiring choice of a single threshold to determine positive or negative predictions.
 In the main text, we report results using AUPR, summarized using average precision.
 AUPR has been shown to distinguish between models more accurately than AUROC when there are few positively labeled samples <span class="citation" data-cites="LB4mDas6 lWf6zHNO">[<a href="#ref-LB4mDas6" role="doc-biblioref">40</a>,<a href="#ref-lWf6zHNO" role="doc-biblioref">41</a>]</span>.
 As an additional correction for imbalanced labels, in many of the results in the main text we report the difference in AUPR between a classifier fit to true mutation labels, and a classifier fit to data where the mutation labels are randomly shuffled.
-In cases where mutation labels are highly imbalanced (very few mutated samples and many non-mutated samples), a classifier with shuffled labels may perform well simply by chance, e.g. by predicting the negative/non-mutated class for most samples.</p>
+In cases where mutation labels are highly imbalanced (very few mutated samples and many non-mutated samples), a classifier with shuffled labels may perform well simply by chance, e.g. by predicting the negative/non-mutated class for most samples.
+To maintain the same label balance for the classifiers with shuffled labels as the classifiers with the true labels, we shuffled labels separately in the train and test sets for each cross-validation split.</p>
 <p>Recall that for each target gene and each -omics dataset, we ran 2 replicates of 4-fold cross-validation, for a total of 8 performance results.
 To make a statistical comparison between two models using these performance distributions, we used paired-sample <em>t</em>-tests, where performance measurements derived from the same cross-validation fold are considered paired measurements.
 We used this approach to compare a model trained on true labels with a model trained on shuffled labels (addressing the question, “for the given gene using the given data type, can we predict mutation status better than random”), and to compare a model trained on data type A with a model trained on data type B (addressing the question, “for the given gene, can we make more effective mutation status predictions using data type A or data type B”).
@@ -205,7 +216,7 @@ We selected these genes because we have previously observed that they have good 
 <p>We collected five different data modalities from cancer samples in the TCGA Pan-Cancer Atlas, capturing five steps of cellular function that are perturbed by genetic alterations in cancer (Figure <a href="#fig:overview">1</a>A).
 These included gene expression (RNA-seq data), DNA methylation (27K and 450K Illumina BeadChip arrays), protein abundance (RPPA data), microRNA expression data, and patterns of somatic mutation (mutational signatures).
 To link these diverse data modalities to changes in mutation status, we used elastic net logistic regression to predict the presence or absence of mutations in cancer genes, using these readouts as predictive features (Figure <a href="#fig:overview">1</a>B).
-We evaluated the resulting mutation status classifiers in a pan-cancer setting, preserving the proportions of each of the 33 cancer types in TCGA for 8 train/test splits (4 folds x 2 replicates) in each of 107 cancer genes (Figure <a href="#fig:overview">1</a>C).</p>
+We evaluated the resulting mutation status classifiers in a pan-cancer setting, preserving the proportions of each of the 33 cancer types in TCGA for 8 train/test splits (4 folds x 2 replicates) in each of 85 cancer genes (Figure <a href="#fig:overview">1</a>C).</p>
 <p>We sought to compare classifiers against a baseline where mutation labels are permuted (to identify genes whose mutation status correlates strongly with a functional signature in a given data type), and also to compare classifiers trained on true labels across different data types (to identify data types that are more or less predictive of mutations in a given gene).
 To account for variation between dataset splits in making these comparisons, we treat classification metrics from the 8 train/test splits as performance distributions, which we compare using <em>t</em>-tests.
 We summarize performance across all genes in our cancer gene set using a similar approach to a volcano plot, in which each point is a gene.

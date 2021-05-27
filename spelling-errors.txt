@@ -23,7 +23,7 @@ genomic
 germline
 GISTIC
 glioma
-heatmap
+Heatmap
 histone
 Hochberg
 hypermutated
@@ -57,6 +57,7 @@ RPPA
 SBS
 SETD
 SKCM
+subtype
 TCGA
 TP
 tradeoff
