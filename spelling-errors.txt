@@ -5,6 +5,7 @@ BeadChip
 Benjamini
 biomarker
 BMIQ
+BRAF
 BRCA
 CNVs
 COAD
@@ -49,8 +50,10 @@ PCA
 performant
 phenotypes
 PIK
+preprocessed
 preprocessing
 proteomics
+PTEN
 quantile
 Ras
 RPPA
