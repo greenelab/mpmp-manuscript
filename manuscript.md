@@ -41,9 +41,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/de42a4240924ffe46d0d2033e248470bd409764d/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/de42a4240924ffe46d0d2033e248470bd409764d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/de42a4240924ffe46d0d2033e248470bd409764d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/de42a4240924ffe46d0d2033e248470bd409764d/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/))
 was automatically generated
-from [greenelab/mpmp-manuscript@de42a42](https://github.com/greenelab/mpmp-manuscript/tree/de42a4240924ffe46d0d2033e248470bd409764d)
+from [greenelab/mpmp-manuscript@385ee1c](https://github.com/greenelab/mpmp-manuscript/tree/385ee1c2dc502b19bb1f73d0d06a10b18a31c244)
 on May 27, 2021.
 </em></small>
 
@@ -111,14 +111,14 @@ While many methods exist to distinguish driver mutations from passenger mutation
 
 The Cancer Genome Atlas (TCGA) Pan-Cancer Atlas provides uniformly processed, multi-platform -omics measurements across tens of thousands of samples from 33 cancer types [@doi:10.1038/ng.2764].
 Enabled by this publicly available data, a growing body of work on linking the presence of driving genetic alterations in cancer to downstream gene expression changes has emerged.
-Recent studies have considered Ras pathway alteration status in colorectal cancer [@doi:10.1158/1078-0432.CCR-13-1943], alteration status across many cancer types in Ras genes [@doi:10.1016/j.celrep.2018.03.046; @doi:10.1093/bib/bbaa258], TP53 [@doi:10.1016/j.celrep.2018.03.076], and PIK3CA [@doi:10.1371/journal.pone.0241514], and alteration status across cancer types in frequently mutated genes [@doi:10.1186/s13059-020-02021-3].
+Recent studies have considered Ras pathway alteration status in colorectal cancer [@doi:10.1158/1078-0432.CCR-13-1943], alteration status across many cancer types in Ras genes [@doi:10.1016/j.celrep.2018.03.046; @doi:10.1093/bib/bbaa258], _TP53_ [@doi:10.1016/j.celrep.2018.03.076], and _PIK3CA_ [@doi:10.1371/journal.pone.0241514], and alteration status across cancer types in frequently mutated genes [@doi:10.1186/s13059-020-02021-3].
 More broadly, other groups have drawn on similar ideas to distinguish between the functional effects of different alterations in the same driver gene [@doi:10.1101/2020.06.02.128850], to link alterations with similar gene expression signatures within cancer types [@doi:10.1142/9789811215636_0031], and to identify trans-acting expression quantitative trait loci (trans-eQTLs) in germline genetic studies [@doi:10.1101/2020.05.07.083386].
 
 These studies share a common thread: they each combine genomic (point mutation and copy number variation) data with transcriptomic (RNA sequencing) data within samples to interrogate the functional effects of genetic variation.
 RNA sequencing is ubiquitous and cheap, and its experimental and computational methods are relatively mature, making it a vital tool for generating insight into cancer pathology [@doi:10.1038/nrg.2017.96].
 Some driver mutations, however, are known to act indirectly on gene expression through varying mechanisms.
-For example, oncogenic IDH1 and IDH2 mutations in glioma have been shown to interfere with histone demethylation, which results in increased DNA methylation and blocked cell differentiation [@doi:10.1056/NEJMoa0808710; @doi:10.1038/nature10860].
-Other genes implicated in aberrant DNA methylation in cancer include the TET family of genes [@doi:10.1016/j.tig.2014.07.005] and SETD2 [@doi:10.1101/cshperspect.a026468].
+For example, oncogenic _IDH1_ and _IDH2_ mutations in glioma have been shown to interfere with histone demethylation, which results in increased DNA methylation and blocked cell differentiation [@doi:10.1056/NEJMoa0808710; @doi:10.1038/nature10860].
+Other genes implicated in aberrant DNA methylation in cancer include the TET family of genes [@doi:10.1016/j.tig.2014.07.005] and _SETD2_ [@doi:10.1101/cshperspect.a026468].
 Certain driver mutations, such as those in DNA damage repair genes, may lead to detectable patterns of somatic mutation [@doi:10.1038/nrg3729].
 Additionally, correlation between gene expression and protein abundance in cancer cell lines is limited, and proteomics data could correspond more directly to certain cancer phenotypes and pathway perturbations [@doi:10.1016/j.cell.2019.12.023].
 In these contexts and others, integrating different data modalities or combining multiple data modalities could be more effective than relying solely on gene expression as a functional signature.
@@ -249,8 +249,8 @@ For gene expression we used all 15,639 genes available in our RNA sequencing dat
 To construct the multi-omics models, we considered each of the pairwise combinations of the datasets listed above, as well as a combination of all 3 datasets.
 When combining multiple datasets, we concatenated along the column axis, including covariates for cancer type and sample mutation burden as before.
 For all multi-omics experiments, we used only the samples from TCGA with data for all three data types (i.e. the same 7,981 samples used in the single-omics experiments comparing expression and methylation data types).
-Due to computational demands, we considered only a limited subset of the Vogelstein et al. genes as target genes, including EGFR, IDH1, KRAS, PIK3CA, SETD2 and TP53.
-We selected these genes because we have previously observed that they have good predictive performance, and they represent a combination of alterations that have strong gene expression signatures (KRAS, EGFR, IDH1, TP53) and strong DNA methylation signatures (IDH1, SETD2, TP53 to some degree).
+Due to computational demands, we considered only a limited subset of the Vogelstein et al. genes as target genes, including _EGFR_, _IDH1_, _KRAS_, _PIK3CA_, _SETD2_, and _TP53_.
+We selected these genes because we have previously observed that they have good predictive performance, and they represent a combination of alterations that have strong gene expression signatures (_KRAS_, _EGFR_, _IDH1_, _TP53_) and strong DNA methylation signatures (_IDH1_, _SETD2_, _TP53_).
 
 ### Data and code availability
 
@@ -340,6 +340,19 @@ The _x_-axis shows the number of PCA components used as features, "raw" = no PCA
 **G-H.** Predictive performance for each gene in the Vogelstein et al. gene set, comparing gene expression directly to each methylation dataset (with classifiers trained on true labels).
 ](images/figure_3.png){#fig:methylation width="90%"}
 
+Focusing on several selected genes of interest, we observed that relative classifier performance varies by gene (Figure {@fig:methylation_genes}).
+Past work has indicated that mutations in _TP53_ are highly predictable from gene expression data [@doi:10.1016/j.celrep.2018.03.076], and we saw that the methylation datasets provided similar predictive performance (Figure {@fig:methylation_genes}A).
+Similarly, for _IDH1_ both expression and methylation features result in similar performance, consistent with IDH1's known role in regulating both DNA methylation and gene expression (Figure {@fig:methylation_genes}D) [@doi:10.1038/ng.3457].
+Mutations in _KRAS_ and _ERBB2_ (_HER2_) were most predictable from gene expression data, and in both cases the methylation datasets significantly outperformed the baseline as well (Figure {@fig:methylation_genes}B and {@fig:methylation_genes}E).
+A detectable gene expression signature of _ERBB2_ overexpression has been identified in breast cancer [@doi:10.1038/sj.onc.1207361], and samples with activating _ERBB2_ mutations have been shown to share sensitivities to some small-molecule inhibitors across cancer types [@doi:10.1016/j.ccell.2019.09.001], consistent with the pan-cancer expression signature that we observed here.
+_NF1_ mutations were also most predictable from gene expression data, although the gene expression-based _NF1_ mutation classifier did not significantly outperform the baseline with permuted labels at a cutoff of $\alpha = 0.001$ (Figure {@fig:methylation_genes}C).
+_SETD2_ is an example of a gene that is more predictable from the methylation datasets than from gene expression, although gene expression with raw gene features significantly outperformed the permuted baseline as well (Figure {@fig:methylation_genes}F).
+_SETD2_ is widely mutated across cancer types and affects H3K36 histone methylation most directly, but SETD2-mediated changes in H3K36 methylation have been linked to dysregulation of diverse cellular processes including DNA methylation and RNA splicing [@doi:10.1101/cshperspect.a026468; @doi:10.1007/s00018-017-2517-x].
+
+![
+Performance across varying PCA dimensions for specific genes of interest. Dotted lines represent results for "raw" features (8,000 gene features for gene expression data and 8,000 CpG probes for both methylation datasets, selected by largest mean absolute deviation). Error bars and shaded regions show bootstrapped 95% confidence intervals. Stars in boxes show statistical testing results compared with permuted baseline model: each box refers to the model using the number of PCA components it is over (far right box = models with raw features). \*\*: _p_ < 0.01, \*\*\*: _p_ < 0.001, no stars: not statistically significant for a cutoff of _p_ = 0.05.
+](images/figure_4.png){#fig:methylation_genes width="90%"}
+
 ### Comparing six different readouts favors expression and DNA methylation
 
 Next, we expanded our comparison to all five functional data modalities (six total readouts, since there are two DNA methylation datasets) available in the TCGA Pan-Cancer Atlas.
@@ -357,12 +370,6 @@ Mutations that are more predictable using RPPA data include _PIK3R1_ and _MAP2K1
 Both genes are kinases involved in phosphorylation-mediated signal transduction.
 The ability of RPPA technology to quantify protein phosphorylation status may thus provide an advantage in identifying mutations in these genes, relative to the other data types we used that cannot directly measure protein phosphorylation.
 
-When we constructed a heatmap depicting predictive performance for each gene across data types, we found that very few genes tended to be well-predicted exclusively by one or two data types (Figure {@fig:heatmap}).
-Of the 39 genes that are well-predicted using at least one data type (blue or red highlighted boxes in Figure {@fig:heatmap}), only three of them are well-predicted exclusively by a single data type, meaning that mutations in the other 37 genes can be predicted effectively using at least two different data sources.
-This supports our observation that choosing the "correct" data modality is often unimportant for driver genes with strong functional signatures.
-Notable exceptions included _NF1_ (only well-predicted using gene expression data), _SETD2_ (only well-predicted using the two methylation datasets), and _TSC1_ (only well-predicted using gene expression data).
-Gene expression provided the best performance in 25/39 genes with at least one significant data type (red highlighted boxes in Figure {@fig:heatmap}), but only 2 of those 25 genes did not have any other significantly predictive data types (_NF1_ and _TSC1_); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.
-
 ![
 **A.** Overlap of TCGA samples between data types used in mutation prediction comparisons. Only overlaps with more than 100 samples are shown.
 **B.** Overall distribution of performance per data type across 75 genes from Vogelstein et al. gene set. Each data point represents mean cross-validated AUPR difference, compared with a baseline model trained on permuted labels, for one gene; notches show bootstrapped 95% confidence intervals.
@@ -370,6 +377,12 @@ Gene expression provided the best performance in 25/39 genes with at least one s
 **D, E, F.** Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set, in each of the added data types (RPPA, microRNA, mutational signatures). The _x_-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
 **G, H, I.** Volcano-like plots comparing predictive performance between data types for each gene in the Vogelstein et al. gene set. The _x_-axis shows the difference in mean AUPR between gene expression and another data type (positive values = better mean performance using gene expression features), and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
 ](images/figure_5.png){#fig:all_data width="90%"}
+
+When we constructed a heatmap depicting predictive performance for each gene across data types, we found that very few genes tended to be well-predicted exclusively by one or two data types (Figure {@fig:heatmap}).
+Of the 39 genes that are well-predicted using at least one data type (blue or red highlighted boxes in Figure {@fig:heatmap}), only three of them are well-predicted exclusively by a single data type, meaning that mutations in the other 37 genes can be predicted effectively using at least two different data sources.
+This supports our observation that choosing the "correct" data modality is often unimportant for driver genes with strong functional signatures.
+Notable exceptions included _NF1_ (only well-predicted using gene expression data), _SETD2_ (only well-predicted using the two methylation datasets), and _TSC1_ (only well-predicted using gene expression data).
+Gene expression provided the best performance in 25/39 genes with at least one significant data type (red highlighted boxes in Figure {@fig:heatmap}), but only 2 of those 25 genes did not have any other significantly predictive data types (_NF1_ and _TSC1_); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.
 
 ![
 Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides the best performance for the given gene, relative to other data types.
