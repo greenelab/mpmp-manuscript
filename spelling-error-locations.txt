@@ -328,3 +328,7 @@ content/04.results.md:149:AUPR
 content/04.results.md:149:omics
 content/04.results.md:149:omics
 content/04.results.md:149:omics
+content/06.acknowledgements.md:1:Acknowledgements
+content/06.acknowledgements.md:3:Heil
+content/06.acknowledgements.md:3:Pividori
+content/06.acknowledgements.md:4:BioRender

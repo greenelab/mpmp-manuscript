@@ -1,49 +1,62 @@
 ---
-title: Manuscript Title
+title: Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation
 keywords:
-- markdown
-- publishing
-- manubot
+- machine learning
+- functional genomics
+- gene expression
+- epigenetics
+- cancer
+- pan-cancer
 lang: en-US
-date-meta: '2021-05-27'
+date-meta: '2021-06-04'
 author-meta:
-- John Doe
-- Jane Roe
+- Jake Crawford
+- Brock C. Christensen
+- Maria Chikina
+- Casey S. Greene
 header-includes: |-
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Manuscript Title" />
-  <meta name="citation_title" content="Manuscript Title" />
-  <meta property="og:title" content="Manuscript Title" />
-  <meta property="twitter:title" content="Manuscript Title" />
-  <meta name="dc.date" content="2021-05-27" />
-  <meta name="citation_publication_date" content="2021-05-27" />
+  <meta name="dc.title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
+  <meta name="citation_title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
+  <meta property="og:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
+  <meta property="twitter:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
+  <meta name="dc.date" content="2021-06-04" />
+  <meta name="citation_publication_date" content="2021-06-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="John Doe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
-  <meta name="twitter:creator" content="@johndoe" />
-  <meta name="citation_author" content="Jane Roe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Jake Crawford" />
+  <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-6207-0782" />
+  <meta name="twitter:creator" content="@jjc2718" />
+  <meta name="citation_author" content="Brock C. Christensen" />
+  <meta name="citation_author_institution" content="Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA" />
+  <meta name="citation_author_orcid" content="0000-0003-3022-426X" />
+  <meta name="citation_author" content="Maria Chikina" />
+  <meta name="citation_author_institution" content="Department of Computational and Systems Biology, School of Medicine, University of Pittsburgh, Pittsburgh, PA, USA" />
+  <meta name="citation_author_orcid" content="0000-0003-2550-5403" />
+  <meta name="citation_author" content="Casey S. Greene" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, USA" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
+  <meta name="twitter:creator" content="@GreeneScientist" />
   <link rel="canonical" href="https://greenelab.github.io/mpmp-manuscript/" />
   <meta property="og:url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta property="twitter:url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/59f9440b0be99ae5c0083cd21ce1a91580c3e16d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/59f9440b0be99ae5c0083cd21ce1a91580c3e16d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/59f9440b0be99ae5c0083cd21ce1a91580c3e16d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -65,35 +78,56 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/385ee1c2dc502b19bb1f73d0d06a10b18a31c244/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/59f9440b0be99ae5c0083cd21ce1a91580c3e16d/))
 was automatically generated
-from [greenelab/mpmp-manuscript@385ee1c](https://github.com/greenelab/mpmp-manuscript/tree/385ee1c2dc502b19bb1f73d0d06a10b18a31c244)
-on May 27, 2021.
+from [greenelab/mpmp-manuscript@59f9440](https://github.com/greenelab/mpmp-manuscript/tree/59f9440b0be99ae5c0083cd21ce1a91580c3e16d)
+on June 4, 2021.
 </em></small>
 
 ## Authors
 
 
 
-+ **John Doe**<br>
++ **Jake Crawford**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0001-6207-0782](https://orcid.org/0000-0001-6207-0782)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
+    [jjc2718](https://github.com/jjc2718)
     · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [jjc2718](https://twitter.com/jjc2718)<br>
   <small>
-     Department of Something, University of Whatever
+     Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA; Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
+     · Funded by National Institutes of Health's National Cancer Institute (R01 CA237170); National Institutes of Health's National Human Genome Research Institute (R01 HG010067)
+  </small>
+
++ **Brock C. Christensen**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0003-3022-426X](https://orcid.org/0000-0003-3022-426X)<br>
+  <small>
+     Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
      · Funded by Grant XXXXXXXX
   </small>
 
-+ **Jane Roe**<br>
++ **Maria Chikina**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0003-2550-5403](https://orcid.org/0000-0003-2550-5403)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
+    [mchikina](https://github.com/mchikina)<br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Department of Computational and Systems Biology, School of Medicine, University of Pittsburgh, Pittsburgh, PA, USA
+     · Funded by Grant XXXXXXXX
+  </small>
+
++ **Casey S. Greene**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [cgreene](https://github.com/cgreene)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [GreeneScientist](https://twitter.com/GreeneScientist)<br>
+  <small>
+     Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO, USA
+     · Funded by National Institutes of Health's National Cancer Institute (R01 CA237170); National Institutes of Health's National Human Genome Research Institute (R01 HG010067)
   </small>
 
 
@@ -408,6 +442,13 @@ This supports our earlier observations of the redundancy of gene expression and 
 **A.** Comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best "multi-omics" model for each target gene. None of the differences between single-omics and multi-omics models were statistically significant using paired-sample _t_-tests across cross-validation folds, for a threshold of 0.05.
 **B-G.** Classifier performance, relative to baseline with permuted labels, for mutation prediction models trained on various combinations of data types. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).
 ](images/figure_7.png){#fig:multi_omics width="90%"}
+
+
+
+## Acknowledgements
+
+We would like to thank Alexandra Lee, Ben Heil, Milton Pividori, and Natalie Davidson for reviewing the software associated with this work and providing insightful feedback.
+Figure 1 (the schematic of the background and evaluation pipeline) was created using BioRender.com.
 
 
 
