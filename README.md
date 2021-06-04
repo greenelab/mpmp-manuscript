@@ -5,7 +5,6 @@
 [![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://greenelab.github.io/mpmp-manuscript/)
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://greenelab.github.io/mpmp-manuscript/manuscript.pdf)
 [![GitHub Actions Status](https://github.com/greenelab/mpmp-manuscript/workflows/Manubot/badge.svg)](https://github.com/greenelab/mpmp-manuscript/actions)
-[![Travis Build Status](https://travis-ci.com/greenelab/mpmp-manuscript.svg?branch=main)](https://travis-ci.com/greenelab/mpmp-manuscript)
 <!-- usage note: delete CI badges above for services not used by your manuscript -->
 
 ## Manuscript description
