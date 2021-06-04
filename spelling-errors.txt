@@ -32,7 +32,7 @@ germline
 GISTIC
 glioma
 GreeneScientist
-heatmap
+Heatmap
 Heil
 histone
 Hochberg
