@@ -61,9 +61,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/7e02c9f8f334675fd545b6f752cc558bcf22b69f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7e02c9f8f334675fd545b6f752cc558bcf22b69f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7e02c9f8f334675fd545b6f752cc558bcf22b69f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,9 +77,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/7e02c9f8f334675fd545b6f752cc558bcf22b69f/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/8a0befb345757aba77bb52fb5306123828348d6a">greenelab/mpmp-manuscript@8a0befb</a>
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/7e02c9f8f334675fd545b6f752cc558bcf22b69f">greenelab/mpmp-manuscript@7e02c9f</a>
 on June 7, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -388,6 +388,40 @@ This supports our earlier observations of the redundancy of gene expression and 
 <strong>B-G.</strong> Classifier performance, relative to baseline with permuted labels, for mutation prediction models trained on various combinations of data types. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).</figcaption>
 </figure>
 </div>
+<h2 id="discussion">Discussion</h2>
+<p>We carried out a large-scale comparison of data types in the TCGA Pan-Cancer Atlas as functional readouts of genetic alterations in cancer, integrating results across cancer types and across driver genes.
+Overall, we found that gene expression and DNA methylation tend to capture signatures of mutation state equally effectively in most cases, and that other data types (RPPA, microRNA, mutational signatures) were generally less effective at predicting mutation presence or absence.
+Our multi-omics modeling experiment indicated that the information captured by gene expression and DNA methylation is highly redundant, as added data types resulted in no gain or modest gains in classifier performance.</p>
+<p>Comparing mutation status prediction using raw and PCA compressed expression and DNA methylation data, we observed that feature extraction using PCA provided no benefit compared to using raw gene or CpG probe features.
+Other studies using DNA methylation array data have found that nonlinear dimension reduction methods, such as variational autoencoders and capsule networks, can be effective for extracting predictive features <span class="citation" data-cites="wOjMFUXP 6QcveIuY">[<a href="#ref-wOjMFUXP" role="doc-biblioref">46</a>,<a href="#ref-6QcveIuY" role="doc-biblioref">47</a>]</span>.
+The latter approach is especially interesting because capsule networks and “capsule-like methods” can be constrained to extract features that align with known biology (i.e. that correspond to known disease pathways or CpG site annotations).
+This can improve model interpretability as well as predictive performance.
+Similar methods have been applied to extract biologically informed features from gene expression data (see, for instance, <span class="citation" data-cites="1HfJnooMx 7kIfUrlF">[<a href="#ref-1HfJnooMx" role="doc-biblioref">48</a>,<a href="#ref-7kIfUrlF" role="doc-biblioref">49</a>]</span>).
+A more comprehensive study of dimension reduction methods in the context of mutation prediction, including the features selected by these methods and their biological relevance and interpretation, would be a beneficial area of future work.</p>
+<p>In contrast to many other studies demonstrating the benefits of integrating multiple -omics data types for various cancer-related prediction problems <span class="citation" data-cites="1AeRgHv3L tMmErZMX 4X1N4DJa shldZigM llajEDiU">[<a href="#ref-1AeRgHv3L" role="doc-biblioref">50</a>,<a href="#ref-tMmErZMX" role="doc-biblioref">51</a>,<a href="#ref-4X1N4DJa" role="doc-biblioref">52</a>,<a href="#ref-shldZigM" role="doc-biblioref">53</a>,<a href="#ref-llajEDiU" role="doc-biblioref">54</a>]</span>, we found that combining multiple data types to predict mutation status was generally not effective for this problem.
+The method we used to integrate different data types by concatenating feature sets is sometimes referred to as “early” data integration (discussed in more detail in <span class="citation" data-cites="gIhNaGUg">[<a href="#ref-gIhNaGUg" role="doc-biblioref">55</a>]</span> and <span class="citation" data-cites="NfKILi8i">[<a href="#ref-NfKILi8i" role="doc-biblioref">56</a>]</span>).
+It is possible that more sophisticated data integration methods, such as “intermediate” integration methods that learn a set of features jointly across datasets, would produce improved predictions.
+We do not interpret our results as concrete evidence that multi-omics integration is not effective for this problem; rather, we see them as an indication that this is a challenging data integration problem for which further investigation is needed.
+We also present this problem as a set of benchmark tasks on which multi-omics integration methods can be evaluated.
+In addition to the methodological questions, the issue of data integration also has implications for the underlying biology: a more nuanced understanding of when different data readouts provide redundant information, and when they can contribute unique information about cancer pathology and development, could have many translational applications.</p>
+<p>One limitation of the current study is that we only evaluated classifiers that were trained on pan-cancer data.
+Considering every possible combination of target gene and TCGA cancer type (85 target genes x 33 cancer types x 6 data types) would have drastically increased the computational load and presented a large multiple testing burden.
+Alternatively, choosing only a subset of gene/cancer type combinations to study would have biased our results toward known driver gene/cancer type relationships, which we wanted to avoid.
+In future work it would be interesting to identify classifiers that perform well in a certain cancer type but not in the pan-cancer context, and to compare these instances across different cancer types.
+As a motivating example, other studies have shown that activating mutations in Ras isoforms (<em>HRAS</em>, <em>KRAS</em>, <em>NRAS</em>) tend to have similar effects to one another in thyroid cancer, producing similar gene expression signatures <span class="citation" data-cites="odNCMbto">[<a href="#ref-odNCMbto" role="doc-biblioref">15</a>]</span>.
+In multiple myeloma, however, activating <em>KRAS</em> and <em>NRAS</em> mutations produce distinct expression signatures, necessitating separate classifiers <span class="citation" data-cites="1B2CloRMX">[<a href="#ref-1B2CloRMX" role="doc-biblioref">57</a>]</span>.
+A high-throughput computational pipeline to identify cases where functional signatures of a particular cancer driver are either concordant or discordant between cancer types could identify opportunities for context-specific protein function prediction, improve biomarker identification, and suggest cases where drugs targeting specific alterations might produce discordant results in different cancer types.</p>
+<p>As with any study relying on observational, cross-sectional data such as the TCGA Pan-Cancer Atlas, the conclusions that we can draw are limited by the data.
+In particular, for any of our “well-predicted” genes (i.e. genes that, when mutated, have strong signatures in one or more data types), we cannot definitively distinguish correlation from causation.
+To directly assess the effects of particular mutations on various data modalities, some studies use cell line data from sources such as the Cancer Cell Line Encyclopedia (CCLE) <span class="citation" data-cites="kcdvZmNN">[<a href="#ref-kcdvZmNN" role="doc-biblioref">58</a>]</span>.
+While this approach could help to isolate the causal effect of a given mutation on a given cell line, cell lines are sometimes an imperfect match for the cancers they are derived from <span class="citation" data-cites="2AuD4Mwu">[<a href="#ref-2AuD4Mwu" role="doc-biblioref">59</a>]</span>.
+We are also limited in that we cannot assign timing or clonal status to mutations, or fully characterize intratumor heterogeneity, with certainty from the bulk sequencing data generated by TCGA (although some features of tumor mutational processes over time can be estimated from bulk data, e.g. <span class="citation" data-cites="16yVVytBf">[<a href="#ref-16yVVytBf" role="doc-biblioref">60</a>]</span>).
+As methods for generating large longitudinal datasets at single-cell resolution mature and scale, we will need to revise the way we think about cellular function and dysregulation in cancer cells, as dynamic and adaptive processes rather than a single representative snapshot of a tumor.</p>
+<p>Based on our results, for studies focused on the functional consequences of cancer mutations, we recommend that researchers designing large-scale studies aiming to understand the regulatory state of cancers prioritize gene expression or DNA methylation as downstream readouts.
+On balance, prediction of mutation status was slightly better using gene expression data.
+However, the finding that DNA methylation profiles contain much of the same information will be useful for some study designs, given the varying stability of mRNA across storage methods and times.
+Results using RPPA measurements as predictive features were also promising, especially considering the substantially lower dimensionality of the RPPA dataset compared to other data types.
+Future technology advances, in both quality and quantity of data, are likely to improve our understanding of the full picture of functional consequences of mutations in cancer cells.</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>We would like to thank Alexandra Lee, Ben Heil, Milton Pividori, and Natalie Davidson for reviewing the software associated with this work and providing insightful feedback.
 Figure 1 (the schematic of the background and evaluation pipeline) was created using BioRender.com.</p>
@@ -661,6 +695,96 @@ DOI: <a href="https://doi.org/10.1016/j.ccell.2019.09.001">10.1016/j.ccell.2019.
 Stephen L. McDaniel, Brian D. Strahl<br />
 <em>Cellular and Molecular Life Sciences</em> (2017-04-06) <a href="https://doi.org/gbrd9b">https://doi.org/gbrd9b</a> <br />
 DOI: <a href="https://doi.org/10.1007/s00018-017-2517-x">10.1007/s00018-017-2517-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28386724">28386724</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545052">PMC5545052</a></p>
+</div>
+<div id="ref-wOjMFUXP">
+<p>46. <strong>MethylNet: an automated and modular deep learning approach for DNA methylation analysis</strong> <br />
+Joshua J. Levy, Alexander J. Titus, Curtis L. Petersen, Youdinghuan Chen, Lucas A. Salas, Brock C. Christensen<br />
+<em>BMC Bioinformatics</em> (2020-03-17) <a href="https://doi.org/ggxvrz">https://doi.org/ggxvrz</a> <br />
+DOI: <a href="https://doi.org/10.1186/s12859-020-3443-8">10.1186/s12859-020-3443-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32183722">32183722</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7076991">PMC7076991</a></p>
+</div>
+<div id="ref-6QcveIuY">
+<p>47. <strong>MethylSPWNet and MethylCapsNet: Biologically Motivated Organization of DNAm Neural Network, Inspired by Capsule Networks</strong> <br />
+Joshua J. Levy, Youdinghuan Chen, Nasim Azizgolshani, Curtis L. Petersen, Alexander J. Titus, Erika L. Moen, Louis J. Vaickus, Lucas A. Salas, Brock C. Christensen<br />
+<em>Cold Spring Harbor Laboratory</em> (2021-04-22) <a href="https://doi.org/gkcc42">https://doi.org/gkcc42</a> <br />
+DOI: <a href="https://doi.org/10.1101/2020.08.14.251306">10.1101/2020.08.14.251306</a></p>
+</div>
+<div id="ref-1HfJnooMx">
+<p>48. <strong>Predicting Drug Response and Synergy Using a Deep Learning Model of Human Cancer Cells</strong> <br />
+Brent M. Kuenzi, Jisoo Park, Samson H. Fong, Kyle S. Sanchez, John Lee, Jason F. Kreisberg, Jianzhu Ma, Trey Ideker<br />
+<em>Cancer Cell</em> (2020-11) <a href="https://doi.org/gh7z2n">https://doi.org/gh7z2n</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ccell.2020.09.014">10.1016/j.ccell.2020.09.014</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33096023">33096023</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7737474">PMC7737474</a></p>
+</div>
+<div id="ref-7kIfUrlF">
+<p>49. <strong>Biological Constraints Can Improve Prediction in Precision Oncology</strong> <br />
+Mohamed Omar, Lotte Mulder, Tendai Coady, Claudio Zanettini, Eddie Luidy Imada, Wikum Dinalankara, Laurent Younes, Donald Geman, Luigi Marchionni<br />
+<em>Cold Spring Harbor Laboratory</em> (2021-05-27) <a href="https://doi.org/gkcc43">https://doi.org/gkcc43</a> <br />
+DOI: <a href="https://doi.org/10.1101/2021.05.25.445604">10.1101/2021.05.25.445604</a></p>
+</div>
+<div id="ref-1AeRgHv3L">
+<p>50. <strong>Principles and methods of integrative genomic analyses in cancer</strong> <br />
+Vessela N. Kristensen, Ole Christian Lingjærde, Hege G. Russnes, Hans Kristian M. Vollan, Arnoldo Frigessi, Anne-Lise Børresen-Dale<br />
+<em>Nature Reviews Cancer</em> (2014-04-24) <a href="https://doi.org/gf66jv">https://doi.org/gf66jv</a> <br />
+DOI: <a href="https://doi.org/10.1038/nrc3721">10.1038/nrc3721</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24759209">24759209</a></p>
+</div>
+<div id="ref-tMmErZMX">
+<p>51. <strong>Predicting censored survival data based on the interactions between meta-dimensional omics data in breast cancer</strong> <br />
+Dokyoon Kim, Ruowang Li, Scott M. Dudek, Marylyn D. Ritchie<br />
+<em>Journal of Biomedical Informatics</em> (2015-08) <a href="https://doi.org/f7n49h">https://doi.org/f7n49h</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.jbi.2015.05.019">10.1016/j.jbi.2015.05.019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26048077">26048077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4550096">PMC4550096</a></p>
+</div>
+<div id="ref-4X1N4DJa">
+<p>52. <strong>Combining DNA methylation and RNA sequencing data of cancer for supervised knowledge extraction</strong> <br />
+Eleonora Cappelli, Giovanni Felici, Emanuel Weitschek<br />
+<em>BioData Mining</em> (2018-10-25) <a href="https://doi.org/gkcdbm">https://doi.org/gkcdbm</a> <br />
+DOI: <a href="https://doi.org/10.1186/s13040-018-0184-6">10.1186/s13040-018-0184-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30386434">30386434</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6203208">PMC6203208</a></p>
+</div>
+<div id="ref-shldZigM">
+<p>53. <strong>MOLI: multi-omics late integration with deep neural networks for drug response prediction</strong> <br />
+Hossein Sharifi-Noghabi, Olga Zolotareva, Colin C Collins, Martin Ester<br />
+<em>Bioinformatics</em> (2019-07) <a href="https://doi.org/fxbz">https://doi.org/fxbz</a> <br />
+DOI: <a href="https://doi.org/10.1093/bioinformatics/btz318">10.1093/bioinformatics/btz318</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31510700">31510700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6612815">PMC6612815</a></p>
+</div>
+<div id="ref-llajEDiU">
+<p>54. <strong>Accurate cancer phenotype prediction with AKLIMATE, a stacked kernel learner integrating multimodal genomic data and pathway knowledge</strong> <br />
+Vladislav Uzunangelov, Christopher K. Wong, Joshua M. Stuart<br />
+<em>PLOS Computational Biology</em> (2021-04-16) <a href="https://doi.org/gkcdbn">https://doi.org/gkcdbn</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pcbi.1008878">10.1371/journal.pcbi.1008878</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33861732">33861732</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8081343">PMC8081343</a></p>
+</div>
+<div id="ref-gIhNaGUg">
+<p>55. <strong>Methods for biological data integration: perspectives and challenges</strong> <br />
+Vladimir Gligorijević, Nataša Pržulj<br />
+<em>Journal of The Royal Society Interface</em> (2015-11-06) <a href="https://doi.org/bdzp">https://doi.org/bdzp</a> <br />
+DOI: <a href="https://doi.org/10.1098/rsif.2015.0571">10.1098/rsif.2015.0571</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26490630">26490630</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685837">PMC4685837</a></p>
+</div>
+<div id="ref-NfKILi8i">
+<p>56. <strong>Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities</strong> <br />
+Marinka Zitnik, Francis Nguyen, Bo Wang, Jure Leskovec, Anna Goldenberg, Michael M. Hoffman<br />
+<em>Information Fusion</em> (2019-10) <a href="https://doi.org/gf7rj8">https://doi.org/gf7rj8</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.inffus.2018.09.012">10.1016/j.inffus.2018.09.012</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30467459">30467459</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6242341">PMC6242341</a></p>
+</div>
+<div id="ref-1B2CloRMX">
+<p>57. <strong>Integrated phosphoproteomics and transcriptional classifiers reveal hidden RAS signaling dynamics in multiple myeloma</strong> <br />
+Yu-Hsiu T. Lin, Gregory P. Way, Benjamin G. Barwick, Margarette C. Mariano, Makeba Marcoulis, Ian D. Ferguson, Christoph Driessen, Lawrence H. Boise, Casey S. Greene, Arun P. Wiita<br />
+<em>Blood Advances</em> (2019-11-12) <a href="https://doi.org/gg7m56">https://doi.org/gg7m56</a> <br />
+DOI: <a href="https://doi.org/10.1182/bloodadvances.2019000303">10.1182/bloodadvances.2019000303</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31698452">31698452</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6855123">PMC6855123</a></p>
+</div>
+<div id="ref-kcdvZmNN">
+<p>58. <strong>Next-generation characterization of the Cancer Cell Line Encyclopedia</strong> <br />
+Mahmoud Ghandi, Franklin W. Huang, Judit Jané-Valbuena, Gregory V. Kryukov, Christopher C. Lo, E. Robert McDonald, Jordi Barretina, Ellen T. Gelfand, Craig M. Bielski, Haoxin Li, … William R. Sellers<br />
+<em>Nature</em> (2019-05-08) <a href="https://doi.org/gf2m3h">https://doi.org/gf2m3h</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41586-019-1186-3">10.1038/s41586-019-1186-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31068700">31068700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6697103">PMC6697103</a></p>
+</div>
+<div id="ref-2AuD4Mwu">
+<p>59. <strong>Comprehensive transcriptomic analysis of cell lines as models of primary tumors across 22 tumor types</strong> <br />
+K. Yu, B. Chen, D. Aran, J. Charalel, C. Yau, D. M. Wolf, L. J. van ‘t Veer, A. J. Butte, T. Goldstein, M. Sirota<br />
+<em>Nature Communications</em> (2019-08-08) <a href="https://doi.org/ggh7t7">https://doi.org/ggh7t7</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41467-019-11415-2">10.1038/s41467-019-11415-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31395879">31395879</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6687785">PMC6687785</a></p>
+</div>
+<div id="ref-16yVVytBf">
+<p>60. <strong>Clonal status of actionable driver events and the timing of mutational processes in cancer evolution</strong> <br />
+Nicholas McGranahan, Francesco Favero, Elza C. de Bruin, Nicolai Juul Birkbak, Zoltan Szallasi, Charles Swanton<br />
+<em>Science Translational Medicine</em> (2015-04-15) <a href="https://doi.org/f7f83d">https://doi.org/f7f83d</a> <br />
+DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed.aaa1408</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25877892">25877892</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636056">PMC4636056</a></p>
 </div>
 </div>
 <!-- default theme -->
