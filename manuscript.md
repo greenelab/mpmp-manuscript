@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-06-04'
+date-meta: '2021-06-07'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-06-04" />
-  <meta name="citation_publication_date" content="2021-06-04" />
+  <meta name="dc.date" content="2021-06-07" />
+  <meta name="citation_publication_date" content="2021-06-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/a9fb1d965bd9615b071a7c7bb68a7188a3879581/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a9fb1d965bd9615b071a7c7bb68a7188a3879581/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a9fb1d965bd9615b071a7c7bb68a7188a3879581/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/a9fb1d965bd9615b071a7c7bb68a7188a3879581/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/8a0befb345757aba77bb52fb5306123828348d6a/))
 was automatically generated
-from [greenelab/mpmp-manuscript@a9fb1d9](https://github.com/greenelab/mpmp-manuscript/tree/a9fb1d965bd9615b071a7c7bb68a7188a3879581)
-on June 4, 2021.
+from [greenelab/mpmp-manuscript@8a0befb](https://github.com/greenelab/mpmp-manuscript/tree/8a0befb345757aba77bb52fb5306123828348d6a)
+on June 7, 2021.
 </em></small>
 
 ## Authors
@@ -134,6 +134,18 @@ on June 4, 2021.
 
 ## Abstract {.page_break_before}
 
+In studies of cellular function in cancer, researchers are increasingly able to choose from many -omics assays as functional readouts.
+Choosing the correct readout for a given study can be difficult, and it is not always clear which layer of cellular function is most suitable to capture the relevant signal.
+In this study, we consider prediction of cancer mutation status (presence or absence) from functional -omics data as a representative problem.
+Since functional signatures of cancer mutation have been identified across many data types, this problem presents an opportunity to quantify and compare the ability of different -omics readouts to capture signals of dysregulation in cancer.
+The TCGA Pan-Cancer Atlas contains genetic alteration data including somatic mutations and copy number variants (CNVs), as well as several -omics data types.
+From TCGA, we focus on RNA sequencing, DNA methylation arrays, reverse phase protein arrays (RPPA), microRNA, and somatic mutational signatures as -omics readouts.
+
+Across a collection of cancer-associated genetic alterations, RNA sequencing and DNA methylation were the most effective predictors of alteration state.
+Surprisingly, we found that for most alterations, they were approximately equally effective predictors.
+The target gene was the primary driver of performance, rather than the data type, and there was little difference between the top data types for the majority of genes.
+We also found that combining data types into a single multi-omics model often provided little or no improvement in predictive ability over the best individual data type.
+Based on our results, for the design of studies focused on the functional outcomes of cancer mutations, we recommend focusing on gene expression or DNA methylation as first-line readouts.
 
 
 
