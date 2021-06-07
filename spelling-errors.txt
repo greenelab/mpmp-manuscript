@@ -2,6 +2,7 @@ Acknowledgements
 arxiv
 AUPR
 AUROC
+autoencoders
 BeadChip
 Benjamini
 biomarker
@@ -9,6 +10,7 @@ BioRender
 BMIQ
 BRAF
 BRCA
+CCLE
 cgreene
 Chikina
 CNVs
@@ -36,12 +38,16 @@ Heatmap
 Heil
 histone
 Hochberg
+HRAS
 hypermutated
 hyperparameter
 hyperparameters
 ICGC
 IDH
 Illumina
+interpretability
+intratumor
+isoforms
 jjc
 kinases
 KRAS
@@ -49,7 +55,10 @@ LAML
 mchikina
 methylation
 microRNA
+mRNA
 myeloid
+myeloma
+NRAS
 omics
 oncogenic
 OV
@@ -76,9 +85,10 @@ TCGA
 TP
 tradeoff
 transcriptomic
-Translational
+translational
 TSC
 univariate
 untransformed
+variational
 Vogelstein
 XXXXXXXX
