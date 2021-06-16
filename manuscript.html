@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-06-09" />
+  <meta name="dcterms.date" content="2021-06-16" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation</title>
   <style>
@@ -31,8 +31,8 @@
   <meta name="citation_title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-06-09" />
-  <meta name="citation_publication_date" content="2021-06-09" />
+  <meta name="dc.date" content="2021-06-16" />
+  <meta name="citation_publication_date" content="2021-06-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -61,9 +61,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b582189960bad94c34bd23bb1c417366911d3108/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b582189960bad94c34bd23bb1c417366911d3108/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b582189960bad94c34bd23bb1c417366911d3108/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,10 +77,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/b582189960bad94c34bd23bb1c417366911d3108/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/b582189960bad94c34bd23bb1c417366911d3108">greenelab/mpmp-manuscript@b582189</a>
-on June 9, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/e3b80fb282b8c0e03452a73a0d4e0be11f621a74">greenelab/mpmp-manuscript@e3b80fb</a>
+on June 16, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -342,12 +342,12 @@ As with previous experiments, we limited our comparison to the set of samples pr
 The data types with the most missing samples were RPPA data (2,215 samples that were missing RPPA data) and 450K methylation (630 samples that were missing 450K methylation data) (Figure <a href="#fig:all_data">5</a>A).
 Summarized over all genes in the Vogelstein et al. dataset, we observed that gene expression and both methylation datasets tended to produce similar quality predictions, and these tended to be slightly better than the remaining data types (Figure <a href="#fig:all_data">5</a>B).
 For the set of genes having at least one significant predictor (i.e. “well-predicted” genes), median performance using gene expression was slightly higher than for the methylation data types, although this difference was not statistically significant (Figure <a href="#fig:all_data">5</a>C).</p>
-<p>On the individual gene level, mutations in 25/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 24/75 genes from microRNA data and 3/75 genes from mutational signatures data (Figure <a href="#fig:all_data">5</a>D-F).
-For the remaining data types on this smaller set of samples, 34/75 genes outperformed the baseline for gene expression data, 32/75 for 27k methylation, and 30/75 for 450k methylation.
+<p>On the individual gene level, mutations in 26/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 23/75 genes from microRNA data and 0/75 genes from mutational signatures data (Figure <a href="#fig:all_data">5</a>D-F).
+For the remaining data types on this smaller set of samples, 35/75 genes outperformed the baseline for gene expression data, 34/75 for 27k methylation, and 31/75 for 450k methylation.
 Compared to the methylation experiments shown in Figure <a href="#fig:methylation">3</a>, we observed slightly fewer “well-predicted” genes for the expression and methylation datasets here (likely due to the considerably smaller sample size) but relative performance was comparable (Supplementary Figure <a href="#fig:all_volcano_me">10</a>).
-Direct comparisons between each added data type and gene expression data showed that RPPA data produces comparable or improved predictions for a small number of genes (Figure <a href="#fig:all_data">5</a>G), but microRNA and mutational signatures data generally provide similar or worse performance (Figure <a href="#fig:all_data">5</a>H-I).
-Performance using RPPA data is notable because of its drastically smaller dimensionality than the other data types (190 proteins, compared to thousands of features for the expression and methylation data types), suggesting that each protein abundance measurement provides a high information content.
-Mutations that are more predictable using RPPA data include <em>PIK3R1</em> and <em>MAP2K1</em> (Figure <a href="#fig:all_data">5</a>G).
+Direct comparisons between each added data type and gene expression data showed that RPPA, microRNA and mutational signatures data generally provide similar or worse performance than the remaining data types (Figure <a href="#fig:all_data">5</a>G-I).
+Performance using RPPA data (Figure <a href="#fig:all_data">5</a>G) is notable because of its drastically smaller dimensionality than the other data types (190 proteins, compared to thousands of features for the expression and methylation data types), suggesting that each protein abundance measurement provides a high information content.
+Mutations that are more predictable using RPPA data include <em>PIK3R1</em> and <em>MAP2K1</em> (Figure <a href="#fig:all_data">5</a>G), although neither classifier significantly outperforms the permuted baseline.
 Both genes are kinases involved in phosphorylation-mediated signal transduction.
 The ability of RPPA technology to quantify protein phosphorylation status may thus provide an advantage in identifying mutations in these genes, relative to the other data types we used that cannot directly measure protein phosphorylation.</p>
 <div id="fig:all_data" class="fignos">
