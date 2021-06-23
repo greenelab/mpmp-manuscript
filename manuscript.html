@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-06-16" />
+  <meta name="dcterms.date" content="2021-06-23" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation</title>
   <style>
@@ -31,8 +31,8 @@
   <meta name="citation_title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-06-16" />
-  <meta name="citation_publication_date" content="2021-06-16" />
+  <meta name="dc.date" content="2021-06-23" />
+  <meta name="citation_publication_date" content="2021-06-23" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -61,9 +61,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,10 +77,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/e3b80fb282b8c0e03452a73a0d4e0be11f621a74/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/e3b80fb282b8c0e03452a73a0d4e0be11f621a74">greenelab/mpmp-manuscript@e3b80fb</a>
-on June 16, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/635eda3824fc41c032808e1edbe4a234916ba020">greenelab/mpmp-manuscript@635eda3</a>
+on June 23, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -220,10 +220,6 @@ For fixed values of <span class="math inline">\(\alpha\)</span> and <span class=
 That is, each training set/test set combination had equal proportions of each cancer type (BRCA, SKCM, COAD, etc) and each sample type (primary tumor, recurrent tumor, etc).
 To choose the elastic net hyperparameters, we used 3-fold nested cross-validation, with a grid search over the following hyperparameter ranges: <span class="math inline">\(\lambda\)</span> = [0.0, 0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0] and <span class="math inline">\(\alpha\)</span> = [0.0001, 0.001, 0.01, 0.1, 1, 10].
 Using the grid search results, for each evaluation fold we selected the set of hyperparameters with the optimal area under the precision-recall curve (AUPR), averaged over the three inner folds.</p>
-<p>Although we stratified our train and test datasets for cancer type and sample type, we opted not to stratify by label.
-In other words, we did not ensure that cross-validation splits had proportions of positive (mutated) and negative (non-mutated) samples that were exactly equal to each other; we instead sampled randomly with respect to labels.
-Label-stratified cross-validation chooses test sets that have exactly the same label balance as the training set, which could select a model that is less robust to shifts in the label proportion than one that is trained and evaluated without controlling label balance.
-Particularly for the problem of mutation prediction, the proportion of samples that are mutated in a given cancer type or subtype often varies considerably, which makes robustness across variation in label proportions important.</p>
 <h3 id="evaluating-mutation-prediction-classifiers">Evaluating mutation prediction classifiers</h3>
 <p>To quantify classification performance for a continuous or probabilistic output, such as that provided by logistic regression, the area under the receiver-operator curve (AUROC) <span class="citation" data-cites="WTSzUd5Y">[<a href="#ref-WTSzUd5Y" role="doc-biblioref">38</a>]</span> and the area under the precision-recall curve (AUPR) <span class="citation" data-cites="pazxvNcz">[<a href="#ref-pazxvNcz" role="doc-biblioref">39</a>]</span> metrics are frequently used.
 These metrics summarize performance across a variety of binary label thresholds, rather than requiring choice of a single threshold to determine positive or negative predictions.
@@ -247,7 +243,7 @@ For gene expression we used all 15,639 genes available in our RNA sequencing dat
 <p>To construct the multi-omics models, we considered each of the pairwise combinations of the datasets listed above, as well as a combination of all 3 datasets.
 When combining multiple datasets, we concatenated along the column axis, including covariates for cancer type and sample mutation burden as before.
 For all multi-omics experiments, we used only the samples from TCGA with data for all three data types (i.e. the same 7,981 samples used in the single-omics experiments comparing expression and methylation data types).
-Due to computational demands, we considered only a limited subset of the Vogelstein et al. genes as target genes, including <em>EGFR</em>, <em>IDH1</em>, <em>KRAS</em>, <em>PIK3CA</em>, <em>SETD2</em>, and <em>TP53</em>.
+We considered a limited subset of well-performing genes from the Vogelstein et al. gene set as target genes, including <em>EGFR</em>, <em>IDH1</em>, <em>KRAS</em>, <em>PIK3CA</em>, <em>SETD2</em>, and <em>TP53</em>.
 We selected these genes because we have previously observed that they have good predictive performance, and they represent a combination of alterations that have strong gene expression signatures (<em>KRAS</em>, <em>EGFR</em>, <em>IDH1</em>, <em>TP53</em>) and strong DNA methylation signatures (<em>IDH1</em>, <em>SETD2</em>, <em>TP53</em>).</p>
 <h3 id="data-and-code-availability">Data and code availability</h3>
 <p>All analyses were implemented in the Python programming language and are available in the following GitHub repository: <a href="https://github.com/greenelab/mpmp"><code>https://github.com/greenelab/mpmp</code></a>, under the open-source BSD 3-clause license. Scripts to download large data files from GDC and other sources are located in the <code>00_download_data</code> directory. Scripts to run experiments comparing data modalities used individually are located in the <code>02_classify_mutations</code> directory, and scripts to run multi-omics experiments are located in the <code>05_classify_mutations_multimodal</code> directory. The Python environment was managed using <code>conda</code>, and directions for setting up the environment can be found in the <code>README.md</code> file. All analyses were run locally on a CPU.</p>
@@ -260,8 +256,7 @@ We evaluated the resulting mutation status classifiers in a pan-cancer setting, 
 <p>We sought to compare classifiers against a baseline where mutation labels are permuted (to identify genes whose mutation status correlates strongly with a functional signature in a given data type), and also to compare classifiers trained on true labels across different data types (to identify data types that are more or less predictive of mutations in a given gene).
 To account for variation between dataset splits in making these comparisons, we treat classification metrics from the 8 train/test splits as performance distributions, which we compare using <em>t</em>-tests.
 We summarize performance across all genes in our cancer gene set using a similar approach to a volcano plot, in which each point is a gene.
-In our summary plots, the x-axis shows the magnitude of the change in the classification metric between conditions, and the y-axis shows the <em>p</em>-value for the associated <em>t</em>-test.
-Figure <a href="#fig:overview">1</a>C illustrates this evaluation pipeline.</p>
+In our summary plots, the x-axis shows the magnitude of the change in the classification metric between conditions, and the y-axis shows the <em>p</em>-value for the associated <em>t</em>-test (Figure <a href="#fig:overview">1</a>C).</p>
 <div id="fig:overview" class="fignos">
 <figure>
 <img src="images/figure_1.png" alt="" /><figcaption><span>Figure 1:</span> <strong>A.</strong> Cancer mutations can perturb cellular function via a variety of cellular processes.
@@ -277,20 +272,18 @@ This reverses the primary direction of information flow shown in Panel A.
 <p>As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
 Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>, and we sought to extend this to a broader list of gene sets.
 We compared a set of cancer-related genes from Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span> with a set of random genes having equal size, and a set of the most mutated genes in TCGA having equal size.
-For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples from all 33 cancer types (Figure <a href="#fig:expression_gene_sets">2</a>A).
+For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples from all 33 cancer types.
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
 We then evaluated the performance for each target gene in each of the three gene sets.</p>
-<p>Figure <a href="#fig:expression_gene_sets">2</a>B summarizes performance for all genes in each gene set.
-Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count.
-Figures <a href="#fig:expression_gene_sets">2</a>C, <a href="#fig:expression_gene_sets">2</a>D, and <a href="#fig:expression_gene_sets">2</a>E show performance for each gene in the random gene set, most mutated gene set, and Vogelstein et al. gene set respectively.
+<p>Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count (Figure <a href="#fig:expression_gene_sets">2</a>A).
 In total, for a significance threshold of <span class="math inline">\(\alpha = 0.001\)</span>, 47/85 genes (55.3%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 12/85 genes (14.1%) in the random gene set and 15/85 genes (17.6%) in the most mutated gene set.
-Additionally, Figure <a href="#fig:expression_gene_sets">2</a>D shows that many of the significant genes in the most mutated gene set are clustered close to the significance threshold, while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold in Figure <a href="#fig:expression_gene_sets">2</a>E (i.e. higher AUPR differences and lower <em>p</em>-values).
+Of the 12 significantly predictable genes in the random gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure <a href="#fig:expression_gene_sets">2</a>B), and of the 15 significantly predictable genes in the most mutated gne set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure <a href="#fig:expression_gene_sets">2</a>C).
+Additionally, many of the significant genes in the most mutated gene set are clustered close to the significance threshold (Figure <a href="#fig:expression_gene_sets">2</a>C), while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold (Figure <a href="#fig:expression_gene_sets">2</a>D, higher AUPR differences and lower <em>p</em>-values).
 These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.</p>
 <div id="fig:expression_gene_sets" class="fignos">
 <figure>
-<img src="images/figure_2.png" style="width:90.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>A.</strong> Overlap of TCGA samples between gene expression and MC3 somatic mutation data.
-<strong>B.</strong> Overall distribution of performance across 3 gene sets. Each data point represents mean cross-validated AUPR difference, compared with a baseline model trained on permuted mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals. “random” = 85 random genes, “most mutated” = 85 most mutated genes, “Vogelstein et al.” = 85 cancer related genes from Vogelstein et al. 2013 gene set.
-<strong>C, D, E.</strong> Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the 3 gene sets. The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds.</figcaption>
+<img src="images/figure_2.png" style="width:90.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>A.</strong> Overall distribution of performance across three gene sets, using gene expression (RNA-seq) data to predict mutations. Each data point represents the mean cross-validated AUPR difference, compared with a baseline model trained on permuted mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals. “random” = 85 random genes, “most mutated” = 85 most mutated genes, “Vogelstein et al.” = 85 cancer related genes from Vogelstein et al. 2013 gene set.
+<strong>B, C, D.</strong> Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the 3 gene sets. The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds. Points (genes) highlighted in red are overlapping between the Vogelstein gene set and either the random or most mutated gene set.</figcaption>
 </figure>
 </div>
 <h3 id="comparing-gene-expression-and-dna-methylation-reveals-widespread-redundancy">Comparing gene expression and DNA methylation reveals widespread redundancy</h3>
@@ -304,8 +297,8 @@ The most frequent missing data types were somatic mutation data (1,114 samples) 
 Performance distributions are similar for expression and methylation, and aggregate performance is also similar for models using both 8,000 raw features (genes or CpG probes for expression and methylation respectively, selected using mean absolute deviation) or 5,000 principal components.
 After filtering for genes that exceed the significance threshold, median gene expression with raw gene features is slightly higher than for other data types or for PCA preprocessed features, although confidence intervals overlap with the methylation data types (Figure <a href="#fig:methylation">3</a>C).
 Comparing distributions provides weak evidence that gene expression measurements may be a slightly better predictor of mutation status than DNA methylation, but the difference does not appear to be substantial.</p>
-<p>Considering each target gene in the Vogelstein gene set individually, we observed that 42/84 genes significantly outperformed the shuffled baseline using gene expression data, as compared to 42/84 genes for 27K methylation and 39/84 genes for 450K methylation (Figure <a href="#fig:methylation">3</a>D-F, more information in Supplementary Figure <a href="#fig:methylation_heatmap">9</a>).
-Genes in the top right of Figure <a href="#fig:methylation">3</a>D-F are well predicted using the relevant data type (high mean difference vs. permuted baseline and low <em>p</em>-value); in most cases these well-predicted genes tended to be similar between data types.
+<p>Considering each target gene in the Vogelstein gene set individually, we observed that 42/84 genes significantly outperformed the permuted baseline using gene expression data, as compared to 42/84 genes for 27K methylation and 39/84 genes for 450K methylation (Figure <a href="#fig:methylation">3</a>D-F, more information in Supplementary Figure <a href="#fig:methylation_heatmap">9</a>).
+In most cases, these “well-predicted” genes that outperformed the permuted baseline tended to be similar between data types (Figure <a href="#fig:methylation">3</a>D-F; genes in the top right of each plot).
 For example, <em>TP53</em>, <em>BRAF</em>, and <em>PTEN</em> appear in the top right of all 3 plots, suggesting that mutations in these genes have strong gene expression and DNA methylation signatures, and these signatures tend to be preserved across cancer types.</p>
 <p>In addition to comparing mutation classifiers trained on different data types to the permuted baseline, we also compared classifiers trained on true labels directly to each other, using a similar methodology (Figure <a href="#fig:methylation">3</a>G-H).
 We observed that 6/100 genes were significantly more predictable from expression data than 27K methylation data, and 2/100 genes were significantly more predictable from expression data than 450K methylation data.
@@ -319,7 +312,7 @@ Only non-zero overlap counts are shown.
 <strong>B.</strong> Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
 The <em>x</em>-axis shows the number of PCA components used as features, “raw” = no PCA compression.
 <strong>C.</strong> Predictive performance for genes where at least one of the considered data types predicts mutation labels significantly better than the permuted baseline.
-<strong>D-F.</strong> Predictive performance for each gene in the Vogelstein et al. gene set, for each data type, compared with a baseline model trained on shuffled labels.
+<strong>D-F.</strong> Predictive performance for each gene in the Vogelstein et al. gene set, for each data type, compared with a baseline model trained on permuted labels.
 <strong>G-H.</strong> Predictive performance for each gene in the Vogelstein et al. gene set, comparing gene expression directly to each methylation dataset (with classifiers trained on true labels).</figcaption>
 </figure>
 </div>
@@ -327,7 +320,8 @@ The <em>x</em>-axis shows the number of PCA components used as features, “raw�
 Past work has indicated that mutations in <em>TP53</em> are highly predictable from gene expression data <span class="citation" data-cites="X6oQhIf8">[<a href="#ref-X6oQhIf8" role="doc-biblioref">11</a>]</span>, and we saw that the methylation datasets provided similar predictive performance (Figure <a href="#fig:methylation_genes">4</a>A).
 Similarly, for <em>IDH1</em> both expression and methylation features result in similar performance, consistent with IDH1’s known role in regulating both DNA methylation and gene expression (Figure <a href="#fig:methylation_genes">4</a>D) <span class="citation" data-cites="KGJwKXkD">[<a href="#ref-KGJwKXkD" role="doc-biblioref">42</a>]</span>.
 Mutations in <em>KRAS</em> and <em>ERBB2</em> (<em>HER2</em>) were most predictable from gene expression data, and in both cases the methylation datasets significantly outperformed the baseline as well (Figure <a href="#fig:methylation_genes">4</a>B and <a href="#fig:methylation_genes">4</a>E).
-A detectable gene expression signature of <em>ERBB2</em> overexpression has been identified in breast cancer <span class="citation" data-cites="uBEARk2">[<a href="#ref-uBEARk2" role="doc-biblioref">43</a>]</span>, and samples with activating <em>ERBB2</em> mutations have been shown to share sensitivities to some small-molecule inhibitors across cancer types <span class="citation" data-cites="1c8GokzT">[<a href="#ref-1c8GokzT" role="doc-biblioref">44</a>]</span>, consistent with the pan-cancer expression signature that we observed here.
+Gene expression signatures of <em>ERBB2</em> alterations are historically well-studied in breast cancer <span class="citation" data-cites="uBEARk2">[<a href="#ref-uBEARk2" role="doc-biblioref">43</a>]</span>, and samples with activating <em>ERBB2</em> mutations have recently been shown to share sensitivities to some small-molecule inhibitors across cancer types <span class="citation" data-cites="1c8GokzT">[<a href="#ref-1c8GokzT" role="doc-biblioref">44</a>]</span>.
+These observations are consistent with the pan-cancer <em>ERBB2</em> mutant-associated expression signature that we observed in this study.
 <em>NF1</em> mutations were also most predictable from gene expression data, although the gene expression-based <em>NF1</em> mutation classifier did not significantly outperform the baseline with permuted labels at a cutoff of <span class="math inline">\(\alpha = 0.001\)</span> (Figure <a href="#fig:methylation_genes">4</a>C).
 <em>SETD2</em> is an example of a gene that is more predictable from the methylation datasets than from gene expression, although gene expression with raw gene features significantly outperformed the permuted baseline as well (Figure <a href="#fig:methylation_genes">4</a>F).
 <em>SETD2</em> is widely mutated across cancer types and affects H3K36 histone methylation most directly, but SETD2-mediated changes in H3K36 methylation have been linked to dysregulation of diverse cellular processes including DNA methylation and RNA splicing <span class="citation" data-cites="rNm0rAz7 fdVKgtEF">[<a href="#ref-rNm0rAz7" role="doc-biblioref">21</a>,<a href="#ref-fdVKgtEF" role="doc-biblioref">45</a>]</span>.</p>
@@ -344,7 +338,7 @@ Summarized over all genes in the Vogelstein et al. dataset, we observed that ge
 For the set of genes having at least one significant predictor (i.e. “well-predicted” genes), median performance using gene expression was slightly higher than for the methylation data types, although this difference was not statistically significant (Figure <a href="#fig:all_data">5</a>C).</p>
 <p>On the individual gene level, mutations in 26/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 23/75 genes from microRNA data and 0/75 genes from mutational signatures data (Figure <a href="#fig:all_data">5</a>D-F).
 For the remaining data types on this smaller set of samples, 35/75 genes outperformed the baseline for gene expression data, 34/75 for 27k methylation, and 31/75 for 450k methylation.
-Compared to the methylation experiments shown in Figure <a href="#fig:methylation">3</a>, we observed slightly fewer “well-predicted” genes for the expression and methylation datasets here (likely due to the considerably smaller sample size) but relative performance was comparable (Supplementary Figure <a href="#fig:all_volcano_me">10</a>).
+Compared to the methylation experiments (Figure <a href="#fig:methylation">3</a>), we observed slightly fewer “well-predicted” genes for the expression and methylation datasets here (likely due to the considerably smaller sample size) but relative performance was comparable (Supplementary Figure <a href="#fig:all_volcano_me">10</a>).
 Direct comparisons between each added data type and gene expression data showed that RPPA, microRNA and mutational signatures data generally provide similar or worse performance than the remaining data types (Figure <a href="#fig:all_data">5</a>G-I).
 Performance using RPPA data (Figure <a href="#fig:all_data">5</a>G) is notable because of its drastically smaller dimensionality than the other data types (190 proteins, compared to thousands of features for the expression and methylation data types), suggesting that each protein abundance measurement provides a high information content.
 Mutations that are more predictable using RPPA data include <em>PIK3R1</em> and <em>MAP2K1</em> (Figure <a href="#fig:all_data">5</a>G), although neither classifier significantly outperforms the permuted baseline.
@@ -366,7 +360,7 @@ Notable exceptions included <em>NF1</em> (only well-predicted using gene express
 Gene expression provided the best performance in 25/39 genes with at least one significant data type (red highlighted boxes in Figure <a href="#fig:heatmap">6</a>), but only 2 of those 25 genes did not have any other significantly predictive data types (<em>NF1</em> and <em>TSC1</em>); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.</p>
 <div id="fig:heatmap" class="fignos">
 <figure>
-<img src="images/figure_6.png" style="width:90.0%" alt="" /><figcaption><span>Figure 6:</span> Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides the best performance for the given gene, relative to other data types.</figcaption>
+<img src="images/figure_6.png" style="width:90.0%" alt="" /><figcaption><span>Figure 6:</span> Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests with FDR correction).</figcaption>
 </figure>
 </div>
 <h3 id="simple-multi-omics-baseline-provides-no-performance-benefit">Simple multi-omics baseline provides no performance benefit</h3>
@@ -378,7 +372,7 @@ Here, we show results using the top 5000 principal components from each data typ
 <p>For each of the six target genes, we observed comparable performance between the best single-omics classifier (blue boxes in Figure <a href="#fig:multi_omics">7</a>A) and the best multi-omics classifier (orange boxes in Figure <a href="#fig:multi_omics">7</a>A).
 Across all classifiers and data types, we found varied patterns based on the target gene.
 For <em>IDH1</em> and <em>TP53</em> performance is relatively consistent regardless of data type(s), suggesting that baseline performance is high and there is little room for improvement as data is added (Figure <a href="#fig:multi_omics">7</a>C, G).
-For <em>EGFR</em>, <em>KRAS</em>, and <em>PIK3CA</em>, combining gene expression with methylation data seems to result in similar (although slightly improved) performance to gene expression alone; classifiers trained only on methylation data perform considerably worse (Figure <a href="#fig:multi_omics">7</a>B, D, E).
+For <em>EGFR</em>, <em>KRAS</em>, and <em>PIK3CA</em>, combining gene expression with methylation data results in statistically equivalent performance to gene expression alone; classifiers trained only on methylation data perform worse (Figure <a href="#fig:multi_omics">7</a>B, D, E).
 The best classifiers for <em>SETD2</em> use methylation data alone; results are comparable whether 27K methylation or 27K+450K methylation features are used (Figure <a href="#fig:multi_omics">7</a>F).
 Overall, we saw that combining data types in a relatively simple manner (i.e. by concatenating features from each individual data type) provided little or no improvement in predictive ability over the best individual data type.
 This supports our earlier observations of the redundancy of gene expression and methylation data as functional readouts, since our multi-omics classifiers are not in general able to extract gains in predictive performance as more data types are added for this set of cancer drivers.</p>
@@ -782,7 +776,7 @@ Figure 1 (the schematic of the background and evaluation pipeline) was created u
 </div>
 <div id="fig:methylation_heatmap" class="fignos">
 <figure>
-<img src="images/supp_figure_2.png" style="width:90.0%" alt="" /><figcaption><span>Figure 9:</span> Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides the best performance for the given gene, relative to other data types.</figcaption>
+<img src="images/supp_figure_2.png" style="width:90.0%" alt="" /><figcaption><span>Figure 9:</span> Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests with FDR correction).</figcaption>
 </figure>
 </div>
 <div id="fig:all_volcano_me" class="fignos">

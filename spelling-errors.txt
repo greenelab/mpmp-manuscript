@@ -40,6 +40,7 @@ genomic
 germline
 GISTIC
 glioma
+gne
 GreeneScientist
 heatmap
 Heil
@@ -80,7 +81,6 @@ NRAS
 omics
 oncogenic
 OV
-overexpression
 overfitting
 PAAD
 PanCanAtlas
@@ -97,14 +97,13 @@ proteomics
 PTEN
 quantile
 Ras
-rppa
+RPPA
 SARC
 SBS
 SETD
 sigs
 SKCM
 STAD
-subtype
 TCGA
 TGCT
 THCA
@@ -112,7 +111,7 @@ THYM
 TP
 tradeoff
 transcriptomic
-translational
+Translational
 TSC
 UCEC
 UCS
