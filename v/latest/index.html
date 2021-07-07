@@ -8,9 +8,9 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-06-23" />
+  <meta name="dcterms.date" content="2021-07-07" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
-  <title>Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation</title>
+  <title>Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -27,12 +27,12 @@
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta name="citation_title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta property="og:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta property="twitter:title" content="Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-06-23" />
-  <meta name="citation_publication_date" content="2021-06-23" />
+  <meta name="dc.title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
+  <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
+  <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
+  <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
+  <meta name="dc.date" content="2021-07-07" />
+  <meta name="citation_publication_date" content="2021-07-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -61,9 +61,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/a42145e9304766b0a8a79daa99c35f3de05fcff6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a42145e9304766b0a8a79daa99c35f3de05fcff6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/a42145e9304766b0a8a79daa99c35f3de05fcff6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -73,14 +73,14 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Prediction of cancer mutation states across multiple data modalities reveals the utility and redundancy of gene expression and DNA methylation</h1>
+<h1 class="title">Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation</h1>
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/635eda3824fc41c032808e1edbe4a234916ba020/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/a42145e9304766b0a8a79daa99c35f3de05fcff6/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/635eda3824fc41c032808e1edbe4a234916ba020">greenelab/mpmp-manuscript@635eda3</a>
-on June 23, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/a42145e9304766b0a8a79daa99c35f3de05fcff6">greenelab/mpmp-manuscript@a42145e</a>
+on July 7, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -125,7 +125,7 @@ Department of Biochemistry and Molecular Genetics, University of Colorado School
 </ul>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
 <p>In studies of cellular function in cancer, researchers are increasingly able to choose from many -omics assays as functional readouts.
-Choosing the correct readout for a given study can be difficult, and it is not always clear which layer of cellular function is most suitable to capture the relevant signal.
+Choosing the correct readout for a given study can be difficult, and which layer of cellular function is most suitable to capture the relevant signal may be unclear.
 In this study, we consider prediction of cancer mutation status (presence or absence) from functional -omics data as a representative problem.
 Since functional signatures of cancer mutation have been identified across many data types, this problem presents an opportunity to quantify and compare the ability of different -omics readouts to capture signals of dysregulation in cancer.
 The TCGA Pan-Cancer Atlas contains genetic alteration data including somatic mutations and copy number variants (CNVs), as well as several -omics data types.
@@ -137,7 +137,7 @@ We also found that combining data types into a single multi-omics model often pr
 Based on our results, for the design of studies focused on the functional outcomes of cancer mutations, we recommend focusing on gene expression or DNA methylation as first-line readouts.</p>
 <h2 id="introduction">Introduction</h2>
 <p>Although cancer can be initiated and driven by many different genetic alterations, these tend to converge on a limited number of pathways or signaling processes <span class="citation" data-cites="11ZPgRuLk">[<a href="#ref-11ZPgRuLk" role="doc-biblioref">1</a>]</span>.
-A comprehensive understanding of how diverse genetic alterations perturb these central pathways is vital to precision medicine and biomarker identification efforts, as driver mutation status alone confers limited prognostic information <span class="citation" data-cites="1CHUpIalb Lm19TMrZ">[<a href="#ref-1CHUpIalb" role="doc-biblioref">2</a>,<a href="#ref-Lm19TMrZ" role="doc-biblioref">3</a>]</span>.
+As driver mutation status alone confers limited prognostic information, a comprehensive understanding of how diverse genetic alterations perturb these central pathways is vital to precision medicine and biomarker identification efforts <span class="citation" data-cites="1CHUpIalb Lm19TMrZ">[<a href="#ref-1CHUpIalb" role="doc-biblioref">2</a>,<a href="#ref-Lm19TMrZ" role="doc-biblioref">3</a>]</span>.
 While many methods exist to distinguish driver mutations from passenger mutations based on genomic sequence characteristics <span class="citation" data-cites="MnWpJEWE YKm7IBTV 17HuO3ZJW">[<a href="#ref-MnWpJEWE" role="doc-biblioref">4</a>,<a href="#ref-YKm7IBTV" role="doc-biblioref">5</a>,<a href="#ref-17HuO3ZJW" role="doc-biblioref">6</a>]</span>, until recently it has been a challenge to connect driver mutations to downstream changes in gene expression and cellular function within individual tumor samples.</p>
 <p>The Cancer Genome Atlas (TCGA) Pan-Cancer Atlas provides uniformly processed, multi-platform -omics measurements across tens of thousands of samples from 33 cancer types <span class="citation" data-cites="AK17eOgD">[<a href="#ref-AK17eOgD" role="doc-biblioref">7</a>]</span>.
 Enabled by this publicly available data, a growing body of work on linking the presence of driving genetic alterations in cancer to downstream gene expression changes has emerged.
@@ -146,25 +146,25 @@ More broadly, other groups have drawn on similar ideas to distinguish between th
 <p>These studies share a common thread: they each combine genomic (point mutation and copy number variation) data with transcriptomic (RNA sequencing) data within samples to interrogate the functional effects of genetic variation.
 RNA sequencing is ubiquitous and cheap, and its experimental and computational methods are relatively mature, making it a vital tool for generating insight into cancer pathology <span class="citation" data-cites="1z8H2EME">[<a href="#ref-1z8H2EME" role="doc-biblioref">17</a>]</span>.
 Some driver mutations, however, are known to act indirectly on gene expression through varying mechanisms.
-For example, oncogenic <em>IDH1</em> and <em>IDH2</em> mutations in glioma have been shown to interfere with histone demethylation, which results in increased DNA methylation and blocked cell differentiation <span class="citation" data-cites="Sp8RO1w7 FYj8JHBX">[<a href="#ref-Sp8RO1w7" role="doc-biblioref">18</a>,<a href="#ref-FYj8JHBX" role="doc-biblioref">19</a>]</span>.
-Other genes implicated in aberrant DNA methylation in cancer include the TET family of genes <span class="citation" data-cites="19sDhpROP">[<a href="#ref-19sDhpROP" role="doc-biblioref">20</a>]</span> and <em>SETD2</em> <span class="citation" data-cites="rNm0rAz7">[<a href="#ref-rNm0rAz7" role="doc-biblioref">21</a>]</span>.
-Certain driver mutations, such as those in DNA damage repair genes, may lead to detectable patterns of somatic mutation <span class="citation" data-cites="18LSSJo3W">[<a href="#ref-18LSSJo3W" role="doc-biblioref">22</a>]</span>.
-Additionally, correlation between gene expression and protein abundance in cancer cell lines is limited, and proteomics data could correspond more directly to certain cancer phenotypes and pathway perturbations <span class="citation" data-cites="pWXLXywn">[<a href="#ref-pWXLXywn" role="doc-biblioref">23</a>]</span>.
+For example, oncogenic <em>IDH1</em> and <em>IDH2</em> mutations in glioma have been shown to interfere with histone demethylation, which results in increased DNA methylation and blocked cell differentiation <span class="citation" data-cites="1Cxnszz2L WN82rY7P Sp8RO1w7 FYj8JHBX">[<a href="#ref-1Cxnszz2L" role="doc-biblioref">18</a>,<a href="#ref-WN82rY7P" role="doc-biblioref">19</a>,<a href="#ref-Sp8RO1w7" role="doc-biblioref">20</a>,<a href="#ref-FYj8JHBX" role="doc-biblioref">21</a>]</span>.
+Other genes implicated in aberrant DNA methylation in cancer include the TET family of genes <span class="citation" data-cites="19sDhpROP">[<a href="#ref-19sDhpROP" role="doc-biblioref">22</a>]</span> and <em>SETD2</em> <span class="citation" data-cites="rNm0rAz7">[<a href="#ref-rNm0rAz7" role="doc-biblioref">23</a>]</span>.
+Certain driver mutations, such as those in DNA damage repair genes, may lead to detectable patterns of somatic mutation <span class="citation" data-cites="18LSSJo3W">[<a href="#ref-18LSSJo3W" role="doc-biblioref">24</a>]</span>.
+Additionally, correlation between gene expression and protein abundance in cancer cell lines is limited, and proteomics data could correspond more directly to certain cancer phenotypes and pathway perturbations <span class="citation" data-cites="pWXLXywn">[<a href="#ref-pWXLXywn" role="doc-biblioref">25</a>]</span>.
 In these contexts and others, integrating different data modalities or combining multiple data modalities could be more effective than relying solely on gene expression as a functional signature.</p>
-<p>Here, we seek to compare -omics data types profiled in the TCGA Pan-Cancer Atlas for use as a multivariate functional readout of genetic alterations in cancer.
-We focus on DNA methylation (27K and 450K probe chips), reverse phase protein array (RPPA), and mutational signatures data <span class="citation" data-cites="11yRODwNY">[<a href="#ref-11yRODwNY" role="doc-biblioref">24</a>]</span> as alternative readouts.
-Prior studies have identified univariate correlations of CpG site methylation <span class="citation" data-cites="UTtkLysq YBXY18s4">[<a href="#ref-UTtkLysq" role="doc-biblioref">25</a>,<a href="#ref-YBXY18s4" role="doc-biblioref">26</a>]</span> and correlations of RPPA protein profiles <span class="citation" data-cites="pRTkOXGI">[<a href="#ref-pRTkOXGI" role="doc-biblioref">27</a>]</span> with the presence or absence of certain driver mutations.
-Other relevant past work includes linking point mutations and copy number variants (CNVs) with changes in methylation and expression at individual genes <span class="citation" data-cites="ZuUqcptb lQ8oalgu">[<a href="#ref-ZuUqcptb" role="doc-biblioref">28</a>,<a href="#ref-lQ8oalgu" role="doc-biblioref">29</a>]</span> and identifying functional modules that are perturbed by somatic mutations <span class="citation" data-cites="StwDSCo7 1BMNB7BTo">[<a href="#ref-StwDSCo7" role="doc-biblioref">30</a>,<a href="#ref-1BMNB7BTo" role="doc-biblioref">31</a>]</span>.
-However, no direct comparison has been made between different data types for this application, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.</p>
-<p>We select a collection of potential cancer drivers with varying functions and roles in cancer development <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>.
+<p>Here, we compare -omics data types profiled in the TCGA Pan-Cancer Atlas to evaluate use as a multivariate functional readout of genetic alterations in cancer.
+We focus on gene expression (RNA sequencing data), DNA methylation (27K and 450K probe chips), reverse phase protein array (RPPA), microRNA expression, and mutational signatures data <span class="citation" data-cites="11yRODwNY">[<a href="#ref-11yRODwNY" role="doc-biblioref">26</a>]</span> as possible readouts.
+Prior studies have identified univariate correlations of CpG site methylation <span class="citation" data-cites="UTtkLysq YBXY18s4">[<a href="#ref-UTtkLysq" role="doc-biblioref">27</a>,<a href="#ref-YBXY18s4" role="doc-biblioref">28</a>]</span> and correlations of RPPA protein profiles <span class="citation" data-cites="pRTkOXGI">[<a href="#ref-pRTkOXGI" role="doc-biblioref">29</a>]</span> with the presence or absence of certain driver mutations.
+Other relevant past work includes linking point mutations and copy number variants (CNVs) with changes in methylation and expression at individual genes <span class="citation" data-cites="ZuUqcptb lQ8oalgu">[<a href="#ref-ZuUqcptb" role="doc-biblioref">30</a>,<a href="#ref-lQ8oalgu" role="doc-biblioref">31</a>]</span> and identifying functional modules that are perturbed by somatic mutations <span class="citation" data-cites="StwDSCo7 1BMNB7BTo">[<a href="#ref-StwDSCo7" role="doc-biblioref">32</a>,<a href="#ref-1BMNB7BTo" role="doc-biblioref">33</a>]</span>.
+However, no direct comparison has been made among different data types for this application, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.</p>
+<p>We select a collection of potential cancer drivers with varying functions and roles in cancer development <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span>.
 We use mutation status in these genes as labels to train classifiers, using each of the data types listed as training data, in a pan-cancer setting; we follow similar methods to the elastic net logistic regression approach described in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
 We show that there is considerable predictive signal for many genes relative to a random baseline, and that gene expression and DNA methylation generally provide the best predictions of mutation state.
-Surprisingly, we find that across a variety of target genes, they are approximately equally effective predictors; the target gene, rather than the data type, is the primary determinant of performance.
+Surprisingly, we find that across a variety of target genes, gene expression and DNA methylation are approximately equally effective predictors; the target gene, rather than the data type, is the primary determinant of performance.
 In addition, we observe that combining data types into a single multi-omics model provides little, if any, performance benefit over the most performant model using a single data type.
 Our results will help to inform the design of future functional genomics studies in cancer, suggesting that for many strong drivers with clear functional signatures, gene expression and DNA methylation measurements provide similar information content.</p>
 <h2 id="methods">Methods</h2>
 <h3 id="mutation-data-download-and-preprocessing">Mutation data download and preprocessing</h3>
-<p>To generate binary mutated/non-mutated gene labels for our machine learning model, we used mutation calls for TCGA samples from MC3 <span class="citation" data-cites="cDnF3a5Q">[<a href="#ref-cDnF3a5Q" role="doc-biblioref">33</a>]</span> and copy number threshold calls from GISTIC2.0 <span class="citation" data-cites="rDV1hhfF">[<a href="#ref-rDV1hhfF" role="doc-biblioref">34</a>]</span>.
+<p>To generate binary mutated/non-mutated gene labels for our machine learning model, we used mutation calls for TCGA samples from MC3 <span class="citation" data-cites="cDnF3a5Q">[<a href="#ref-cDnF3a5Q" role="doc-biblioref">35</a>]</span> and copy number threshold calls from GISTIC2.0 <span class="citation" data-cites="rDV1hhfF">[<a href="#ref-rDV1hhfF" role="doc-biblioref">36</a>]</span>.
 MC3 mutation calls were downloaded from the Genome Data Commons (GDC) of the National Cancer Institute, at <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas"><code>https://gdc.cancer.gov/about-data/publications/pancanatlas</code></a>.
 Copy number threshold calls are from an older version of PanCanAtlas, and are available here: <a href="https://figshare.com/articles/dataset/TCGA_PanCanAtlas_Copy_Number_Data/6144122"><code>https://figshare.com/articles/dataset/TCGA_PanCanAtlas_Copy_Number_Data/6144122</code></a>.
 We removed hypermutated samples (defined as five or more standard deviations above the mean non-silent somatic mutation count) from our dataset to reduce the number of false positives (i.e., non-driver mutations).
@@ -174,15 +174,15 @@ We also included copy number gains in the target gene for oncogenes, and copy nu
 <h3 id="omics-data-download-and-preprocessing">Omics data download and preprocessing</h3>
 <p>RNA sequencing, 27K and 450K methylation array, and RPPA datasets for TCGA samples were all downloaded from GDC, at the same link provided above.
 Mutational signatures information for TCGA samples with whole-exome sequencing data was downloaded from the International Cancer Genome Consortium (ICGC) data portal, at <a href="https://dcc.icgc.org/releases/PCAWG/mutational_signatures/Signatures_in_Samples/SP_Signatures_in_Samples"><code>https://dcc.icgc.org/releases/PCAWG/mutational_signatures/Signatures_in_Samples/SP_Signatures_in_Samples</code></a>.
-For our experiments, we used only the “single base signature” (SBS) mutational signatures, generated in <span class="citation" data-cites="11yRODwNY">[<a href="#ref-11yRODwNY" role="doc-biblioref">24</a>]</span>.
+For our experiments, we used only the “single base signature” (SBS) mutational signatures, generated in <span class="citation" data-cites="11yRODwNY">[<a href="#ref-11yRODwNY" role="doc-biblioref">26</a>]</span>.
 We standardized (took z-scores of) each column of RNA sequencing and RPPA data; methylation data and mutational signatures data were left untransformed (beta values and mutation counts respectively), except in multi-omics experiments where all data types were standardized.
 For the RNA sequencing dataset, we used only the top 8,000 gene features by mean absolute deviation as predictors in our models, except in multi-omics experiments where all 15,639 genes were used.</p>
-<p>In order to remove missing values from the methylation datasets, we removed the 10 samples with the most missing values, then performed mean imputation for probes with 1 or 2 values missing.
+<p>To remove missing values from the methylation datasets, we removed the 10 samples with the most missing values, then performed mean imputation for probes with 1 or 2 values missing.
 All probes with missing values remaining after sample filtering and imputation were dropped from the analysis.
 This left us with 20,040 CpG probes in the 27K methylation dataset, and 370,961 CpG probes in the 450K methylation dataset.
 For experiments where “raw” methylation data was used, we used the top 100,000 probes in the 450K dataset by mean absolute deviation for computational efficiency, and we used all of the 20,040 probes in the 27K dataset.
-For experiments where “compressed” methylation data was used, we used principal component analysis (PCA), as implemented in the <code>scikit-learn</code> Python library <span class="citation" data-cites="lF0Fr9LL">[<a href="#ref-lF0Fr9LL" role="doc-biblioref">35</a>]</span>, to extract the top 5,000 principal components from the methylation datasets.
-We initially applied the beta-mixture quantile normalization (BMIQ) method <span class="citation" data-cites="Zg2jmD6p">[<a href="#ref-Zg2jmD6p" role="doc-biblioref">36</a>]</span> to correct for variability in signal intensity between type I and type II probes, but we observed that this had no effect on our results.
+For experiments where “compressed” methylation data was used, we used principal component analysis (PCA), as implemented in the <code>scikit-learn</code> Python library <span class="citation" data-cites="lF0Fr9LL">[<a href="#ref-lF0Fr9LL" role="doc-biblioref">37</a>]</span>, to extract the top 5,000 principal components from the methylation datasets.
+We initially applied the beta-mixture quantile normalization (BMIQ) method <span class="citation" data-cites="Zg2jmD6p">[<a href="#ref-Zg2jmD6p" role="doc-biblioref">38</a>]</span> to correct for variability in signal intensity between type I and type II probes, but we observed that this had no effect on our results.
 We report uncorrected results in the main paper for simplicity.</p>
 <h3 id="comparing-data-modalities">Comparing data modalities</h3>
 <p>We made three main comparisons in this study, listed in the results section: one between different sets of genes using only expression data, one comparing expression and DNA methylation data types, and one comparing all data types.
@@ -196,7 +196,7 @@ More detailed information on cancer type proportions profiled for each data type
 <p>For each target gene, in order to ensure that the training dataset was reasonably balanced (i.e. that there would be enough mutated samples to train an effective classifier), we included only cancer types with at least 15 mutated samples and at least 5% mutated samples, which we refer to here as “valid” cancer types.
 After applying these filters, the number of valid cancer types remaining for each gene varied based on the set of samples used: more data types resulted in fewer shared samples, and fewer samples generally meant fewer valid cancer types.
 In some cases, this resulted in genes with no valid cancer types, which we dropped from the analysis.
-Out of the 127 genes from the original cancer gene set described in Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>, for the analysis using {expression, mutation} data we retained 85 target genes, for the {expression, mutation, 27k methylation, 450k methylation} analysis we retained 84 genes, and for the analysis using all data types we retained 75 genes.</p>
+Out of the 127 genes from the original cancer gene set described in Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span>, for the analysis using {expression, mutation} data we retained 85 target genes, for the {expression, mutation, 27k methylation, 450k methylation} analysis we retained 84 genes, and for the analysis using all data types we retained 75 genes.</p>
 <p>We additionally explored mutation prediction from gene expression alone using 3 gene sets of equal size: the cancer-related genes from Vogelstein et al. 2013 described above, a set of frequently mutated genes in TCGA, and a set of random genes with mutations profiled by MC3.
 To match the size of the Vogelstein et al. gene set, we took the 85 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
 For the random gene set, we first filtered to the set of all genes with 2 or more valid cancer types by the above criteria, then sampled 85 of these genes uniformly at random.
@@ -205,7 +205,7 @@ Based on the results of the gene expression experiments, we used the Vogelstein 
 <p>We trained logistic regression classifiers to predict whether or not a given sample has a mutational event in a given target gene, using data from various -omics datasets as explanatory variables.
 Our model is trained on -omics data (<span class="math inline">\(X\)</span>) to predict mutation presence or absence (<span class="math inline">\(y\)</span>) in a target gene.
 To control for varying mutation burden per sample, and to adjust for potential cancer type-specific expression patterns, we included one-hot encoded cancer type and log<sub>10</sub>(sample mutation count) in the model as covariates.
-Since our -omics datasets tend to have many dimensions and comparatively few samples, we used an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">37</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
+Since our -omics datasets tend to have many dimensions and comparatively few samples, we used an elastic net penalty to prevent overfitting <span class="citation" data-cites="JZNkB8d7">[<a href="#ref-JZNkB8d7" role="doc-biblioref">39</a>]</span>, in line with the approach used in Way et al. 2018 <span class="citation" data-cites="17XHtmqPY">[<a href="#ref-17XHtmqPY" role="doc-biblioref">9</a>]</span> and Way et al. 2020 <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>.
 Elastic net logistic regression finds the feature weights <span class="math inline">\(\hat{w} \in \mathbb{R}^{p}\)</span> solving the following optimization problem:</p>
 <p><span class="math display">\[\hat{w} = \text{argmin}_{w} \ \ell(X, y; w) + \alpha \lambda||w||_1 + \frac{1}{2}\alpha (1 - \lambda) ||w||_2\]</span></p>
 <p>where <span class="math inline">\(i \in \{1, \dots, n\}\)</span> denotes a sample in the dataset, <span class="math inline">\(X_i \in \mathbb{R}^{p}\)</span> denotes features (omics measurements) from the given sample, <span class="math inline">\(y_i \in \{0, 1\}\)</span> denotes the label (mutation presence/absence) for the given sample, and <span class="math inline">\(\ell(\cdot)\)</span> denotes the negative log-likelihood of the observed data given a particular choice of feature weights, i.e.</p>
@@ -221,10 +221,10 @@ That is, each training set/test set combination had equal proportions of each ca
 To choose the elastic net hyperparameters, we used 3-fold nested cross-validation, with a grid search over the following hyperparameter ranges: <span class="math inline">\(\lambda\)</span> = [0.0, 0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 1.0] and <span class="math inline">\(\alpha\)</span> = [0.0001, 0.001, 0.01, 0.1, 1, 10].
 Using the grid search results, for each evaluation fold we selected the set of hyperparameters with the optimal area under the precision-recall curve (AUPR), averaged over the three inner folds.</p>
 <h3 id="evaluating-mutation-prediction-classifiers">Evaluating mutation prediction classifiers</h3>
-<p>To quantify classification performance for a continuous or probabilistic output, such as that provided by logistic regression, the area under the receiver-operator curve (AUROC) <span class="citation" data-cites="WTSzUd5Y">[<a href="#ref-WTSzUd5Y" role="doc-biblioref">38</a>]</span> and the area under the precision-recall curve (AUPR) <span class="citation" data-cites="pazxvNcz">[<a href="#ref-pazxvNcz" role="doc-biblioref">39</a>]</span> metrics are frequently used.
+<p>To quantify classification performance for a continuous or probabilistic output, such as that provided by logistic regression, the area under the receiver-operator curve (AUROC) <span class="citation" data-cites="WTSzUd5Y">[<a href="#ref-WTSzUd5Y" role="doc-biblioref">40</a>]</span> and the area under the precision-recall curve (AUPR) <span class="citation" data-cites="pazxvNcz">[<a href="#ref-pazxvNcz" role="doc-biblioref">41</a>]</span> metrics are frequently used.
 These metrics summarize performance across a variety of binary label thresholds, rather than requiring choice of a single threshold to determine positive or negative predictions.
 In the main text, we report results using AUPR, summarized using average precision.
-AUPR has been shown to distinguish between models more accurately than AUROC when there are few positively labeled samples <span class="citation" data-cites="LB4mDas6 lWf6zHNO">[<a href="#ref-LB4mDas6" role="doc-biblioref">40</a>,<a href="#ref-lWf6zHNO" role="doc-biblioref">41</a>]</span>.
+AUPR has been shown to distinguish between models more accurately than AUROC when there are few positively labeled samples <span class="citation" data-cites="LB4mDas6 lWf6zHNO">[<a href="#ref-LB4mDas6" role="doc-biblioref">42</a>,<a href="#ref-lWf6zHNO" role="doc-biblioref">43</a>]</span>.
 As an additional correction for imbalanced labels, in many of the results in the main text we report the difference in AUPR between a classifier fit to true mutation labels, and a classifier fit to data where the mutation labels are randomly shuffled.
 In cases where mutation labels are highly imbalanced (very few mutated samples and many non-mutated samples), a classifier with shuffled labels may perform well simply by chance, e.g. by predicting the negative/non-mutated class for most samples.
 To maintain the same label balance for the classifiers with shuffled labels as the classifiers with the true labels, we shuffled labels separately in the train and test sets for each cross-validation split.</p>
@@ -246,7 +246,11 @@ For all multi-omics experiments, we used only the samples from TCGA with data fo
 We considered a limited subset of well-performing genes from the Vogelstein et al. gene set as target genes, including <em>EGFR</em>, <em>IDH1</em>, <em>KRAS</em>, <em>PIK3CA</em>, <em>SETD2</em>, and <em>TP53</em>.
 We selected these genes because we have previously observed that they have good predictive performance, and they represent a combination of alterations that have strong gene expression signatures (<em>KRAS</em>, <em>EGFR</em>, <em>IDH1</em>, <em>TP53</em>) and strong DNA methylation signatures (<em>IDH1</em>, <em>SETD2</em>, <em>TP53</em>).</p>
 <h3 id="data-and-code-availability">Data and code availability</h3>
-<p>All analyses were implemented in the Python programming language and are available in the following GitHub repository: <a href="https://github.com/greenelab/mpmp"><code>https://github.com/greenelab/mpmp</code></a>, under the open-source BSD 3-clause license. Scripts to download large data files from GDC and other sources are located in the <code>00_download_data</code> directory. Scripts to run experiments comparing data modalities used individually are located in the <code>02_classify_mutations</code> directory, and scripts to run multi-omics experiments are located in the <code>05_classify_mutations_multimodal</code> directory. The Python environment was managed using <code>conda</code>, and directions for setting up the environment can be found in the <code>README.md</code> file. All analyses were run locally on a CPU.</p>
+<p>All analyses were implemented in the Python programming language and are available in the following GitHub repository: <a href="https://github.com/greenelab/mpmp"><code>https://github.com/greenelab/mpmp</code></a>, under the open-source BSD 3-clause license.
+Scripts to download large data files from GDC and other sources are located in the <code>00_download_data</code> directory.
+Scripts to run experiments comparing data modalities used individually are located in the <code>02_classify_mutations</code> directory, and scripts to run multi-omics experiments are located in the <code>05_classify_mutations_multimodal</code> directory.
+The Python environment was managed using <code>conda</code>, and directions for setting up the environment can be found in the <code>README.md</code> file. All analyses were run locally on a CPU.
+This manuscript was written using Manubot <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">44</a>]</span> and is available on GitHub at <a href="https://github.com/greenelab/mpmp-manuscript"><code>https://github.com/greenelab/mpmp-manuscript</code></a>.</p>
 <h2 id="results">Results</h2>
 <h3 id="using-diverse-data-modalities-to-predict-cancer-alterations">Using diverse data modalities to predict cancer alterations</h3>
 <p>We collected five different data modalities from cancer samples in the TCGA Pan-Cancer Atlas, capturing five steps of cellular function that are perturbed by genetic alterations in cancer (Figure <a href="#fig:overview">1</a>A).
@@ -271,7 +275,7 @@ This reverses the primary direction of information flow shown in Panel A.
 <h3 id="selection-of-cancer-related-genes-improves-predictive-signal">Selection of cancer-related genes improves predictive signal</h3>
 <p>As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
 Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>, and we sought to extend this to a broader list of gene sets.
-We compared a set of cancer-related genes from Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span> with a set of random genes having equal size, and a set of the most mutated genes in TCGA having equal size.
+We compared a set of cancer-related genes (n=85) from Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span> with an equal number of random genes (n=85) and an equal number of the most mutated genes in TCGA (n=85).
 For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples from all 33 cancer types.
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
 We then evaluated the performance for each target gene in each of the three gene sets.</p>
@@ -286,10 +290,10 @@ These results suggest that selecting target genes for mutation prediction based 
 <strong>B, C, D.</strong> Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the 3 gene sets. The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds. Points (genes) highlighted in red are overlapping between the Vogelstein gene set and either the random or most mutated gene set.</figcaption>
 </figure>
 </div>
-<h3 id="comparing-gene-expression-and-dna-methylation-reveals-widespread-redundancy">Comparing gene expression and DNA methylation reveals widespread redundancy</h3>
+<h3 id="gene-expression-and-dna-methylation-have-similar-mutation-prediction-performance">Gene expression and DNA methylation have similar mutation prediction performance</h3>
 <p>We compared gene expression with DNA methylation as downstream readouts of the effects of cancer alterations.
 In these analyses, we considered both the 27K probe and 450K probe methylation datasets generated for the TCGA Pan-Cancer Atlas.
-We performed this comparison using the cancer-related gene set derived from Vogelstein et al. <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">32</a>]</span>.
+We performed this comparison using the cancer-related gene set derived from Vogelstein et al. <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span>.
 We used samples that had data for each of the data types being compared, including somatic mutation data to generate mutation labels.
 This process retained 7,981 samples in the intersection of the expression, 27K methylation, 450K methylation, and mutation datasets, which we used for subsequent analyses.
 The most frequent missing data types were somatic mutation data (1,114 samples) and 450K methylation data (1,072 samples) (Figure <a href="#fig:methylation">3</a>A).</p>
@@ -317,21 +321,21 @@ The <em>x</em>-axis shows the number of PCA components used as features, “raw�
 </figure>
 </div>
 <p>Focusing on several selected genes of interest, we observed that relative classifier performance varies by gene (Figure <a href="#fig:methylation_genes">4</a>).
-Past work has indicated that mutations in <em>TP53</em> are highly predictable from gene expression data <span class="citation" data-cites="X6oQhIf8">[<a href="#ref-X6oQhIf8" role="doc-biblioref">11</a>]</span>, and we saw that the methylation datasets provided similar predictive performance (Figure <a href="#fig:methylation_genes">4</a>A).
-Similarly, for <em>IDH1</em> both expression and methylation features result in similar performance, consistent with IDH1’s known role in regulating both DNA methylation and gene expression (Figure <a href="#fig:methylation_genes">4</a>D) <span class="citation" data-cites="KGJwKXkD">[<a href="#ref-KGJwKXkD" role="doc-biblioref">42</a>]</span>.
+Past work has indicated that mutations in <em>TP53</em> are highly predictable from gene expression data <span class="citation" data-cites="X6oQhIf8">[<a href="#ref-X6oQhIf8" role="doc-biblioref">11</a>]</span>, and we observed that the methylation datasets provided similar predictive performance (Figure <a href="#fig:methylation_genes">4</a>A).
+Similarly, for <em>IDH1</em> both expression and methylation features result in similar performance, consistent with IDH1’s known role in regulating both DNA methylation and gene expression (Figure <a href="#fig:methylation_genes">4</a>D) <span class="citation" data-cites="KGJwKXkD">[<a href="#ref-KGJwKXkD" role="doc-biblioref">45</a>]</span>.
 Mutations in <em>KRAS</em> and <em>ERBB2</em> (<em>HER2</em>) were most predictable from gene expression data, and in both cases the methylation datasets significantly outperformed the baseline as well (Figure <a href="#fig:methylation_genes">4</a>B and <a href="#fig:methylation_genes">4</a>E).
-Gene expression signatures of <em>ERBB2</em> alterations are historically well-studied in breast cancer <span class="citation" data-cites="uBEARk2">[<a href="#ref-uBEARk2" role="doc-biblioref">43</a>]</span>, and samples with activating <em>ERBB2</em> mutations have recently been shown to share sensitivities to some small-molecule inhibitors across cancer types <span class="citation" data-cites="1c8GokzT">[<a href="#ref-1c8GokzT" role="doc-biblioref">44</a>]</span>.
+Gene expression signatures of <em>ERBB2</em> alterations are historically well-studied in breast cancer <span class="citation" data-cites="uBEARk2">[<a href="#ref-uBEARk2" role="doc-biblioref">46</a>]</span>, and samples with activating <em>ERBB2</em> mutations have recently been shown to share sensitivities to some small-molecule inhibitors across cancer types <span class="citation" data-cites="1c8GokzT">[<a href="#ref-1c8GokzT" role="doc-biblioref">47</a>]</span>.
 These observations are consistent with the pan-cancer <em>ERBB2</em> mutant-associated expression signature that we observed in this study.
 <em>NF1</em> mutations were also most predictable from gene expression data, although the gene expression-based <em>NF1</em> mutation classifier did not significantly outperform the baseline with permuted labels at a cutoff of <span class="math inline">\(\alpha = 0.001\)</span> (Figure <a href="#fig:methylation_genes">4</a>C).
 <em>SETD2</em> is an example of a gene that is more predictable from the methylation datasets than from gene expression, although gene expression with raw gene features significantly outperformed the permuted baseline as well (Figure <a href="#fig:methylation_genes">4</a>F).
-<em>SETD2</em> is widely mutated across cancer types and affects H3K36 histone methylation most directly, but SETD2-mediated changes in H3K36 methylation have been linked to dysregulation of diverse cellular processes including DNA methylation and RNA splicing <span class="citation" data-cites="rNm0rAz7 fdVKgtEF">[<a href="#ref-rNm0rAz7" role="doc-biblioref">21</a>,<a href="#ref-fdVKgtEF" role="doc-biblioref">45</a>]</span>.</p>
+<em>SETD2</em> is widely mutated across cancer types and affects H3K36 histone methylation most directly, but SETD2-mediated changes in H3K36 methylation have been linked to dysregulation of diverse cellular processes including DNA methylation and RNA splicing <span class="citation" data-cites="rNm0rAz7 fdVKgtEF">[<a href="#ref-rNm0rAz7" role="doc-biblioref">23</a>,<a href="#ref-fdVKgtEF" role="doc-biblioref">48</a>]</span>.</p>
 <div id="fig:methylation_genes" class="fignos">
 <figure>
 <img src="images/figure_4.png" style="width:90.0%" alt="" /><figcaption><span>Figure 4:</span> Performance across varying PCA dimensions for specific genes of interest. Dotted lines represent results for “raw” features (8,000 gene features for gene expression data and 8,000 CpG probes for both methylation datasets, selected by largest mean absolute deviation). Error bars and shaded regions show bootstrapped 95% confidence intervals. Stars in boxes show statistical testing results compared with permuted baseline model: each box refers to the model using the number of PCA components it is over (far right box = models with raw features). **: <em>p</em> &lt; 0.01, ***: <em>p</em> &lt; 0.001, no stars: not statistically significant for a cutoff of <em>p</em> = 0.05.</figcaption>
 </figure>
 </div>
 <h3 id="comparing-six-different-readouts-favors-expression-and-dna-methylation">Comparing six different readouts favors expression and DNA methylation</h3>
-<p>Next, we expanded our comparison to all five functional data modalities (six total readouts, since there are two DNA methylation datasets) available in the TCGA Pan-Cancer Atlas.
+<p>Next, we expanded our comparison to all five functional data modalities (six total readouts, since there are two DNA methylation platforms) available in the TCGA Pan-Cancer Atlas.
 As with previous experiments, we limited our comparison to the set of samples profiled for each readout, resulting in 5,226 samples with data for all readouts.
 The data types with the most missing samples were RPPA data (2,215 samples that were missing RPPA data) and 450K methylation (630 samples that were missing 450K methylation data) (Figure <a href="#fig:all_data">5</a>A).
 Summarized over all genes in the Vogelstein et al. dataset, we observed that gene expression and both methylation datasets tended to produce similar quality predictions, and these tended to be slightly better than the remaining data types (Figure <a href="#fig:all_data">5</a>B).
@@ -340,7 +344,8 @@ For the set of genes having at least one significant predictor (i.e. “well-pr
 For the remaining data types on this smaller set of samples, 35/75 genes outperformed the baseline for gene expression data, 34/75 for 27k methylation, and 31/75 for 450k methylation.
 Compared to the methylation experiments (Figure <a href="#fig:methylation">3</a>), we observed slightly fewer “well-predicted” genes for the expression and methylation datasets here (likely due to the considerably smaller sample size) but relative performance was comparable (Supplementary Figure <a href="#fig:all_volcano_me">10</a>).
 Direct comparisons between each added data type and gene expression data showed that RPPA, microRNA and mutational signatures data generally provide similar or worse performance than the remaining data types (Figure <a href="#fig:all_data">5</a>G-I).
-Performance using RPPA data (Figure <a href="#fig:all_data">5</a>G) is notable because of its drastically smaller dimensionality than the other data types (190 proteins, compared to thousands of features for the expression and methylation data types), suggesting that each protein abundance measurement provides a high information content.
+Performance using RPPA data (Figure <a href="#fig:all_data">5</a>G) is notable because of its drastically smaller dimensionality than the other data types (190 proteins, compared to thousands of features for the expression and methylation data types).
+This suggests that each protein abundance measurement provides a high information content, although this is by design as the antibody probes used for the TCGA analysis were selected to cover established cancer-related pathways <span class="citation" data-cites="rBwmNJtL">[<a href="#ref-rBwmNJtL" role="doc-biblioref">49</a>]</span>.
 Mutations that are more predictable using RPPA data include <em>PIK3R1</em> and <em>MAP2K1</em> (Figure <a href="#fig:all_data">5</a>G), although neither classifier significantly outperforms the permuted baseline.
 Both genes are kinases involved in phosphorylation-mediated signal transduction.
 The ability of RPPA technology to quantify protein phosphorylation status may thus provide an advantage in identifying mutations in these genes, relative to the other data types we used that cannot directly measure protein phosphorylation.</p>
@@ -368,7 +373,7 @@ Gene expression provided the best performance in 25/39 genes with at least one s
 Each of these genes is well-predicted from several data types in our earlier experiments (Figure <a href="#fig:heatmap">6</a>), consistent with having strong pan-cancer driver effects.
 For the multi-omics classifiers, we considered all pairwise combinations of the top three performing individual data types (gene expression, 27K methylation, and 450K methylation), in addition to a model using all three data types.
 We trained a classifier for multiple data types by concatenating features from the individual data types, then fitting the same elastic net logistic regression model as we used for the single-omics models.
-Here, we show results using the top 5000 principal components from each data type as predictive features, to ensure that feature count and scale is comparable between data types; results for raw features are shown in Supplementary Figure <a href="#fig:multi_omics_raw_feats">11</a>.</p>
+Here, we show results using the top 5000 principal components from each data type as predictive features, to ensure that feature count and scale is comparable among data types; results for raw features are shown in Supplementary Figure <a href="#fig:multi_omics_raw_feats">11</a>.</p>
 <p>For each of the six target genes, we observed comparable performance between the best single-omics classifier (blue boxes in Figure <a href="#fig:multi_omics">7</a>A) and the best multi-omics classifier (orange boxes in Figure <a href="#fig:multi_omics">7</a>A).
 Across all classifiers and data types, we found varied patterns based on the target gene.
 For <em>IDH1</em> and <em>TP53</em> performance is relatively consistent regardless of data type(s), suggesting that baseline performance is high and there is little room for improvement as data is added (Figure <a href="#fig:multi_omics">7</a>C, G).
@@ -387,13 +392,13 @@ This supports our earlier observations of the redundancy of gene expression and 
 Overall, we found that gene expression and DNA methylation tend to capture signatures of mutation state equally effectively in most cases, and that other data types (RPPA, microRNA, mutational signatures) were generally less effective at predicting mutation presence or absence.
 Our multi-omics modeling experiment indicated that the information captured by gene expression and DNA methylation is highly redundant, as added data types resulted in no gain or modest gains in classifier performance.</p>
 <p>Comparing mutation status prediction using raw and PCA compressed expression and DNA methylation data, we observed that feature extraction using PCA provided no benefit compared to using raw gene or CpG probe features.
-Other studies using DNA methylation array data have found that nonlinear dimension reduction methods, such as variational autoencoders and capsule networks, can be effective for extracting predictive features <span class="citation" data-cites="wOjMFUXP 6QcveIuY">[<a href="#ref-wOjMFUXP" role="doc-biblioref">46</a>,<a href="#ref-6QcveIuY" role="doc-biblioref">47</a>]</span>.
+Other studies using DNA methylation array data have found that nonlinear dimension reduction methods, such as variational autoencoders and capsule networks, can be effective for extracting predictive features <span class="citation" data-cites="wOjMFUXP 6QcveIuY">[<a href="#ref-wOjMFUXP" role="doc-biblioref">50</a>,<a href="#ref-6QcveIuY" role="doc-biblioref">51</a>]</span>.
 The latter approach is especially interesting because capsule networks and “capsule-like methods” can be constrained to extract features that align with known biology (i.e. that correspond to known disease pathways or CpG site annotations).
 This can improve model interpretability as well as predictive performance.
-Similar methods have been applied to extract biologically informed features from gene expression data (see, for instance, <span class="citation" data-cites="1HfJnooMx 7kIfUrlF">[<a href="#ref-1HfJnooMx" role="doc-biblioref">48</a>,<a href="#ref-7kIfUrlF" role="doc-biblioref">49</a>]</span>).
+Similar methods have been applied to extract biologically informed features from gene expression data (see, for instance, <span class="citation" data-cites="1HfJnooMx 7kIfUrlF">[<a href="#ref-1HfJnooMx" role="doc-biblioref">52</a>,<a href="#ref-7kIfUrlF" role="doc-biblioref">53</a>]</span>).
 A more comprehensive study of dimension reduction methods in the context of mutation prediction, including the features selected by these methods and their biological relevance and interpretation, would be a beneficial area of future work.</p>
-<p>In contrast to many other studies demonstrating the benefits of integrating multiple -omics data types for various cancer-related prediction problems <span class="citation" data-cites="1AeRgHv3L tMmErZMX 4X1N4DJa shldZigM llajEDiU">[<a href="#ref-1AeRgHv3L" role="doc-biblioref">50</a>,<a href="#ref-tMmErZMX" role="doc-biblioref">51</a>,<a href="#ref-4X1N4DJa" role="doc-biblioref">52</a>,<a href="#ref-shldZigM" role="doc-biblioref">53</a>,<a href="#ref-llajEDiU" role="doc-biblioref">54</a>]</span>, we found that combining multiple data types to predict mutation status was generally not effective for this problem.
-The method we used to integrate different data types by concatenating feature sets is sometimes referred to as “early” data integration (discussed in more detail in <span class="citation" data-cites="gIhNaGUg">[<a href="#ref-gIhNaGUg" role="doc-biblioref">55</a>]</span> and <span class="citation" data-cites="NfKILi8i">[<a href="#ref-NfKILi8i" role="doc-biblioref">56</a>]</span>).
+<p>In contrast to many other studies demonstrating the benefits of integrating multiple -omics data types for various cancer-related prediction problems <span class="citation" data-cites="1AeRgHv3L tMmErZMX 4X1N4DJa shldZigM llajEDiU">[<a href="#ref-1AeRgHv3L" role="doc-biblioref">54</a>,<a href="#ref-tMmErZMX" role="doc-biblioref">55</a>,<a href="#ref-4X1N4DJa" role="doc-biblioref">56</a>,<a href="#ref-shldZigM" role="doc-biblioref">57</a>,<a href="#ref-llajEDiU" role="doc-biblioref">58</a>]</span>, we found that combining multiple data types to predict mutation status was generally not effective for this problem.
+The method we used to integrate different data types by concatenating feature sets is sometimes referred to as “early” data integration (discussed in more detail in <span class="citation" data-cites="gIhNaGUg">[<a href="#ref-gIhNaGUg" role="doc-biblioref">59</a>]</span> and <span class="citation" data-cites="NfKILi8i">[<a href="#ref-NfKILi8i" role="doc-biblioref">60</a>]</span>).
 It is possible that more sophisticated data integration methods, such as “intermediate” integration methods that learn a set of features jointly across datasets, would produce improved predictions.
 We do not interpret our results as concrete evidence that multi-omics integration is not effective for this problem; rather, we see them as an indication that this is a challenging data integration problem for which further investigation is needed.
 We also present this problem as a set of benchmark tasks on which multi-omics integration methods can be evaluated.
@@ -403,13 +408,13 @@ Considering every possible combination of target gene and TCGA cancer type (85 t
 Alternatively, choosing only a subset of gene/cancer type combinations to study would have biased our results toward known driver gene/cancer type relationships, which we wanted to avoid.
 In future work it would be interesting to identify classifiers that perform well in a certain cancer type but not in the pan-cancer context, and to compare these instances across different cancer types.
 As a motivating example, other studies have shown that activating mutations in Ras isoforms (<em>HRAS</em>, <em>KRAS</em>, <em>NRAS</em>) tend to have similar effects to one another in thyroid cancer, producing similar gene expression signatures <span class="citation" data-cites="odNCMbto">[<a href="#ref-odNCMbto" role="doc-biblioref">15</a>]</span>.
-In multiple myeloma, however, activating <em>KRAS</em> and <em>NRAS</em> mutations produce distinct expression signatures, necessitating separate classifiers <span class="citation" data-cites="1B2CloRMX">[<a href="#ref-1B2CloRMX" role="doc-biblioref">57</a>]</span>.
+In multiple myeloma, however, activating <em>KRAS</em> and <em>NRAS</em> mutations produce distinct expression signatures, necessitating separate classifiers <span class="citation" data-cites="1B2CloRMX">[<a href="#ref-1B2CloRMX" role="doc-biblioref">61</a>]</span>.
 A high-throughput computational pipeline to identify cases where functional signatures of a particular cancer driver are either concordant or discordant between cancer types could identify opportunities for context-specific protein function prediction, improve biomarker identification, and suggest cases where drugs targeting specific alterations might produce discordant results in different cancer types.</p>
 <p>As with any study relying on observational, cross-sectional data such as the TCGA Pan-Cancer Atlas, the conclusions that we can draw are limited by the data.
 In particular, for any of our “well-predicted” genes (i.e. genes that, when mutated, have strong signatures in one or more data types), we cannot definitively distinguish correlation from causation.
-To directly assess the effects of particular mutations on various data modalities, some studies use cell line data from sources such as the Cancer Cell Line Encyclopedia (CCLE) <span class="citation" data-cites="kcdvZmNN">[<a href="#ref-kcdvZmNN" role="doc-biblioref">58</a>]</span>.
-While this approach could help to isolate the causal effect of a given mutation on a given cell line, cell lines are sometimes an imperfect match for the cancers they are derived from <span class="citation" data-cites="2AuD4Mwu">[<a href="#ref-2AuD4Mwu" role="doc-biblioref">59</a>]</span>.
-We are also limited in that we cannot assign timing or clonal status to mutations, or fully characterize intratumor heterogeneity, with certainty from the bulk sequencing data generated by TCGA (although some features of tumor mutational processes over time can be estimated from bulk data, e.g. <span class="citation" data-cites="16yVVytBf">[<a href="#ref-16yVVytBf" role="doc-biblioref">60</a>]</span>).
+To directly assess the effects of particular mutations on various data modalities, some studies use cell line data from sources such as the Cancer Cell Line Encyclopedia (CCLE) <span class="citation" data-cites="kcdvZmNN">[<a href="#ref-kcdvZmNN" role="doc-biblioref">62</a>]</span>.
+While this approach could help to isolate the causal effect of a given mutation on a given cell line, cell lines are sometimes an imperfect match for the cancers they are derived from <span class="citation" data-cites="2AuD4Mwu">[<a href="#ref-2AuD4Mwu" role="doc-biblioref">63</a>]</span>.
+We are also limited in that we cannot assign timing or clonal status to mutations, or fully characterize intratumor heterogeneity, with certainty from the bulk sequencing data generated by TCGA (although some features of tumor mutational processes over time can be estimated from bulk data, e.g. <span class="citation" data-cites="16yVVytBf">[<a href="#ref-16yVVytBf" role="doc-biblioref">64</a>]</span>).
 As methods for generating large longitudinal datasets at single-cell resolution mature and scale, we will need to revise the way we think about cellular function and dysregulation in cancer cells, as dynamic and adaptive processes rather than a single representative snapshot of a tumor.</p>
 <p>Based on our results, for studies focused on the functional consequences of cancer mutations, we recommend that researchers designing large-scale studies aiming to understand the regulatory state of cancers prioritize gene expression or DNA methylation as downstream readouts.
 On balance, prediction of mutation status was slightly better using gene expression data.
@@ -895,258 +900,282 @@ Marcin Cieślik, Arul M. Chinnaiyan<br />
 <em>Nature Reviews Genetics</em> (2017-12-27) <a href="https://doi.org/gcsmnr">https://doi.org/gcsmnr</a> <br />
 DOI: <a href="https://doi.org/10.1038/nrg.2017.96">10.1038/nrg.2017.96</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29279605">29279605</a></p>
 </div>
+<div id="ref-1Cxnszz2L">
+<p>18. <strong>Identification of a CpG Island Methylator Phenotype that Defines a Distinct Subgroup of Glioma</strong> <br />
+Houtan Noushmehr, Daniel J. Weisenberger, Kristin Diefes, Heidi S. Phillips, Kanan Pujara, Benjamin P. Berman, Fei Pan, Christopher E. Pelloski, Erik P. Sulman, Krishna P. Bhat, … Kenneth Aldape<br />
+<em>Cancer Cell</em> (2010-05) <a href="https://doi.org/dbtmsd">https://doi.org/dbtmsd</a> <br />
+DOI: <a href="https://doi.org/10.1016/j.ccr.2010.03.017">10.1016/j.ccr.2010.03.017</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20399149">20399149</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872684">PMC2872684</a></p>
+</div>
+<div id="ref-WN82rY7P">
+<p>19. <strong>DNA Methylation, Isocitrate Dehydrogenase Mutation, and Survival in Glioma</strong> <br />
+Brock C. Christensen, Ashley A. Smith, Shichun Zheng, Devin C. Koestler, E. Andres Houseman, Carmen J. Marsit, Joseph L. Wiemels, Heather H. Nelson, Margaret R. Karagas, Margaret R. Wrensch, … John K. Wiencke<br />
+<em>JNCI: Journal of the National Cancer Institute</em> (2011-01-19) <a href="https://doi.org/bbjqf9">https://doi.org/bbjqf9</a> <br />
+DOI: <a href="https://doi.org/10.1093/jnci/djq497">10.1093/jnci/djq497</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21163902">21163902</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3022619">PMC3022619</a></p>
+</div>
 <div id="ref-Sp8RO1w7">
-<p>18. <strong><em>IDH1</em> and <em>IDH2</em> Mutations in Gliomas</strong> <br />
+<p>20. <strong><em>IDH1</em> and <em>IDH2</em> Mutations in Gliomas</strong> <br />
 Hai Yan, D. Williams Parsons, Genglin Jin, Roger McLendon, B. Ahmed Rasheed, Weishi Yuan, Ivan Kos, Ines Batinic-Haberle, Siân Jones, Gregory J. Riggins, … Darell D. Bigner<br />
 <em>New England Journal of Medicine</em> (2009-02-19) <a href="https://doi.org/btz6db">https://doi.org/btz6db</a> <br />
 DOI: <a href="https://doi.org/10.1056/nejmoa0808710">10.1056/nejmoa0808710</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19228619">19228619</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2820383">PMC2820383</a></p>
 </div>
 <div id="ref-FYj8JHBX">
-<p>19. <strong>IDH mutation impairs histone demethylation and results in a block to cell differentiation</strong> <br />
+<p>21. <strong>IDH mutation impairs histone demethylation and results in a block to cell differentiation</strong> <br />
 Chao Lu, Patrick S. Ward, Gurpreet S. Kapoor, Dan Rohle, Sevin Turcan, Omar Abdel-Wahab, Christopher R. Edwards, Raya Khanin, Maria E. Figueroa, Ari Melnick, … Craig B. Thompson<br />
 <em>Nature</em> (2012-02-15) <a href="https://doi.org/f4msnt">https://doi.org/f4msnt</a> <br />
 DOI: <a href="https://doi.org/10.1038/nature10860">10.1038/nature10860</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22343901">22343901</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478770">PMC3478770</a></p>
 </div>
 <div id="ref-19sDhpROP">
-<p>20. <strong>Connections between TET proteins and aberrant DNA modification in cancer</strong> <br />
+<p>22. <strong>Connections between TET proteins and aberrant DNA modification in cancer</strong> <br />
 Yun Huang, Anjana Rao<br />
 <em>Trends in Genetics</em> (2014-10) <a href="https://doi.org/f6jm7v">https://doi.org/f6jm7v</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.tig.2014.07.005">10.1016/j.tig.2014.07.005</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25132561">25132561</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4337960">PMC4337960</a></p>
 </div>
 <div id="ref-rNm0rAz7">
-<p>21. <strong>SETting the Stage for Cancer Development: SETD2 and the Consequences of Lost Methylation</strong> <br />
+<p>23. <strong>SETting the Stage for Cancer Development: SETD2 and the Consequences of Lost Methylation</strong> <br />
 Catherine C. Fahey, Ian J. Davis<br />
 <em>Cold Spring Harbor Perspectives in Medicine</em> (2017-05) <a href="https://doi.org/gjmfvq">https://doi.org/gjmfvq</a> <br />
 DOI: <a href="https://doi.org/10.1101/cshperspect.a026468">10.1101/cshperspect.a026468</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28159833">28159833</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411680">PMC5411680</a></p>
 </div>
 <div id="ref-18LSSJo3W">
-<p>22. <strong>Mechanisms underlying mutational signatures in human cancers</strong> <br />
+<p>24. <strong>Mechanisms underlying mutational signatures in human cancers</strong> <br />
 Thomas Helleday, Saeed Eshtad, Serena Nik-Zainal<br />
 <em>Nature Reviews Genetics</em> (2014-07-01) <a href="https://doi.org/f25gnp">https://doi.org/f25gnp</a> <br />
 DOI: <a href="https://doi.org/10.1038/nrg3729">10.1038/nrg3729</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24981601">24981601</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6044419">PMC6044419</a></p>
 </div>
 <div id="ref-pWXLXywn">
-<p>23. <strong>Quantitative Proteomics of the Cancer Cell Line Encyclopedia</strong> <br />
+<p>25. <strong>Quantitative Proteomics of the Cancer Cell Line Encyclopedia</strong> <br />
 David P. Nusinow, John Szpyt, Mahmoud Ghandi, Christopher M. Rose, E. Robert McDonald, Marian Kalocsay, Judit Jané-Valbuena, Ellen Gelfand, Devin K. Schweppe, Mark Jedrychowski, … Steven P. Gygi<br />
 <em>Cell</em> (2020-01) <a href="https://doi.org/ggxbh5">https://doi.org/ggxbh5</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.cell.2019.12.023">10.1016/j.cell.2019.12.023</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31978347">31978347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339254">PMC7339254</a></p>
 </div>
 <div id="ref-11yRODwNY">
-<p>24. <strong>The repertoire of mutational signatures in human cancer</strong> <br />
+<p>26. <strong>The repertoire of mutational signatures in human cancer</strong> <br />
 Ludmil B. Alexandrov, Jaegil Kim, Nicholas J. Haradhvala, Mi Ni Huang, Alvin Wei Tian Ng, Yang Wu, Arnoud Boot, Kyle R. Covington, Dmitry A. Gordenin, Erik N. Bergstrom, … PCAWG Consortium<br />
 <em>Nature</em> (2020-02-05) <a href="https://doi.org/ggkfnv">https://doi.org/ggkfnv</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41586-020-1943-3">10.1038/s41586-020-1943-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32025018">32025018</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054213">PMC7054213</a></p>
 </div>
 <div id="ref-UTtkLysq">
-<p>25. <strong>Significant associations between driver gene mutations and DNA methylation alterations across many cancer types</strong> <br />
+<p>27. <strong>Significant associations between driver gene mutations and DNA methylation alterations across many cancer types</strong> <br />
 Yun-Ching Chen, Valer Gotea, Gennady Margolin, Laura Elnitski<br />
 <em>PLOS Computational Biology</em> (2017-11-10) <a href="https://doi.org/gchz8h">https://doi.org/gchz8h</a> <br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1005840">10.1371/journal.pcbi.1005840</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29125844">29125844</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5709060">PMC5709060</a></p>
 </div>
 <div id="ref-YBXY18s4">
-<p>26. <strong>A pan-cancer analysis of driver gene mutations, DNA methylation and gene expressions reveals that chromatin remodeling is a major mechanism inducing global changes in cancer epigenomes</strong> <br />
+<p>28. <strong>A pan-cancer analysis of driver gene mutations, DNA methylation and gene expressions reveals that chromatin remodeling is a major mechanism inducing global changes in cancer epigenomes</strong> <br />
 Ahrim Youn, Kyung In Kim, Raul Rabadan, Benjamin Tycko, Yufeng Shen, Shuang Wang<br />
 <em>BMC Medical Genomics</em> (2018-11-06) <a href="https://doi.org/gjmhfb">https://doi.org/gjmhfb</a> <br />
 DOI: <a href="https://doi.org/10.1186/s12920-018-0425-z">10.1186/s12920-018-0425-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30400878">30400878</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6218985">PMC6218985</a></p>
 </div>
 <div id="ref-pRTkOXGI">
-<p>27. <strong>Computational analysis reveals histotype-dependent molecular profile and actionable mutation effects across cancers</strong> <br />
+<p>29. <strong>Computational analysis reveals histotype-dependent molecular profile and actionable mutation effects across cancers</strong> <br />
 Daniel Heim, Grégoire Montavon, Peter Hufnagl, Klaus-Robert Müller, Frederick Klauschen<br />
 <em>Genome Medicine</em> (2018-11-15) <a href="https://doi.org/gjmhfc">https://doi.org/gjmhfc</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13073-018-0591-9">10.1186/s13073-018-0591-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30442178">30442178</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6238410">PMC6238410</a></p>
 </div>
 <div id="ref-ZuUqcptb">
-<p>28. <strong>CNAmet: an R package for integrating copy number, methylation and expression data</strong> <br />
+<p>30. <strong>CNAmet: an R package for integrating copy number, methylation and expression data</strong> <br />
 Riku Louhimo, Sampsa Hautaniemi<br />
 <em>Bioinformatics</em> (2011-03-15) <a href="https://doi.org/fbq4p2">https://doi.org/fbq4p2</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btr019">10.1093/bioinformatics/btr019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21228048">21228048</a></p>
 </div>
 <div id="ref-lQ8oalgu">
-<p>29. <strong>Impacts of somatic mutations on gene expression: an association perspective</strong> <br />
+<p>31. <strong>Impacts of somatic mutations on gene expression: an association perspective</strong> <br />
 Peilin Jia, Zhongming Zhao<br />
 <em>Briefings in Bioinformatics</em> (2016-04-28) <a href="https://doi.org/gjnd5b">https://doi.org/gjnd5b</a> <br />
 DOI: <a href="https://doi.org/10.1093/bib/bbw037">10.1093/bib/bbw037</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27127206">27127206</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5862283">PMC5862283</a></p>
 </div>
 <div id="ref-StwDSCo7">
-<p>30. <strong>Inference of patient-specific pathway activities from multi-dimensional cancer genomics data using PARADIGM</strong> <br />
+<p>32. <strong>Inference of patient-specific pathway activities from multi-dimensional cancer genomics data using PARADIGM</strong> <br />
 Charles J. Vaske, Stephen C. Benz, J. Zachary Sanborn, Dent Earl, Christopher Szeto, Jingchun Zhu, David Haussler, Joshua M. Stuart<br />
 <em>Bioinformatics</em> (2010-06-15) <a href="https://doi.org/bcvgjf">https://doi.org/bcvgjf</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btq182">10.1093/bioinformatics/btq182</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20529912">20529912</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881367">PMC2881367</a></p>
 </div>
 <div id="ref-1BMNB7BTo">
-<p>31. <strong>Systematic analysis of somatic mutations impacting gene expression in 12 tumour types</strong> <br />
+<p>33. <strong>Systematic analysis of somatic mutations impacting gene expression in 12 tumour types</strong> <br />
 Jiarui Ding, Melissa K. McConechy, Hugo M. Horlings, Gavin Ha, Fong Chun Chan, Tyler Funnell, Sarah C. Mullaly, Jüri Reimand, Ali Bashashati, Gary D. Bader, … Sohrab P. Shah<br />
 <em>Nature Communications</em> (2015-10-05) <a href="https://doi.org/f7z86p">https://doi.org/f7z86p</a> <br />
 DOI: <a href="https://doi.org/10.1038/ncomms9554">10.1038/ncomms9554</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26436532">26436532</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4600750">PMC4600750</a></p>
 </div>
 <div id="ref-809OyWlC">
-<p>32. <strong>Cancer Genome Landscapes</strong> <br />
+<p>34. <strong>Cancer Genome Landscapes</strong> <br />
 B. Vogelstein, N. Papadopoulos, V. E. Velculescu, S. Zhou, L. A. Diaz, K. W. Kinzler<br />
 <em>Science</em> (2013-03-28) <a href="https://doi.org/6rg">https://doi.org/6rg</a> <br />
 DOI: <a href="https://doi.org/10.1126/science.1235122">10.1126/science.1235122</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539594">23539594</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3749880">PMC3749880</a></p>
 </div>
 <div id="ref-cDnF3a5Q">
-<p>33. <strong>Scalable Open Science Approach for Mutation Calling of Tumor Exomes Using Multiple Genomic Pipelines</strong> <br />
+<p>35. <strong>Scalable Open Science Approach for Mutation Calling of Tumor Exomes Using Multiple Genomic Pipelines</strong> <br />
 Kyle Ellrott, Matthew H. Bailey, Gordon Saksena, Kyle R. Covington, Cyriac Kandoth, Chip Stewart, Julian Hess, Singer Ma, Kami E. Chiotti, Michael McLellan, … Armaz Mariamidze<br />
 <em>Cell Systems</em> (2018-03) <a href="https://doi.org/gf9twn">https://doi.org/gf9twn</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.cels.2018.03.002">10.1016/j.cels.2018.03.002</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29596782">29596782</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6075717">PMC6075717</a></p>
 </div>
 <div id="ref-rDV1hhfF">
-<p>34. <strong>GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers</strong> <br />
+<p>36. <strong>GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers</strong> <br />
 Craig H Mermel, Steven E Schumacher, Barbara Hill, Matthew L Meyerson, Rameen Beroukhim, Gad Getz<br />
 <em>Genome Biology</em> (2011-04-28) <a href="https://doi.org/dzhjqh">https://doi.org/dzhjqh</a> <br />
 DOI: <a href="https://doi.org/10.1186/gb-2011-12-4-r41">10.1186/gb-2011-12-4-r41</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21527027">21527027</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3218867">PMC3218867</a></p>
 </div>
 <div id="ref-lF0Fr9LL">
-<p>35. <strong>Scikit-learn: Machine Learning in Python</strong> <br />
+<p>37. <strong>Scikit-learn: Machine Learning in Python</strong> <br />
 Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, … Édouard Duchesnay<br />
 <em>Journal of Machine Learning Research</em> (2011) <a href="http://jmlr.org/papers/v12/pedregosa11a.html">http://jmlr.org/papers/v12/pedregosa11a.html</a></p>
 </div>
 <div id="ref-Zg2jmD6p">
-<p>36. <strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <br />
+<p>38. <strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <br />
 Andrew E. Teschendorff, Francesco Marabita, Matthias Lechner, Thomas Bartlett, Jesper Tegner, David Gomez-Cabrero, Stephan Beck<br />
 <em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/f25mvt">https://doi.org/f25mvt</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bts680">10.1093/bioinformatics/bts680</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23175756">23175756</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546795">PMC3546795</a></p>
 </div>
 <div id="ref-JZNkB8d7">
-<p>37. <strong>Regularization and variable selection via the elastic net</strong> <br />
+<p>39. <strong>Regularization and variable selection via the elastic net</strong> <br />
 Hui Zou, Trevor Hastie<br />
 <em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em> (2005-04) <a href="https://doi.org/b8cwwr">https://doi.org/b8cwwr</a> <br />
 DOI: <a href="https://doi.org/10.1111/j.1467-9868.2005.00503.x">10.1111/j.1467-9868.2005.00503.x</a></p>
 </div>
 <div id="ref-WTSzUd5Y">
-<p>38. <strong>An introduction to ROC analysis</strong> <br />
+<p>40. <strong>An introduction to ROC analysis</strong> <br />
 Tom Fawcett<br />
 <em>Pattern Recognition Letters</em> (2006-06) <a href="https://doi.org/bpsghb">https://doi.org/bpsghb</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.patrec.2005.10.010">10.1016/j.patrec.2005.10.010</a></p>
 </div>
 <div id="ref-pazxvNcz">
-<p>39. <strong>A critical investigation of recall and precision as measures of retrieval system performance</strong> <br />
+<p>41. <strong>A critical investigation of recall and precision as measures of retrieval system performance</strong> <br />
 Vijay Raghavan, Peter Bollmann, Gwang S. Jung<br />
 <em>ACM Transactions on Information Systems</em> (1989-07) <a href="https://doi.org/bg4tps">https://doi.org/bg4tps</a> <br />
 DOI: <a href="https://doi.org/10.1145/65943.65945">10.1145/65943.65945</a></p>
 </div>
 <div id="ref-LB4mDas6">
-<p>40. <strong>The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</strong> <br />
+<p>42. <strong>The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</strong> <br />
 Takaya Saito, Marc Rehmsmeier<br />
 <em>PLOS ONE</em> (2015-03-04) <a href="https://doi.org/f69237">https://doi.org/f69237</a> <br />
 DOI: <a href="https://doi.org/10.1371/journal.pone.0118432">10.1371/journal.pone.0118432</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25738806">25738806</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4349800">PMC4349800</a></p>
 </div>
 <div id="ref-lWf6zHNO">
-<p>41. <strong>The MCC-F1 curve: a performance evaluation technique for binary classification</strong> <br />
+<p>43. <strong>The MCC-F1 curve: a performance evaluation technique for binary classification</strong> <br />
 Chang Cao, Davide Chicco, Michael M. Hoffman<br />
 <em>arXiv</em> (2020-06-23) <a href="https://arxiv.org/abs/2006.11278">https://arxiv.org/abs/2006.11278</a></p>
 </div>
+<div id="ref-YuJbg3zO">
+<p>44. <strong>Open collaborative writing with Manubot</strong> <br />
+Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter<br />
+<em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></p>
+</div>
 <div id="ref-KGJwKXkD">
-<p>42. <strong>Integrated genomic characterization of IDH1-mutant glioma malignant progression</strong> <br />
+<p>45. <strong>Integrated genomic characterization of IDH1-mutant glioma malignant progression</strong> <br />
 Hanwen Bai, Akdes Serin Harmancı, E Zeynep Erson-Omay, Jie Li, Süleyman Coşkun, Matthias Simon, Boris Krischek, Koray Özduman, S Bülent Omay, Eric A Sorensen, … Murat Günel<br />
 <em>Nature Genetics</em> (2015-11-30) <a href="https://doi.org/f895hx">https://doi.org/f895hx</a> <br />
 DOI: <a href="https://doi.org/10.1038/ng.3457">10.1038/ng.3457</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26618343">26618343</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4829945">PMC4829945</a></p>
 </div>
 <div id="ref-uBEARk2">
-<p>43. <strong>Identification and validation of an ERBB2 gene expression signature in breast cancers</strong> <br />
+<p>46. <strong>Identification and validation of an ERBB2 gene expression signature in breast cancers</strong> <br />
 François Bertucci, Nathalie Borie, Christophe Ginestier, Agnès Groulet, Emmanuelle Charafe-Jauffret, José Adélaïde, Jeannine Geneix, Loïc Bachelart, Pascal Finetti, Alane Koki, … Daniel Birnbaum<br />
 <em>Oncogene</em> (2004-01-26) <a href="https://doi.org/dq9kvk">https://doi.org/dq9kvk</a> <br />
 DOI: <a href="https://doi.org/10.1038/sj.onc.1207361">10.1038/sj.onc.1207361</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/14743203">14743203</a></p>
 </div>
 <div id="ref-1c8GokzT">
-<p>44. <strong>Pan-Cancer Landscape and Analysis of ERBB2 Mutations Identifies Poziotinib as a Clinically Active Inhibitor and Enhancer of T-DM1 Activity</strong> <br />
+<p>47. <strong>Pan-Cancer Landscape and Analysis of ERBB2 Mutations Identifies Poziotinib as a Clinically Active Inhibitor and Enhancer of T-DM1 Activity</strong> <br />
 Jacqulyne P. Robichaux, Yasir Y. Elamin, R. S. K. Vijayan, Monique B. Nilsson, Lemei Hu, Junqin He, Fahao Zhang, Marlese Pisegna, Alissa Poteete, Huiying Sun, … John V. Heymach<br />
 <em>Cancer Cell</em> (2019-10) <a href="https://doi.org/ggcv27">https://doi.org/ggcv27</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.ccell.2019.09.001">10.1016/j.ccell.2019.09.001</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31588020">31588020</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6944069">PMC6944069</a></p>
 </div>
 <div id="ref-fdVKgtEF">
-<p>45. <strong>Shaping the cellular landscape with Set2/SETD2 methylation</strong> <br />
+<p>48. <strong>Shaping the cellular landscape with Set2/SETD2 methylation</strong> <br />
 Stephen L. McDaniel, Brian D. Strahl<br />
 <em>Cellular and Molecular Life Sciences</em> (2017-04-06) <a href="https://doi.org/gbrd9b">https://doi.org/gbrd9b</a> <br />
 DOI: <a href="https://doi.org/10.1007/s00018-017-2517-x">10.1007/s00018-017-2517-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28386724">28386724</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545052">PMC5545052</a></p>
 </div>
+<div id="ref-rBwmNJtL">
+<p>49. <strong>TCPA: a resource for cancer functional proteomics data</strong> <br />
+Jun Li, Yiling Lu, Rehan Akbani, Zhenlin Ju, Paul L Roebuck, Wenbin Liu, Ji-Yeon Yang, Bradley M Broom, Roeland GW Verhaak, David W Kane, … Han Liang<br />
+<em>Nature Methods</em> (2013-09-15) <a href="https://doi.org/gffkjm">https://doi.org/gffkjm</a> <br />
+DOI: <a href="https://doi.org/10.1038/nmeth.2650">10.1038/nmeth.2650</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24037243">24037243</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4076789">PMC4076789</a></p>
+</div>
 <div id="ref-wOjMFUXP">
-<p>46. <strong>MethylNet: an automated and modular deep learning approach for DNA methylation analysis</strong> <br />
+<p>50. <strong>MethylNet: an automated and modular deep learning approach for DNA methylation analysis</strong> <br />
 Joshua J. Levy, Alexander J. Titus, Curtis L. Petersen, Youdinghuan Chen, Lucas A. Salas, Brock C. Christensen<br />
 <em>BMC Bioinformatics</em> (2020-03-17) <a href="https://doi.org/ggxvrz">https://doi.org/ggxvrz</a> <br />
 DOI: <a href="https://doi.org/10.1186/s12859-020-3443-8">10.1186/s12859-020-3443-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32183722">32183722</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7076991">PMC7076991</a></p>
 </div>
 <div id="ref-6QcveIuY">
-<p>47. <strong>MethylSPWNet and MethylCapsNet: Biologically Motivated Organization of DNAm Neural Network, Inspired by Capsule Networks</strong> <br />
+<p>51. <strong>MethylSPWNet and MethylCapsNet: Biologically Motivated Organization of DNAm Neural Network, Inspired by Capsule Networks</strong> <br />
 Joshua J. Levy, Youdinghuan Chen, Nasim Azizgolshani, Curtis L. Petersen, Alexander J. Titus, Erika L. Moen, Louis J. Vaickus, Lucas A. Salas, Brock C. Christensen<br />
 <em>Cold Spring Harbor Laboratory</em> (2021-04-22) <a href="https://doi.org/gkcc42">https://doi.org/gkcc42</a> <br />
 DOI: <a href="https://doi.org/10.1101/2020.08.14.251306">10.1101/2020.08.14.251306</a></p>
 </div>
 <div id="ref-1HfJnooMx">
-<p>48. <strong>Predicting Drug Response and Synergy Using a Deep Learning Model of Human Cancer Cells</strong> <br />
+<p>52. <strong>Predicting Drug Response and Synergy Using a Deep Learning Model of Human Cancer Cells</strong> <br />
 Brent M. Kuenzi, Jisoo Park, Samson H. Fong, Kyle S. Sanchez, John Lee, Jason F. Kreisberg, Jianzhu Ma, Trey Ideker<br />
 <em>Cancer Cell</em> (2020-11) <a href="https://doi.org/gh7z2n">https://doi.org/gh7z2n</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.ccell.2020.09.014">10.1016/j.ccell.2020.09.014</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33096023">33096023</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7737474">PMC7737474</a></p>
 </div>
 <div id="ref-7kIfUrlF">
-<p>49. <strong>Biological Constraints Can Improve Prediction in Precision Oncology</strong> <br />
+<p>53. <strong>Biological Constraints Can Improve Prediction in Precision Oncology</strong> <br />
 Mohamed Omar, Lotte Mulder, Tendai Coady, Claudio Zanettini, Eddie Luidy Imada, Wikum Dinalankara, Laurent Younes, Donald Geman, Luigi Marchionni<br />
 <em>Cold Spring Harbor Laboratory</em> (2021-05-27) <a href="https://doi.org/gkcc43">https://doi.org/gkcc43</a> <br />
 DOI: <a href="https://doi.org/10.1101/2021.05.25.445604">10.1101/2021.05.25.445604</a></p>
 </div>
 <div id="ref-1AeRgHv3L">
-<p>50. <strong>Principles and methods of integrative genomic analyses in cancer</strong> <br />
+<p>54. <strong>Principles and methods of integrative genomic analyses in cancer</strong> <br />
 Vessela N. Kristensen, Ole Christian Lingjærde, Hege G. Russnes, Hans Kristian M. Vollan, Arnoldo Frigessi, Anne-Lise Børresen-Dale<br />
 <em>Nature Reviews Cancer</em> (2014-04-24) <a href="https://doi.org/gf66jv">https://doi.org/gf66jv</a> <br />
 DOI: <a href="https://doi.org/10.1038/nrc3721">10.1038/nrc3721</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24759209">24759209</a></p>
 </div>
 <div id="ref-tMmErZMX">
-<p>51. <strong>Predicting censored survival data based on the interactions between meta-dimensional omics data in breast cancer</strong> <br />
+<p>55. <strong>Predicting censored survival data based on the interactions between meta-dimensional omics data in breast cancer</strong> <br />
 Dokyoon Kim, Ruowang Li, Scott M. Dudek, Marylyn D. Ritchie<br />
 <em>Journal of Biomedical Informatics</em> (2015-08) <a href="https://doi.org/f7n49h">https://doi.org/f7n49h</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.jbi.2015.05.019">10.1016/j.jbi.2015.05.019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26048077">26048077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4550096">PMC4550096</a></p>
 </div>
 <div id="ref-4X1N4DJa">
-<p>52. <strong>Combining DNA methylation and RNA sequencing data of cancer for supervised knowledge extraction</strong> <br />
+<p>56. <strong>Combining DNA methylation and RNA sequencing data of cancer for supervised knowledge extraction</strong> <br />
 Eleonora Cappelli, Giovanni Felici, Emanuel Weitschek<br />
 <em>BioData Mining</em> (2018-10-25) <a href="https://doi.org/gkcdbm">https://doi.org/gkcdbm</a> <br />
 DOI: <a href="https://doi.org/10.1186/s13040-018-0184-6">10.1186/s13040-018-0184-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30386434">30386434</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6203208">PMC6203208</a></p>
 </div>
 <div id="ref-shldZigM">
-<p>53. <strong>MOLI: multi-omics late integration with deep neural networks for drug response prediction</strong> <br />
+<p>57. <strong>MOLI: multi-omics late integration with deep neural networks for drug response prediction</strong> <br />
 Hossein Sharifi-Noghabi, Olga Zolotareva, Colin C Collins, Martin Ester<br />
 <em>Bioinformatics</em> (2019-07) <a href="https://doi.org/fxbz">https://doi.org/fxbz</a> <br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/btz318">10.1093/bioinformatics/btz318</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31510700">31510700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6612815">PMC6612815</a></p>
 </div>
 <div id="ref-llajEDiU">
-<p>54. <strong>Accurate cancer phenotype prediction with AKLIMATE, a stacked kernel learner integrating multimodal genomic data and pathway knowledge</strong> <br />
+<p>58. <strong>Accurate cancer phenotype prediction with AKLIMATE, a stacked kernel learner integrating multimodal genomic data and pathway knowledge</strong> <br />
 Vladislav Uzunangelov, Christopher K. Wong, Joshua M. Stuart<br />
 <em>PLOS Computational Biology</em> (2021-04-16) <a href="https://doi.org/gkcdbn">https://doi.org/gkcdbn</a> <br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1008878">10.1371/journal.pcbi.1008878</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33861732">33861732</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8081343">PMC8081343</a></p>
 </div>
 <div id="ref-gIhNaGUg">
-<p>55. <strong>Methods for biological data integration: perspectives and challenges</strong> <br />
+<p>59. <strong>Methods for biological data integration: perspectives and challenges</strong> <br />
 Vladimir Gligorijević, Nataša Pržulj<br />
 <em>Journal of The Royal Society Interface</em> (2015-11-06) <a href="https://doi.org/bdzp">https://doi.org/bdzp</a> <br />
 DOI: <a href="https://doi.org/10.1098/rsif.2015.0571">10.1098/rsif.2015.0571</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26490630">26490630</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685837">PMC4685837</a></p>
 </div>
 <div id="ref-NfKILi8i">
-<p>56. <strong>Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities</strong> <br />
+<p>60. <strong>Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities</strong> <br />
 Marinka Zitnik, Francis Nguyen, Bo Wang, Jure Leskovec, Anna Goldenberg, Michael M. Hoffman<br />
 <em>Information Fusion</em> (2019-10) <a href="https://doi.org/gf7rj8">https://doi.org/gf7rj8</a> <br />
 DOI: <a href="https://doi.org/10.1016/j.inffus.2018.09.012">10.1016/j.inffus.2018.09.012</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30467459">30467459</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6242341">PMC6242341</a></p>
 </div>
 <div id="ref-1B2CloRMX">
-<p>57. <strong>Integrated phosphoproteomics and transcriptional classifiers reveal hidden RAS signaling dynamics in multiple myeloma</strong> <br />
+<p>61. <strong>Integrated phosphoproteomics and transcriptional classifiers reveal hidden RAS signaling dynamics in multiple myeloma</strong> <br />
 Yu-Hsiu T. Lin, Gregory P. Way, Benjamin G. Barwick, Margarette C. Mariano, Makeba Marcoulis, Ian D. Ferguson, Christoph Driessen, Lawrence H. Boise, Casey S. Greene, Arun P. Wiita<br />
 <em>Blood Advances</em> (2019-11-12) <a href="https://doi.org/gg7m56">https://doi.org/gg7m56</a> <br />
 DOI: <a href="https://doi.org/10.1182/bloodadvances.2019000303">10.1182/bloodadvances.2019000303</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31698452">31698452</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6855123">PMC6855123</a></p>
 </div>
 <div id="ref-kcdvZmNN">
-<p>58. <strong>Next-generation characterization of the Cancer Cell Line Encyclopedia</strong> <br />
+<p>62. <strong>Next-generation characterization of the Cancer Cell Line Encyclopedia</strong> <br />
 Mahmoud Ghandi, Franklin W. Huang, Judit Jané-Valbuena, Gregory V. Kryukov, Christopher C. Lo, E. Robert McDonald, Jordi Barretina, Ellen T. Gelfand, Craig M. Bielski, Haoxin Li, … William R. Sellers<br />
 <em>Nature</em> (2019-05-08) <a href="https://doi.org/gf2m3h">https://doi.org/gf2m3h</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41586-019-1186-3">10.1038/s41586-019-1186-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31068700">31068700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6697103">PMC6697103</a></p>
 </div>
 <div id="ref-2AuD4Mwu">
-<p>59. <strong>Comprehensive transcriptomic analysis of cell lines as models of primary tumors across 22 tumor types</strong> <br />
+<p>63. <strong>Comprehensive transcriptomic analysis of cell lines as models of primary tumors across 22 tumor types</strong> <br />
 K. Yu, B. Chen, D. Aran, J. Charalel, C. Yau, D. M. Wolf, L. J. van ‘t Veer, A. J. Butte, T. Goldstein, M. Sirota<br />
 <em>Nature Communications</em> (2019-08-08) <a href="https://doi.org/ggh7t7">https://doi.org/ggh7t7</a> <br />
 DOI: <a href="https://doi.org/10.1038/s41467-019-11415-2">10.1038/s41467-019-11415-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31395879">31395879</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6687785">PMC6687785</a></p>
 </div>
 <div id="ref-16yVVytBf">
-<p>60. <strong>Clonal status of actionable driver events and the timing of mutational processes in cancer evolution</strong> <br />
+<p>64. <strong>Clonal status of actionable driver events and the timing of mutational processes in cancer evolution</strong> <br />
 Nicholas McGranahan, Francesco Favero, Elza C. de Bruin, Nicolai Juul Birkbak, Zoltan Szallasi, Charles Swanton<br />
 <em>Science Translational Medicine</em> (2015-04-15) <a href="https://doi.org/f7f83d">https://doi.org/f7f83d</a> <br />
 DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed.aaa1408</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25877892">25877892</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636056">PMC4636056</a></p>
