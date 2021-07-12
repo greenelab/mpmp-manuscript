@@ -10,6 +10,7 @@ biomarker
 BioRender
 BLCA
 BMIQ
+Bonferroni
 BRAF
 BRCA
 CCLE
@@ -91,7 +92,6 @@ phenotypes
 PIK
 Pividori
 PRAD
-preprocessed
 preprocessing
 proteomics
 PTEN
@@ -111,7 +111,7 @@ THYM
 TP
 tradeoff
 transcriptomic
-Translational
+translational
 TSC
 UCEC
 UCS
@@ -120,4 +120,5 @@ untransformed
 UVM
 variational
 Vogelstein
+Wilcoxon
 XXXXXXXX
