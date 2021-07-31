@@ -111,7 +111,7 @@ THYM
 TP
 tradeoff
 transcriptomic
-translational
+Translational
 TSC
 UCEC
 UCS

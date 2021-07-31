@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-07-12" />
+  <meta name="dcterms.date" content="2021-07-31" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation</title>
   <style>
@@ -31,8 +31,8 @@
   <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-07-12" />
-  <meta name="citation_publication_date" content="2021-07-12" />
+  <meta name="dc.date" content="2021-07-31" />
+  <meta name="citation_publication_date" content="2021-07-31" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -61,9 +61,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/d7b443245f58de0bb342801c4d0775c8441bea3f/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7b443245f58de0bb342801c4d0775c8441bea3f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7b443245f58de0bb342801c4d0775c8441bea3f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/fccf18ffb14f8829b3757236aca6195d0407905d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/fccf18ffb14f8829b3757236aca6195d0407905d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/fccf18ffb14f8829b3757236aca6195d0407905d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,10 +77,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/d7b443245f58de0bb342801c4d0775c8441bea3f/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/fccf18ffb14f8829b3757236aca6195d0407905d/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/d7b443245f58de0bb342801c4d0775c8441bea3f">greenelab/mpmp-manuscript@d7b4432</a>
-on July 12, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/fccf18ffb14f8829b3757236aca6195d0407905d">greenelab/mpmp-manuscript@fccf18f</a>
+on July 31, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -372,7 +372,7 @@ All pairwise tests were run (and corrected for) but only neighboring test result
 Of the 39 genes that are well-predicted using at least one data type (blue or red highlighted boxes in Figure <a href="#fig:heatmap">6</a>), only three of them are well-predicted exclusively by a single data type, meaning that mutations in the other 37 genes can be predicted effectively using at least two different data sources.
 This supports our observation that choosing the “correct” data modality is often unimportant for driver genes with strong functional signatures.
 Notable exceptions included <em>NF1</em> (only well-predicted using gene expression data), <em>SETD2</em> (only well-predicted using the two methylation datasets), and <em>TSC1</em> (only well-predicted using gene expression data).
-Gene expression provided the best performance in 25/39 genes with at least one significant data type (red highlighted boxes in Figure <a href="#fig:heatmap">6</a>), but only 2 of those 25 genes did not have any other significantly predictive data types (<em>NF1</em> and <em>TSC1</em>); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.</p>
+Gene expression provided the best performance in 32/39 genes with at least one significant data type (red highlighted boxes in Figure <a href="#fig:heatmap">6</a>), but only 2 of those 32 genes did not have any other significantly predictive data types (<em>NF1</em> and <em>TSC1</em>); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.</p>
 <div id="fig:heatmap" class="fignos">
 <figure>
 <img src="images/figure_6.png" style="width:90.0%" alt="" /><figcaption><span>Figure 6:</span> Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests with FDR correction).</figcaption>
@@ -872,7 +872,7 @@ DOI: <a href="https://doi.org/10.1016/j.celrep.2018.03.046">10.1016/j.celrep.201
 <div id="ref-Z5JvAfru">
 <p>10. <strong>Identification of pan-cancer Ras pathway activation with deep learning</strong> <br />
 Xiangtao Li, Shaochuan Li, Yunhe Wang, Shixiong Zhang, Ka-Chun Wong<br />
-<em>Briefings in Bioinformatics</em> (2020-10-30) <a href="https://doi.org/gjmd3p">https://doi.org/gjmd3p</a> <br />
+<em>Briefings in Bioinformatics</em> (2021-07) <a href="https://doi.org/gjmd3p">https://doi.org/gjmd3p</a> <br />
 DOI: <a href="https://doi.org/10.1093/bib/bbaa258">10.1093/bib/bbaa258</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33126245">33126245</a></p>
 </div>
 <div id="ref-X6oQhIf8">
