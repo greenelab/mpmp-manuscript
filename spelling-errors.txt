@@ -43,7 +43,7 @@ GISTIC
 glioma
 gne
 GreeneScientist
-heatmap
+Heatmap
 Heil
 histone
 HNSC
@@ -88,16 +88,18 @@ PanCanAtlas
 PCA
 PCPG
 performant
+PFI
 phenotypes
 PIK
 Pividori
 PRAD
+preprocessed
 preprocessing
 proteomics
 PTEN
 quantile
 Ras
-RPPA
+rppa
 SARC
 SBS
 SETD
@@ -111,7 +113,7 @@ THYM
 TP
 tradeoff
 transcriptomic
-Translational
+translational
 TSC
 UCEC
 UCS
@@ -121,4 +123,3 @@ UVM
 variational
 Vogelstein
 Wilcoxon
-XXXXXXXX
