@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-09-13'
+date-meta: '2021-09-16'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-09-13" />
-  <meta name="citation_publication_date" content="2021-09-13" />
+  <meta name="dc.date" content="2021-09-16" />
+  <meta name="citation_publication_date" content="2021-09-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -53,9 +53,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/ee1f7d87b049c57fd4f7ab6963291feec22b2f23/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/ee1f7d87b049c57fd4f7ab6963291feec22b2f23/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/ee1f7d87b049c57fd4f7ab6963291feec22b2f23/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,10 +77,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/ee1f7d87b049c57fd4f7ab6963291feec22b2f23/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/))
 was automatically generated
-from [greenelab/mpmp-manuscript@ee1f7d8](https://github.com/greenelab/mpmp-manuscript/tree/ee1f7d87b049c57fd4f7ab6963291feec22b2f23)
-on September 13, 2021.
+from [greenelab/mpmp-manuscript@8b3e079](https://github.com/greenelab/mpmp-manuscript/tree/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c)
+on September 16, 2021.
 </em></small>
 
 ## Authors
@@ -389,7 +389,8 @@ In addition to comparing mutation classifiers trained on different data types to
 We observed that 6/100 genes were significantly more predictable from expression data than 27K methylation data, and 2/100 genes were significantly more predictable from expression data than 450K methylation data.
 In both cases, 0/100 genes were significantly more predictable using the methylation data types.
 For both comparisons (expression vs. 27K methylation and expression vs. 450K methylation), we observed that the majority of points were clustered around the origin, indicating that the data types appear to confer similar information about mutation status.
-In other words, for genes near the origin, matching the gene being studied with the "correct" data modality seems to be unimportant: either mutation status has a strong signature which can be extracted from both expression and DNA methylation data roughly equally, or mutation presence/absence does not have a strong effect on either data modality.
+Additionally, many genes near the origin are significantly predictable vs. the shuffled baseline (labeled with an "X" in Figure {@fig:methylation}G-H), but equally predictable between data types (blue shading in Figure {@fig:methylation}G-H).
+That is, in many cases, matching the gene being studied with the "correct" data modality seems to be unimportant: mutation status has a strong signature which can be extracted from both expression and DNA methylation data roughly equally.
 
 We additionally compared pan-cancer survival prediction performance using principal components derived from each data type; results were comparable across the three data types (Figure {@fig:methylation}I).
 The 450K methylation predictor appears to benefit slightly more from higher numbers of PCs than the other data modalities, with performance for gene expression and 27K methylation remaining fairly constant as more PCs were added to the model.

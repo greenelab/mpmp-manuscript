@@ -43,7 +43,7 @@ GISTIC
 glioma
 gne
 GreeneScientist
-Heatmap
+heatmap
 Heil
 histone
 HNSC
@@ -99,7 +99,7 @@ proteomics
 PTEN
 quantile
 Ras
-rppa
+RPPA
 SARC
 SBS
 SETD
