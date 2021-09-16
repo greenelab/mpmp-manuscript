@@ -25,6 +25,9 @@ authors:
     orcid: 0000-0003-3022-426X
     affiliations:
       - Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
+      - Department of Molecular and Systems Biology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
+    funders:
+      - National Institutes of Health's National Cancer Institute (R01 CA216265, R01 CA253976)
   - github: mchikina
     name: Maria Chikina
     initials: MC
