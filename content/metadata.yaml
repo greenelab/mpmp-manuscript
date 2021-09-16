@@ -17,7 +17,6 @@ authors:
     email: jcra@pennmedicine.upenn.edu
     affiliations:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
-      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
     funders:
       - National Institutes of Health's National Cancer Institute (R01 CA237170)
       - National Institutes of Health's National Human Genome Research Institute (R01 HG010067)
@@ -26,16 +25,12 @@ authors:
     orcid: 0000-0003-3022-426X
     affiliations:
       - Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
-    funders:
-      - Grant XXXXXXXX
   - github: mchikina
     name: Maria Chikina
     initials: MC
     orcid: 0000-0003-2550-5403
     affiliations:
       - Department of Computational and Systems Biology, School of Medicine, University of Pittsburgh, Pittsburgh, PA, USA
-    funders:
-      - Grant XXXXXXXX
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
