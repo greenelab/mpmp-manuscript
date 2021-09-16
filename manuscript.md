@@ -38,6 +38,7 @@ header-includes: |-
   <meta name="twitter:creator" content="@jjc2718" />
   <meta name="citation_author" content="Brock C. Christensen" />
   <meta name="citation_author_institution" content="Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA" />
+  <meta name="citation_author_institution" content="Department of Molecular and Systems Biology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA" />
   <meta name="citation_author_orcid" content="0000-0003-3022-426X" />
   <meta name="citation_author" content="Maria Chikina" />
   <meta name="citation_author_institution" content="Department of Computational and Systems Biology, School of Medicine, University of Pittsburgh, Pittsburgh, PA, USA" />
@@ -53,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/))
 was automatically generated
-from [greenelab/mpmp-manuscript@8b3e079](https://github.com/greenelab/mpmp-manuscript/tree/8b3e0796368e7c5121a4fe58ae835ef884ba2c9c)
+from [greenelab/mpmp-manuscript@1cddd22](https://github.com/greenelab/mpmp-manuscript/tree/1cddd2284c81c33e53f40346ee7ff1e101eb58f0)
 on September 16, 2021.
 </em></small>
 
@@ -103,7 +104,8 @@ on September 16, 2021.
     ![ORCID icon](images/orcid.svg){.inline_icon}
     [0000-0003-3022-426X](https://orcid.org/0000-0003-3022-426X)<br>
   <small>
-     Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
+     Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA; Department of Molecular and Systems Biology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
+     · Funded by National Institutes of Health's National Cancer Institute (R01 CA216265, R01 CA253976)
   </small>
 
 + **Maria Chikina**<br>
@@ -149,7 +151,7 @@ Based on our results, for the design of studies focused on the functional outcom
 ## Introduction
 
 Although cancer can be initiated and driven by many different genetic alterations, these tend to converge on a limited number of pathways or signaling processes [@doi:10.1016/j.cell.2018.03.035].
-As driver mutation status alone confers limited prognostic information, a comprehensive understanding of how diverse genetic alterations perturb these central pathways is vital to precision medicine and biomarker identification efforts [@doi:10.7554/eLife.39217; @doi:10.1038/ncomms12096].
+As driver mutation status alone confers limited prognostic information, a comprehensive understanding of how diverse genetic alterations perturb central pathways is vital to precision medicine and biomarker identification efforts [@doi:10.7554/eLife.39217; @doi:10.1038/ncomms12096].
 While many methods exist to distinguish driver mutations from passenger mutations based on genomic sequence characteristics [@doi:10.1073/pnas.1616440113; @doi:10.1038/s41467-019-11284-9; @doi:10.1371/journal.pcbi.1006658], until recently it has been a challenge to connect driver mutations to downstream changes in gene expression and cellular function within individual tumor samples.
 
 The Cancer Genome Atlas (TCGA) Pan-Cancer Atlas provides uniformly processed, multi-platform -omics measurements across tens of thousands of samples from 33 cancer types [@doi:10.1038/ng.2764].
@@ -170,7 +172,7 @@ Here, we compare -omics data types profiled in the TCGA Pan-Cancer Atlas to eval
 We focus on gene expression (RNA sequencing data), DNA methylation (27K and 450K probe chips), reverse phase protein array (RPPA), microRNA expression, and mutational signatures data [@doi:10.1038/s41586-020-1943-3] as possible readouts.
 Prior studies have identified univariate correlations of CpG site methylation [@doi:10.1371/journal.pcbi.1005840; @doi:10.1186/s12920-018-0425-z] and correlations of RPPA protein profiles [@doi:10.1186/s13073-018-0591-9] with the presence or absence of certain driver mutations.
 Other relevant past work includes linking point mutations and copy number variants (CNVs) with changes in methylation and expression at individual genes [@doi:10.1093/bioinformatics/btr019; @doi:10.1093/bib/bbw037] and identifying functional modules that are perturbed by somatic mutations [@doi:10.1093/bioinformatics/btq182; @doi:10.1038/ncomms9554].
-However, no direct comparison has been made among different data types for this application, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.
+However, direct comparison among different data types for this application is lacking, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.
 
 We select a collection of potential cancer drivers with varying functions and roles in cancer development [@doi:10.1126/science.1235122].
 We use mutation status in these genes as labels to train classifiers, using each of the data types listed as training data, in a pan-cancer setting; we follow similar methods to the elastic net logistic regression approach described in Way et al. 2018 [@doi:10.1016/j.celrep.2018.03.046] and Way et al. 2020 [@doi:10.1186/s13059-020-02021-3].
@@ -290,9 +292,9 @@ To select hyperparameters for the elastic net Cox regression model, we performed
 This procedure begins by deriving the maximum $\alpha$ value as the smallest value for which all coefficients are 0 (call this $\alpha_{\text{max}}$), then it selects 100 possibilities for alpha spaced evenly on a log scale between $\alpha_{\text{max}}$ and $0.01 \cdot \alpha_{\text{max}}$.
 For the survival models, we found that this data-driven procedure resulted in more consistent and stable model convergence than choosing a fixed set of alphas to search over as in the mutation prediction experiments.
 
-We measured survival prediction performance using the censored concordance index [@pubmed:8668867], which quantifies agreement between the order of survival time predictions and true outcomes for a held-out dataset: higher concordance index values indicate more accurate survival prediction performance.
-Similar to the mutation prediction experiments, we calculated concordance index values on held-out subsets of the data for 2 replicates of 4-fold cross-validation, resulting in 8 performance measurements for each model.
-For the results shown in the main text, we report the difference in concordance index relative to a model where the survival endpoints are permuted, so values close to 0 suggest that the -omics features and other covariates are uninformative, and values greater than 0 suggest that they add predictive value.
+We measured survival prediction performance using the censored concordance index (c-index) [@pubmed:8668867], which quantifies agreement between the order of survival time predictions and true outcomes for a held-out dataset: higher c-index values indicate more accurate survival prediction performance.
+Similar to the mutation prediction experiments, we calculated c-index values on held-out subsets of the data for 2 replicates of 4-fold cross-validation, resulting in 8 performance measurements for each model.
+For the results shown in the main text, we report the difference in c-index relative to a model where the survival endpoints are permuted, so values close to 0 suggest that the -omics features and other covariates are uninformative, and values greater than 0 suggest that they add predictive value.
 
 ### Multi-omics mutation prediction experiments
 
@@ -352,7 +354,7 @@ We then evaluated the performance for each target gene in each of the three gene
 
 Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count (Figure {@fig:expression_gene_sets}A).
 In total, for a significance threshold of $\alpha = 0.001$, 47/85 genes (55.3%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 12/85 genes (14.1%) in the random gene set and 15/85 genes (17.6%) in the most mutated gene set.
-Of the 12 significantly predictable genes in the random gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}B), and of the 15 significantly predictable genes in the most mutated gne set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}C).
+Of the 12 significantly predictable genes in the random gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}B), and of the 15 significantly predictable genes in the most mutated gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}C).
 Additionally, many of the significant genes in the most mutated gene set are clustered close to the significance threshold (Figure {@fig:expression_gene_sets}C), while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold (Figure {@fig:expression_gene_sets}D, higher AUPR differences and lower _p_-values).
 These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.
 
@@ -405,7 +407,8 @@ Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon te
 **C.** Predictive performance for genes where at least one of the considered data types predicts mutation labels significantly better than the permuted baseline.
 **D-F.** Predictive performance for each gene in the Vogelstein et al. gene set, for each data type, compared with a baseline model trained on permuted labels.
 **G-H.** Predictive performance for each gene in the Vogelstein et al. gene set, comparing gene expression directly to each methylation dataset (with classifiers trained on true labels).
-**I.** Pan-cancer survival prediction performance, quantified using concordance index relative to a label-permuted baseline on the _y_-axis, for gene expression, 27K methylation, and 450K methylation. The _x_-axis shows results for varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type.
+**I.** Pan-cancer survival prediction performance, quantified using c-index relative to a label-permuted baseline on the _y_-axis, for gene expression, 27K methylation, and 450K methylation. The _x_-axis shows results for varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type.
+
 ](images/figure_3.png){#fig:methylation width="90%"}
 
 Focusing on several selected genes of interest, we observed that relative classifier performance varies by gene (Figure {@fig:methylation_genes}).
@@ -430,15 +433,18 @@ The data types with the most missing samples were RPPA data (2,215 samples that 
 Summarized over all genes in the Vogelstein et al. dataset, we observed that gene expression and both methylation datasets tended to produce similar quality predictions, and these were significantly better than the remaining data types (Figure {@fig:all_data}B).
 For the set of genes having at least one significant predictor (i.e. "well-predicted" genes), median performance using gene expression was slightly higher than for the methylation data types, although this difference was not statistically significant (Figure {@fig:all_data}C).
 
-On the individual gene level, mutations in 26/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 23/75 genes from microRNA data and 0/75 genes from mutational signatures data (Figure {@fig:all_data}D-F).
+On the individual gene level, mutations in 26/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 23/75 genes from microRNA data and 15/75 genes from mutational signatures data (Figure {@fig:all_data}D-F).
 For the remaining data types on this smaller set of samples, 35/75 genes outperformed the baseline for gene expression data, 34/75 for 27k methylation, and 31/75 for 450k methylation.
 Compared to the methylation experiments (Figure {@fig:methylation}), we observed slightly fewer "well-predicted" genes for the expression and methylation datasets here (likely due to the considerably smaller sample size) but relative performance was comparable (Supplementary Figure {@fig:all_volcano_me}).
 Direct comparisons between each added data type and gene expression data showed that RPPA, microRNA and mutational signatures data generally provide similar or worse performance than the remaining data types (Figure {@fig:all_data}G-I).
+
 Performance using RPPA data (Figure {@fig:all_data}G) is notable because of its drastically smaller dimensionality than the other data types (190 proteins, compared to thousands of features for the expression and methylation data types).
 This suggests that each protein abundance measurement provides a high information content, although this is by design as the antibody probes used for the TCGA analysis were selected to cover established cancer-related pathways [@doi:10.1038/nmeth.2650].
 Mutations that are more predictable using RPPA data include _PIK3R1_ and _MAP2K1_ (Figure {@fig:all_data}G), although neither classifier significantly outperforms the permuted baseline.
 Both genes are kinases involved in phosphorylation-mediated signal transduction.
 The ability of RPPA technology to quantify protein phosphorylation status may thus provide an advantage in identifying mutations in these genes, relative to the other data types we used that cannot directly measure protein phosphorylation.
+Similarly, the scope of the features captured by the mutational signatures data we used is limited to single-base substitution signatures; a broader spectrum of possible signatures is described in previous work [@doi:10.1038/s41586-020-1943-3; @doi:10.1038/s41586-019-1913-9] including doublet-substitution signatures, small indel signatures, and signatures of structural variation, but these were not readily available for the TCGA exome sequencing data.
+The relatively poor predictive ability of mutational signatures likely stems from a combination of biological and technical factors, as there is no reason to expect that changes in somatic mutation patterns would be directly caused by most cancer driver mutations (excepting, for instance, mutations in genes involved in DNA damage repair and similar processes).
 
 As in the expression/methylation comparison, we compared pan-cancer survival prediction performance between all six readouts, using the top principal components derived from each data type to ensure comparable information content (Figure {@fig:all_data}J).
 In this case, RPPA data resulted in comparable prediction to the expression and methylation-derived feature sets, performing slightly better at low numbers of PCs possibly due to its higher information content over a smaller dimensionality.
@@ -453,7 +459,7 @@ All pairwise tests were run (and corrected for) but only neighboring test result
 **C.** Overall performance distribution per data type for genes where the permuted baseline model is significantly outperformed for one or more data types, resulting in a total of 39 genes.
 **D, E, F.** Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set, in each of the added data types (RPPA, microRNA, mutational signatures). The _x_-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
 **G, H, I.** Volcano-like plots comparing predictive performance between data types for each gene in the Vogelstein et al. gene set. The _x_-axis shows the difference in mean AUPR between gene expression and another data type (positive values = better mean performance using gene expression features), and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
-**J.** Pan-cancer survival prediction performance, quantified using concordance index relative to a label-permuted baseline on the _y_-axis, for all data types. The _x_-axis shows results for varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type.
+**J.** Pan-cancer survival prediction performance, quantified using c-index relative to a label-permuted baseline on the _y_-axis, for all data types. The _x_-axis shows results for varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type.
 ](images/figure_5.png){#fig:all_data width="90%"}
 
 When we constructed a heatmap depicting predictive performance for each gene across data types, we found that very few genes tended to be well-predicted exclusively by one or two data types (Figure {@fig:heatmap}).
@@ -491,12 +497,12 @@ This supports our earlier observations of the redundancy of gene expression and 
 ## Discussion
 
 We carried out a large-scale comparison of data types in the TCGA Pan-Cancer Atlas as functional readouts of genetic alterations in cancer, integrating results across cancer types and across driver genes.
-Overall, we found that gene expression and DNA methylation tend to capture signatures of mutation state equally effectively in most cases, and that other data types (RPPA, microRNA, mutational signatures) were generally less effective at predicting mutation presence or absence.
+Overall, we found that gene expression and DNA methylation capture signatures of mutation state equally effectively in most cases, and that other data types (RPPA, microRNA, mutational signatures) were less effective at predicting mutation presence or absence.
 For pan-cancer survival prediction, we found that RPPA data had comparable effectiveness to the expression and methylation data types, and microRNA and mutational signatures datasets were ineffective.
-Our multi-omics modeling experiment indicated that the information captured by gene expression and DNA methylation is highly redundant, as added data types resulted in no gain or modest gains in classifier performance.
+Our multi-omics modeling experiment indicated that the mutation state information captured by gene expression and DNA methylation is highly redundant, as added data types resulted in no gain or modest gains in classifier performance.
 
 Comparing mutation status prediction using raw and PCA compressed expression and DNA methylation data, we observed that feature extraction using PCA provided no benefit compared to using raw gene or CpG probe features.
-Other studies using DNA methylation array data have found that nonlinear dimension reduction methods, such as variational autoencoders and capsule networks, can be effective for extracting predictive features [@doi:10.1186/s12859-020-3443-8; @doi:10.1101/2020.08.14.251306].
+Other studies using DNA methylation array data have found that nonlinear dimension reduction methods, such as variational autoencoders and capsule networks, can be effective for extracting predictive features [@doi:10.1186/s12859-020-3443-8; @pubmed:34417465].
 The latter approach is especially interesting because capsule networks and "capsule-like methods" can be constrained to extract features that align with known biology (i.e. that correspond to known disease pathways or CpG site annotations).
 This can improve model interpretability as well as predictive performance.
 Similar methods have been applied to extract biologically informed features from gene expression data (see, for instance, [@doi:10.1016/j.ccell.2020.09.014; @doi:10.1101/2021.05.25.445604]).
@@ -511,7 +517,7 @@ In addition to the methodological questions, the issue of data integration also 
 
 One limitation of the current study is that, for the mutation prediction problem, we only evaluated classifiers that were trained on pan-cancer data.
 Considering every possible combination of target gene and TCGA cancer type (85 target genes x 33 cancer types x 6 data types) would have drastically increased the computational load and presented a large multiple testing burden.
-Alternatively, choosing only a subset of gene/cancer type combinations to study would have biased our results toward known driver gene/cancer type relationships, which we wanted to avoid.
+Alternatively, choosing only a subset of gene/cancer type combinations to study would have biased our results toward known driver gene/cancer type relationships, which we aimed to avoid.
 In future work it would be interesting to identify classifiers that perform well in a certain cancer type but not in the pan-cancer context, and to compare these instances across different cancer types.
 As a motivating example, other studies have shown that activating mutations in Ras isoforms (_HRAS_, _KRAS_, _NRAS_) tend to have similar effects to one another in thyroid cancer, producing similar gene expression signatures [@doi:10.1142/9789811215636_0031].
 In multiple myeloma, however, activating _KRAS_ and _NRAS_ mutations produce distinct expression signatures, necessitating separate classifiers [@doi:10.1182/bloodadvances.2019000303].

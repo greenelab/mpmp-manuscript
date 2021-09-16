@@ -41,7 +41,6 @@ genomic
 germline
 GISTIC
 glioma
-gne
 GreeneScientist
 heatmap
 Heil
@@ -55,6 +54,7 @@ hyperparameters
 ICGC
 IDH
 Illumina
+indel
 interpretability
 intratumor
 isoforms
