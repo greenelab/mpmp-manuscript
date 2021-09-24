@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-09-16'
+date-meta: '2021-09-24'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-09-16" />
-  <meta name="citation_publication_date" content="2021-09-16" />
+  <meta name="dc.date" content="2021-09-24" />
+  <meta name="citation_publication_date" content="2021-09-24" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/1cddd2284c81c33e53f40346ee7ff1e101eb58f0/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/))
 was automatically generated
-from [greenelab/mpmp-manuscript@1cddd22](https://github.com/greenelab/mpmp-manuscript/tree/1cddd2284c81c33e53f40346ee7ff1e101eb58f0)
-on September 16, 2021.
+from [greenelab/mpmp-manuscript@f4ffff0](https://github.com/greenelab/mpmp-manuscript/tree/f4ffff0135f578fc8c19949c558c62681d4c42e7)
+on September 24, 2021.
 </em></small>
 
 ## Authors
@@ -433,8 +433,8 @@ The data types with the most missing samples were RPPA data (2,215 samples that 
 Summarized over all genes in the Vogelstein et al. dataset, we observed that gene expression and both methylation datasets tended to produce similar quality predictions, and these were significantly better than the remaining data types (Figure {@fig:all_data}B).
 For the set of genes having at least one significant predictor (i.e. "well-predicted" genes), median performance using gene expression was slightly higher than for the methylation data types, although this difference was not statistically significant (Figure {@fig:all_data}C).
 
-On the individual gene level, mutations in 26/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 23/75 genes from microRNA data and 15/75 genes from mutational signatures data (Figure {@fig:all_data}D-F).
-For the remaining data types on this smaller set of samples, 35/75 genes outperformed the baseline for gene expression data, 34/75 for 27k methylation, and 31/75 for 450k methylation.
+On the individual gene level, mutations in 22/75 genes were significantly predictable from RPPA data relative to the permuted baseline, compared to 17/75 genes from microRNA data and 1/75 genes from mutational signatures data (Figure {@fig:all_data}D-F).
+For the remaining data types on this smaller set of samples, 35/75 genes outperformed the baseline for gene expression data, 25/75 for 27k methylation, and 32/75 for 450k methylation.
 Compared to the methylation experiments (Figure {@fig:methylation}), we observed slightly fewer "well-predicted" genes for the expression and methylation datasets here (likely due to the considerably smaller sample size) but relative performance was comparable (Supplementary Figure {@fig:all_volcano_me}).
 Direct comparisons between each added data type and gene expression data showed that RPPA, microRNA and mutational signatures data generally provide similar or worse performance than the remaining data types (Figure {@fig:all_data}G-I).
 
@@ -463,13 +463,13 @@ All pairwise tests were run (and corrected for) but only neighboring test result
 ](images/figure_5.png){#fig:all_data width="90%"}
 
 When we constructed a heatmap depicting predictive performance for each gene across data types, we found that very few genes tended to be well-predicted exclusively by one or two data types (Figure {@fig:heatmap}).
-Of the 39 genes that are well-predicted using at least one data type (blue or red highlighted boxes in Figure {@fig:heatmap}), only three of them are well-predicted exclusively by a single data type, meaning that mutations in the other 37 genes can be predicted effectively using at least two different data sources.
+Of the 38 genes that are well-predicted using at least one data type (grey circles in Figure {@fig:heatmap}), only four of them are well-predicted exclusively by a single data type, meaning that mutations in the other 36 genes can be predicted effectively using at least two different data sources.
 This supports our observation that choosing the "correct" data modality is often unimportant for driver genes with strong functional signatures.
-Notable exceptions included _NF1_ (only well-predicted using gene expression data), _SETD2_ (only well-predicted using the two methylation datasets), and _TSC1_ (only well-predicted using gene expression data).
-Gene expression provided the best performance in 32/39 genes with at least one significant data type (red highlighted boxes in Figure {@fig:heatmap}), but only 2 of those 32 genes did not have any other significantly predictive data types (_NF1_ and _TSC1_); in the other 23 genes one or more non-expression data types also outperformed the permuted baseline.
+Exceptions included _NF1_ and _TSC1_ (only well-predicted using gene expression data), and _CASP8_ and _SETD2_ (only well-predicted using the two methylation datasets).
+Gene expression provided the best performance in 33/38 genes with at least one significant data type (red highlighted boxes in Figure {@fig:heatmap}), but only 2 of those 33 genes did not have any other significantly predictive data types (_NF1_ and _TSC1_); in the other 31 genes one or more non-expression data types also outperformed the permuted baseline.
 
 ![
-Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise _t_-tests with FDR correction).
+Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise _t_-tests across data types with FDR correction).
 ](images/figure_6.png){#fig:heatmap width="90%"}
 
 ### Simple multi-omics baseline provides no performance benefit
