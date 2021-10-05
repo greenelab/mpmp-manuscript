@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-09-24'
+date-meta: '2021-10-05'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-09-24" />
-  <meta name="citation_publication_date" content="2021-09-24" />
+  <meta name="dc.date" content="2021-10-05" />
+  <meta name="citation_publication_date" content="2021-10-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/))
 was automatically generated
-from [greenelab/mpmp-manuscript@f4ffff0](https://github.com/greenelab/mpmp-manuscript/tree/f4ffff0135f578fc8c19949c558c62681d4c42e7)
-on September 24, 2021.
+from [greenelab/mpmp-manuscript@7394143](https://github.com/greenelab/mpmp-manuscript/tree/7394143f2bf80e99ede1946d7e85123de0a033f9)
+on October 5, 2021.
 </em></small>
 
 ## Authors
@@ -353,9 +353,8 @@ This set of samples was further filtered for each target gene to cancer types co
 We then evaluated the performance for each target gene in each of the three gene sets.
 
 Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count (Figure {@fig:expression_gene_sets}A).
-In total, for a significance threshold of $\alpha = 0.001$, 47/85 genes (55.3%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 12/85 genes (14.1%) in the random gene set and 15/85 genes (17.6%) in the most mutated gene set.
-Of the 12 significantly predictable genes in the random gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}B), and of the 15 significantly predictable genes in the most mutated gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}C).
-Additionally, many of the significant genes in the most mutated gene set are clustered close to the significance threshold (Figure {@fig:expression_gene_sets}C), while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold (Figure {@fig:expression_gene_sets}D, higher AUPR differences and lower _p_-values).
+In total, for a significance threshold of $\alpha = 0.001$, 45/85 genes (52.9%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 9/85 genes (10.6%) in the random gene set and 7/85 genes (8.24%) in the most mutated gene set.
+Of the 9 significantly predictable genes in the random gene set, 8 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}B), and of the 7 significantly predictable genes in the most mutated gene set, all 7 of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}C).
 These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.
 
 ![

@@ -100,7 +100,7 @@ proteomics
 PTEN
 quantile
 Ras
-RPPA
+rppa
 SARC
 SBS
 SETD
