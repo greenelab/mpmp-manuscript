@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-09-24" />
+  <meta name="dcterms.date" content="2021-10-05" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation</title>
   <style>
@@ -31,8 +31,8 @@
   <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-09-24" />
-  <meta name="citation_publication_date" content="2021-09-24" />
+  <meta name="dc.date" content="2021-10-05" />
+  <meta name="citation_publication_date" content="2021-10-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -61,9 +61,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -77,10 +77,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/f4ffff0135f578fc8c19949c558c62681d4c42e7/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/f4ffff0135f578fc8c19949c558c62681d4c42e7">greenelab/mpmp-manuscript@f4ffff0</a>
-on September 24, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/7394143f2bf80e99ede1946d7e85123de0a033f9">greenelab/mpmp-manuscript@7394143</a>
+on October 5, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -292,9 +292,8 @@ For all gene sets, we used only the set of TCGA samples for which both gene expr
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
 We then evaluated the performance for each target gene in each of the three gene sets.</p>
 <p>Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count (Figure <a href="#fig:expression_gene_sets">2</a>A).
-In total, for a significance threshold of <span class="math inline">\(\alpha = 0.001\)</span>, 47/85 genes (55.3%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 12/85 genes (14.1%) in the random gene set and 15/85 genes (17.6%) in the most mutated gene set.
-Of the 12 significantly predictable genes in the random gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure <a href="#fig:expression_gene_sets">2</a>B), and of the 15 significantly predictable genes in the most mutated gene set, 9 of them are also in the Vogelstein gene set (highlighted in red in Figure <a href="#fig:expression_gene_sets">2</a>C).
-Additionally, many of the significant genes in the most mutated gene set are clustered close to the significance threshold (Figure <a href="#fig:expression_gene_sets">2</a>C), while the significant genes in the Vogelstein et al. gene set tend to be further from the threshold (Figure <a href="#fig:expression_gene_sets">2</a>D, higher AUPR differences and lower <em>p</em>-values).
+In total, for a significance threshold of <span class="math inline">\(\alpha = 0.001\)</span>, 45/85 genes (52.9%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 9/85 genes (10.6%) in the random gene set and 7/85 genes (8.24%) in the most mutated gene set.
+Of the 9 significantly predictable genes in the random gene set, 8 of them are also in the Vogelstein gene set (highlighted in red in Figure <a href="#fig:expression_gene_sets">2</a>B), and of the 7 significantly predictable genes in the most mutated gene set, all 7 of them are also in the Vogelstein gene set (highlighted in red in Figure <a href="#fig:expression_gene_sets">2</a>C).
 These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.</p>
 <div id="fig:expression_gene_sets" class="fignos">
 <figure>
@@ -1064,9 +1063,7 @@ Craig H Mermel, Steven E Schumacher, Barbara Hill, Matthew L Meyerson, Rameen Be
 DOI: <a href="https://doi.org/10.1186/gb-2011-12-4-r41">10.1186/gb-2011-12-4-r41</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21527027">21527027</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3218867">PMC3218867</a></p>
 </div>
 <div id="ref-lF0Fr9LL">
-<p>37. <strong>Scikit-learn: Machine Learning in Python</strong> <br />
-Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, … Édouard Duchesnay<br />
-<em>Journal of Machine Learning Research</em> (2011) <a href="http://jmlr.org/papers/v12/pedregosa11a.html">http://jmlr.org/papers/v12/pedregosa11a.html</a></p>
+<p>37. <a href="https://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html">https://jmlr.csail.mit.edu/papers/v12/pedregosa11a.html</a></p>
 </div>
 <div id="ref-Zg2jmD6p">
 <p>38. <strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <br />
@@ -1110,9 +1107,7 @@ Joan C. Smith, Jason M. Sheltzer<br />
 DOI: <a href="https://doi.org/10.1101/2021.06.01.446243">10.1101/2021.06.01.446243</a></p>
 </div>
 <div id="ref-wiw7Q7M7">
-<p>45. <strong>scikit-survival: A Library for Time-to-Event Analysis Built on Top of scikit-learn</strong> <br />
-Sebastian Pölsterl<br />
-<em>Journal of Machine Learning Research</em> (2020) <a href="http://jmlr.org/papers/v21/20-729.html">http://jmlr.org/papers/v21/20-729.html</a></p>
+<p>45. <a href="https://jmlr.org/papers/v21/20-729.html">https://jmlr.org/papers/v21/20-729.html</a></p>
 </div>
 <div id="ref-NrTv8Fyq">
 <p>46. <strong>Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors.</strong> <br />
