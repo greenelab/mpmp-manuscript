@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,9 +78,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/7394143f2bf80e99ede1946d7e85123de0a033f9/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/))
 was automatically generated
-from [greenelab/mpmp-manuscript@7394143](https://github.com/greenelab/mpmp-manuscript/tree/7394143f2bf80e99ede1946d7e85123de0a033f9)
+from [greenelab/mpmp-manuscript@b30738e](https://github.com/greenelab/mpmp-manuscript/tree/b30738eb23c95c289d55424c8917410c4e700678)
 on October 5, 2021.
 </em></small>
 
@@ -376,18 +376,17 @@ We used samples that had data for each of the data types being compared, includi
 This process retained 7,981 samples in the intersection of the expression, 27K methylation, 450K methylation, and mutation datasets, which we used for subsequent analyses.
 The most frequent missing data types were somatic mutation data (1,114 samples) and 450K methylation data (1,072 samples) (Figure {@fig:methylation}A).
 
-For most genes, predictions are better than our baseline model where labels are permuted (most values greater than 0 in the box plots), suggesting that there is considerable predictive signal in both expression and methylation datasets across the Vogelstein et al. gene set (Figure {@fig:methylation}B).
+For most genes, predictions are better than our baseline model where labels are permuted (values greater than 0 in the box plots), suggesting that there is considerable predictive signal in both expression and methylation datasets across the Vogelstein et al. gene set (Figure {@fig:methylation}B).
 Performance distributions are similar for expression and methylation, and aggregate performance is also similar for models using both 8,000 raw features (genes or CpG probes for expression and methylation respectively, selected using mean absolute deviation) or 5,000 principal components.
-Both before and after filtering for genes that exceed the significance threshold, gene expression with raw gene features provides a significant performance improvement relative to the methylation datasets (Figure {@fig:methylation}B, C).
-This provides evidence that gene expression measurements may be a slightly better predictor of mutation status than DNA methylation, although we observed no significant difference between aggregate performance using 27k methylation and 450k methylation.
+Both before and after filtering for genes that exceed the significance threshold, gene expression with raw gene features provides a significant performance improvement relative to the 27K methylation dataset, but gene expression and 450K methylation have statistically equivalent performance distributions (Figure {@fig:methylation}B, C).
 Results were similar with PCA-compressed gene expression features or raw CpG probes as predictors (Supplementary Figure {@fig:me_compress_boxes}).
 
-Considering each target gene in the Vogelstein gene set individually, we observed that 42/84 genes significantly outperformed the permuted baseline using gene expression data, as compared to 42/84 genes for 27K methylation and 39/84 genes for 450K methylation (Figure {@fig:methylation}D-F, more information in Supplementary Figure {@fig:methylation_heatmap}).
+Considering each target gene in the Vogelstein gene set individually, we observed that 40/84 genes significantly outperformed the permuted baseline using gene expression data, as compared to 38/84 genes for 27K methylation and 37/84 genes for 450K methylation (Figure {@fig:methylation}D-F, more information about specific genes in Supplementary Figure {@fig:methylation_heatmap}).
 In most cases, these "well-predicted" genes that outperformed the permuted baseline tended to be similar between data types (Figure {@fig:methylation}D-F; genes in the top right of each plot).
 For example, _TP53_, _BRAF_, and _PTEN_ appear in the top right of all 3 plots, suggesting that mutations in these genes have strong gene expression and DNA methylation signatures, and these signatures tend to be preserved across cancer types.
 
 In addition to comparing mutation classifiers trained on different data types to the permuted baseline, we also compared classifiers trained on true labels directly to each other, using a similar methodology (Figure {@fig:methylation}G-H).
-We observed that 6/100 genes were significantly more predictable from expression data than 27K methylation data, and 2/100 genes were significantly more predictable from expression data than 450K methylation data.
+We observed that 5/100 genes were significantly more predictable from expression data than 27K methylation data, and 3/100 genes were significantly more predictable from expression data than 450K methylation data.
 In both cases, 0/100 genes were significantly more predictable using the methylation data types.
 For both comparisons (expression vs. 27K methylation and expression vs. 450K methylation), we observed that the majority of points were clustered around the origin, indicating that the data types appear to confer similar information about mutation status.
 Additionally, many genes near the origin are significantly predictable vs. the shuffled baseline (labeled with an "X" in Figure {@fig:methylation}G-H), but equally predictable between data types (blue shading in Figure {@fig:methylation}G-H).
@@ -590,7 +589,7 @@ Proportion of samples from each TCGA cancer type that are "dropped" as more data
 Table: Number of samples from each TCGA cancer type that are "dropped" as more data types are added to the analysis. The "base" column indicates the number of samples that are present per cancer type in the final intersection of all data types (i.e. each sample counted in the last column has data for each of the 7 data types, including gene expression (not listed here) and somatic mutations). {#tbl:cancer_type_proportions}
 
 ![
-Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Blue highlights indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; red highlights indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise _t_-tests with FDR correction).
+Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise _t_-tests across data types with FDR correction).
 ](images/supp_figure_9.png){#fig:methylation_heatmap width=90%}
 
 ![
