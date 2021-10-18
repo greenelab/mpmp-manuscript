@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-10-05'
+date-meta: '2021-10-18'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
   <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-10-05" />
-  <meta name="citation_publication_date" content="2021-10-05" />
+  <meta name="dc.date" content="2021-10-18" />
+  <meta name="citation_publication_date" content="2021-10-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/b17814c0bd035be2d5a1930bf7dc8d2618e11eb1/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b17814c0bd035be2d5a1930bf7dc8d2618e11eb1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/b17814c0bd035be2d5a1930bf7dc8d2618e11eb1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/b30738eb23c95c289d55424c8917410c4e700678/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/b17814c0bd035be2d5a1930bf7dc8d2618e11eb1/))
 was automatically generated
-from [greenelab/mpmp-manuscript@b30738e](https://github.com/greenelab/mpmp-manuscript/tree/b30738eb23c95c289d55424c8917410c4e700678)
-on October 5, 2021.
+from [greenelab/mpmp-manuscript@b17814c](https://github.com/greenelab/mpmp-manuscript/tree/b17814c0bd035be2d5a1930bf7dc8d2618e11eb1)
+on October 18, 2021.
 </em></small>
 
 ## Authors
@@ -300,9 +300,9 @@ For the results shown in the main text, we report the difference in c-index rela
 
 To predict mutation presence or absence in cancer genes using multiple data types simultaneously, we concatenated individual datasets into a large feature matrix, then used the same elastic net logistic regression method described previously.
 For this task, we considered only the gene expression, 27K methylation, and 450K methylation datasets.
-We used only these data types to limit the number of multi-omics combinations: the expression and methylation datasets resulted in the best overall performance across the single-omics experiments so we limited combinations to those datasets here.
-In the main text, we report results using the top 5,000 principal components for each dataset.
-In the supplement, we also report results using "raw" features: for gene expression we used all 15,639 genes available in our RNA sequencing dataset, for the 27K methylation dataset we used all 20,040 CpG probes, and for the 450K methylation dataset we used the top 5,000 principal components.
+We used only these data types to limit the number of multi-omics combinations: the expression and methylation datasets resulted in the best overall performance across the single-omics experiments so we limited combinations to those datasets.
+In the main text, we report results using the top 5,000 principal components for each dataset, to ensure that the information content of the included features is comparable between data types.
+In the supplement, we also report results using "raw" features: for gene expression we used all 15,639 genes available in our RNA sequencing dataset, and for the 27K and 450K methylation datasets we used the top 20,000 CpG probes by mean absolute deviation.
 
 To construct the multi-omics models, we considered each of the pairwise combinations of the datasets listed above, as well as a combination of all 3 datasets.
 When combining multiple datasets, we concatenated along the column axis, including covariates for cancer type and sample mutation burden as before.
@@ -470,7 +470,7 @@ Gene expression provided the best performance in 33/38 genes with at least one s
 Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all 6 TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise _t_-tests across data types with FDR correction).
 ](images/figure_6.png){#fig:heatmap width="90%"}
 
-### Simple multi-omics baseline provides no performance benefit
+### Simple multi-omics integration provides little performance benefit
 
 We also trained "multi-omics" classifiers to predict mutations in six well-studied and widely mutated driver genes across various cancer types: _EGFR_, _IDH1_, _KRAS_, _PIK3CA_, _SETD2_, and _TP53_.
 Each of these genes is well-predicted from several data types in our earlier experiments (Figure {@fig:heatmap}), consistent with having strong pan-cancer driver effects.
@@ -481,9 +481,11 @@ Here, we show results using the top 5000 principal components from each data typ
 For each of the six target genes, we observed comparable performance between the best single-omics classifier (blue boxes in Figure {@fig:multi_omics}A) and the best multi-omics classifier (orange boxes in Figure {@fig:multi_omics}A).
 Across all classifiers and data types, we found varied patterns based on the target gene.
 For _IDH1_ and _TP53_ performance is relatively consistent regardless of data type(s), suggesting that baseline performance is high and there is little room for improvement as data is added (Figure {@fig:multi_omics}C, G).
-For _EGFR_, _KRAS_, and _PIK3CA_, combining gene expression with methylation data results in statistically equivalent performance to gene expression alone; classifiers trained only on methylation data perform worse (Figure {@fig:multi_omics}B, D, E).
-The best classifiers for _SETD2_ use methylation data alone; results are comparable whether 27K methylation or 27K+450K methylation features are used (Figure {@fig:multi_omics}F).
-Overall, we saw that combining data types in a relatively simple manner (i.e. by concatenating features from each individual data type) provided little or no improvement in predictive ability over the best individual data type.
+The _TP53_ classifier using raw features showed a statistically significant improvement when multiple data types were integrated, although the difference in mean performance was relatively small (Supplementary Figure {@fig:multi_omics_raw_feats}, _p_=0.0078).
+For _EGFR_, _KRAS_, and _PIK3CA_, combining gene expression with methylation data results in statistically equivalent or worse performance to gene expression alone; classifiers trained only on methylation data generally do not perform as well as those that integrate expression data (Figure {@fig:multi_omics}B, D, E).
+Previously, we saw that the best classifiers for _SETD2_ used methylation data alone (Figure {@fig:heatmap}).
+When we added multiple data types to our _SETD2_ classifier, we did observe an increase in performance (Figure {@fig:multi_omics}F), although this improvement was not statistically significant in a paired-sample _t_-test for $\alpha$=0.05 (_p_=0.078).
+Overall, we observed that combining data types in a relatively simple manner, by concatenating features from each individual data type, provided little or no improvement in predictive ability over the best individual data type.
 This supports our earlier observations of the redundancy of gene expression and methylation data as functional readouts, since our multi-omics classifiers are not in general able to extract gains in predictive performance as more data types are added for this set of cancer drivers.
 
 ![
@@ -609,7 +611,8 @@ Each point shows the mean concordance index, relative to baseline predictors wit
 ](images/supp_figure_12.png){#fig:survival_cancer_types width=90%}
 
 ![
-Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best "multi-omics" model for each target gene, using raw (not PCA compressed) features. For feature parity between data types, the top 20,000 features by mean absolute deviation were used for each feature type. None of the differences between single-omics and multi-omics models were statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
+Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best "multi-omics" model for each target gene, using raw (not PCA compressed) features. For feature parity between data types, the top 20,000 features by mean absolute deviation were used for each data type.
+The difference between single-omics and multi-omics performance for _TP53_ was statistically significant (_p_=0.0078), but other differences between single-omics and multi-omics models were not statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
 Bottom plots: classifier performance, relative to baseline with permuted labels, for individual genes. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).
 ](images/supp_figure_13.png){#fig:multi_omics_raw_feats width=90%}
 
