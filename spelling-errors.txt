@@ -22,6 +22,7 @@ CHOL
 CNVs
 COAD
 colorectal
+covariate
 covariates
 CpG
 dataset
@@ -43,7 +44,7 @@ germline
 GISTIC
 glioma
 GreeneScientist
-Heatmap
+heatmap
 Heil
 histone
 HNSC
@@ -100,6 +101,7 @@ proteomics
 PTEN
 quantile
 Ras
+regresssion
 RPPA
 SARC
 SBS
@@ -119,7 +121,6 @@ TSC
 UCEC
 UCS
 univariate
-untransformed
 UVM
 variational
 Vogelstein
