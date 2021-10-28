@@ -46,8 +46,6 @@ content/02.introduction.md:24:methylation
 content/02.introduction.md:25:omics
 content/02.introduction.md:29:methylation
 content/02.introduction.md:30:methylation
-content/02.introduction.md:31:methylation
-content/02.introduction.md:31:RPPA
 content/02.introduction.md:32:omics
 content/02.introduction.md:32:performant
 content/02.introduction.md:33:methylation
@@ -400,10 +398,6 @@ content/05.discussion.md:3:TCGA
 content/05.discussion.md:4:methylation
 content/05.discussion.md:4:microRNA
 content/05.discussion.md:4:RPPA
-content/05.discussion.md:5:datasets
-content/05.discussion.md:5:methylation
-content/05.discussion.md:5:microRNA
-content/05.discussion.md:5:RPPA
 content/05.discussion.md:6:methylation
 content/05.discussion.md:6:omics
 content/05.discussion.md:8:CpG
