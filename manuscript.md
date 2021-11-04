@@ -1,5 +1,5 @@
 ---
-title: Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation
+title: Gene expression and DNA methylation consistently predict cancer mutation states
 keywords:
 - machine learning
 - functional genomics
@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-10-28'
+date-meta: '2021-11-04'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -20,12 +20,12 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="citation_title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta property="og:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta property="twitter:title" content="Prediction of cancer mutation states using multiple data modalities reveals the utility and consistency of gene expression and DNA methylation" />
-  <meta name="dc.date" content="2021-10-28" />
-  <meta name="citation_publication_date" content="2021-10-28" />
+  <meta name="dc.title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
+  <meta name="citation_title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
+  <meta property="og:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
+  <meta property="twitter:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
+  <meta name="dc.date" content="2021-11-04" />
+  <meta name="citation_publication_date" content="2021-11-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,9 +54,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/7720d496e955ce9cf5ae93a10f1ba50264146974/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7720d496e955ce9cf5ae93a10f1ba50264146974/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/7720d496e955ce9cf5ae93a10f1ba50264146974/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -78,10 +78,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/7720d496e955ce9cf5ae93a10f1ba50264146974/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/))
 was automatically generated
-from [greenelab/mpmp-manuscript@7720d49](https://github.com/greenelab/mpmp-manuscript/tree/7720d496e955ce9cf5ae93a10f1ba50264146974)
-on October 28, 2021.
+from [greenelab/mpmp-manuscript@777987b](https://github.com/greenelab/mpmp-manuscript/tree/777987beef1e5fff7bf956117754ac4ff9961d36)
+on November 4, 2021.
 </em></small>
 
 ## Authors

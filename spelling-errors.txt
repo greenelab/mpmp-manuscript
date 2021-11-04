@@ -81,7 +81,7 @@ mut
 myeloid
 myeloma
 NRAS
-omics
+Omics
 oncogenic
 OV
 overfitting
