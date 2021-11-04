@@ -54,11 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/015e2a55ce0835ffeefd39bbb123c7ff5205657e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/015e2a55ce0835ffeefd39bbb123c7ff5205657e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/015e2a55ce0835ffeefd39bbb123c7ff5205657e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/015e2a55ce0835ffeefd39bbb123c7ff5205657e/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/015e2a55ce0835ffeefd39bbb123c7ff5205657e/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -78,9 +80,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/777987beef1e5fff7bf956117754ac4ff9961d36/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/015e2a55ce0835ffeefd39bbb123c7ff5205657e/))
 was automatically generated
-from [greenelab/mpmp-manuscript@777987b](https://github.com/greenelab/mpmp-manuscript/tree/777987beef1e5fff7bf956117754ac4ff9961d36)
+from [greenelab/mpmp-manuscript@015e2a5](https://github.com/greenelab/mpmp-manuscript/tree/015e2a55ce0835ffeefd39bbb123c7ff5205657e)
 on November 4, 2021.
 </em></small>
 
