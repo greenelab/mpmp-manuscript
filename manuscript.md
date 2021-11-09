@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/3ea44825a268c09e268dfdb932de0cfe27d9ee72/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3ea44825a268c09e268dfdb932de0cfe27d9ee72/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3ea44825a268c09e268dfdb932de0cfe27d9ee72/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3ea44825a268c09e268dfdb932de0cfe27d9ee72/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3ea44825a268c09e268dfdb932de0cfe27d9ee72/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/5f87cb419994de8df54674d36e86c5f6325f8254/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/5f87cb419994de8df54674d36e86c5f6325f8254/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,9 +80,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/3ea44825a268c09e268dfdb932de0cfe27d9ee72/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/))
 was automatically generated
-from [greenelab/mpmp-manuscript@3ea4482](https://github.com/greenelab/mpmp-manuscript/tree/3ea44825a268c09e268dfdb932de0cfe27d9ee72)
+from [greenelab/mpmp-manuscript@5f87cb4](https://github.com/greenelab/mpmp-manuscript/tree/5f87cb419994de8df54674d36e86c5f6325f8254)
 on November 9, 2021.
 </em></small>
 
@@ -142,10 +142,10 @@ Since functional signatures of cancer mutation have been identified across many 
 The TCGA Pan-Cancer Atlas contains genetic alteration data including somatic mutations and copy number variants (CNVs), as well as several -omics data types.
 From TCGA, we focus on RNA sequencing, DNA methylation arrays, reverse phase protein arrays (RPPA), microRNA, and somatic mutational signatures as -omics readouts.
 
-Across a collection of cancer-associated genetic alterations, RNA sequencing and DNA methylation were the most effective predictors of alteration state.
-Surprisingly, we found that for most alterations, they were approximately equally effective predictors.
-The target gene was the primary driver of performance, rather than the data type, and there was little difference between the top data types for the majority of genes.
-We also found that combining data types into a single multi-omics model often provided little or no improvement in predictive ability over the best individual data type.
+Across a collection of genes recurrently mutated in cancer, RNA sequencing and DNA methylation were the most effective predictors of mutation state.
+Surprisingly, we found that for most mutated genes, they were approximately equally effective predictors.
+Performance was more variable between mutations than it was between data types for the same mutation, and there was little difference between the top data types for the majority of genes.
+We also found that combining data types into a single multi-omics model provided little or no improvement in predictive ability over the best individual data type.
 Based on our results, for the design of studies focused on the functional outcomes of cancer mutations, we recommend focusing on gene expression or DNA methylation as first-line readouts.
 
 
@@ -179,7 +179,7 @@ However, direct comparison among different data types for this application is la
 We select a collection of potential cancer drivers with varying functions and roles in cancer development [@doi:10.1126/science.1235122].
 We use mutation status in these genes as labels to train classifiers, using each of the data types listed as training data, in a pan-cancer setting; we follow similar methods to the elastic net logistic regression approach described in Way et al. 2018 [@doi:10.1016/j.celrep.2018.03.046] and Way et al. 2020 [@doi:10.1186/s13059-020-02021-3].
 We show that there is considerable predictive signal for many genes relative to a random baseline and that gene expression and DNA methylation generally provide the best predictions of mutation state.
-Surprisingly, we find that across a variety of target genes, gene expression and DNA methylation are approximately equally effective predictors; the target gene, rather than the data type, is the primary determinant of performance.
+Surprisingly, we find that across a variety of genes, gene expression and DNA methylation are approximately equally effective predictors.
 We observe similar results for pan-cancer survival prediction across the same data types with little separation between the top-performing data types.
 In addition, we observe that combining data types into a single multi-omics model for mutation prediction provides little, if any, performance benefit over the most performant model using a single data type.
 Our results will help to inform the design of future functional genomics studies in cancer, suggesting that for many strong drivers with clear functional signatures, gene expression and DNA methylation measurements provide similar information content.
@@ -373,7 +373,7 @@ Each data point represents the mean cross-validated AUPR difference, compared wi
 Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: \*\*: _p_ < 0.01, \*\*\*: _p_ < 0.001, ns: not statistically significant for a cutoff of _p_ = 0.05.
 **B, C, D.** Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the three gene sets.
 The _x_-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
-Points (genes) highlighted in red are overlapping between the Vogelstein gene set and either the random or most mutated gene set.
+Points (genes) marked with an "X" are overlapping between the Vogelstein gene set and either the random or most mutated gene set.
 ](images/figure_2.png){#fig:expression_gene_sets width="90%"}
 
 ### Gene expression and DNA methylation have similar mutation prediction performance
@@ -408,6 +408,7 @@ Confidence intervals between the best- and worst-performing data types overlap a
 ![
 **A.** Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA.
 Only non-zero overlap counts are shown.
+Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels.
 **B.** Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
 The gene expression predictor uses the top 8000 gene features by mean absolute deviation, and the methylation predictors use the top 5000 principal components as predictive features.
 Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: \*\*: _p_ < 0.01, \*\*\*: _p_ < 0.001, ns: not statistically significant for a cutoff of _p_ = 0.05.
@@ -457,7 +458,9 @@ All six readouts performed comparably for this smaller set of samples, with slig
 The covariate-only baseline predictor performed considerably worse than it did in the expression/methylation comparisons, with all -omics data types outperforming the baseline predictor at all PC numbers.
 
 ![
-**A.** Overlap of TCGA samples between data types used in mutation prediction comparisons. Only overlaps with more than 100 samples are shown.
+**A.** Overlap of TCGA samples between all data types used in mutation prediction comparisons.
+Only overlaps with more than 100 samples are shown.
+Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels.
 **B.** Overall distribution of performance per data type across 75 genes from Vogelstein et al. gene set.
 Each data point represents mean cross-validated AUPR difference, compared with a baseline model trained on permuted labels, for one gene; notches show bootstrapped 95% confidence intervals.
 Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: \*\*: _p_ < 0.01, \*\*\*: _p_ < 0.001, ns: not statistically significant for a cutoff of _p_ = 0.05.
