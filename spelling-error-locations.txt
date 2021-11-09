@@ -54,11 +54,9 @@ content/03.methods.md:5:TCGA
 content/03.methods.md:6:gdc
 content/03.methods.md:6:gdc
 content/03.methods.md:6:GDC
-content/03.methods.md:6:pancanatlas
-content/03.methods.md:6:pancanatlas
 content/03.methods.md:7:dataset
 content/03.methods.md:7:dataset
-content/03.methods.md:7:PanCanAtlas
+content/03.methods.md:7:GDC
 content/03.methods.md:8:dataset
 content/03.methods.md:8:hypermutated
 content/03.methods.md:9:TCGA
