@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-11-09'
+date-meta: '2021-11-10'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="og:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="twitter:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta name="dc.date" content="2021-11-09" />
-  <meta name="citation_publication_date" content="2021-11-09" />
+  <meta name="dc.date" content="2021-11-10" />
+  <meta name="citation_publication_date" content="2021-11-10" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/5f87cb419994de8df54674d36e86c5f6325f8254/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/5f87cb419994de8df54674d36e86c5f6325f8254/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/95ea0b76be9707d48f0c38712d7f3135a5ee4435/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/95ea0b76be9707d48f0c38712d7f3135a5ee4435/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,10 +80,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/5f87cb419994de8df54674d36e86c5f6325f8254/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/))
 was automatically generated
-from [greenelab/mpmp-manuscript@5f87cb4](https://github.com/greenelab/mpmp-manuscript/tree/5f87cb419994de8df54674d36e86c5f6325f8254)
-on November 9, 2021.
+from [greenelab/mpmp-manuscript@95ea0b7](https://github.com/greenelab/mpmp-manuscript/tree/95ea0b76be9707d48f0c38712d7f3135a5ee4435)
+on November 10, 2021.
 </em></small>
 
 ## Authors
@@ -190,7 +190,7 @@ Our results will help to inform the design of future functional genomics studies
 ### Mutation data download and preprocessing
 
 To generate binary mutated/non-mutated gene labels for our machine learning model, we used mutation calls for TCGA samples from MC3 [@doi:10.1016/j.cels.2018.03.002] and copy number threshold calls from GISTIC2.0 [@doi:10.1186/gb-2011-12-4-r41].
-MC3 mutation calls were downloaded from the Genome Data Commons (GDC) of the National Cancer Institute, at [`https://gdc.cancer.gov/about-data/publications/pancanatlas`](https://gdc.cancer.gov/about-data/publications/pancanatlas).
+MC3 mutation calls were downloaded from the Genomic Data Commons (GDC) of the National Cancer Institute, at [`https://gdc.cancer.gov/about-data/publications/pancanatlas`](https://gdc.cancer.gov/about-data/publications/pancanatlas).
 Copy number threshold calls are from an older version of the GDC data, and are available here: [`https://figshare.com/articles/dataset/TCGA_PanCanAtlas_Copy_Number_Data/6144122`](https://figshare.com/articles/dataset/TCGA_PanCanAtlas_Copy_Number_Data/6144122).
 We removed hypermutated samples (defined as five or more standard deviations above the mean non-silent somatic mutation count) from our dataset to reduce the number of false positives (i.e., non-driver mutations).
 After this filtering, 9,074 TCGA samples with mutation and copy number data remained.
@@ -548,7 +548,39 @@ Results using RPPA measurements as predictive features were also promising, espe
 Future technology advances, in both quality and quantity of data, are likely to improve our understanding of the full picture of functional consequences of mutations in cancer cells.
 
 
-## Acknowledgements
+## Declarations
+
+### Ethics approval and consent to participate
+
+Not applicable
+
+### Consent for publication
+
+Not applicable
+
+### Availability of data and materials
+
+The datasets analyzed during this study were previously published as part of the TCGA Pan-Cancer Atlas project, and are publicly available from the NIH NCI Genomic Data Commons (GDC) at `https://gdc.cancer.gov/about-data/publications/pancanatlas`.
+
+Scripts used to download and preprocess the datasets for this study are available at `https://github.com/greenelab/mpmp/tree/master/00_download_data`.
+
+### Competing interests
+
+The authors declare that they have no competing interests.
+
+### Funding
+
+This work was supported by grants from the National Institutes of Health's National Human Genome Research Institute (NHGRI) under award R01 HG010067 to CSG and the National Institutes of Health’s National Cancer Institute (NCI) under awards R01 CA237170 to CSG, R01 CA216265 to BCC, and R01 CA253976 to BCC.
+The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
+
+### Authors' contributions
+
+JC: conceptualization, methodology, software, visualization, writing - original draft, writing - review and editing
+BCC: methodology, writing - review and editing
+MC: methodology, writing - review and editing
+CSG: conceptualization, funding acquisition, methodology, supervision, writing - review and editing
+
+### Acknowledgements
 
 We would like to thank Alexandra Lee, Ben Heil, Milton Pividori, and Natalie Davidson for reviewing the software associated with this work and providing insightful feedback.
 Figure 1 (the schematic of the background and evaluation pipeline) was created using BioRender.com.
