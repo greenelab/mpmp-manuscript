@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2021-11-10" />
+  <meta name="dcterms.date" content="2022-04-07" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Gene expression and DNA methylation consistently predict cancer mutation states</title>
   <style>
@@ -18,10 +18,26 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
@@ -31,8 +47,8 @@
   <meta name="citation_title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="og:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="twitter:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta name="dc.date" content="2021-11-10" />
-  <meta name="citation_publication_date" content="2021-11-10" />
+  <meta name="dc.date" content="2022-04-07" />
+  <meta name="citation_publication_date" content="2022-04-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -61,17 +77,20 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/95ea0b76be9707d48f0c38712d7f3135a5ee4435/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/95ea0b76be9707d48f0c38712d7f3135a5ee4435/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
   <!-- end Manubot generated metadata -->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -79,45 +98,45 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/95ea0b76be9707d48f0c38712d7f3135a5ee4435">greenelab/mpmp-manuscript@95ea0b7</a>
-on November 10, 2021.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd">greenelab/mpmp-manuscript@d7a322d</a>
+on April 7, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Jake Crawford</strong><br>
-<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/0000-0001-6207-0782">0000-0001-6207-0782</a>
-· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
 <a href="https://github.com/jjc2718">jjc2718</a>
-· <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" />
+· <img src="images/twitter.svg" class="inline_icon" width="16" height="16" alt="Twitter icon" />
 <a href="https://twitter.com/jjc2718">jjc2718</a><br>
 <small>
 Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
 · Funded by National Institutes of Health’s National Cancer Institute (R01 CA237170); National Institutes of Health’s National Human Genome Research Institute (R01 HG010067)
 </small></p></li>
 <li><p><strong>Brock C. Christensen</strong><br>
-<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/0000-0003-3022-426X">0000-0003-3022-426X</a><br>
 <small>
 Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA; Department of Molecular and Systems Biology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
 · Funded by National Institutes of Health’s National Cancer Institute (R01 CA216265, R01 CA253976)
 </small></p></li>
 <li><p><strong>Maria Chikina</strong><br>
-<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/0000-0003-2550-5403">0000-0003-2550-5403</a>
-· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
 <a href="https://github.com/mchikina">mchikina</a><br>
 <small>
 Department of Computational and Systems Biology, School of Medicine, University of Pittsburgh, Pittsburgh, PA, USA
 </small></p></li>
 <li><p><strong>Casey S. Greene</strong><br>
-<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/0000-0001-8713-9213">0000-0001-8713-9213</a>
-· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
 <a href="https://github.com/cgreene">cgreene</a>
-· <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" />
+· <img src="images/twitter.svg" class="inline_icon" width="16" height="16" alt="Twitter icon" />
 <a href="https://twitter.com/GreeneScientist">GreeneScientist</a><br>
 <small>
 Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO, USA
@@ -285,7 +304,8 @@ We summarize performance across all genes in our cancer gene set using a similar
 In our summary plots, the x-axis shows the magnitude of the change in the classification metric between conditions, and the y-axis shows the <em>p</em>-value for the associated <em>t</em>-test (Figure <a href="#fig:overview">1</a>C).</p>
 <div id="fig:overview" class="fignos">
 <figure>
-<img src="images/figure_1.png" alt="" /><figcaption><span>Figure 1:</span> <strong>A.</strong> Cancer mutations can perturb cellular function via a variety of cellular processes.
+<img src="images/figure_1.png" alt="Figure 1: A. Cancer mutations can perturb cellular function via a variety of cellular processes. Arrows represent major potential paths of information flow from a somatic mutation in DNA to its resulting cell phenotype; circular arrow represents the ability of certain mutations (e.g. in DNA damage repair genes) to alter somatic mutation patterns. Note that this does not reflect all possible relationships between cellular processes: for instance, changes in gene expression can lead to changes in somatic mutation rates. B. Predicting presence/absence of somatic alterations in cancer from diverse data modalities. In this study, we use functional readouts from TCGA as predictive features and the presence or absence of mutation in a given gene as labels. This reverses the primary direction of information flow shown in Panel A. C. Schematic of evaluation pipeline." />
+<figcaption aria-hidden="true"><span>Figure 1:</span> <strong>A.</strong> Cancer mutations can perturb cellular function via a variety of cellular processes.
 Arrows represent major potential paths of information flow from a somatic mutation in DNA to its resulting cell phenotype; circular arrow represents the ability of certain mutations (e.g. in DNA damage repair genes) to alter somatic mutation patterns.
 Note that this does not reflect all possible relationships between cellular processes: for instance, changes in gene expression can lead to changes in somatic mutation rates.
 <strong>B.</strong> Predicting presence/absence of somatic alterations in cancer from diverse data modalities.
@@ -307,7 +327,8 @@ Of the nine significantly predictable genes in the random gene set, eight of the
 These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.</p>
 <div id="fig:expression_gene_sets" class="fignos">
 <figure>
-<img src="images/figure_2.png" style="width:90.0%" alt="" /><figcaption><span>Figure 2:</span> <strong>A.</strong> Overall distribution of performance across three gene sets, using gene expression (RNA-seq) data to predict mutations.
+<img src="images/figure_2.png" style="width:90.0%" alt="Figure 2: A. Overall distribution of performance across three gene sets, using gene expression (RNA-seq) data to predict mutations. Each data point represents the mean cross-validated AUPR difference, compared with a baseline model trained on permuted mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals. “random” = 85 random genes, “most mutated” = 85 most mutated genes, “Vogelstein et al.” = 85 cancer related genes from Vogelstein et al. 2013 gene set. Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: p &lt; 0.01, ***: p &lt; 0.001, ns: not statistically significant for a cutoff of p = 0.05. B, C, D. Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the three gene sets. The x-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the y-axis shows p-values for a paired t-test comparing cross-validated AUPR values within folds. Points (genes) marked with an “X” are overlapping between the Vogelstein gene set and either the random or most mutated gene set." />
+<figcaption aria-hidden="true"><span>Figure 2:</span> <strong>A.</strong> Overall distribution of performance across three gene sets, using gene expression (RNA-seq) data to predict mutations.
 Each data point represents the mean cross-validated AUPR difference, compared with a baseline model trained on permuted mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals.
 “random” = 85 random genes, “most mutated” = 85 most mutated genes, “Vogelstein et al.” = 85 cancer related genes from Vogelstein et al. 2013 gene set.
 Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: <em>p</em> &lt; 0.01, ***: <em>p</em> &lt; 0.001, ns: not statistically significant for a cutoff of <em>p</em> = 0.05.
@@ -319,7 +340,7 @@ Points (genes) marked with an “X” are overlapping between the Vogelstein gen
 <h3 id="gene-expression-and-dna-methylation-have-similar-mutation-prediction-performance">Gene expression and DNA methylation have similar mutation prediction performance</h3>
 <p>We compared gene expression with DNA methylation as downstream readouts of the effects of cancer alterations.
 In these analyses, we considered both the 27K probe and 450K probe methylation datasets generated for the TCGA Pan-Cancer Atlas.
-We performed this comparison using the cancer-related gene set derived from Vogelstein et al. <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span>.
+We performed this comparison using the cancer-related gene set derived from Vogelstein et al. <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span>.
 We used samples that had data for each of the data types being compared, including somatic mutation data to generate mutation labels.
 This process retained 7,981 samples in the intersection of the expression, 27K methylation, 450K methylation, and mutation datasets, which we used for subsequent analyses.
 The most frequent missing data types were somatic mutation data (1,114 samples) and 450K methylation data (1,072 samples) (Figure <a href="#fig:methylation">3</a>A).</p>
@@ -341,7 +362,8 @@ All data types outperformed the covariate-only baseline (see <a href="#survival-
 Confidence intervals between the best- and worst-performing data types overlap at most PC counts (with the exception of gene expression at 5,000 PC features), suggesting that similarly to mutation prediction, the three data types tend to have comparable effectiveness for pan-cancer survival prediction.</p>
 <div id="fig:methylation" class="fignos">
 <figure>
-<img src="images/figure_3.png" style="width:90.0%" alt="" /><figcaption><span>Figure 3:</span> <strong>A.</strong> Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA.
+<img src="images/figure_3.png" style="width:90.0%" alt="Figure 3: A. Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA. Only non-zero overlap counts are shown. Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels. B. Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors. The gene expression predictor uses the top 8000 gene features by mean absolute deviation, and the methylation predictors use the top 5000 principal components as predictive features. Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: p &lt; 0.01, ***: p &lt; 0.001, ns: not statistically significant for a cutoff of p = 0.05. C. Predictive performance for genes where at least one of the considered data types predicts mutation labels significantly better than the permuted baseline. D-F. Predictive performance for each gene in the Vogelstein et al. gene set, for each data type, compared with a baseline model trained on permuted labels. G-H. Predictive performance for each gene in the Vogelstein et al. gene set, comparing gene expression directly to each methylation dataset (with classifiers trained on true labels). I. Pan-cancer survival prediction performance, quantified using c-index on the y-axis, for gene expression, 27K methylation, and 450K methylation. The x-axis shows results with varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type; grey dotted line indicates mean performance for a covariate-only baseline model." />
+<figcaption aria-hidden="true"><span>Figure 3:</span> <strong>A.</strong> Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA.
 Only non-zero overlap counts are shown.
 Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels.
 <strong>B.</strong> Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
@@ -364,7 +386,8 @@ These observations are consistent with the pan-cancer <em>ERBB2</em> mutant-asso
 <em>SETD2</em> is widely mutated across cancer types and affects H3K36 histone methylation most directly, but SETD2-mediated changes in H3K36 methylation have been linked to dysregulation of diverse cellular processes including DNA methylation and RNA splicing <span class="citation" data-cites="rNm0rAz7 fdVKgtEF">[<a href="#ref-rNm0rAz7" role="doc-biblioref">23</a>,<a href="#ref-fdVKgtEF" role="doc-biblioref">51</a>]</span>.</p>
 <div id="fig:methylation_genes" class="fignos">
 <figure>
-<img src="images/figure_4.png" style="width:90.0%" alt="" /><figcaption><span>Figure 4:</span> Performance across varying PCA dimensions for specific genes of interest. Dotted lines represent results for “raw” features (8,000 gene features for gene expression data and 8,000 CpG probes for both methylation datasets, selected by largest mean absolute deviation). Error bars and shaded regions show bootstrapped 95% confidence intervals. Stars in boxes show statistical testing results compared with permuted baseline model; each box refers to the model using the number of PCA components it is over (far right box = models with raw features). **: <em>p</em> &lt; 0.01, ***: <em>p</em> &lt; 0.001, no stars: not statistically significant for a cutoff of <em>p</em> = 0.05.</figcaption>
+<img src="images/figure_4.png" style="width:90.0%" alt="Figure 4: Performance across varying PCA dimensions for specific genes of interest. Dotted lines represent results for “raw” features (8,000 gene features for gene expression data and 8,000 CpG probes for both methylation datasets, selected by largest mean absolute deviation). Error bars and shaded regions show bootstrapped 95% confidence intervals. Stars in boxes show statistical testing results compared with permuted baseline model; each box refers to the model using the number of PCA components it is over (far right box = models with raw features). **: p &lt; 0.01, ***: p &lt; 0.001, no stars: not statistically significant for a cutoff of p = 0.05." />
+<figcaption aria-hidden="true"><span>Figure 4:</span> Performance across varying PCA dimensions for specific genes of interest. Dotted lines represent results for “raw” features (8,000 gene features for gene expression data and 8,000 CpG probes for both methylation datasets, selected by largest mean absolute deviation). Error bars and shaded regions show bootstrapped 95% confidence intervals. Stars in boxes show statistical testing results compared with permuted baseline model; each box refers to the model using the number of PCA components it is over (far right box = models with raw features). **: <em>p</em> &lt; 0.01, ***: <em>p</em> &lt; 0.001, no stars: not statistically significant for a cutoff of <em>p</em> = 0.05.</figcaption>
 </figure>
 </div>
 <h3 id="comparing-six-different-readouts-favors-expression-and-dna-methylation">Comparing six different readouts favors expression and DNA methylation</h3>
@@ -389,7 +412,8 @@ All six readouts performed comparably for this smaller set of samples, with slig
 The covariate-only baseline predictor performed considerably worse than it did in the expression/methylation comparisons, with all -omics data types outperforming the baseline predictor at all PC numbers.</p>
 <div id="fig:all_data" class="fignos">
 <figure>
-<img src="images/figure_5.png" style="width:90.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>A.</strong> Overlap of TCGA samples between all data types used in mutation prediction comparisons.
+<img src="images/figure_5.png" style="width:90.0%" alt="Figure 5: A. Overlap of TCGA samples between all data types used in mutation prediction comparisons. Only overlaps with more than 100 samples are shown. Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels. B. Overall distribution of performance per data type across 75 genes from Vogelstein et al. gene set. Each data point represents mean cross-validated AUPR difference, compared with a baseline model trained on permuted labels, for one gene; notches show bootstrapped 95% confidence intervals. Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: p &lt; 0.01, ***: p &lt; 0.001, ns: not statistically significant for a cutoff of p = 0.05. All pairwise tests were run (and corrected for) but only neighboring test results are shown. C. Overall performance distribution per data type for genes where the permuted baseline model is significantly outperformed for one or more data types, resulting in a total of 39 genes. D, E, F. Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set, in each of the added data types (RPPA, microRNA, mutational signatures). The x-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the y-axis shows p-values for a paired t-test comparing cross-validated AUPR values within folds. G, H, I. Volcano-like plots comparing predictive performance between data types for each gene in the Vogelstein et al. gene set. The x-axis shows the difference in mean AUPR between gene expression and another data type (positive values = better mean performance using gene expression features), and the y-axis shows p-values for a paired t-test comparing cross-validated AUPR values within folds. J. Pan-cancer survival prediction performance, quantified using c-index on the y-axis, for all data types. The x-axis shows results with varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type; grey dotted line indicates mean performance for a covariate-only baseline model." />
+<figcaption aria-hidden="true"><span>Figure 5:</span> <strong>A.</strong> Overlap of TCGA samples between all data types used in mutation prediction comparisons.
 Only overlaps with more than 100 samples are shown.
 Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels.
 <strong>B.</strong> Overall distribution of performance per data type across 75 genes from Vogelstein et al. gene set.
@@ -409,7 +433,8 @@ Exceptions included <em>NF1</em> and <em>TSC1</em> (only well-predicted using ge
 Gene expression provided the best performance in 33/38 genes with at least one significant data type (red highlighted boxes in Figure <a href="#fig:heatmap">6</a>), but only 2 of those 33 genes did not have any other significantly predictive data types (<em>NF1</em> and <em>TSC1</em>); in the other 31 genes one or more non-expression data types also outperformed the permuted baseline.</p>
 <div id="fig:heatmap" class="fignos">
 <figure>
-<img src="images/figure_6.png" style="width:90.0%" alt="" /><figcaption><span>Figure 6:</span> Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all six TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests across data types with FDR correction).</figcaption>
+<img src="images/figure_6.png" style="width:90.0%" alt="Figure 6: Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all six TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise t-tests across data types with FDR correction)." />
+<figcaption aria-hidden="true"><span>Figure 6:</span> Heatmap displaying predictive performance for mutations in each of the 75 genes from the Vogelstein et al. gene set, across all six TCGA data modalities. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests across data types with FDR correction).</figcaption>
 </figure>
 </div>
 <h3 id="simple-multi-omics-integration-provides-little-performance-benefit">Simple multi-omics integration provides little performance benefit</h3>
@@ -429,7 +454,8 @@ Overall, we observed that combining data types in a relatively simple manner, by
 This supports our earlier observations of the redundancy of gene expression and methylation data as functional readouts, since our multi-omics classifiers are not in general able to extract gains in predictive performance as more data types are added for this set of cancer drivers.</p>
 <div id="fig:multi_omics" class="fignos">
 <figure>
-<img src="images/figure_7.png" style="width:90.0%" alt="" /><figcaption><span>Figure 7:</span> <strong>A.</strong> Comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best “multi-omics” model for each target gene. None of the differences between single-omics and multi-omics models were statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
+<img src="images/figure_7.png" style="width:90.0%" alt="Figure 7: A. Comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best “multi-omics” model for each target gene. None of the differences between single-omics and multi-omics models were statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05. B-G. Classifier performance, relative to baseline with permuted labels, for mutation prediction models trained on various combinations of data types. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates)." />
+<figcaption aria-hidden="true"><span>Figure 7:</span> <strong>A.</strong> Comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best “multi-omics” model for each target gene. None of the differences between single-omics and multi-omics models were statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
 <strong>B-G.</strong> Classifier performance, relative to baseline with permuted labels, for mutation prediction models trained on various combinations of data types. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).</figcaption>
 </figure>
 </div>
@@ -461,7 +487,7 @@ A high-throughput computational pipeline to identify cases where functional sign
 In particular, for any of our “well-predicted” genes (i.e. genes that, when mutated, have strong signatures in one or more data types), we cannot definitively distinguish correlation from causation.
 To directly assess the effects of particular mutations on various data modalities, some studies use cell line data from sources such as the Cancer Cell Line Encyclopedia (CCLE) <span class="citation" data-cites="kcdvZmNN">[<a href="#ref-kcdvZmNN" role="doc-biblioref">66</a>]</span>.
 While this approach could help to isolate the causal effect of a given mutation on a given cell line, cell lines are sometimes an imperfect match for the cancers they are derived from <span class="citation" data-cites="2AuD4Mwu">[<a href="#ref-2AuD4Mwu" role="doc-biblioref">67</a>]</span>.
-We are also limited in that we cannot assign timing or clonal status to mutations, or fully characterize intratumor heterogeneity, with certainty from the bulk sequencing data generated by TCGA (although some features of tumor mutational processes over time can be estimated from bulk data, e.g. <span class="citation" data-cites="16yVVytBf">[<a href="#ref-16yVVytBf" role="doc-biblioref">68</a>]</span>).
+We are also limited in that we cannot assign timing or clonal status to mutations, or fully characterize intratumor heterogeneity, with certainty from the bulk sequencing data generated by TCGA (although some features of tumor mutational processes over time can be estimated from bulk data, e.g. <span class="citation" data-cites="16yVVytBf">[<a href="#ref-16yVVytBf" role="doc-biblioref">68</a>]</span>).
 As methods for generating large longitudinal datasets at single-cell resolution mature and scale, we will need to revise the way we think about cellular function and dysregulation in cancer cells, as dynamic and adaptive processes rather than a single representative snapshot of a tumor.</p>
 <p>Based on our results, for studies focused on the functional consequences of cancer mutations, we recommend that researchers designing large-scale studies aiming to understand the regulatory state of cancers prioritize gene expression or DNA methylation as downstream readouts.
 On balance, prediction of mutation status was slightly better using gene expression data, and prediction of patient survival was similar using both data types.
@@ -493,12 +519,23 @@ Figure 1 (the schematic of the background and evaluation pipeline) was created u
 <p>A version of the main paper figures using the area under the receiver-operator curve (AUROC) metric rather than AUPR is available at <a href="https://doi.org/10.6084/m9.figshare.14919729"><code>https://doi.org/10.6084/m9.figshare.14919729</code></a>.</p>
 <div id="fig:cancer_type_proportions" class="fignos">
 <figure>
-<img src="images/supp_figure_8.png" style="width:80.0%" alt="" /><figcaption><span>Figure 8:</span> Proportion of samples from each TCGA cancer type that are “dropped” as more data types are added to our analyses. We started with gene expression data, and for each added data type, we took the intersection of samples that were profiled for that data type and the previous data types, dropping all samples that were missing 1 or more data types. Overall, at each step, the proportions of “dropped” samples appear to be fairly evenly spread between cancer types, showing that in general we are not disproportionately losing one or several cancer types as more data modalities are added to our analyses.</figcaption>
+<img src="images/supp_figure_8.png" style="width:80.0%" alt="Figure 8: Proportion of samples from each TCGA cancer type that are “dropped” as more data types are added to our analyses. We started with gene expression data, and for each added data type, we took the intersection of samples that were profiled for that data type and the previous data types, dropping all samples that were missing 1 or more data types. Overall, at each step, the proportions of “dropped” samples appear to be fairly evenly spread between cancer types, showing that in general we are not disproportionately losing one or several cancer types as more data modalities are added to our analyses." />
+<figcaption aria-hidden="true"><span>Figure 8:</span> Proportion of samples from each TCGA cancer type that are “dropped” as more data types are added to our analyses. We started with gene expression data, and for each added data type, we took the intersection of samples that were profiled for that data type and the previous data types, dropping all samples that were missing 1 or more data types. Overall, at each step, the proportions of “dropped” samples appear to be fairly evenly spread between cancer types, showing that in general we are not disproportionately losing one or several cancer types as more data modalities are added to our analyses.</figcaption>
 </figure>
 </div>
 <div id="tbl:cancer_type_proportions" class="tablenos">
-<table>
+<table id="tbl:cancer_type_proportions">
 <caption><span>Table 1:</span> Number of samples from each TCGA cancer type that are “dropped” as more data types are added to the analysis. The “base” column indicates the number of samples that are present per cancer type in the final intersection of all data types (i.e. each sample counted in the last column has data for each of the 7 data types, including gene expression (not listed here) and somatic mutations). </caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 14%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>cancer type</th>
@@ -847,23 +884,27 @@ Figure 1 (the schematic of the background and evaluation pipeline) was created u
 </div>
 <div id="fig:methylation_heatmap" class="fignos">
 <figure>
-<img src="images/supp_figure_9.png" style="width:90.0%" alt="" /><figcaption><span>Figure 9:</span> Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests across data types with FDR correction).</figcaption>
+<img src="images/supp_figure_9.png" style="width:90.0%" alt="Figure 9: Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise t-tests across data types with FDR correction)." />
+<figcaption aria-hidden="true"><span>Figure 9:</span> Heatmap displaying predictive performance for mutations in each of the 84 genes from the Vogelstein et al. gene set, across gene expression and the two DNA methylation arrays. Each cell quantifies performance for a target gene, using predictive features derived from a particular data type. Grey shaded dots indicate that the given data type provides significantly better predictions than the permuted baseline for the given gene; black inner dots indicate the same and additionally that the given data type provides statistically equivalent performance to the data type with the best average performance (determined by pairwise <em>t</em>-tests across data types with FDR correction).</figcaption>
 </figure>
 </div>
 <div id="fig:all_volcano_me" class="fignos">
 <figure>
-<img src="images/supp_figure_10.png" style="width:90.0%" alt="" /><figcaption><span>Figure 10:</span> Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set for expression and DNA methylation, on the sample set used for the “all data types” experiments. The first row shows performance relative to the permuted baseline, and the second row shows direct comparisons between data types. The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds.</figcaption>
+<img src="images/supp_figure_10.png" style="width:90.0%" alt="Figure 10: Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set for expression and DNA methylation, on the sample set used for the “all data types” experiments. The first row shows performance relative to the permuted baseline, and the second row shows direct comparisons between data types. The x-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the y-axis shows p-values for a paired t-test comparing cross-validated AUPR values within folds." />
+<figcaption aria-hidden="true"><span>Figure 10:</span> Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set for expression and DNA methylation, on the sample set used for the “all data types” experiments. The first row shows performance relative to the permuted baseline, and the second row shows direct comparisons between data types. The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the <em>y</em>-axis shows <em>p</em>-values for a paired <em>t</em>-test comparing cross-validated AUPR values within folds.</figcaption>
 </figure>
 </div>
 <div id="fig:me_compress_boxes" class="fignos">
 <figure>
-<img src="images/supp_figure_11.png" style="width:90.0%" alt="" /><figcaption><span>Figure 11:</span> Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
+<img src="images/supp_figure_11.png" style="width:90.0%" alt="Figure 11: Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors. The x-axis shows the number of PCA components used as features, “raw” = no PCA compression." />
+<figcaption aria-hidden="true"><span>Figure 11:</span> Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
 The <em>x</em>-axis shows the number of PCA components used as features, “raw” = no PCA compression.</figcaption>
 </figure>
 </div>
 <div id="fig:survival_cancer_types" class="fignos">
 <figure>
-<img src="images/supp_figure_12.png" style="width:90.0%" alt="" /><figcaption><span>Figure 12:</span> Survival prediction performance for top 10 PCA components, for individual cancer types.
+<img src="images/supp_figure_12.png" style="width:90.0%" alt="Figure 12: Survival prediction performance for top 10 PCA components, for individual cancer types. The top row shows the five cancer types with the highest average coefficient of variation across data types, for expression, 27K methylation, and 450K methylation. The bottom row shows the five cancer types with the highest average coefficient of variation across data types, for the comparison using all 6 data types. Each box plot displays the c-index distribution across 8 performance measurements (2 cross-validation replicates x 4 folds). The grey dotted line shows mean performance for a model using only non-omics covariates (patient age at diagnosis and log10(sample mutation count)); grey shaded area indicates bootstrapped 95% confidence interval." />
+<figcaption aria-hidden="true"><span>Figure 12:</span> Survival prediction performance for top 10 PCA components, for individual cancer types.
 The top row shows the five cancer types with the highest average coefficient of variation across data types, for expression, 27K methylation, and 450K methylation.
 The bottom row shows the five cancer types with the highest average coefficient of variation across data types, for the comparison using all 6 data types.
 Each box plot displays the c-index distribution across 8 performance measurements (2 cross-validation replicates x 4 folds).
@@ -872,418 +913,218 @@ The grey dotted line shows mean performance for a model using only non-omics cov
 </div>
 <div id="fig:multi_omics_raw_feats" class="fignos">
 <figure>
-<img src="images/supp_figure_13.png" style="width:90.0%" alt="" /><figcaption><span>Figure 13:</span> Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best “multi-omics” model for each target gene, using raw (not PCA compressed) features. For feature parity between data types, the top 20,000 features by mean absolute deviation were used for each data type.
+<img src="images/supp_figure_13.png" style="width:90.0%" alt="Figure 13: Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best “multi-omics” model for each target gene, using raw (not PCA compressed) features. For feature parity between data types, the top 20,000 features by mean absolute deviation were used for each data type. The difference between single-omics and multi-omics performance for TP53 was statistically significant (p=0.0078), but other differences between single-omics and multi-omics models were not statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05. Bottom plots: classifier performance, relative to baseline with permuted labels, for individual genes. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates)." />
+<figcaption aria-hidden="true"><span>Figure 13:</span> Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best “multi-omics” model for each target gene, using raw (not PCA compressed) features. For feature parity between data types, the top 20,000 features by mean absolute deviation were used for each data type.
 The difference between single-omics and multi-omics performance for <em>TP53</em> was statistically significant (<em>p</em>=0.0078), but other differences between single-omics and multi-omics models were not statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
 Bottom plots: classifier performance, relative to baseline with permuted labels, for individual genes. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).</figcaption>
 </figure>
 </div>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
-<div id="refs" class="references hanging-indent" role="doc-bibliography">
-<div id="ref-11ZPgRuLk">
-<p>1. <strong>Oncogenic Signaling Pathways in The Cancer Genome Atlas</strong> <br />
-Francisco Sanchez-Vega, Marco Mina, Joshua Armenia, Walid K. Chatila, Augustin Luna, Konnor C. La, Sofia Dimitriadoy, David L. Liu, Havish S. Kantheti, Sadegh Saghafinia, … Armaz Mariamidze<br />
-<em>Cell</em> (2018-04) <a href="https://doi.org/gc7r9b">https://doi.org/gc7r9b</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.cell.2018.03.035">10.1016/j.cell.2018.03.035</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29625050">29625050</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6070353">PMC6070353</a></p>
-</div>
-<div id="ref-1CHUpIalb">
-<p>2. <strong>Systematic identification of mutations and copy number alterations associated with cancer patient prognosis</strong> <br />
-Joan C Smith, Jason M Sheltzer<br />
-<em>eLife</em> (2018-12-11) <a href="https://doi.org/gf4zgg">https://doi.org/gf4zgg</a> <br />
-DOI: <a href="https://doi.org/10.7554/elife.39217">10.7554/elife.39217</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30526857">30526857</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6289580">PMC6289580</a></p>
-</div>
-<div id="ref-Lm19TMrZ">
-<p>3. <strong>Challenges in identifying cancer genes by analysis of exome sequencing data</strong> <br />
-Matan Hofree, Hannah Carter, Jason F. Kreisberg, Sourav Bandyopadhyay, Paul S. Mischel, Stephen Friend, Trey Ideker<br />
-<em>Nature Communications</em> (2016-07-15) <a href="https://doi.org/f8x7t3">https://doi.org/f8x7t3</a> <br />
-DOI: <a href="https://doi.org/10.1038/ncomms12096">10.1038/ncomms12096</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27417679">27417679</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4947162">PMC4947162</a></p>
-</div>
-<div id="ref-MnWpJEWE">
-<p>4. <strong>Evaluating the evaluation of cancer driver genes</strong> <br />
-Collin J. Tokheim, Nickolas Papadopoulos, Kenneth W. Kinzler, Bert Vogelstein, Rachel Karchin<br />
-<em>Proceedings of the National Academy of Sciences</em> (2016-12-13) <a href="https://doi.org/f9d77w">https://doi.org/f9d77w</a> <br />
-DOI: <a href="https://doi.org/10.1073/pnas.1616440113">10.1073/pnas.1616440113</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27911828">27911828</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5167163">PMC5167163</a></p>
-</div>
-<div id="ref-YKm7IBTV">
-<p>5. <strong>Detailed modeling of positive selection improves detection of cancer driver genes</strong> <br />
-Siming Zhao, Jun Liu, Pranav Nanga, Yuwen Liu, A. Ercument Cicek, Nicholas Knoblauch, Chuan He, Matthew Stephens, Xin He<br />
-<em>Nature Communications</em> (2019-07-30) <a href="https://doi.org/gjmhnn">https://doi.org/gjmhnn</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41467-019-11284-9">10.1038/s41467-019-11284-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31363082">31363082</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6667447">PMC6667447</a></p>
-</div>
-<div id="ref-17HuO3ZJW">
-<p>6. <strong>Review: Precision medicine and driver mutations: Computational methods, functional assays and conformational principles for interpreting cancer drivers</strong> <br />
-Ruth Nussinov, Hyunbum Jang, Chung-Jung Tsai, Feixiong Cheng<br />
-<em>PLOS Computational Biology</em> (2019-03-28) <a href="https://doi.org/gg8jhm">https://doi.org/gg8jhm</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pcbi.1006658">10.1371/journal.pcbi.1006658</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30921324">30921324</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6438456">PMC6438456</a></p>
-</div>
-<div id="ref-AK17eOgD">
-<p>7. <strong>The Cancer Genome Atlas Pan-Cancer analysis project</strong> <br />
-John N Weinstein, Eric A Collisson, Gordon B Mills, Kenna R Mills Shaw, Brad A Ozenberger, Kyle Ellrott, Ilya Shmulevich, Chris Sander, Joshua M Stuart, The Cancer Genome Atlas Research Network<br />
-<em>Nature Genetics</em> (2013-09-26) <a href="https://doi.org/f3nt5c">https://doi.org/f3nt5c</a> <br />
-DOI: <a href="https://doi.org/10.1038/ng.2764">10.1038/ng.2764</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24071849">24071849</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3919969">PMC3919969</a></p>
-</div>
-<div id="ref-zPJFCX9h">
-<p>8. <strong>Modeling RAS Phenotype in Colorectal Cancer Uncovers Novel Molecular Traits of RAS Dependency and Improves Prediction of Response to Targeted Agents in Patients</strong> <br />
-Justin Guinney, Charles Ferté, Jonathan Dry, Robert McEwen, Gilles Manceau, KJ Kao, Kai-Ming Chang, Claus Bendtsen, Kevin Hudson, Erich Huang, … Pierre Laurent-Puig<br />
-<em>Clinical Cancer Research</em> (2014-01-01) <a href="https://doi.org/f5njhn">https://doi.org/f5njhn</a> <br />
-DOI: <a href="https://doi.org/10.1158/1078-0432.ccr-13-1943">10.1158/1078-0432.ccr-13-1943</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24170544">24170544</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4141655">PMC4141655</a></p>
-</div>
-<div id="ref-17XHtmqPY">
-<p>9. <strong>Machine Learning Detects Pan-cancer Ras Pathway Activation in The Cancer Genome Atlas</strong> <br />
-Gregory P. Way, Francisco Sanchez-Vega, Konnor La, Joshua Armenia, Walid K. Chatila, Augustin Luna, Chris Sander, Andrew D. Cherniack, Marco Mina, Giovanni Ciriello, … Armaz Mariamidze<br />
-<em>Cell Reports</em> (2018-04) <a href="https://doi.org/gfspsb">https://doi.org/gfspsb</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.celrep.2018.03.046">10.1016/j.celrep.2018.03.046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29617658">29617658</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5918694">PMC5918694</a></p>
-</div>
-<div id="ref-Z5JvAfru">
-<p>10. <strong>Identification of pan-cancer Ras pathway activation with deep learning</strong> <br />
-Xiangtao Li, Shaochuan Li, Yunhe Wang, Shixiong Zhang, Ka-Chun Wong<br />
-<em>Briefings in Bioinformatics</em> (2021-07) <a href="https://doi.org/gjmd3p">https://doi.org/gjmd3p</a> <br />
-DOI: <a href="https://doi.org/10.1093/bib/bbaa258">10.1093/bib/bbaa258</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33126245">33126245</a></p>
-</div>
-<div id="ref-X6oQhIf8">
-<p>11. <strong>Genomic and Molecular Landscape of DNA Damage Repair Deficiency across The Cancer Genome Atlas</strong> <br />
-Theo A. Knijnenburg, Linghua Wang, Michael T. Zimmermann, Nyasha Chambwe, Galen F. Gao, Andrew D. Cherniack, Huihui Fan, Hui Shen, Gregory P. Way, Casey S. Greene, … Armaz Mariamidze<br />
-<em>Cell Reports</em> (2018-04) <a href="https://doi.org/gfspsc">https://doi.org/gfspsc</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.celrep.2018.03.076">10.1016/j.celrep.2018.03.076</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29617664">29617664</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5961503">PMC5961503</a></p>
-</div>
-<div id="ref-MUt3ESlf">
-<p>12. <strong>Prediction of PIK3CA mutations from cancer gene expression data</strong> <br />
-Jun Kang, Ahwon Lee, Youn Soo Lee<br />
-<em>PLOS ONE</em> (2020-11-09) <a href="https://doi.org/gjmd3s">https://doi.org/gjmd3s</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pone.0241514">10.1371/journal.pone.0241514</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33166334">33166334</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7652327">PMC7652327</a></p>
-</div>
-<div id="ref-NsW0qxZF">
-<p>13. <strong>Compressing gene expression data using multiple latent space dimensionalities learns complementary biological representations</strong> <br />
-Gregory P. Way, Michael Zietz, Vincent Rubinetti, Daniel S. Himmelstein, Casey S. Greene<br />
-<em>Genome Biology</em> (2020-05-11) <a href="https://doi.org/gg2mjh">https://doi.org/gg2mjh</a> <br />
-DOI: <a href="https://doi.org/10.1186/s13059-020-02021-3">10.1186/s13059-020-02021-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32393369">32393369</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7212571">PMC7212571</a></p>
-</div>
-<div id="ref-ekDcxjcr">
-<p>14. <strong>Systematic interrogation of mutation groupings reveals divergent downstream expression programs within key cancer genes</strong> <br />
-Michal R. Grzadkowski, Hannah Manning, Julia Somers, Emek Demir<br />
-<em>Cold Spring Harbor Laboratory</em> (2020-06-18) <a href="https://doi.org/gjmd7t">https://doi.org/gjmd7t</a> <br />
-DOI: <a href="https://doi.org/10.1101/2020.06.02.128850">10.1101/2020.06.02.128850</a></p>
-</div>
-<div id="ref-odNCMbto">
-<p>15. <strong>Using Transcriptional Signatures to Find Cancer Drivers with LURE</strong> <br />
-David Haan, Ruikang Tao, Verena Friedl, Ioannis N Anastopoulos, Christopher K Wong, Alana S Weinstein, Joshua M Stuart<br />
-<em>World Scientific Pub Co Pte Ltd</em> (2019-12) <a href="https://doi.org/gjmd4t">https://doi.org/gjmd4t</a> <br />
-DOI: <a href="https://doi.org/10.1142/9789811215636_0031">10.1142/9789811215636_0031</a></p>
-</div>
-<div id="ref-pLo10xih">
-<p>16. <strong>Reverse regression increases power for detecting trans-eQTLs</strong> <br />
-Saikat Banerjee, Franco L. Simonetti, Kira E. Detrois, Anubhav Kaphle, Raktim Mitra, Rahul Nagial, Johannes Söding<br />
-<em>Cold Spring Harbor Laboratory</em> (2020-09-02) <a href="https://doi.org/gjmhd8">https://doi.org/gjmhd8</a> <br />
-DOI: <a href="https://doi.org/10.1101/2020.05.07.083386">10.1101/2020.05.07.083386</a></p>
-</div>
-<div id="ref-1z8H2EME">
-<p>17. <strong>Cancer transcriptome profiling at the juncture of clinical translation</strong> <br />
-Marcin Cieślik, Arul M. Chinnaiyan<br />
-<em>Nature Reviews Genetics</em> (2017-12-27) <a href="https://doi.org/gcsmnr">https://doi.org/gcsmnr</a> <br />
-DOI: <a href="https://doi.org/10.1038/nrg.2017.96">10.1038/nrg.2017.96</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29279605">29279605</a></p>
-</div>
-<div id="ref-1Cxnszz2L">
-<p>18. <strong>Identification of a CpG Island Methylator Phenotype that Defines a Distinct Subgroup of Glioma</strong> <br />
-Houtan Noushmehr, Daniel J. Weisenberger, Kristin Diefes, Heidi S. Phillips, Kanan Pujara, Benjamin P. Berman, Fei Pan, Christopher E. Pelloski, Erik P. Sulman, Krishna P. Bhat, … Kenneth Aldape<br />
-<em>Cancer Cell</em> (2010-05) <a href="https://doi.org/dbtmsd">https://doi.org/dbtmsd</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.ccr.2010.03.017">10.1016/j.ccr.2010.03.017</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20399149">20399149</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872684">PMC2872684</a></p>
-</div>
-<div id="ref-WN82rY7P">
-<p>19. <strong>DNA Methylation, Isocitrate Dehydrogenase Mutation, and Survival in Glioma</strong> <br />
-Brock C. Christensen, Ashley A. Smith, Shichun Zheng, Devin C. Koestler, E. Andres Houseman, Carmen J. Marsit, Joseph L. Wiemels, Heather H. Nelson, Margaret R. Karagas, Margaret R. Wrensch, … John K. Wiencke<br />
-<em>JNCI: Journal of the National Cancer Institute</em> (2011-01-19) <a href="https://doi.org/bbjqf9">https://doi.org/bbjqf9</a> <br />
-DOI: <a href="https://doi.org/10.1093/jnci/djq497">10.1093/jnci/djq497</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21163902">21163902</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3022619">PMC3022619</a></p>
-</div>
-<div id="ref-Sp8RO1w7">
-<p>20. <strong><em>IDH1</em> and <em>IDH2</em> Mutations in Gliomas</strong> <br />
-Hai Yan, D. Williams Parsons, Genglin Jin, Roger McLendon, B. Ahmed Rasheed, Weishi Yuan, Ivan Kos, Ines Batinic-Haberle, Siân Jones, Gregory J. Riggins, … Darell D. Bigner<br />
-<em>New England Journal of Medicine</em> (2009-02-19) <a href="https://doi.org/btz6db">https://doi.org/btz6db</a> <br />
-DOI: <a href="https://doi.org/10.1056/nejmoa0808710">10.1056/nejmoa0808710</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19228619">19228619</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2820383">PMC2820383</a></p>
-</div>
-<div id="ref-FYj8JHBX">
-<p>21. <strong>IDH mutation impairs histone demethylation and results in a block to cell differentiation</strong> <br />
-Chao Lu, Patrick S. Ward, Gurpreet S. Kapoor, Dan Rohle, Sevin Turcan, Omar Abdel-Wahab, Christopher R. Edwards, Raya Khanin, Maria E. Figueroa, Ari Melnick, … Craig B. Thompson<br />
-<em>Nature</em> (2012-02-15) <a href="https://doi.org/f4msnt">https://doi.org/f4msnt</a> <br />
-DOI: <a href="https://doi.org/10.1038/nature10860">10.1038/nature10860</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22343901">22343901</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478770">PMC3478770</a></p>
-</div>
-<div id="ref-19sDhpROP">
-<p>22. <strong>Connections between TET proteins and aberrant DNA modification in cancer</strong> <br />
-Yun Huang, Anjana Rao<br />
-<em>Trends in Genetics</em> (2014-10) <a href="https://doi.org/f6jm7v">https://doi.org/f6jm7v</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.tig.2014.07.005">10.1016/j.tig.2014.07.005</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25132561">25132561</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4337960">PMC4337960</a></p>
-</div>
-<div id="ref-rNm0rAz7">
-<p>23. <strong>SETting the Stage for Cancer Development: SETD2 and the Consequences of Lost Methylation</strong> <br />
-Catherine C. Fahey, Ian J. Davis<br />
-<em>Cold Spring Harbor Perspectives in Medicine</em> (2017-05) <a href="https://doi.org/gjmfvq">https://doi.org/gjmfvq</a> <br />
-DOI: <a href="https://doi.org/10.1101/cshperspect.a026468">10.1101/cshperspect.a026468</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28159833">28159833</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411680">PMC5411680</a></p>
-</div>
-<div id="ref-18LSSJo3W">
-<p>24. <strong>Mechanisms underlying mutational signatures in human cancers</strong> <br />
-Thomas Helleday, Saeed Eshtad, Serena Nik-Zainal<br />
-<em>Nature Reviews Genetics</em> (2014-07-01) <a href="https://doi.org/f25gnp">https://doi.org/f25gnp</a> <br />
-DOI: <a href="https://doi.org/10.1038/nrg3729">10.1038/nrg3729</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24981601">24981601</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6044419">PMC6044419</a></p>
-</div>
-<div id="ref-pWXLXywn">
-<p>25. <strong>Quantitative Proteomics of the Cancer Cell Line Encyclopedia</strong> <br />
-David P. Nusinow, John Szpyt, Mahmoud Ghandi, Christopher M. Rose, E. Robert McDonald, Marian Kalocsay, Judit Jané-Valbuena, Ellen Gelfand, Devin K. Schweppe, Mark Jedrychowski, … Steven P. Gygi<br />
-<em>Cell</em> (2020-01) <a href="https://doi.org/ggxbh5">https://doi.org/ggxbh5</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.cell.2019.12.023">10.1016/j.cell.2019.12.023</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31978347">31978347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339254">PMC7339254</a></p>
-</div>
-<div id="ref-11yRODwNY">
-<p>26. <strong>The repertoire of mutational signatures in human cancer</strong> <br />
-Ludmil B. Alexandrov, Jaegil Kim, Nicholas J. Haradhvala, Mi Ni Huang, Alvin Wei Tian Ng, Yang Wu, Arnoud Boot, Kyle R. Covington, Dmitry A. Gordenin, Erik N. Bergstrom, … PCAWG Consortium<br />
-<em>Nature</em> (2020-02-05) <a href="https://doi.org/ggkfnv">https://doi.org/ggkfnv</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41586-020-1943-3">10.1038/s41586-020-1943-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32025018">32025018</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054213">PMC7054213</a></p>
-</div>
-<div id="ref-UTtkLysq">
-<p>27. <strong>Significant associations between driver gene mutations and DNA methylation alterations across many cancer types</strong> <br />
-Yun-Ching Chen, Valer Gotea, Gennady Margolin, Laura Elnitski<br />
-<em>PLOS Computational Biology</em> (2017-11-10) <a href="https://doi.org/gchz8h">https://doi.org/gchz8h</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pcbi.1005840">10.1371/journal.pcbi.1005840</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29125844">29125844</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5709060">PMC5709060</a></p>
-</div>
-<div id="ref-YBXY18s4">
-<p>28. <strong>A pan-cancer analysis of driver gene mutations, DNA methylation and gene expressions reveals that chromatin remodeling is a major mechanism inducing global changes in cancer epigenomes</strong> <br />
-Ahrim Youn, Kyung In Kim, Raul Rabadan, Benjamin Tycko, Yufeng Shen, Shuang Wang<br />
-<em>BMC Medical Genomics</em> (2018-11-06) <a href="https://doi.org/gjmhfb">https://doi.org/gjmhfb</a> <br />
-DOI: <a href="https://doi.org/10.1186/s12920-018-0425-z">10.1186/s12920-018-0425-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30400878">30400878</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6218985">PMC6218985</a></p>
-</div>
-<div id="ref-pRTkOXGI">
-<p>29. <strong>Computational analysis reveals histotype-dependent molecular profile and actionable mutation effects across cancers</strong> <br />
-Daniel Heim, Grégoire Montavon, Peter Hufnagl, Klaus-Robert Müller, Frederick Klauschen<br />
-<em>Genome Medicine</em> (2018-11-15) <a href="https://doi.org/gjmhfc">https://doi.org/gjmhfc</a> <br />
-DOI: <a href="https://doi.org/10.1186/s13073-018-0591-9">10.1186/s13073-018-0591-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30442178">30442178</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6238410">PMC6238410</a></p>
-</div>
-<div id="ref-ZuUqcptb">
-<p>30. <strong>CNAmet: an R package for integrating copy number, methylation and expression data</strong> <br />
-Riku Louhimo, Sampsa Hautaniemi<br />
-<em>Bioinformatics</em> (2011-03-15) <a href="https://doi.org/fbq4p2">https://doi.org/fbq4p2</a> <br />
-DOI: <a href="https://doi.org/10.1093/bioinformatics/btr019">10.1093/bioinformatics/btr019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21228048">21228048</a></p>
-</div>
-<div id="ref-lQ8oalgu">
-<p>31. <strong>Impacts of somatic mutations on gene expression: an association perspective</strong> <br />
-Peilin Jia, Zhongming Zhao<br />
-<em>Briefings in Bioinformatics</em> (2016-04-28) <a href="https://doi.org/gjnd5b">https://doi.org/gjnd5b</a> <br />
-DOI: <a href="https://doi.org/10.1093/bib/bbw037">10.1093/bib/bbw037</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27127206">27127206</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5862283">PMC5862283</a></p>
-</div>
-<div id="ref-StwDSCo7">
-<p>32. <strong>Inference of patient-specific pathway activities from multi-dimensional cancer genomics data using PARADIGM</strong> <br />
-Charles J. Vaske, Stephen C. Benz, J. Zachary Sanborn, Dent Earl, Christopher Szeto, Jingchun Zhu, David Haussler, Joshua M. Stuart<br />
-<em>Bioinformatics</em> (2010-06-15) <a href="https://doi.org/bcvgjf">https://doi.org/bcvgjf</a> <br />
-DOI: <a href="https://doi.org/10.1093/bioinformatics/btq182">10.1093/bioinformatics/btq182</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20529912">20529912</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881367">PMC2881367</a></p>
-</div>
-<div id="ref-1BMNB7BTo">
-<p>33. <strong>Systematic analysis of somatic mutations impacting gene expression in 12 tumour types</strong> <br />
-Jiarui Ding, Melissa K. McConechy, Hugo M. Horlings, Gavin Ha, Fong Chun Chan, Tyler Funnell, Sarah C. Mullaly, Jüri Reimand, Ali Bashashati, Gary D. Bader, … Sohrab P. Shah<br />
-<em>Nature Communications</em> (2015-10-05) <a href="https://doi.org/f7z86p">https://doi.org/f7z86p</a> <br />
-DOI: <a href="https://doi.org/10.1038/ncomms9554">10.1038/ncomms9554</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26436532">26436532</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4600750">PMC4600750</a></p>
-</div>
-<div id="ref-809OyWlC">
-<p>34. <strong>Cancer Genome Landscapes</strong> <br />
-B. Vogelstein, N. Papadopoulos, V. E. Velculescu, S. Zhou, L. A. Diaz, K. W. Kinzler<br />
-<em>Science</em> (2013-03-28) <a href="https://doi.org/6rg">https://doi.org/6rg</a> <br />
-DOI: <a href="https://doi.org/10.1126/science.1235122">10.1126/science.1235122</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539594">23539594</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3749880">PMC3749880</a></p>
-</div>
-<div id="ref-cDnF3a5Q">
-<p>35. <strong>Scalable Open Science Approach for Mutation Calling of Tumor Exomes Using Multiple Genomic Pipelines</strong> <br />
-Kyle Ellrott, Matthew H. Bailey, Gordon Saksena, Kyle R. Covington, Cyriac Kandoth, Chip Stewart, Julian Hess, Singer Ma, Kami E. Chiotti, Michael McLellan, … Armaz Mariamidze<br />
-<em>Cell Systems</em> (2018-03) <a href="https://doi.org/gf9twn">https://doi.org/gf9twn</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.cels.2018.03.002">10.1016/j.cels.2018.03.002</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29596782">29596782</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6075717">PMC6075717</a></p>
-</div>
-<div id="ref-rDV1hhfF">
-<p>36. <strong>GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers</strong> <br />
-Craig H Mermel, Steven E Schumacher, Barbara Hill, Matthew L Meyerson, Rameen Beroukhim, Gad Getz<br />
-<em>Genome Biology</em> (2011-04-28) <a href="https://doi.org/dzhjqh">https://doi.org/dzhjqh</a> <br />
-DOI: <a href="https://doi.org/10.1186/gb-2011-12-4-r41">10.1186/gb-2011-12-4-r41</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21527027">21527027</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3218867">PMC3218867</a></p>
-</div>
-<div id="ref-lF0Fr9LL">
-<p>37. <strong>Scikit-learn: Machine Learning in Python</strong> <br />
-Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, … Édouard Duchesnay<br />
-<em>Journal of Machine Learning Research</em> (2011) <a href="http://jmlr.org/papers/v12/pedregosa11a.html">http://jmlr.org/papers/v12/pedregosa11a.html</a></p>
-</div>
-<div id="ref-Zg2jmD6p">
-<p>38. <strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <br />
-Andrew E. Teschendorff, Francesco Marabita, Matthias Lechner, Thomas Bartlett, Jesper Tegner, David Gomez-Cabrero, Stephan Beck<br />
-<em>Bioinformatics</em> (2013-01-15) <a href="https://doi.org/f25mvt">https://doi.org/f25mvt</a> <br />
-DOI: <a href="https://doi.org/10.1093/bioinformatics/bts680">10.1093/bioinformatics/bts680</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23175756">23175756</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546795">PMC3546795</a></p>
-</div>
-<div id="ref-JZNkB8d7">
-<p>39. <strong>Regularization and variable selection via the elastic net</strong> <br />
-Hui Zou, Trevor Hastie<br />
-<em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em> (2005-04) <a href="https://doi.org/b8cwwr">https://doi.org/b8cwwr</a> <br />
-DOI: <a href="https://doi.org/10.1111/j.1467-9868.2005.00503.x">10.1111/j.1467-9868.2005.00503.x</a></p>
-</div>
-<div id="ref-WTSzUd5Y">
-<p>40. <strong>An introduction to ROC analysis</strong> <br />
-Tom Fawcett<br />
-<em>Pattern Recognition Letters</em> (2006-06) <a href="https://doi.org/bpsghb">https://doi.org/bpsghb</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.patrec.2005.10.010">10.1016/j.patrec.2005.10.010</a></p>
-</div>
-<div id="ref-pazxvNcz">
-<p>41. <strong>A critical investigation of recall and precision as measures of retrieval system performance</strong> <br />
-Vijay Raghavan, Peter Bollmann, Gwang S. Jung<br />
-<em>ACM Transactions on Information Systems</em> (1989-07) <a href="https://doi.org/bg4tps">https://doi.org/bg4tps</a> <br />
-DOI: <a href="https://doi.org/10.1145/65943.65945">10.1145/65943.65945</a></p>
-</div>
-<div id="ref-LB4mDas6">
-<p>42. <strong>The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</strong> <br />
-Takaya Saito, Marc Rehmsmeier<br />
-<em>PLOS ONE</em> (2015-03-04) <a href="https://doi.org/f69237">https://doi.org/f69237</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pone.0118432">10.1371/journal.pone.0118432</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25738806">25738806</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4349800">PMC4349800</a></p>
-</div>
-<div id="ref-lWf6zHNO">
-<p>43. <strong>The MCC-F1 curve: a performance evaluation technique for binary classification</strong> <br />
-Chang Cao, Davide Chicco, Michael M. Hoffman<br />
-<em>arXiv</em> (2020-06-23) <a href="https://arxiv.org/abs/2006.11278">https://arxiv.org/abs/2006.11278</a></p>
-</div>
-<div id="ref-CZHe0A4l">
-<p>44. <strong>Genome-wide identification and analysis of prognostic features in human cancers</strong> <br />
-Joan C. Smith, Jason M. Sheltzer<br />
-<em>Cold Spring Harbor Laboratory</em> (2021-06-01) <a href="https://doi.org/gmqfqt">https://doi.org/gmqfqt</a> <br />
-DOI: <a href="https://doi.org/10.1101/2021.06.01.446243">10.1101/2021.06.01.446243</a></p>
-</div>
-<div id="ref-wiw7Q7M7">
-<p>45. <strong>scikit-survival: A Library for Time-to-Event Analysis Built on Top of scikit-learn</strong> <br />
-Sebastian Pölsterl<br />
-<em>Journal of Machine Learning Research</em> (2020) <a href="http://jmlr.org/papers/v21/20-729.html">http://jmlr.org/papers/v21/20-729.html</a></p>
-</div>
-<div id="ref-NrTv8Fyq">
-<p>46. <strong>Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors.</strong> <br />
-FE Harrell, KL Lee, DB Mark<br />
-<em>Statistics in medicine</em> (1996-02-28) <a href="https://www.ncbi.nlm.nih.gov/pubmed/8668867">https://www.ncbi.nlm.nih.gov/pubmed/8668867</a> <br />
-DOI: <a href="https://doi.org/10.1002/(sici)1097-0258(19960229)15:4%3C361::aid-sim168%3E3.0.co;2-4">10.1002/(sici)1097-0258(19960229)15:4&lt;361::aid-sim168&gt;3.0.co;2-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8668867">8668867</a></p>
-</div>
-<div id="ref-YuJbg3zO">
-<p>47. <strong>Open collaborative writing with Manubot</strong> <br />
-Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter<br />
-<em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></p>
-</div>
-<div id="ref-KGJwKXkD">
-<p>48. <strong>Integrated genomic characterization of IDH1-mutant glioma malignant progression</strong> <br />
-Hanwen Bai, Akdes Serin Harmancı, E Zeynep Erson-Omay, Jie Li, Süleyman Coşkun, Matthias Simon, Boris Krischek, Koray Özduman, S Bülent Omay, Eric A Sorensen, … Murat Günel<br />
-<em>Nature Genetics</em> (2015-11-30) <a href="https://doi.org/f895hx">https://doi.org/f895hx</a> <br />
-DOI: <a href="https://doi.org/10.1038/ng.3457">10.1038/ng.3457</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26618343">26618343</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4829945">PMC4829945</a></p>
-</div>
-<div id="ref-uBEARk2">
-<p>49. <strong>Identification and validation of an ERBB2 gene expression signature in breast cancers</strong> <br />
-François Bertucci, Nathalie Borie, Christophe Ginestier, Agnès Groulet, Emmanuelle Charafe-Jauffret, José Adélaïde, Jeannine Geneix, Loïc Bachelart, Pascal Finetti, Alane Koki, … Daniel Birnbaum<br />
-<em>Oncogene</em> (2004-01-26) <a href="https://doi.org/dq9kvk">https://doi.org/dq9kvk</a> <br />
-DOI: <a href="https://doi.org/10.1038/sj.onc.1207361">10.1038/sj.onc.1207361</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/14743203">14743203</a></p>
-</div>
-<div id="ref-1c8GokzT">
-<p>50. <strong>Pan-Cancer Landscape and Analysis of ERBB2 Mutations Identifies Poziotinib as a Clinically Active Inhibitor and Enhancer of T-DM1 Activity</strong> <br />
-Jacqulyne P. Robichaux, Yasir Y. Elamin, R. S. K. Vijayan, Monique B. Nilsson, Lemei Hu, Junqin He, Fahao Zhang, Marlese Pisegna, Alissa Poteete, Huiying Sun, … John V. Heymach<br />
-<em>Cancer Cell</em> (2019-10) <a href="https://doi.org/ggcv27">https://doi.org/ggcv27</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.ccell.2019.09.001">10.1016/j.ccell.2019.09.001</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31588020">31588020</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6944069">PMC6944069</a></p>
-</div>
-<div id="ref-fdVKgtEF">
-<p>51. <strong>Shaping the cellular landscape with Set2/SETD2 methylation</strong> <br />
-Stephen L. McDaniel, Brian D. Strahl<br />
-<em>Cellular and Molecular Life Sciences</em> (2017-04-06) <a href="https://doi.org/gbrd9b">https://doi.org/gbrd9b</a> <br />
-DOI: <a href="https://doi.org/10.1007/s00018-017-2517-x">10.1007/s00018-017-2517-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28386724">28386724</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545052">PMC5545052</a></p>
-</div>
-<div id="ref-rBwmNJtL">
-<p>52. <strong>TCPA: a resource for cancer functional proteomics data</strong> <br />
-Jun Li, Yiling Lu, Rehan Akbani, Zhenlin Ju, Paul L Roebuck, Wenbin Liu, Ji-Yeon Yang, Bradley M Broom, Roeland GW Verhaak, David W Kane, … Han Liang<br />
-<em>Nature Methods</em> (2013-09-15) <a href="https://doi.org/gffkjm">https://doi.org/gffkjm</a> <br />
-DOI: <a href="https://doi.org/10.1038/nmeth.2650">10.1038/nmeth.2650</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24037243">24037243</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4076789">PMC4076789</a></p>
-</div>
-<div id="ref-23jjG6I6">
-<p>53. <strong>Patterns of somatic structural variation in human cancer genomes</strong> <br />
-Yilong Li, Nicola D. Roberts, Jeremiah A. Wala, Ofer Shapira, Steven E. Schumacher, Kiran Kumar, Ekta Khurana, Sebastian Waszak, Jan O. Korbel, James E. Haber, … PCAWG Consortium<br />
-<em>Nature</em> (2020-02-05) <a href="https://doi.org/ggkfnw">https://doi.org/ggkfnw</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41586-019-1913-9">10.1038/s41586-019-1913-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32025012">32025012</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7025897">PMC7025897</a></p>
-</div>
-<div id="ref-wOjMFUXP">
-<p>54. <strong>MethylNet: an automated and modular deep learning approach for DNA methylation analysis</strong> <br />
-Joshua J. Levy, Alexander J. Titus, Curtis L. Petersen, Youdinghuan Chen, Lucas A. Salas, Brock C. Christensen<br />
-<em>BMC Bioinformatics</em> (2020-03-17) <a href="https://doi.org/ggxvrz">https://doi.org/ggxvrz</a> <br />
-DOI: <a href="https://doi.org/10.1186/s12859-020-3443-8">10.1186/s12859-020-3443-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32183722">32183722</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7076991">PMC7076991</a></p>
-</div>
-<div id="ref-dSUkNdCN">
-<p>55. <strong>MethylSPWNet and MethylCapsNet: Biologically Motivated Organization of DNAm Neural Networks, Inspired by Capsule Networks.</strong> <br />
-Joshua J Levy, Youdinghuan Chen, Nasim Azizgolshani, Curtis L Petersen, Alexander J Titus, Erika L Moen, Louis J Vaickus, Lucas A Salas, Brock C Christensen<br />
-<em>NPJ systems biology and applications</em> (2021-08-20) <a href="https://www.ncbi.nlm.nih.gov/pubmed/34417465">https://www.ncbi.nlm.nih.gov/pubmed/34417465</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41540-021-00193-7">10.1038/s41540-021-00193-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34417465">34417465</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8379254">PMC8379254</a></p>
-</div>
-<div id="ref-1HfJnooMx">
-<p>56. <strong>Predicting Drug Response and Synergy Using a Deep Learning Model of Human Cancer Cells</strong> <br />
-Brent M. Kuenzi, Jisoo Park, Samson H. Fong, Kyle S. Sanchez, John Lee, Jason F. Kreisberg, Jianzhu Ma, Trey Ideker<br />
-<em>Cancer Cell</em> (2020-11) <a href="https://doi.org/gh7z2n">https://doi.org/gh7z2n</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.ccell.2020.09.014">10.1016/j.ccell.2020.09.014</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33096023">33096023</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7737474">PMC7737474</a></p>
-</div>
-<div id="ref-7kIfUrlF">
-<p>57. <strong>Biological Constraints Can Improve Prediction in Precision Oncology</strong> <br />
-Mohamed Omar, Lotte Mulder, Tendai Coady, Claudio Zanettini, Eddie Luidy Imada, Wikum Dinalankara, Laurent Younes, Donald Geman, Luigi Marchionni<br />
-<em>Cold Spring Harbor Laboratory</em> (2021-05-27) <a href="https://doi.org/gkcc43">https://doi.org/gkcc43</a> <br />
-DOI: <a href="https://doi.org/10.1101/2021.05.25.445604">10.1101/2021.05.25.445604</a></p>
-</div>
-<div id="ref-1AeRgHv3L">
-<p>58. <strong>Principles and methods of integrative genomic analyses in cancer</strong> <br />
-Vessela N. Kristensen, Ole Christian Lingjærde, Hege G. Russnes, Hans Kristian M. Vollan, Arnoldo Frigessi, Anne-Lise Børresen-Dale<br />
-<em>Nature Reviews Cancer</em> (2014-04-24) <a href="https://doi.org/gf66jv">https://doi.org/gf66jv</a> <br />
-DOI: <a href="https://doi.org/10.1038/nrc3721">10.1038/nrc3721</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24759209">24759209</a></p>
-</div>
-<div id="ref-tMmErZMX">
-<p>59. <strong>Predicting censored survival data based on the interactions between meta-dimensional omics data in breast cancer</strong> <br />
-Dokyoon Kim, Ruowang Li, Scott M. Dudek, Marylyn D. Ritchie<br />
-<em>Journal of Biomedical Informatics</em> (2015-08) <a href="https://doi.org/f7n49h">https://doi.org/f7n49h</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.jbi.2015.05.019">10.1016/j.jbi.2015.05.019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26048077">26048077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4550096">PMC4550096</a></p>
-</div>
-<div id="ref-4X1N4DJa">
-<p>60. <strong>Combining DNA methylation and RNA sequencing data of cancer for supervised knowledge extraction</strong> <br />
-Eleonora Cappelli, Giovanni Felici, Emanuel Weitschek<br />
-<em>BioData Mining</em> (2018-10-25) <a href="https://doi.org/gkcdbm">https://doi.org/gkcdbm</a> <br />
-DOI: <a href="https://doi.org/10.1186/s13040-018-0184-6">10.1186/s13040-018-0184-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30386434">30386434</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6203208">PMC6203208</a></p>
-</div>
-<div id="ref-shldZigM">
-<p>61. <strong>MOLI: multi-omics late integration with deep neural networks for drug response prediction</strong> <br />
-Hossein Sharifi-Noghabi, Olga Zolotareva, Colin C Collins, Martin Ester<br />
-<em>Bioinformatics</em> (2019-07) <a href="https://doi.org/fxbz">https://doi.org/fxbz</a> <br />
-DOI: <a href="https://doi.org/10.1093/bioinformatics/btz318">10.1093/bioinformatics/btz318</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31510700">31510700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6612815">PMC6612815</a></p>
-</div>
-<div id="ref-llajEDiU">
-<p>62. <strong>Accurate cancer phenotype prediction with AKLIMATE, a stacked kernel learner integrating multimodal genomic data and pathway knowledge</strong> <br />
-Vladislav Uzunangelov, Christopher K. Wong, Joshua M. Stuart<br />
-<em>PLOS Computational Biology</em> (2021-04-16) <a href="https://doi.org/gkcdbn">https://doi.org/gkcdbn</a> <br />
-DOI: <a href="https://doi.org/10.1371/journal.pcbi.1008878">10.1371/journal.pcbi.1008878</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33861732">33861732</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8081343">PMC8081343</a></p>
-</div>
-<div id="ref-gIhNaGUg">
-<p>63. <strong>Methods for biological data integration: perspectives and challenges</strong> <br />
-Vladimir Gligorijević, Nataša Pržulj<br />
-<em>Journal of The Royal Society Interface</em> (2015-11-06) <a href="https://doi.org/bdzp">https://doi.org/bdzp</a> <br />
-DOI: <a href="https://doi.org/10.1098/rsif.2015.0571">10.1098/rsif.2015.0571</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26490630">26490630</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685837">PMC4685837</a></p>
-</div>
-<div id="ref-NfKILi8i">
-<p>64. <strong>Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities</strong> <br />
-Marinka Zitnik, Francis Nguyen, Bo Wang, Jure Leskovec, Anna Goldenberg, Michael M. Hoffman<br />
-<em>Information Fusion</em> (2019-10) <a href="https://doi.org/gf7rj8">https://doi.org/gf7rj8</a> <br />
-DOI: <a href="https://doi.org/10.1016/j.inffus.2018.09.012">10.1016/j.inffus.2018.09.012</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30467459">30467459</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6242341">PMC6242341</a></p>
-</div>
-<div id="ref-1B2CloRMX">
-<p>65. <strong>Integrated phosphoproteomics and transcriptional classifiers reveal hidden RAS signaling dynamics in multiple myeloma</strong> <br />
-Yu-Hsiu T. Lin, Gregory P. Way, Benjamin G. Barwick, Margarette C. Mariano, Makeba Marcoulis, Ian D. Ferguson, Christoph Driessen, Lawrence H. Boise, Casey S. Greene, Arun P. Wiita<br />
-<em>Blood Advances</em> (2019-11-12) <a href="https://doi.org/gg7m56">https://doi.org/gg7m56</a> <br />
-DOI: <a href="https://doi.org/10.1182/bloodadvances.2019000303">10.1182/bloodadvances.2019000303</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31698452">31698452</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6855123">PMC6855123</a></p>
-</div>
-<div id="ref-kcdvZmNN">
-<p>66. <strong>Next-generation characterization of the Cancer Cell Line Encyclopedia</strong> <br />
-Mahmoud Ghandi, Franklin W. Huang, Judit Jané-Valbuena, Gregory V. Kryukov, Christopher C. Lo, E. Robert McDonald, Jordi Barretina, Ellen T. Gelfand, Craig M. Bielski, Haoxin Li, … William R. Sellers<br />
-<em>Nature</em> (2019-05-08) <a href="https://doi.org/gf2m3h">https://doi.org/gf2m3h</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41586-019-1186-3">10.1038/s41586-019-1186-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31068700">31068700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6697103">PMC6697103</a></p>
-</div>
-<div id="ref-2AuD4Mwu">
-<p>67. <strong>Comprehensive transcriptomic analysis of cell lines as models of primary tumors across 22 tumor types</strong> <br />
-K. Yu, B. Chen, D. Aran, J. Charalel, C. Yau, D. M. Wolf, L. J. van ‘t Veer, A. J. Butte, T. Goldstein, M. Sirota<br />
-<em>Nature Communications</em> (2019-08-08) <a href="https://doi.org/ggh7t7">https://doi.org/ggh7t7</a> <br />
-DOI: <a href="https://doi.org/10.1038/s41467-019-11415-2">10.1038/s41467-019-11415-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31395879">31395879</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6687785">PMC6687785</a></p>
-</div>
-<div id="ref-16yVVytBf">
-<p>68. <strong>Clonal status of actionable driver events and the timing of mutational processes in cancer evolution</strong> <br />
-Nicholas McGranahan, Francesco Favero, Elza C. de Bruin, Nicolai Juul Birkbak, Zoltan Szallasi, Charles Swanton<br />
-<em>Science Translational Medicine</em> (2015-04-15) <a href="https://doi.org/f7f83d">https://doi.org/f7f83d</a> <br />
-DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed.aaa1408</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25877892">25877892</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636056">PMC4636056</a></p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-11ZPgRuLk" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Oncogenic Signaling Pathways in The Cancer Genome Atlas</strong> <div class="csl-block">Francisco Sanchez-Vega, Marco Mina, Joshua Armenia, Walid K Chatila, Augustin Luna, Konnor C La, Sofia Dimitriadoy, David L Liu, Havish S Kantheti, Sadegh Saghafinia, … Armaz Mariamidze</div> <em>Cell</em> (2018-04) <a href="https://doi.org/gc7r9b">https://doi.org/gc7r9b</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.cell.2018.03.035">10.1016/j.cell.2018.03.035</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29625050">29625050</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6070353">PMC6070353</a></div></div>
+</div>
+<div id="ref-1CHUpIalb" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Systematic identification of mutations and copy number alterations associated with cancer patient prognosis</strong> <div class="csl-block">Joan C Smith, Jason M Sheltzer</div> <em>eLife</em> (2018-12-11) <a href="https://doi.org/gf4zgg">https://doi.org/gf4zgg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.39217">10.7554/elife.39217</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30526857">30526857</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6289580">PMC6289580</a></div></div>
+</div>
+<div id="ref-Lm19TMrZ" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Challenges in identifying cancer genes by analysis of exome sequencing data</strong> <div class="csl-block">Matan Hofree, Hannah Carter, Jason F Kreisberg, Sourav Bandyopadhyay, Paul S Mischel, Stephen Friend, Trey Ideker</div> <em>Nature Communications</em> (2016-07-15) <a href="https://doi.org/f8x7t3">https://doi.org/f8x7t3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/ncomms12096">10.1038/ncomms12096</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27417679">27417679</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4947162">PMC4947162</a></div></div>
+</div>
+<div id="ref-MnWpJEWE" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Evaluating the evaluation of cancer driver genes</strong> <div class="csl-block">Collin J Tokheim, Nickolas Papadopoulos, Kenneth W Kinzler, Bert Vogelstein, Rachel Karchin</div> <em>Proceedings of the National Academy of Sciences</em> (2016-11-22) <a href="https://doi.org/f9d77w">https://doi.org/f9d77w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1073/pnas.1616440113">10.1073/pnas.1616440113</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27911828">27911828</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5167163">PMC5167163</a></div></div>
+</div>
+<div id="ref-YKm7IBTV" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Detailed modeling of positive selection improves detection of cancer driver genes</strong> <div class="csl-block">Siming Zhao, Jun Liu, Pranav Nanga, Yuwen Liu, AErcument Cicek, Nicholas Knoblauch, Chuan He, Matthew Stephens, Xin He</div> <em>Nature Communications</em> (2019-07-30) <a href="https://doi.org/gjmhnn">https://doi.org/gjmhnn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41467-019-11284-9">10.1038/s41467-019-11284-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31363082">31363082</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6667447">PMC6667447</a></div></div>
+</div>
+<div id="ref-17HuO3ZJW" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Review: Precision medicine and driver mutations: Computational methods, functional assays and conformational principles for interpreting cancer drivers</strong> <div class="csl-block">Ruth Nussinov, Hyunbum Jang, Chung-Jung Tsai, Feixiong Cheng</div> <em>PLOS Computational Biology</em> (2019-03-28) <a href="https://doi.org/gg8jhm">https://doi.org/gg8jhm</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1006658">10.1371/journal.pcbi.1006658</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30921324">30921324</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6438456">PMC6438456</a></div></div>
+</div>
+<div id="ref-AK17eOgD" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>The Cancer Genome Atlas Pan-Cancer analysis project</strong> <div class="csl-block">John N Weinstein, Eric A Collisson, Gordon B Mills, Kenna RMills Shaw, Brad A Ozenberger, Kyle Ellrott, Ilya Shmulevich, Chris Sander, Joshua M Stuart</div> <em>Nature Genetics</em> (2013-09-26) <a href="https://doi.org/f3nt5c">https://doi.org/f3nt5c</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/ng.2764">10.1038/ng.2764</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24071849">24071849</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3919969">PMC3919969</a></div></div>
+</div>
+<div id="ref-zPJFCX9h" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Modeling RAS Phenotype in Colorectal Cancer Uncovers Novel Molecular Traits of RAS Dependency and Improves Prediction of Response to Targeted Agents in Patients</strong> <div class="csl-block">Justin Guinney, Charles Ferté, Jonathan Dry, Robert McEwen, Gilles Manceau, KJ Kao, Kai-Ming Chang, Claus Bendtsen, Kevin Hudson, Erich Huang, … Pierre Laurent-Puig</div> <em>Clinical Cancer Research</em> (2013-10-29) <a href="https://doi.org/f5njhn">https://doi.org/f5njhn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1158/1078-0432.ccr-13-1943">10.1158/1078-0432.ccr-13-1943</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24170544">24170544</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4141655">PMC4141655</a></div></div>
+</div>
+<div id="ref-17XHtmqPY" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Machine Learning Detects Pan-cancer Ras Pathway Activation in The Cancer Genome Atlas</strong> <div class="csl-block">Gregory P Way, Francisco Sanchez-Vega, Konnor La, Joshua Armenia, Walid K Chatila, Augustin Luna, Chris Sander, Andrew D Cherniack, Marco Mina, Giovanni Ciriello, … Armaz Mariamidze</div> <em>Cell Reports</em> (2018-04) <a href="https://doi.org/gfspsb">https://doi.org/gfspsb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.celrep.2018.03.046">10.1016/j.celrep.2018.03.046</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29617658">29617658</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5918694">PMC5918694</a></div></div>
+</div>
+<div id="ref-Z5JvAfru" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Identification of pan-cancer Ras pathway activation with deep learning</strong> <div class="csl-block">Xiangtao Li, Shaochuan Li, Yunhe Wang, Shixiong Zhang, Ka-Chun Wong</div> <em>Briefings in Bioinformatics</em> (2020-10-30) <a href="https://doi.org/gjmd3p">https://doi.org/gjmd3p</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bib/bbaa258">10.1093/bib/bbaa258</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33126245">33126245</a></div></div>
+</div>
+<div id="ref-X6oQhIf8" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Genomic and Molecular Landscape of DNA Damage Repair Deficiency across The Cancer Genome Atlas</strong> <div class="csl-block">Theo A Knijnenburg, Linghua Wang, Michael T Zimmermann, Nyasha Chambwe, Galen F Gao, Andrew D Cherniack, Huihui Fan, Hui Shen, Gregory P Way, Casey S Greene, … Armaz Mariamidze</div> <em>Cell Reports</em> (2018-04) <a href="https://doi.org/gfspsc">https://doi.org/gfspsc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.celrep.2018.03.076">10.1016/j.celrep.2018.03.076</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29617664">29617664</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5961503">PMC5961503</a></div></div>
+</div>
+<div id="ref-MUt3ESlf" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Prediction of PIK3CA mutations from cancer gene expression data</strong> <div class="csl-block">Jun Kang, Ahwon Lee, Youn Soo Lee</div> <em>PLOS ONE</em> (2020-11-09) <a href="https://doi.org/gjmd3s">https://doi.org/gjmd3s</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pone.0241514">10.1371/journal.pone.0241514</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33166334">33166334</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7652327">PMC7652327</a></div></div>
+</div>
+<div id="ref-NsW0qxZF" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Compressing gene expression data using multiple latent space dimensionalities learns complementary biological representations</strong> <div class="csl-block">Gregory P Way, Michael Zietz, Vincent Rubinetti, Daniel S Himmelstein, Casey S Greene</div> <em>Genome Biology</em> (2020-05-11) <a href="https://doi.org/gg2mjh">https://doi.org/gg2mjh</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-020-02021-3">10.1186/s13059-020-02021-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32393369">32393369</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7212571">PMC7212571</a></div></div>
+</div>
+<div id="ref-ekDcxjcr" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Systematic interrogation of mutation groupings reveals divergent downstream expression programs within key cancer genes</strong> <div class="csl-block">Michal R Grzadkowski, Hannah Manning, Julia Somers, Emek Demir</div> <em>Cold Spring Harbor Laboratory</em> (2020-06-03) <a href="https://doi.org/gjmd7t">https://doi.org/gjmd7t</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2020.06.02.128850">10.1101/2020.06.02.128850</a></div></div>
+</div>
+<div id="ref-odNCMbto" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Using Transcriptional Signatures to Find Cancer Drivers with LURE</strong> <div class="csl-block">David Haan, Ruikang Tao, Verena Friedl, Ioannis N Anastopoulos, Christopher K Wong, Alana S Weinstein, Joshua M Stuart</div> <em>Biocomputing 2020</em> (2019-11-27) <a href="https://doi.org/gjmd4t">https://doi.org/gjmd4t</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1142/9789811215636_0031">10.1142/9789811215636_0031</a></div></div>
+</div>
+<div id="ref-pLo10xih" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Reverse regression increases power for detecting trans-eQTLs</strong> <div class="csl-block">Saikat Banerjee, Franco L Simonetti, Kira E Detrois, Anubhav Kaphle, Raktim Mitra, Rahul Nagial, Johannes Söding</div> <em>Cold Spring Harbor Laboratory</em> (2020-05-09) <a href="https://doi.org/gjmhd8">https://doi.org/gjmhd8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2020.05.07.083386">10.1101/2020.05.07.083386</a></div></div>
+</div>
+<div id="ref-1z8H2EME" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Cancer transcriptome profiling at the juncture of clinical translation</strong> <div class="csl-block">Marcin Cieślik, Arul M Chinnaiyan</div> <em>Nature Reviews Genetics</em> (2017-12-27) <a href="https://doi.org/gcsmnr">https://doi.org/gcsmnr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nrg.2017.96">10.1038/nrg.2017.96</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29279605">29279605</a></div></div>
+</div>
+<div id="ref-1Cxnszz2L" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Identification of a CpG Island Methylator Phenotype that Defines a Distinct Subgroup of Glioma</strong> <div class="csl-block">Houtan Noushmehr, Daniel J Weisenberger, Kristin Diefes, Heidi S Phillips, Kanan Pujara, Benjamin P Berman, Fei Pan, Christopher E Pelloski, Erik P Sulman, Krishna P Bhat, … Kenneth Aldape</div> <em>Cancer Cell</em> (2010-05) <a href="https://doi.org/dbtmsd">https://doi.org/dbtmsd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ccr.2010.03.017">10.1016/j.ccr.2010.03.017</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20399149">20399149</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872684">PMC2872684</a></div></div>
+</div>
+<div id="ref-WN82rY7P" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>DNA Methylation, Isocitrate Dehydrogenase Mutation, and Survival in Glioma</strong> <div class="csl-block">Brock C Christensen, Ashley A Smith, Shichun Zheng, Devin C Koestler, EAndres Houseman, Carmen J Marsit, Joseph L Wiemels, Heather H Nelson, Margaret R Karagas, Margaret R Wrensch, … John K Wiencke</div> <em>JNCI: Journal of the National Cancer Institute</em> (2011-01-19) <a href="https://doi.org/bbjqf9">https://doi.org/bbjqf9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jnci/djq497">10.1093/jnci/djq497</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21163902">21163902</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3022619">PMC3022619</a></div></div>
+</div>
+<div id="ref-Sp8RO1w7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>&lt;i&gt;IDH1&lt;/i&gt;and&lt;i&gt;IDH2&lt;/i&gt;Mutations in Gliomas</strong> <div class="csl-block">Hai Yan, DWilliams Parsons, Genglin Jin, Roger McLendon, BAhmed Rasheed, Weishi Yuan, Ivan Kos, Ines Batinic-Haberle, Siân Jones, Gregory J Riggins, … Darell D Bigner</div> <em>New England Journal of Medicine</em> (2009-02-19) <a href="https://doi.org/btz6db">https://doi.org/btz6db</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1056/nejmoa0808710">10.1056/nejmoa0808710</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19228619">19228619</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2820383">PMC2820383</a></div></div>
+</div>
+<div id="ref-FYj8JHBX" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>IDH mutation impairs histone demethylation and results in a block to cell differentiation</strong> <div class="csl-block">Chao Lu, Patrick S Ward, Gurpreet S Kapoor, Dan Rohle, Sevin Turcan, Omar Abdel-Wahab, Christopher R Edwards, Raya Khanin, Maria E Figueroa, Ari Melnick, … Craig B Thompson</div> <em>Nature</em> (2012-02-15) <a href="https://doi.org/f4msnt">https://doi.org/f4msnt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nature10860">10.1038/nature10860</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/22343901">22343901</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3478770">PMC3478770</a></div></div>
+</div>
+<div id="ref-19sDhpROP" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Connections between TET proteins and aberrant DNA modification in cancer</strong> <div class="csl-block">Yun Huang, Anjana Rao</div> <em>Trends in Genetics</em> (2014-10) <a href="https://doi.org/f6jm7v">https://doi.org/f6jm7v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.tig.2014.07.005">10.1016/j.tig.2014.07.005</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25132561">25132561</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4337960">PMC4337960</a></div></div>
+</div>
+<div id="ref-rNm0rAz7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>SETting the Stage for Cancer Development: SETD2 and the Consequences of Lost Methylation</strong> <div class="csl-block">Catherine C Fahey, Ian J Davis</div> <em>Cold Spring Harbor Perspectives in Medicine</em> (2017-02-03) <a href="https://doi.org/gjmfvq">https://doi.org/gjmfvq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/cshperspect.a026468">10.1101/cshperspect.a026468</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28159833">28159833</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5411680">PMC5411680</a></div></div>
+</div>
+<div id="ref-18LSSJo3W" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Mechanisms underlying mutational signatures in human cancers</strong> <div class="csl-block">Thomas Helleday, Saeed Eshtad, Serena Nik-Zainal</div> <em>Nature Reviews Genetics</em> (2014-07-01) <a href="https://doi.org/f25gnp">https://doi.org/f25gnp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nrg3729">10.1038/nrg3729</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24981601">24981601</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6044419">PMC6044419</a></div></div>
+</div>
+<div id="ref-pWXLXywn" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Quantitative Proteomics of the Cancer Cell Line Encyclopedia</strong> <div class="csl-block">David P Nusinow, John Szpyt, Mahmoud Ghandi, Christopher M Rose, ERobert McDonald III, Marian Kalocsay, Judit Jané-Valbuena, Ellen Gelfand, Devin K Schweppe, Mark Jedrychowski, … Steven P Gygi</div> <em>Cell</em> (2020-01) <a href="https://doi.org/ggxbh5">https://doi.org/ggxbh5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.cell.2019.12.023">10.1016/j.cell.2019.12.023</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31978347">31978347</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7339254">PMC7339254</a></div></div>
+</div>
+<div id="ref-11yRODwNY" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>The repertoire of mutational signatures in human cancer</strong> <div class="csl-block">Ludmil B Alexandrov, Jaegil Kim, Nicholas J Haradhvala, Mi Ni Huang, Alvin Wei Tian Ng, Yang Wu, Arnoud Boot, Kyle R Covington, Dmitry A Gordenin, … </div> <em>Nature</em> (2020-02-05) <a href="https://doi.org/ggkfnv">https://doi.org/ggkfnv</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41586-020-1943-3">10.1038/s41586-020-1943-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32025018">32025018</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054213">PMC7054213</a></div></div>
+</div>
+<div id="ref-UTtkLysq" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Significant associations between driver gene mutations and DNA methylation alterations across many cancer types</strong> <div class="csl-block">Yun-Ching Chen, Valer Gotea, Gennady Margolin, Laura Elnitski</div> <em>PLOS Computational Biology</em> (2017-11-10) <a href="https://doi.org/gchz8h">https://doi.org/gchz8h</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1005840">10.1371/journal.pcbi.1005840</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29125844">29125844</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5709060">PMC5709060</a></div></div>
+</div>
+<div id="ref-YBXY18s4" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>A pan-cancer analysis of driver gene mutations, DNA methylation and gene expressions reveals that chromatin remodeling is a major mechanism inducing global changes in cancer epigenomes</strong> <div class="csl-block">Ahrim Youn, Kyung In Kim, Raul Rabadan, Benjamin Tycko, Yufeng Shen, Shuang Wang</div> <em>BMC Medical Genomics</em> (2018-11-06) <a href="https://doi.org/gjmhfb">https://doi.org/gjmhfb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12920-018-0425-z">10.1186/s12920-018-0425-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30400878">30400878</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6218985">PMC6218985</a></div></div>
+</div>
+<div id="ref-pRTkOXGI" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Computational analysis reveals histotype-dependent molecular profile and actionable mutation effects across cancers</strong> <div class="csl-block">Daniel Heim, Grégoire Montavon, Peter Hufnagl, Klaus-Robert Müller, Frederick Klauschen</div> <em>Genome Medicine</em> (2018-11-15) <a href="https://doi.org/gjmhfc">https://doi.org/gjmhfc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13073-018-0591-9">10.1186/s13073-018-0591-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30442178">30442178</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6238410">PMC6238410</a></div></div>
+</div>
+<div id="ref-ZuUqcptb" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>CNAmet: an R package for integrating copy number, methylation and expression data</strong> <div class="csl-block">Riku Louhimo, Sampsa Hautaniemi</div> <em>Bioinformatics</em> (2011-01-12) <a href="https://doi.org/fbq4p2">https://doi.org/fbq4p2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btr019">10.1093/bioinformatics/btr019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21228048">21228048</a></div></div>
+</div>
+<div id="ref-lQ8oalgu" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Impacts of somatic mutations on gene expression: an association perspective</strong> <div class="csl-block">Peilin Jia, Zhongming Zhao</div> <em>Briefings in Bioinformatics</em> (2016-04-28) <a href="https://doi.org/gjnd5b">https://doi.org/gjnd5b</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bib/bbw037">10.1093/bib/bbw037</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27127206">27127206</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5862283">PMC5862283</a></div></div>
+</div>
+<div id="ref-StwDSCo7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Inference of patient-specific pathway activities from multi-dimensional cancer genomics data using PARADIGM</strong> <div class="csl-block">Charles J Vaske, Stephen C Benz, JZachary Sanborn, Dent Earl, Christopher Szeto, Jingchun Zhu, David Haussler, Joshua M Stuart</div> <em>Bioinformatics</em> (2010-06-01) <a href="https://doi.org/bcvgjf">https://doi.org/bcvgjf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btq182">10.1093/bioinformatics/btq182</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20529912">20529912</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2881367">PMC2881367</a></div></div>
+</div>
+<div id="ref-1BMNB7BTo" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>Systematic analysis of somatic mutations impacting gene expression in 12 tumour types</strong> <div class="csl-block">Jiarui Ding, Melissa K McConechy, Hugo M Horlings, Gavin Ha, Fong Chun Chan, Tyler Funnell, Sarah C Mullaly, Jüri Reimand, Ali Bashashati, Gary D Bader, … Sohrab P Shah</div> <em>Nature Communications</em> (2015-10-05) <a href="https://doi.org/f7z86p">https://doi.org/f7z86p</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/ncomms9554">10.1038/ncomms9554</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26436532">26436532</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4600750">PMC4600750</a></div></div>
+</div>
+<div id="ref-809OyWlC" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Cancer Genome Landscapes</strong> <div class="csl-block">B Vogelstein, N Papadopoulos, VE Velculescu, S Zhou, LA Diaz, KW Kinzler</div> <em>Science</em> (2013-03-28) <a href="https://doi.org/6rg">https://doi.org/6rg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1126/science.1235122">10.1126/science.1235122</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539594">23539594</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3749880">PMC3749880</a></div></div>
+</div>
+<div id="ref-cDnF3a5Q" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Scalable Open Science Approach for Mutation Calling of Tumor Exomes Using Multiple Genomic Pipelines</strong> <div class="csl-block">Kyle Ellrott, Matthew H Bailey, Gordon Saksena, Kyle R Covington, Cyriac Kandoth, Chip Stewart, Julian Hess, Singer Ma, Kami E Chiotti, Michael McLellan, … Armaz Mariamidze</div> <em>Cell Systems</em> (2018-03) <a href="https://doi.org/gf9twn">https://doi.org/gf9twn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.cels.2018.03.002">10.1016/j.cels.2018.03.002</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29596782">29596782</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6075717">PMC6075717</a></div></div>
+</div>
+<div id="ref-rDV1hhfF" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers</strong> <div class="csl-block">Craig H Mermel, Steven E Schumacher, Barbara Hill, Matthew L Meyerson, Rameen Beroukhim, Gad Getz</div> <em>Genome Biology</em> (2011-04) <a href="https://doi.org/dzhjqh">https://doi.org/dzhjqh</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/gb-2011-12-4-r41">10.1186/gb-2011-12-4-r41</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21527027">21527027</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3218867">PMC3218867</a></div></div>
+</div>
+<div id="ref-lF0Fr9LL" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Scikit-learn: Machine Learning in Python</strong> <div class="csl-block">Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, … Édouard Duchesnay</div> <em>Journal of Machine Learning Research</em> (2011) <a href="http://jmlr.org/papers/v12/pedregosa11a.html">http://jmlr.org/papers/v12/pedregosa11a.html</a></div>
+</div>
+<div id="ref-Zg2jmD6p" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <div class="csl-block">Andrew E Teschendorff, Francesco Marabita, Matthias Lechner, Thomas Bartlett, Jesper Tegner, David Gomez-Cabrero, Stephan Beck</div> <em>Bioinformatics</em> (2012-11-21) <a href="https://doi.org/f25mvt">https://doi.org/f25mvt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bts680">10.1093/bioinformatics/bts680</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23175756">23175756</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546795">PMC3546795</a></div></div>
+</div>
+<div id="ref-JZNkB8d7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>Regularization and variable selection via the elastic net</strong> <div class="csl-block">Hui Zou, Trevor Hastie</div> <em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em> (2005-04) <a href="https://doi.org/b8cwwr">https://doi.org/b8cwwr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1111/j.1467-9868.2005.00503.x">10.1111/j.1467-9868.2005.00503.x</a></div></div>
+</div>
+<div id="ref-WTSzUd5Y" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">40. </div><div class="csl-right-inline"><strong>An introduction to ROC analysis</strong> <div class="csl-block">Tom Fawcett</div> <em>Pattern Recognition Letters</em> (2006-06) <a href="https://doi.org/bpsghb">https://doi.org/bpsghb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.patrec.2005.10.010">10.1016/j.patrec.2005.10.010</a></div></div>
+</div>
+<div id="ref-pazxvNcz" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">41. </div><div class="csl-right-inline"><strong>A critical investigation of recall and precision as measures of retrieval system performance</strong> <div class="csl-block">Vijay Raghavan, Peter Bollmann, Gwang S Jung</div> <em>ACM Transactions on Information Systems</em> (1989-07) <a href="https://doi.org/bg4tps">https://doi.org/bg4tps</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/65943.65945">10.1145/65943.65945</a></div></div>
+</div>
+<div id="ref-LB4mDas6" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets</strong> <div class="csl-block">Takaya Saito, Marc Rehmsmeier</div> <em>PLOS ONE</em> (2015-03-04) <a href="https://doi.org/f69237">https://doi.org/f69237</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pone.0118432">10.1371/journal.pone.0118432</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25738806">25738806</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4349800">PMC4349800</a></div></div>
+</div>
+<div id="ref-lWf6zHNO" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">43. </div><div class="csl-right-inline"><strong>The MCC-F1 curve: a performance evaluation technique for binary classification</strong> <div class="csl-block">Chang Cao, Davide Chicco, Michael M Hoffman</div> <em>arXiv</em> (2020-06-23) <a href="https://arxiv.org/abs/2006.11278">https://arxiv.org/abs/2006.11278</a></div>
+</div>
+<div id="ref-CZHe0A4l" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">44. </div><div class="csl-right-inline"><strong>Genome-wide identification and analysis of prognostic features in human cancers</strong> <div class="csl-block">Joan C Smith, Jason M Sheltzer</div> <em>Cold Spring Harbor Laboratory</em> (2021-06-01) <a href="https://doi.org/gmqfqt">https://doi.org/gmqfqt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.06.01.446243">10.1101/2021.06.01.446243</a></div></div>
+</div>
+<div id="ref-wiw7Q7M7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">45. </div><div class="csl-right-inline"><strong>scikit-survival: A Library for Time-to-Event Analysis Built on Top of scikit-learn</strong> <div class="csl-block">Sebastian Pölsterl</div> <em>Journal of Machine Learning Research</em> (2020) <a href="http://jmlr.org/papers/v21/20-729.html">http://jmlr.org/papers/v21/20-729.html</a></div>
+</div>
+<div id="ref-NrTv8Fyq" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">46. </div><div class="csl-right-inline"><strong>Multivariable prognostic models: issues in developing models, evaluating assumptions and adequacy, and measuring and reducing errors.</strong> <div class="csl-block">FE Harrell, KL Lee, DB Mark</div> <em>Statistics in medicine</em> (1996-02-28) <a href="https://www.ncbi.nlm.nih.gov/pubmed/8668867">https://www.ncbi.nlm.nih.gov/pubmed/8668867</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1002/(sici)1097-0258(19960229)15:4&lt;361::aid-sim168&gt;3.0.co;2-4">10.1002/(sici)1097-0258(19960229)15:4&lt;361::aid-sim168&gt;3.0.co;2-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/8668867">8668867</a></div></div>
+</div>
+<div id="ref-YuJbg3zO" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">47. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
+</div>
+<div id="ref-KGJwKXkD" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">48. </div><div class="csl-right-inline"><strong>Integrated genomic characterization of IDH1-mutant glioma malignant progression</strong> <div class="csl-block">Hanwen Bai, Akdes Serin Harmancı, EZeynep Erson-Omay, Jie Li, Süleyman Coşkun, Matthias Simon, Boris Krischek, Koray Özduman, SBülent Omay, Eric A Sorensen, … Murat Günel</div> <em>Nature Genetics</em> (2015-11-30) <a href="https://doi.org/f895hx">https://doi.org/f895hx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/ng.3457">10.1038/ng.3457</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26618343">26618343</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4829945">PMC4829945</a></div></div>
+</div>
+<div id="ref-uBEARk2" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">49. </div><div class="csl-right-inline"><strong>Identification and validation of an ERBB2 gene expression signature in breast cancers</strong> <div class="csl-block">François Bertucci, Nathalie Borie, Christophe Ginestier, Agnès Groulet, Emmanuelle Charafe-Jauffret, José Adélaïde, Jeannine Geneix, Loïc Bachelart, Pascal Finetti, Alane Koki, … Daniel Birnbaum</div> <em>Oncogene</em> (2004-01-26) <a href="https://doi.org/dq9kvk">https://doi.org/dq9kvk</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/sj.onc.1207361">10.1038/sj.onc.1207361</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/14743203">14743203</a></div></div>
+</div>
+<div id="ref-1c8GokzT" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">50. </div><div class="csl-right-inline"><strong>Pan-Cancer Landscape and Analysis of ERBB2 Mutations Identifies Poziotinib as a Clinically Active Inhibitor and Enhancer of T-DM1 Activity</strong> <div class="csl-block">Jacqulyne P Robichaux, Yasir Y Elamin, RSK Vijayan, Monique B Nilsson, Lemei Hu, Junqin He, Fahao Zhang, Marlese Pisegna, Alissa Poteete, Huiying Sun, … John V Heymach</div> <em>Cancer Cell</em> (2019-10) <a href="https://doi.org/ggcv27">https://doi.org/ggcv27</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ccell.2019.09.001">10.1016/j.ccell.2019.09.001</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31588020">31588020</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6944069">PMC6944069</a></div></div>
+</div>
+<div id="ref-fdVKgtEF" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">51. </div><div class="csl-right-inline"><strong>Shaping the cellular landscape with Set2/SETD2 methylation</strong> <div class="csl-block">Stephen L McDaniel, Brian D Strahl</div> <em>Cellular and Molecular Life Sciences</em> (2017-04-06) <a href="https://doi.org/gbrd9b">https://doi.org/gbrd9b</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/s00018-017-2517-x">10.1007/s00018-017-2517-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28386724">28386724</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5545052">PMC5545052</a></div></div>
+</div>
+<div id="ref-rBwmNJtL" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">52. </div><div class="csl-right-inline"><strong>TCPA: a resource for cancer functional proteomics data</strong> <div class="csl-block">Jun Li, Yiling Lu, Rehan Akbani, Zhenlin Ju, Paul L Roebuck, Wenbin Liu, Ji-Yeon Yang, Bradley M Broom, Roeland GW Verhaak, David W Kane, … Han Liang</div> <em>Nature Methods</em> (2013-09-15) <a href="https://doi.org/gffkjm">https://doi.org/gffkjm</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth.2650">10.1038/nmeth.2650</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24037243">24037243</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4076789">PMC4076789</a></div></div>
+</div>
+<div id="ref-23jjG6I6" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">53. </div><div class="csl-right-inline"><strong>Patterns of somatic structural variation in human cancer genomes</strong> <div class="csl-block">Yilong Li, Nicola D Roberts, Jeremiah A Wala, Ofer Shapira, Steven E Schumacher, Kiran Kumar, Ekta Khurana, Sebastian Waszak, Jan O Korbel, … </div> <em>Nature</em> (2020-02-05) <a href="https://doi.org/ggkfnw">https://doi.org/ggkfnw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41586-019-1913-9">10.1038/s41586-019-1913-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32025012">32025012</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7025897">PMC7025897</a></div></div>
+</div>
+<div id="ref-wOjMFUXP" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">54. </div><div class="csl-right-inline"><strong>MethylNet: an automated and modular deep learning approach for DNA methylation analysis</strong> <div class="csl-block">Joshua J Levy, Alexander J Titus, Curtis L Petersen, Youdinghuan Chen, Lucas A Salas, Brock C Christensen</div> <em>BMC Bioinformatics</em> (2020-03-17) <a href="https://doi.org/ggxvrz">https://doi.org/ggxvrz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12859-020-3443-8">10.1186/s12859-020-3443-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32183722">32183722</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7076991">PMC7076991</a></div></div>
+</div>
+<div id="ref-dSUkNdCN" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">55. </div><div class="csl-right-inline"><strong>MethylSPWNet and MethylCapsNet: Biologically Motivated Organization of DNAm Neural Networks, Inspired by Capsule Networks.</strong> <div class="csl-block">Joshua J Levy, Youdinghuan Chen, Nasim Azizgolshani, Curtis L Petersen, Alexander J Titus, Erika L Moen, Louis J Vaickus, Lucas A Salas, Brock C Christensen</div> <em>NPJ systems biology and applications</em> (2021-08-20) <a href="https://www.ncbi.nlm.nih.gov/pubmed/34417465">https://www.ncbi.nlm.nih.gov/pubmed/34417465</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41540-021-00193-7">10.1038/s41540-021-00193-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34417465">34417465</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8379254">PMC8379254</a></div></div>
+</div>
+<div id="ref-1HfJnooMx" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">56. </div><div class="csl-right-inline"><strong>Predicting Drug Response and Synergy Using a Deep Learning Model of Human Cancer Cells</strong> <div class="csl-block">Brent M Kuenzi, Jisoo Park, Samson H Fong, Kyle S Sanchez, John Lee, Jason F Kreisberg, Jianzhu Ma, Trey Ideker</div> <em>Cancer Cell</em> (2020-11) <a href="https://doi.org/gh7z2n">https://doi.org/gh7z2n</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ccell.2020.09.014">10.1016/j.ccell.2020.09.014</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33096023">33096023</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7737474">PMC7737474</a></div></div>
+</div>
+<div id="ref-7kIfUrlF" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">57. </div><div class="csl-right-inline"><strong>Biological Constraints Can Improve Prediction in Precision Oncology</strong> <div class="csl-block">Mohamed Omar, Lotte Mulder, Tendai Coady, Claudio Zanettini, Eddie Luidy Imada, Wikum Dinalankara, Laurent Younes, Donald Geman, Luigi Marchionni</div> <em>Cold Spring Harbor Laboratory</em> (2021-05-27) <a href="https://doi.org/gkcc43">https://doi.org/gkcc43</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.05.25.445604">10.1101/2021.05.25.445604</a></div></div>
+</div>
+<div id="ref-1AeRgHv3L" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">58. </div><div class="csl-right-inline"><strong>Principles and methods of integrative genomic analyses in cancer</strong> <div class="csl-block">Vessela N Kristensen, Ole Christian Lingjærde, Hege G Russnes, Hans Kristian M Vollan, Arnoldo Frigessi, Anne-Lise Børresen-Dale</div> <em>Nature Reviews Cancer</em> (2014-04-24) <a href="https://doi.org/gf66jv">https://doi.org/gf66jv</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nrc3721">10.1038/nrc3721</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24759209">24759209</a></div></div>
+</div>
+<div id="ref-tMmErZMX" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">59. </div><div class="csl-right-inline"><strong>Predicting censored survival data based on the interactions between meta-dimensional omics data in breast cancer</strong> <div class="csl-block">Dokyoon Kim, Ruowang Li, Scott M Dudek, Marylyn D Ritchie</div> <em>Journal of Biomedical Informatics</em> (2015-08) <a href="https://doi.org/f7n49h">https://doi.org/f7n49h</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.jbi.2015.05.019">10.1016/j.jbi.2015.05.019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26048077">26048077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4550096">PMC4550096</a></div></div>
+</div>
+<div id="ref-4X1N4DJa" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">60. </div><div class="csl-right-inline"><strong>Combining DNA methylation and RNA sequencing data of cancer for supervised knowledge extraction</strong> <div class="csl-block">Eleonora Cappelli, Giovanni Felici, Emanuel Weitschek</div> <em>BioData Mining</em> (2018-10-25) <a href="https://doi.org/gkcdbm">https://doi.org/gkcdbm</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13040-018-0184-6">10.1186/s13040-018-0184-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30386434">30386434</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6203208">PMC6203208</a></div></div>
+</div>
+<div id="ref-shldZigM" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">61. </div><div class="csl-right-inline"><strong>MOLI: multi-omics late integration with deep neural networks for drug response prediction</strong> <div class="csl-block">Hossein Sharifi-Noghabi, Olga Zolotareva, Colin C Collins, Martin Ester</div> <em>Bioinformatics</em> (2019-07) <a href="https://doi.org/fxbz">https://doi.org/fxbz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btz318">10.1093/bioinformatics/btz318</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31510700">31510700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6612815">PMC6612815</a></div></div>
+</div>
+<div id="ref-llajEDiU" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">62. </div><div class="csl-right-inline"><strong>Accurate cancer phenotype prediction with AKLIMATE, a stacked kernel learner integrating multimodal genomic data and pathway knowledge</strong> <div class="csl-block">Vladislav Uzunangelov, Christopher K Wong, Joshua M Stuart</div> <em>PLOS Computational Biology</em> (2021-04-16) <a href="https://doi.org/gkcdbn">https://doi.org/gkcdbn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1008878">10.1371/journal.pcbi.1008878</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33861732">33861732</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8081343">PMC8081343</a></div></div>
+</div>
+<div id="ref-gIhNaGUg" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">63. </div><div class="csl-right-inline"><strong>Methods for biological data integration: perspectives and challenges</strong> <div class="csl-block">Vladimir Gligorijević, Nataša Pržulj</div> <em>Journal of The Royal Society Interface</em> (2015-11) <a href="https://doi.org/bdzp">https://doi.org/bdzp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1098/rsif.2015.0571">10.1098/rsif.2015.0571</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26490630">26490630</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685837">PMC4685837</a></div></div>
+</div>
+<div id="ref-NfKILi8i" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">64. </div><div class="csl-right-inline"><strong>Machine learning for integrating data in biology and medicine: Principles, practice, and opportunities</strong> <div class="csl-block">Marinka Zitnik, Francis Nguyen, Bo Wang, Jure Leskovec, Anna Goldenberg, Michael M Hoffman</div> <em>Information Fusion</em> (2019-10) <a href="https://doi.org/gf7rj8">https://doi.org/gf7rj8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.inffus.2018.09.012">10.1016/j.inffus.2018.09.012</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30467459">30467459</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6242341">PMC6242341</a></div></div>
+</div>
+<div id="ref-1B2CloRMX" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">65. </div><div class="csl-right-inline"><strong>Integrated phosphoproteomics and transcriptional classifiers reveal hidden RAS signaling dynamics in multiple myeloma</strong> <div class="csl-block">Yu-Hsiu T Lin, Gregory P Way, Benjamin G Barwick, Margarette C Mariano, Makeba Marcoulis, Ian D Ferguson, Christoph Driessen, Lawrence H Boise, Casey S Greene, Arun P Wiita</div> <em>Blood Advances</em> (2019-10-29) <a href="https://doi.org/gg7m56">https://doi.org/gg7m56</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1182/bloodadvances.2019000303">10.1182/bloodadvances.2019000303</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31698452">31698452</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6855123">PMC6855123</a></div></div>
+</div>
+<div id="ref-kcdvZmNN" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">66. </div><div class="csl-right-inline"><strong>Next-generation characterization of the Cancer Cell Line Encyclopedia</strong> <div class="csl-block">Mahmoud Ghandi, Franklin W Huang, Judit Jané-Valbuena, Gregory V Kryukov, Christopher C Lo, ERobert McDonald III, Jordi Barretina, Ellen T Gelfand, Craig M Bielski, Haoxin Li, … William R Sellers</div> <em>Nature</em> (2019-05) <a href="https://doi.org/gf2m3h">https://doi.org/gf2m3h</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41586-019-1186-3">10.1038/s41586-019-1186-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31068700">31068700</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6697103">PMC6697103</a></div></div>
+</div>
+<div id="ref-2AuD4Mwu" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">67. </div><div class="csl-right-inline"><strong>Comprehensive transcriptomic analysis of cell lines as models of primary tumors across 22 tumor types</strong> <div class="csl-block">K Yu, B Chen, D Aran, J Charalel, C Yau, DM Wolf, LJ van ‘t Veer, AJ Butte, T Goldstein, M Sirota</div> <em>Nature Communications</em> (2019-08-08) <a href="https://doi.org/ggh7t7">https://doi.org/ggh7t7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41467-019-11415-2">10.1038/s41467-019-11415-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31395879">31395879</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6687785">PMC6687785</a></div></div>
+</div>
+<div id="ref-16yVVytBf" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">68. </div><div class="csl-right-inline"><strong>Clonal status of actionable driver events and the timing of mutational processes in cancer evolution</strong> <div class="csl-block">Nicholas McGranahan, Francesco Favero, Elza C de Bruin, Nicolai Juul Birkbak, Zoltan Szallasi, Charles Swanton</div> <em>Science Translational Medicine</em> (2015-04-15) <a href="https://doi.org/f7f83d">https://doi.org/f7f83d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed.aaa1408</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25877892">25877892</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636056">PMC4636056</a></div></div>
 </div>
 </div>
 <!-- default theme -->
@@ -1555,8 +1396,7 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
   }
 
   /* table auto-number */
-  table > caption > span:first-of-type,
-  div.table_wrapper > table > caption > span:first-of-type {
+  table > caption > span:first-of-type {
     font-weight: bold;
     margin-right: 5px;
   }
@@ -1784,6 +1624,15 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
   }
 
   /* -------------------------------------------------- */
+  /* references */
+  /* -------------------------------------------------- */
+
+  .csl-entry {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* -------------------------------------------------- */
   /* print control */
   /* -------------------------------------------------- */
 
@@ -1914,7 +1763,6 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
 
   /* tablenos wrapper */
   .tablenos {
-    /* show scrollbar on tables if necessary to prevent overflow */
     width: 100%;
     margin: 20px 0;
   }
@@ -2095,7 +1943,8 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
       // start expanded/collapsed based on option
       if (
         startCollapsed === "true" ||
-        (startCollapsed === "auto" && isSmallScreen())
+        (startCollapsed === "auto" && isSmallScreen()) ||
+        heading.dataset.collapsed === "true"
       )
         collapseHeading(heading);
       else expandElement(heading);
@@ -2231,7 +2080,8 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
 <script type="module">
   // which types of elements to add anchors next to, in "document.querySelector"
   // format
-  const typesQuery = 'h1, h2, h3, [id^="fig:"], [id^="tbl:"], [id^="eq:"]';
+  const typesQuery =
+    'h1, h2, h3, div[id^="fig:"], div[id^="tbl:"], span[id^="eq:"]';
 
   // start script
   function start() {
@@ -2427,8 +2277,9 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
     }
   }
 
-  // start script when document is finished loading
-  window.addEventListener("load", start);
+  // start script on DOMContentLoaded instead of load to ensure this plugins
+  // runs before other plugins
+  window.addEventListener("DOMContentLoaded", start);
 </script>
 <!--
   Jump to First Plugin
@@ -2447,9 +2298,11 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
 
   // start script
   function start() {
-    if (references !== "false") makeButtons("ref-", "p", "reference");
-    if (figures !== "false") makeButtons("fig:", "figcaption", "figure");
-    if (tables !== "false") makeButtons("tbl:", "caption", "table");
+    if (references !== "false")
+      makeButtons(`div[id^="ref-"]`, ".csl-left-margin", "reference");
+    if (figures !== "false")
+      makeButtons(`div[id^="fig:"]`, "figcaption", "figure");
+    if (tables !== "false") makeButtons(`div[id^="tbl:"]`, "caption", "table");
   }
 
   // when jump button clicked
@@ -2477,7 +2330,7 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
 
   // add button next to each reference entry, figure, or table
   function makeButtons(query, containerQuery, subject) {
-    const elements = document.querySelectorAll(`[id^="${query}"`);
+    const elements = document.querySelectorAll(query);
     for (const element of elements) {
       const id = element.id;
       const buttonContainer = element.querySelector(containerQuery);
@@ -3985,6 +3838,7 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
       "data-selected",
       "data-highlighted",
       "data-glow",
+      "class",
     ];
     for (const attribute of attributes) {
       sourceCopy.removeAttribute(attribute);
@@ -4045,9 +3899,8 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
     prevButton.classList.add("icon_button");
     nextButton.classList.add("icon_button");
     prevButton.innerHTML = document.querySelector(".icon_caret_left").innerHTML;
-    nextButton.innerHTML = document.querySelector(
-      ".icon_caret_right"
-    ).innerHTML;
+    nextButton.innerHTML =
+      document.querySelector(".icon_caret_right").innerHTML;
     navBar.appendChild(prevButton);
     navBar.appendChild(document.createTextNode(text));
     navBar.appendChild(nextButton);
@@ -4091,7 +3944,7 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
     if (!target) return;
 
     // if ref or figure, modify target to get expected element
-    if (id.indexOf("ref-") === 0) target = target.querySelector("p");
+    if (id.indexOf("ref-") === 0) target = target.querySelector(":nth-child(2)");
     else if (id.indexOf("fig:") === 0) target = target.querySelector("figure");
 
     return target;
@@ -4271,7 +4124,7 @@ DOI: <a href="https://doi.org/10.1126/scitranslmed.aaa1408">10.1126/scitranslmed
   Allows public annotation of the  manuscript. See https://web.hypothes.is/.
 -->
 
-<script>
+<script type="module">
   // configuration
   window.hypothesisConfig = function () {
     return {
