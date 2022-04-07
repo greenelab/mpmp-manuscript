@@ -452,7 +452,6 @@ content/06.declarations.md:24:funders
 content/06.declarations.md:28:JC
 content/06.declarations.md:29:BCC
 content/06.declarations.md:31:CSG
-content/06.declarations.md:33:Acknowledgements
 content/06.declarations.md:35:Heil
 content/06.declarations.md:35:Pividori
 content/06.declarations.md:36:BioRender

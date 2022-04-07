@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2021-11-10'
+date-meta: '2022-04-07'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="og:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="twitter:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta name="dc.date" content="2021-11-10" />
-  <meta name="citation_publication_date" content="2021-11-10" />
+  <meta name="dc.date" content="2022-04-07" />
+  <meta name="citation_publication_date" content="2022-04-07" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/95ea0b76be9707d48f0c38712d7f3135a5ee4435/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/95ea0b76be9707d48f0c38712d7f3135a5ee4435/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,10 +80,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/95ea0b76be9707d48f0c38712d7f3135a5ee4435/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/))
 was automatically generated
-from [greenelab/mpmp-manuscript@95ea0b7](https://github.com/greenelab/mpmp-manuscript/tree/95ea0b76be9707d48f0c38712d7f3135a5ee4435)
-on November 10, 2021.
+from [greenelab/mpmp-manuscript@d7a322d](https://github.com/greenelab/mpmp-manuscript/tree/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd)
+on April 7, 2022.
 </em></small>
 
 ## Authors
@@ -91,11 +91,11 @@ on November 10, 2021.
 
 
 + **Jake Crawford**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-6207-0782](https://orcid.org/0000-0001-6207-0782)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [jjc2718](https://github.com/jjc2718)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [jjc2718](https://twitter.com/jjc2718)<br>
   <small>
      Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA, USA
@@ -103,7 +103,7 @@ on November 10, 2021.
   </small>
 
 + **Brock C. Christensen**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-3022-426X](https://orcid.org/0000-0003-3022-426X)<br>
   <small>
      Department of Epidemiology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA; Department of Molecular and Systems Biology, Geisel School of Medicine, Dartmouth College, Lebanon, NH, USA
@@ -111,20 +111,20 @@ on November 10, 2021.
   </small>
 
 + **Maria Chikina**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-2550-5403](https://orcid.org/0000-0003-2550-5403)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [mchikina](https://github.com/mchikina)<br>
   <small>
      Department of Computational and Systems Biology, School of Medicine, University of Pittsburgh, Pittsburgh, PA, USA
   </small>
 
 + **Casey S. Greene**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [cgreene](https://github.com/cgreene)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [GreeneScientist](https://twitter.com/GreeneScientist)<br>
   <small>
      Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO, USA

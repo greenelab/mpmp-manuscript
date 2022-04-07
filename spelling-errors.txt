@@ -1,5 +1,4 @@
 ACC
-Acknowledgements
 arxiv
 AUPR
 AUROC
@@ -42,7 +41,7 @@ funders
 GBM
 GDC
 Geisel
-genomic
+Genomic
 germline
 GISTIC
 glioma
