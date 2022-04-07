@@ -16,6 +16,7 @@ BRCA
 CASP
 CCLE
 CESC
+CGC
 cgreene
 Chikina
 CHOL
@@ -41,7 +42,7 @@ funders
 GBM
 GDC
 Geisel
-Genomic
+genomic
 germline
 GISTIC
 glioma
@@ -123,6 +124,7 @@ tradeoff
 transcriptomic
 translational
 TSC
+TSG
 UCEC
 UCS
 univariate
