@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/caca4e01881f9f9e3f3719808aac5ee43d079224/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/caca4e01881f9f9e3f3719808aac5ee43d079224/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/caca4e01881f9f9e3f3719808aac5ee43d079224/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/caca4e01881f9f9e3f3719808aac5ee43d079224/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/caca4e01881f9f9e3f3719808aac5ee43d079224/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,9 +80,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/caca4e01881f9f9e3f3719808aac5ee43d079224/))
 was automatically generated
-from [greenelab/mpmp-manuscript@d7a322d](https://github.com/greenelab/mpmp-manuscript/tree/d7a322d974d5bdf5f087c5ee5dd5ee6e59b76fbd)
+from [greenelab/mpmp-manuscript@caca4e0](https://github.com/greenelab/mpmp-manuscript/tree/caca4e01881f9f9e3f3719808aac5ee43d079224)
 on April 7, 2022.
 </em></small>
 
@@ -335,7 +335,7 @@ This manuscript was written using Manubot [@doi:10.1371/journal.pcbi.1007128] an
 We collected five different data modalities from cancer samples in the TCGA Pan-Cancer Atlas, capturing five steps of cellular function that are perturbed by genetic alterations in cancer (Figure {@fig:overview}A).
 These included gene expression (RNA-seq data), DNA methylation (27K and 450K Illumina BeadChip arrays), protein abundance (RPPA data), microRNA expression data, and patterns of somatic mutation (mutational signatures).
 To link these diverse data modalities to changes in mutation status, we used elastic net logistic regression to predict the presence or absence of mutations in cancer genes, using these readouts as predictive features (Figure {@fig:overview}B).
-We evaluated the resulting mutation status classifiers in a pan-cancer setting, preserving the proportions of each of the 33 cancer types in TCGA for eight train/test splits (4 folds x 2 replicates) in each of 85 cancer genes (Figure {@fig:overview}C).
+We evaluated the resulting mutation status classifiers in a pan-cancer setting, preserving the proportions of each of the 33 cancer types in TCGA for eight train/test splits (4 folds x 2 replicates) in each of approximately 250 cancer genes (Figure {@fig:overview}C).
 
 We sought to compare classifiers against a baseline where mutation labels are permuted (to identify genes whose mutation status correlates strongly with a functional signature in a given data type) and also to compare classifiers trained on true labels across different data types (to identify data types that are more or less predictive of mutations in a given gene).
 To account for variation between dataset splits in making these comparisons, we treat classification metrics from the eight train/test splits as performance distributions, which we compare using _t_-tests.
@@ -356,24 +356,25 @@ This reverses the primary direction of information flow shown in Panel A.
 
 As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
 Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA [@doi:10.1186/s13059-020-02021-3], and we sought to extend this to a broader list of gene sets.
-We compared a set of cancer-related genes (n=85) from Vogelstein et al. 2013 [@doi:10.1126/science.1235122] with an equal number of random genes (n=85) and an equal number of the most mutated genes in TCGA (n=85).
+To evaluate whether using known cancer-related genes tends to improve prediction, we compiled a set of cancer-related genes (n=268) from Vogelstein et al. 2013 [@doi:10.1126/science.1235122], Bailey et al. 2018 [@doi:10.1016/j.cell.2018.02.060], and the COSMIC Cancer Gene Census [@doi:10.1038/s41568-018-0060-1].
+We compared performance on this curated gene set with performance on an equal number of random genes (n=268) and an equal number of the most mutated genes in TCGA (n=268).
 For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples across all 33 cancer types.
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
 We then evaluated the performance for each target gene in each of the three gene sets.
 
-Genes from the Vogelstein et al. set were more predictable than randomly chosen genes or those selected by total mutation count (Figure {@fig:expression_gene_sets}A).
-In total, for a significance threshold of $\alpha = 0.001$, 45/85 genes (52.9%) in the Vogelstein et al. gene set are significantly predictable from gene expression data, compared to 9/85 genes (10.6%) in the random gene set and 7/85 genes (8.24%) in the most mutated gene set.
-Of the nine significantly predictable genes in the random gene set, eight of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}B), and of the seven significantly predictable genes in the most mutated gene set, all seven of them are also in the Vogelstein gene set (highlighted in red in Figure {@fig:expression_gene_sets}C).
+Overall, genes from the cancer-related gene set were more predictable than randomly chosen genes or those selected by total mutation count (Figure {@fig:expression_gene_sets}A).
+In total, for a significance threshold of $\alpha = 0.001$, 120/268 genes (44.8%) in the cancer-related gene set are significantly predictable from gene expression data, compared to 14/268 genes (5.22%) in the random gene set and 80/268 genes (29.9%) in the most mutated gene set.
+Of the 14 significantly predictable genes in the random gene set, 13 of them are also in the cancer-related gene set (highlighted with 'X' in Figure {@fig:expression_gene_sets}B), and of the 80 significantly predictable genes in the most mutated gene set, 26 of them are also in the cancer-related gene set (highlighted in red in Figure {@fig:expression_gene_sets}C).
 These results suggest that selecting target genes for mutation prediction based on prior knowledge of their involvement in cancer pathways and processes, rather than randomly or based on mutation frequency alone, can improve predictive signal and identify more highly predictable mutations from gene expression data.
 
 ![
 **A.** Overall distribution of performance across three gene sets, using gene expression (RNA-seq) data to predict mutations.
 Each data point represents the mean cross-validated AUPR difference, compared with a baseline model trained on permuted mutation presence/absence labels, for one gene in the given gene set; notches show bootstrapped 95% confidence intervals.
-"random" = 85 random genes, "most mutated" = 85 most mutated genes, "Vogelstein et al." = 85 cancer related genes from Vogelstein et al. 2013 gene set.
+"random" = 268 random genes, "most mutated" = 268 most mutated genes, "cancer gene set" = 268 cancer related genes from curated gene sets.
 Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: \*\*: _p_ < 0.01, \*\*\*: _p_ < 0.001, ns: not statistically significant for a cutoff of _p_ = 0.05.
 **B, C, D.** Volcano-like plots showing mutation presence/absence predictive performance for each gene in each of the three gene sets.
 The _x_-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
-Points (genes) marked with an "X" are overlapping between the Vogelstein gene set and either the random or most mutated gene set.
+Points (genes) marked with an "X" are overlapping between the cancer gene set and either the random or most mutated gene set.
 ](images/figure_2.png){#fig:expression_gene_sets width="90%"}
 
 ### Gene expression and DNA methylation have similar mutation prediction performance
