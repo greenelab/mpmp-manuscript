@@ -1,5 +1,5 @@
 ---
-title: Gene expression and DNA methylation consistently predict cancer mutation states
+title: Widespread redundancy in -omics profiles of cancer mutation states
 keywords:
 - machine learning
 - functional genomics
@@ -20,10 +20,10 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta name="citation_title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta property="og:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta property="twitter:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
+  <meta name="dc.title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
+  <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
+  <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
+  <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta name="dc.date" content="2022-04-08" />
   <meta name="citation_publication_date" content="2022-04-08" />
   <meta name="dc.language" content="en-US" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/3948b495d515f566a54eb8be55f87e545dcb955e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3948b495d515f566a54eb8be55f87e545dcb955e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3948b495d515f566a54eb8be55f87e545dcb955e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3948b495d515f566a54eb8be55f87e545dcb955e/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3948b495d515f566a54eb8be55f87e545dcb955e/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/47edd8e335b9713af0615d834a7da6de1fe649d3/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/47edd8e335b9713af0615d834a7da6de1fe649d3/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,9 +80,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/3948b495d515f566a54eb8be55f87e545dcb955e/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/))
 was automatically generated
-from [greenelab/mpmp-manuscript@3948b49](https://github.com/greenelab/mpmp-manuscript/tree/3948b495d515f566a54eb8be55f87e545dcb955e)
+from [greenelab/mpmp-manuscript@47edd8e](https://github.com/greenelab/mpmp-manuscript/tree/47edd8e335b9713af0615d834a7da6de1fe649d3)
 on April 8, 2022.
 </em></small>
 
@@ -142,11 +142,11 @@ Since functional signatures of cancer mutation have been identified across many 
 The TCGA Pan-Cancer Atlas contains genetic alteration data including somatic mutations and copy number variants (CNVs), as well as several -omics data types.
 From TCGA, we focus on RNA sequencing, DNA methylation arrays, reverse phase protein arrays (RPPA), microRNA, and somatic mutational signatures as -omics readouts.
 
-Across a collection of genes recurrently mutated in cancer, RNA sequencing and DNA methylation were the most effective predictors of mutation state.
-Surprisingly, we found that for most mutated genes, they were approximately equally effective predictors.
-Performance was more variable between mutations than it was between data types for the same mutation, and there was little difference between the top data types for the majority of genes.
+Across a collection of genes recurrently mutated in cancer, RNA sequencing tends to be the most effective predictor of mutation state.
+Surprisingly, we found that for many of the genes we considered, one or more other data types are approximately equally effective predictors.
+Performance was more variable between mutations than it was between data types for the same mutation, and there was often little difference between the top data types.
 We also found that combining data types into a single multi-omics model provided little or no improvement in predictive ability over the best individual data type.
-Based on our results, for the design of studies focused on the functional outcomes of cancer mutations, we recommend focusing on gene expression or DNA methylation as first-line readouts.
+Based on our results, for the design of studies focused on the functional outcomes of cancer mutations, there are often multiple -omics types that can serve as effective readouts, although gene expression seems to be a reasonable default option.
 
 
 
@@ -176,13 +176,13 @@ Prior studies have identified univariate correlations of CpG site methylation [@
 Other relevant past work includes linking point mutations and copy number variants (CNVs) with changes in methylation and expression at individual genes [@doi:10.1093/bioinformatics/btr019; @doi:10.1093/bib/bbw037] and identifying functional modules that are perturbed by somatic mutations [@doi:10.1093/bioinformatics/btq182; @doi:10.1038/ncomms9554].
 However, direct comparison among different data types for this application is lacking, particularly in the multivariate case where we consider changes to -omics-derived gene signatures rather than individual genes in isolation.
 
-We select a collection of potential cancer drivers with varying functions and roles in cancer development [@doi:10.1126/science.1235122].
+We select a collection of potential cancer drivers with varying functions and roles in cancer development.
 We use mutation status in these genes as labels to train classifiers, using each of the data types listed as training data, in a pan-cancer setting; we follow similar methods to the elastic net logistic regression approach described in Way et al. 2018 [@doi:10.1016/j.celrep.2018.03.046] and Way et al. 2020 [@doi:10.1186/s13059-020-02021-3].
-We show that there is considerable predictive signal for many genes relative to a random baseline and that gene expression and DNA methylation generally provide the best predictions of mutation state.
-Surprisingly, we find that across a variety of genes, gene expression and DNA methylation are approximately equally effective predictors.
+We show that there is considerable predictive signal for many genes relative to a cancer-type corrected baseline and that gene expression tends to provide good predictions of mutation state across most genes.
+Surprisingly, we find that for a variety of genes, multiple data types are approximately equally effective predictors.
 We observe similar results for pan-cancer survival prediction across the same data types with little separation between the top-performing data types.
 In addition, we observe that combining data types into a single multi-omics model for mutation prediction provides little, if any, performance benefit over the most performant model using a single data type.
-Our results will help to inform the design of future functional genomics studies in cancer, suggesting that for many strong drivers with clear functional signatures, gene expression and DNA methylation measurements provide similar information content.
+Our results will help to inform the design of future functional genomics studies in cancer, suggesting that for many strong drivers with clear functional signatures, different -omics measurements can provide similar information content.
 
 
 ## Methods
@@ -513,7 +513,7 @@ This supports our earlier observations of the redundancy of gene expression and 
 ## Discussion
 
 We carried out a large-scale comparison of data types in the TCGA Pan-Cancer Atlas as functional readouts of genetic alterations in cancer, integrating results across cancer types and across driver genes.
-Overall, we found that gene expression and DNA methylation capture signatures of mutation state equally effectively in most cases, and that other data types (RPPA, microRNA, mutational signatures) were less effective at predicting mutation presence or absence.
+Overall, we found that gene expression captures signatures of mutation state most effectively in general, relative to a baseline model, but we saw that for many genes other data types could be equally effective at predicting mutation presence or absence.
 For pan-cancer survival prediction, we found that the functional readouts tended to be similarly effective, outperforming a simple baseline using age and sample mutation burden in most cases.
 Our multi-omics modeling experiment indicated that the mutation state information captured by gene expression and DNA methylation is highly redundant, as added data types resulted in no gain or modest gains in classifier performance.
 
@@ -523,6 +523,8 @@ The latter approach is especially interesting because capsule networks and "caps
 This can improve model interpretability as well as predictive performance.
 Similar methods have been applied to extract biologically informed features from gene expression data (see, for instance, [@doi:10.1016/j.ccell.2020.09.014; @doi:10.1101/2021.05.25.445604]).
 A more comprehensive study of dimension reduction methods in the context of mutation prediction, including the features selected by these methods and their biological relevance and interpretation, would be a beneficial area of future work.
+In addition to methods for extracting features, another aspect of the study that could be explored further is methods for labeling samples as mutated or not more efficiently.
+Although the mutation calls we used from MC3 represent the consensus of multiple algorithms aggregated through a standard pipeline, benchmarking other methods for identifying mutated samples could improve the utility of our method, such as calling mutations directly from RNA-seq data to avoid the need for paired samples [@doi:10.1016/j.ajhg.2013.08.008; @doi:10.7717/peerj.5362].
 
 In contrast to many other studies demonstrating the benefits of integrating multiple -omics data types for various cancer-related prediction problems [@doi:10.1038/nrc3721; @doi:10.1016/j.jbi.2015.05.019; @doi:10.1186/s13040-018-0184-6; @doi:10.1093/bioinformatics/btz318; @doi:10.1371/journal.pcbi.1008878], we found that combining multiple data types to predict mutation status was generally not effective for this problem.
 The method we used to integrate different data types by concatenating feature sets is sometimes referred to as "early" data integration (discussed in more detail in [@doi:10.1098/rsif.2015.0571] and [@doi:10.1016/j.inffus.2018.09.012]).
@@ -546,10 +548,10 @@ While this approach could help to isolate the causal effect of a given mutation 
 We are also limited in that we cannot assign timing or clonal status to mutations, or fully characterize intratumor heterogeneity, with certainty from the bulk sequencing data generated by TCGA (although some features of tumor mutational processes over time can be estimated from bulk data, e.g. [@doi:10.1126/scitranslmed.aaa1408]).
 As methods for generating large longitudinal datasets at single-cell resolution mature and scale, we will need to revise the way we think about cellular function and dysregulation in cancer cells, as dynamic and adaptive processes rather than a single representative snapshot of a tumor.
 
-Based on our results, for studies focused on the functional consequences of cancer mutations, we recommend that researchers designing large-scale studies aiming to understand the regulatory state of cancers prioritize gene expression or DNA methylation as downstream readouts.
-On balance, prediction of mutation status was slightly better using gene expression data, and prediction of patient survival was similar using both data types.
-However, the finding that DNA methylation profiles contain much of the same information will be useful for some study designs, given the varying stability of mRNA across storage methods and times.
-Results using RPPA measurements as predictive features were also promising, especially considering the substantially lower dimensionality of the RPPA dataset compared to other data types.
+Based on our results, for studies focused on the functional consequences of cancer mutations, we recommend that researchers cancers prioritize downstream readouts based on the gene or genes of interest (Figure {@fig:heatmap}).
+On balance, prediction of mutation status is best in general using gene expression data, and prediction of patient survival is similar for all data types in the study.
+However, the finding that for many genes, multiple functional profiles contain much of the same information will be useful for some study designs, given varying cost and stability of different readouts.
+In addition to gene expression, results using DNA methylation and RPPA measurements as predictive features were promising, especially considering the substantially lower dimensionality of the RPPA dataset compared to other data types.
 Future technology advances, in both quality and quantity of data, are likely to improve our understanding of the full picture of functional consequences of mutations in cancer cells.
 
 
@@ -587,7 +589,7 @@ CSG: conceptualization, funding acquisition, methodology, supervision, writing -
 
 ### Acknowledgements
 
-We would like to thank Alexandra Lee, Ben Heil, Milton Pividori, and Natalie Davidson for reviewing the software associated with this work and providing insightful feedback.
+We would like to thank Alexandra Lee, Ariel Hippen, Ben Heil, Milton Pividori, and Natalie Davidson for reviewing the software associated with this work and providing insightful feedback.
 Figure 1 (the schematic of the background and evaluation pipeline) was created using BioRender.com.
 
 

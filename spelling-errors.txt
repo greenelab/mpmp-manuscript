@@ -5,6 +5,7 @@ AUROC
 autoencoders
 BCC
 BeadChip
+benchmarking
 Benjamini
 biomarker
 BioRender
@@ -42,13 +43,14 @@ funders
 GBM
 GDC
 Geisel
-genomic
+Genomic
 germline
 GISTIC
 glioma
 GreeneScientist
-heatmap
+Heatmap
 Heil
+Hippen
 histone
 HNSC
 Hochberg
@@ -81,7 +83,6 @@ MESO
 methylation
 microRNA
 mirna
-mRNA
 mut
 myeloid
 myeloma
