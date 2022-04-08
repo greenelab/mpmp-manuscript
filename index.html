@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-04-07" />
+  <meta name="dcterms.date" content="2022-04-08" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Gene expression and DNA methylation consistently predict cancer mutation states</title>
   <style>
@@ -47,8 +47,8 @@
   <meta name="citation_title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="og:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
   <meta property="twitter:title" content="Gene expression and DNA methylation consistently predict cancer mutation states" />
-  <meta name="dc.date" content="2022-04-07" />
-  <meta name="citation_publication_date" content="2022-04-07" />
+  <meta name="dc.date" content="2022-04-08" />
+  <meta name="citation_publication_date" content="2022-04-08" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -77,13 +77,13 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/0418b8f6fca199877e5ded32a8ff52bc04d5bc39/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/0418b8f6fca199877e5ded32a8ff52bc04d5bc39/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/0418b8f6fca199877e5ded32a8ff52bc04d5bc39/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/854e3ac035e02a16c225e0d41e79c76954d24159/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/854e3ac035e02a16c225e0d41e79c76954d24159/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/854e3ac035e02a16c225e0d41e79c76954d24159/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/0418b8f6fca199877e5ded32a8ff52bc04d5bc39/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/0418b8f6fca199877e5ded32a8ff52bc04d5bc39/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/854e3ac035e02a16c225e0d41e79c76954d24159/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/854e3ac035e02a16c225e0d41e79c76954d24159/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -98,10 +98,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/0418b8f6fca199877e5ded32a8ff52bc04d5bc39/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/854e3ac035e02a16c225e0d41e79c76954d24159/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/0418b8f6fca199877e5ded32a8ff52bc04d5bc39">greenelab/mpmp-manuscript@0418b8f</a>
-on April 7, 2022.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/854e3ac035e02a16c225e0d41e79c76954d24159">greenelab/mpmp-manuscript@854e3ac</a>
+on April 8, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -343,41 +343,40 @@ The <em>x</em>-axis shows the difference in mean AUPR compared with a baseline m
 Points (genes) marked with an “X” are overlapping between the cancer gene set and either the random or most mutated gene set.</figcaption>
 </figure>
 </div>
-<h3 id="gene-expression-and-dna-methylation-have-similar-mutation-prediction-performance">Gene expression and DNA methylation have similar mutation prediction performance</h3>
+<h3 id="gene-expression-predicts-cancer-mutation-status-more-effectively-than-dna-methylation">Gene expression predicts cancer mutation status more effectively than DNA methylation</h3>
 <p>We compared gene expression with DNA methylation as downstream readouts of the effects of cancer alterations.
 In these analyses, we considered both the 27K probe and 450K probe methylation datasets generated for the TCGA Pan-Cancer Atlas.
-We performed this comparison using the cancer-related gene set derived from Vogelstein et al. <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">34</a>]</span>.
+As target genes, we used the same combined cancer-related gene set described in the “Selection of cancer-related genes” section.
 We used samples that had data for each of the data types being compared, including somatic mutation data to generate mutation labels.
 This process retained 7,981 samples in the intersection of the expression, 27K methylation, 450K methylation, and mutation datasets, which we used for subsequent analyses.
 The most frequent missing data types were somatic mutation data (1,114 samples) and 450K methylation data (1,072 samples) (Figure <a href="#fig:methylation">3</a>A).</p>
-<p>For most genes, predictions are better than our baseline model where labels are permuted (values greater than 0 in the box plots), suggesting that there is considerable predictive signal in both expression and methylation datasets across the Vogelstein et al. gene set (Figure <a href="#fig:methylation">3</a>B).
-Performance distributions are similar for expression and methylation, and aggregate performance is also similar for models using both 8,000 raw features (genes or CpG probes for expression and methylation respectively, selected using mean absolute deviation) or 5,000 principal components.
-Both before and after filtering for genes that exceed the significance threshold, gene expression with raw gene features provides a significant performance improvement relative to the 27K methylation dataset, but gene expression and 450K methylation have statistically equivalent performance distributions (Figure <a href="#fig:methylation">3</a>B, C).
+<p>For many genes, predictions are better than our baseline model where labels are permuted (values greater than 0 in the box plots), suggesting that there is considerable predictive signal in both expression and methylation datasets across the cancer-related gene set (Figure <a href="#fig:methylation">3</a>B).
+On aggregate across all genes, predictive performance is better overall for gene expression.
+Both before and after filtering for genes that exceed the significance threshold, gene expression with raw gene features provides a significant performance improvement relative to the 27K methylation and 450K methylation datasets (Figure <a href="#fig:methylation">3</a>B, C).
 Results were similar with PCA-compressed gene expression features or raw CpG probes as predictors (Supplementary Figure <a href="#fig:me_compress_boxes">11</a>).</p>
-<p>Considering each target gene in the Vogelstein gene set individually, we observed that 40/84 genes significantly outperformed the permuted baseline using gene expression data, as compared to 38/84 genes for 27K methylation and 37/84 genes for 450K methylation (Figure <a href="#fig:methylation">3</a>D-F, more information about specific genes in Supplementary Figure <a href="#fig:methylation_heatmap">9</a>).
-In most cases, these “well-predicted” genes that outperformed the permuted baseline tended to be similar between data types (Figure <a href="#fig:methylation">3</a>D-F; genes in the top right of each plot).
-For example, <em>TP53</em>, <em>BRAF</em>, and <em>PTEN</em> appear in the top right of all 3 plots, suggesting that mutations in these genes have strong gene expression and DNA methylation signatures, and these signatures tend to be preserved across cancer types.</p>
-<p>In addition to comparing mutation classifiers trained on different data types to the permuted baseline, we also compared classifiers trained on true labels directly to each other, using a similar methodology (Figure <a href="#fig:methylation">3</a>G-H).
-We observed that 5/100 genes were significantly more predictable from expression data than 27K methylation data, and 3/100 genes were significantly more predictable from expression data than 450K methylation data.
-In both cases, 0/100 genes were significantly more predictable using the methylation data types.
-For both comparisons (expression vs. 27K methylation and expression vs. 450K methylation), we observed that the majority of points were clustered around the origin, indicating that the data types appear to confer similar information about mutation status.
-Additionally, many genes near the origin are significantly predictable vs. the permuted-labels baseline (labeled with an “X” in Figure <a href="#fig:methylation">3</a>G-H), but equally predictable between data types (blue shading in Figure <a href="#fig:methylation">3</a>G-H).
-That is, in many cases, matching the gene being studied with the “correct” data modality seems to be unimportant: mutation status has a strong signature which can be extracted from both expression and DNA methylation data roughly equally.</p>
+<p>Considering each target gene in the cancer-related gene set individually, we observed that 113/272 genes significantly outperformed the permuted baseline using gene expression data, as compared to 62/272 genes for 27K methylation and 77/272 genes for 450K methylation (Figure <a href="#fig:methylation">3</a>D-F, more information about specific genes in Supplementary Figure <a href="#fig:methylation_heatmap">9</a>).
+Some “well-predicted” genes that outperformed the permuted baseline tended to be similar between data types (Figure <a href="#fig:methylation">3</a>D-F; genes in the top right of each plot).
+For example, <em>CIC</em> appears in the top right of all 3 plots, and <em>CCND1</em> appears in the top right of the gene expression and 450K methylation plots, suggesting that mutations in these genes have strong gene expression and DNA methylation signatures, and these signatures tend to be preserved across cancer types.</p>
+<p>In addition to comparing mutation classifiers trained on different data types to the permuted baseline, we also compared classifiers trained on true labels directly to each other, for genes that beat the baseline for both of the data types under consideration (Figure <a href="#fig:methylation">3</a>G-H).
+We observed that 18/58 genes were significantly more predictable from expression data than 27K methylation data, and 21/69 genes were significantly more predictable from expression data than 450K methylation data.
+In both cases, no genes were significantly more predictable using the methylation data types.
+Still, we observed that some points were clustered around the origin, indicating that the data types appear to confer similar information about mutation status.
+That is, in these cases, matching the gene being studied with the “correct” data modality seems to be unimportant: mutation status has a strong signature which can be extracted from both expression and DNA methylation data roughly equally.</p>
 <p>We additionally compared pan-cancer survival prediction performance using principal components derived from each data type; in general, results were comparable across the three data types (Figure <a href="#fig:methylation">3</a>I).
 All data types outperformed the covariate-only baseline (see <a href="#survival-prediction-using--omics-datasets">Methods</a>) for lower numbers of PC features included, although performance was similar to the baseline for higher numbers of PCs.
 Confidence intervals between the best- and worst-performing data types overlap at most PC counts (with the exception of gene expression at 5,000 PC features), suggesting that similarly to mutation prediction, the three data types tend to have comparable effectiveness for pan-cancer survival prediction.</p>
 <div id="fig:methylation" class="fignos">
 <figure>
-<img src="images/figure_3.png" style="width:90.0%" alt="Figure 3: A. Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA. Only non-zero overlap counts are shown. Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels. B. Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors. The gene expression predictor uses the top 8000 gene features by mean absolute deviation, and the methylation predictors use the top 5000 principal components as predictive features. Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: p &lt; 0.01, ***: p &lt; 0.001, ns: not statistically significant for a cutoff of p = 0.05. C. Predictive performance for genes where at least one of the considered data types predicts mutation labels significantly better than the permuted baseline. D-F. Predictive performance for each gene in the Vogelstein et al. gene set, for each data type, compared with a baseline model trained on permuted labels. G-H. Predictive performance for each gene in the Vogelstein et al. gene set, comparing gene expression directly to each methylation dataset (with classifiers trained on true labels). I. Pan-cancer survival prediction performance, quantified using c-index on the y-axis, for gene expression, 27K methylation, and 450K methylation. The x-axis shows results with varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type; grey dotted line indicates mean performance for a covariate-only baseline model." />
+<img src="images/figure_3.png" style="width:90.0%" alt="Figure 3: A. Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA. Only non-zero overlap counts are shown. Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels. B. Predictive performance for genes in the cancer-related gene set, using each of the three data types as predictors. The gene expression predictor uses the top 8000 gene features by mean absolute deviation, and the methylation predictors use the top 5000 principal components as predictive features. Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: p &lt; 0.01, ***: p &lt; 0.001, ns: not statistically significant for a cutoff of p = 0.05. C. Predictive performance for genes where at least one of the considered data types predicts mutation labels significantly better than the permuted baseline. D-F. Predictive performance for each gene in the cancer-related gene set, for each data type, compared with a baseline model trained on permuted labels. G-H. Direct comparison of performance using gene expression and each methylation dataset, for genes that perform significantly better than the baseline for both data types. Points (genes) to the left of y=0 perform better using gene expression-derived features, and points to the right perform better using methylation-derived features. I. Pan-cancer survival prediction performance, quantified using c-index on the y-axis, for gene expression, 27K methylation, and 450K methylation. The x-axis shows results with varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type; grey dotted line indicates mean performance for a covariate-only baseline model." />
 <figcaption aria-hidden="true"><span>Figure 3:</span> <strong>A.</strong> Count of overlapping samples between gene expression, 27K methylation, 450K methylation, and somatic mutation data used from TCGA.
 Only non-zero overlap counts are shown.
 Somatic mutation sample information is included because it is needed to generate the mutation presence/absence labels.
-<strong>B.</strong> Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
+<strong>B.</strong> Predictive performance for genes in the cancer-related gene set, using each of the three data types as predictors.
 The gene expression predictor uses the top 8000 gene features by mean absolute deviation, and the methylation predictors use the top 5000 principal components as predictive features.
 Significance stars indicate results of Bonferroni-corrected pairwise Wilcoxon tests: **: <em>p</em> &lt; 0.01, ***: <em>p</em> &lt; 0.001, ns: not statistically significant for a cutoff of <em>p</em> = 0.05.
 <strong>C.</strong> Predictive performance for genes where at least one of the considered data types predicts mutation labels significantly better than the permuted baseline.
-<strong>D-F.</strong> Predictive performance for each gene in the Vogelstein et al. gene set, for each data type, compared with a baseline model trained on permuted labels.
-<strong>G-H.</strong> Predictive performance for each gene in the Vogelstein et al. gene set, comparing gene expression directly to each methylation dataset (with classifiers trained on true labels).
+<strong>D-F.</strong> Predictive performance for each gene in the cancer-related gene set, for each data type, compared with a baseline model trained on permuted labels.
+<strong>G-H.</strong> Direct comparison of performance using gene expression and each methylation dataset, for genes that perform significantly better than the baseline for both data types. Points (genes) to the left of y=0 perform better using gene expression-derived features, and points to the right perform better using methylation-derived features.
 <strong>I.</strong> Pan-cancer survival prediction performance, quantified using c-index on the <em>y</em>-axis, for gene expression, 27K methylation, and 450K methylation. The <em>x</em>-axis shows results with varying numbers of principal components included for each data type. Models also included covariates for patient age, sample mutation burden, and sample cancer type; grey dotted line indicates mean performance for a covariate-only baseline model.</figcaption>
 </figure>
 </div>
