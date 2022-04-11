@@ -35,10 +35,12 @@ dimensionality
 DLBC
 dysregulation
 EGFR
+Entrez
 eQTLs
 ERBB
 ESCA
 exome
+Figshare
 funders
 GBM
 GDC
@@ -48,7 +50,7 @@ germline
 GISTIC
 glioma
 GreeneScientist
-Heatmap
+heatmap
 Heil
 Hippen
 histone
@@ -110,7 +112,7 @@ quantile
 Ras
 regresssion
 RPL
-RPPA
+rppa
 SARC
 SBS
 SETD
@@ -123,6 +125,7 @@ THCA
 THYM
 TP
 tradeoff
+transcriptional
 transcriptomic
 translational
 TSG

@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2022-04-08'
+date-meta: '2022-04-11'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
-  <meta name="dc.date" content="2022-04-08" />
-  <meta name="citation_publication_date" content="2022-04-08" />
+  <meta name="dc.date" content="2022-04-11" />
+  <meta name="citation_publication_date" content="2022-04-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/47edd8e335b9713af0615d834a7da6de1fe649d3/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/47edd8e335b9713af0615d834a7da6de1fe649d3/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/19076591948240e8341ea853af0eb3f27c7fe1e8/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/19076591948240e8341ea853af0eb3f27c7fe1e8/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,10 +80,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/47edd8e335b9713af0615d834a7da6de1fe649d3/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/))
 was automatically generated
-from [greenelab/mpmp-manuscript@47edd8e](https://github.com/greenelab/mpmp-manuscript/tree/47edd8e335b9713af0615d834a7da6de1fe649d3)
-on April 8, 2022.
+from [greenelab/mpmp-manuscript@1907659](https://github.com/greenelab/mpmp-manuscript/tree/19076591948240e8341ea853af0eb3f27c7fe1e8)
+on April 11, 2022.
 </em></small>
 
 ## Authors
@@ -367,6 +367,7 @@ To evaluate whether using known cancer-related genes tends to improve prediction
 We compared performance on this curated gene set with performance on an equal number of random genes (n=268) and an equal number of the most mutated genes in TCGA (n=268).
 For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples across all 33 cancer types.
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
+As an alternate approach, we tried including/excluding entire genes using similar filters, and the results were consistent across filtering strategies (Supplementary Figure {@fig:all_volcano_filter}).
 We then evaluated the performance for each target gene in each of the three gene sets.
 
 Overall, genes from the cancer-related gene set were more predictable than randomly chosen genes or those selected by total mutation count (Figure {@fig:expression_gene_sets}A).
@@ -598,6 +599,12 @@ Figure 1 (the schematic of the background and evaluation pipeline) was created u
 
 A version of the main paper figures using the area under the receiver-operator curve (AUROC) metric rather than AUPR is available at [`https://doi.org/10.6084/m9.figshare.14919729`](https://doi.org/10.6084/m9.figshare.14919729).
 
+In a previous version of this paper, we ran our analysis only for the genes in the Vogelstein et al. [@doi:10.1126/science.1235122] gene set. Scaling up the gene set, by combining cancer gene sets from the literature as described in the methods/results sections, affected the study results somewhat, as mutations in the added genes tend to be better predicted using gene expression than other data types. During the revision, we explored the difference between the genes in this gene set, and the genes in the "merged" gene set but not in the Vogelstein genes. GO analysis results for the Vogelstein genes are available at [`https://doi.org/10.6084/m9.figshare.19565890`](https://doi.org/10.6084/m9.figshare.19565890), and results for the non-Vogelstein genes are available at [`https://doi.org/10.6084/m9.figshare.19565887`](https://doi.org/10.6084/m9.figshare.19565887). In general, we noticed that the non-Vogelstein genes tend to be enriched for terms relating to transcription factors and transcriptional regulation.
+
+As a data resource, coefficients and hyperparameter choices for final models fit using gene expression features are available on Figshare: coefficients are available at [`https://doi.org/10.6084/m9.figshare.19576012`](https://doi.org/10.6084/m9.figshare.19576012) and hyperparameters are at [`https://doi.org/10.6084/m9.figshare.19576048`](https://doi.org/10.6084/m9.figshare.19576048). Columns in the coefficients dataset correspond to target genes (gene symbols), and rows correspond either to gene expression features (Entrez IDs) or covariates (cancer type indicator variables or log(mutation burden)). An 'NA' value in a cell indicates that feature was not used in the model for the corresponding gene (for a gene feature this means that gene was not in the top 8000 genes by MAD, for a cancer type feature this means that cancer type was not included in the training set based on our mutation filters). A 0 value in a cell indicates that feature was included in model training, but it was not selected by the elastic net feature selection algorithm. Columns in the hyperparameters dataset correspond to hyperparameters (alpha and l1_ratio for elastic net logistic regression) and rows correspond to target genes.
+
+Regarding the hyperparameters for the final models, recall that for the main figures in the paper, we evaluate each of our models using 2 replicates of 4-fold cross-validation. For each of these folds (train/test splits), we further split the training set into train and validation sets to select hyperparameters, independently for each fold, and evaluate the models on the test set to get the results in the paper. Because we are evaluating performance over multiple folds, it is not perfectly straightforward to get a single set of regression coefficients, since we have a (potentially different) set of coefficients for each cross-validation fold. In order to synthesize these results into a single model for each gene in each data type, we selected one of the 8 sets of hyperparameters (from the 8 best models, 1 per CV fold) at random, with probability proportional to performance (AUPR) on the validation set used to select the hyperparameters, described above (so test set performance is not used here). We then used the selected hyperparameters to train a single model on the entire dataset.
+
 ![
 Proportion of samples from each TCGA cancer type that are "dropped" as more data types are added to our analyses. We started with gene expression data, and for each added data type, we took the intersection of samples that were profiled for that data type and the previous data types, dropping all samples that were missing 1 or more data types. Overall, at each step, the proportions of "dropped" samples appear to be fairly evenly spread between cancer types, showing that in general we are not disproportionately losing one or several cancer types as more data modalities are added to our analyses.
 ](images/supp_figure_8.png){#fig:cancer_type_proportions width=80%}
@@ -649,17 +656,16 @@ Volcano-like plots showing predictive performance for each gene in the Vogelstei
 ](images/supp_figure_10.png){#fig:all_volcano_me width=90%}
 
 ![
-Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
-The _x_-axis shows the number of PCA components used as features, "raw" = no PCA compression.
-](images/supp_figure_11.png){#fig:me_compress_boxes width=90%}
+Volcano-like plots showing predictive performance for each gene in the Vogelstein et al. gene set for all data types, relative to the permuted baseline model, when genes are filtered based on the entire dataset rather than by cancer type.
+For this filtering approach, we included/excluded entire genes rather than individual cancer types: specifically, we trained a classifier for each gene where all cancer types combined had at least 5% mutated samples and at least 100 total mutated samples, resulting in 182 total classifiers.
+The _x_-axis shows the difference in mean AUPR compared with a baseline model trained on permuted labels, and the _y_-axis shows _p_-values for a paired _t_-test comparing cross-validated AUPR values within folds.
+Counts of genes making the significance threshold of 0.001: gene expression 81/182 (44.5%), 27K methylation 16/182 (8.8%), 450K methylation 1/182 (0.6%), RPPA 41/182 (22.5%), microRNA 25/182 (13.7%), mutational signatures 7/182 (3.9%).
+](images/supp_figure_11.png){#fig:all_volcano_filter width=90%}
 
 ![
-Survival prediction performance for top 10 PCA components, for individual cancer types.
-The top row shows the five cancer types with the highest average coefficient of variation across data types, for expression, 27K methylation, and 450K methylation.
-The bottom row shows the five cancer types with the highest average coefficient of variation across data types, for the comparison using all 6 data types.
-Each box plot displays the c-index distribution across 8 performance measurements (2 cross-validation replicates x 4 folds).
-The grey dotted line shows mean performance for a model using only non-omics covariates (patient age at diagnosis and log~10~(sample mutation count)); grey shaded area indicates bootstrapped 95% confidence interval.
-](images/supp_figure_12.png){#fig:survival_cancer_types width=90%}
+Predictive performance for genes in the Vogelstein et al. gene set, using each of the three data types as predictors.
+The _x_-axis shows the number of PCA components used as features, "raw" = no PCA compression.
+](images/supp_figure_12.png){#fig:me_compress_boxes width=90%}
 
 ![
 Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best "multi-omics" model for each target gene, using raw (not PCA compressed) features. For feature parity between data types, the top 20,000 features by mean absolute deviation were used for each data type.
