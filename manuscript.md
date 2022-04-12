@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2022-04-11'
+date-meta: '2022-04-12'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
-  <meta name="dc.date" content="2022-04-11" />
-  <meta name="citation_publication_date" content="2022-04-11" />
+  <meta name="dc.date" content="2022-04-12" />
+  <meta name="citation_publication_date" content="2022-04-12" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/4f5bc4bac15c95da5a41641ef1e050ffae370c12/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/4f5bc4bac15c95da5a41641ef1e050ffae370c12/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/4f5bc4bac15c95da5a41641ef1e050ffae370c12/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/19076591948240e8341ea853af0eb3f27c7fe1e8/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/19076591948240e8341ea853af0eb3f27c7fe1e8/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/4f5bc4bac15c95da5a41641ef1e050ffae370c12/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/4f5bc4bac15c95da5a41641ef1e050ffae370c12/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,10 +80,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/19076591948240e8341ea853af0eb3f27c7fe1e8/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/4f5bc4bac15c95da5a41641ef1e050ffae370c12/))
 was automatically generated
-from [greenelab/mpmp-manuscript@1907659](https://github.com/greenelab/mpmp-manuscript/tree/19076591948240e8341ea853af0eb3f27c7fe1e8)
-on April 11, 2022.
+from [greenelab/mpmp-manuscript@4f5bc4b](https://github.com/greenelab/mpmp-manuscript/tree/4f5bc4bac15c95da5a41641ef1e050ffae370c12)
+on April 12, 2022.
 </em></small>
 
 ## Authors
@@ -326,12 +326,20 @@ For all multi-omics experiments, we used only the samples from TCGA with data fo
 We considered a limited subset of well-performing genes from the merged cancer gene set as target genes, including _EGFR_, _IDH1_, _KRAS_, _PIK3CA_, _SETD2_, and _TP53_.
 We selected these genes because we had previously observed that they have good predictive performance and because they represent a combination of alterations that have strong gene expression signatures (_KRAS_, _EGFR_, _IDH1_, _TP53_) and strong DNA methylation signatures (_IDH1_, _SETD2_, _TP53_).
 
+For the experiments predicting mutation status using a 3-layer fully connected neural network, described in the Results section and the supplement, we used the top 5,000 principal components as input for each data type.
+We selected hyperparameters for each of the 8 outer cross-validation splits using a single inner train/validation split and a random search over 20 hyperparameter combinations.
+The hyperparameter ranges that we sampled from in the random search were: `learning_rate: [0.1, 0.01, 0.001, 5e-4, 1e-4], h1_size: [1000, 500, 250], dropout: [0.5, 0.75, 0.9], weight_decay: [0, 0.1, 1, 100]`.
+Here, `h1_size` refers to the size of the first hidden layer, and the size of the second hidden layer was always set to `h1_size / 2`.
+As in the elastic net grid search, we chose the combination of hyperparameters with the best AUPR on the validation set, and retrained the model with those hyperparameters to make predictions on the test set.
+We trained our networks with the Adam optimizer [@arxiv:1412.6980], with ReLU activation after the hidden layers and sigmoid activation to make predictions, and using binary cross-entropy as the loss function as implemented in the PyTorch `BCEWithLogitsLoss` function, through the `skorch` library which provides interoperability between PyTorch and scikit-learn.
+
 ### Data and code availability
 
 All analyses were implemented in the Python programming language and are available in the following GitHub repository: [`https://github.com/greenelab/mpmp`](https://github.com/greenelab/mpmp) under the open-source BSD 3-clause license.
 Scripts to download large data files from GDC and other sources are located in the `00_download_data` directory.
 Scripts to run experiments comparing data modalities used individually are located in the `02_classify_mutations` directory, scripts to run multi-omics experiments are located in the `05_classify_mutations_multimodal` directory, and scripts to run survival prediction experiments are located in the `06_predict_survival` directory.
-The Python environment was managed using `conda`, and directions for setting up the environment can be found in the `README.md` file. All analyses were run locally on a CPU.
+The Python environment was managed using `conda`, and directions for setting up the environment can be found in the `README.md` file.
+Most analyses were run on the HTC CPU cluster at the University of Pittsburgh, except the neural networks which were trained and evaluated on the PMACS LPC GPU cluster at the University of Pennsylvania; scripts for training classifiers both locally for a single gene and on a Slurm cluster to reproduce the analysis of many genes in parallel are provided in the linked GitHub repo.
 This manuscript was written using Manubot [@doi:10.1371/journal.pcbi.1007128] and is available on GitHub at [`https://github.com/greenelab/mpmp-manuscript`](https://github.com/greenelab/mpmp-manuscript).
 
 
@@ -494,6 +502,8 @@ Each of these genes is well-predicted from several data types in our earlier exp
 For the multi-omics classifiers, we considered all pairwise combinations of the top three performing individual data types (gene expression, 27K methylation, and 450K methylation), in addition to a model using all three data types.
 We trained a classifier for multiple data types by concatenating features from the individual data types, then fitting the same elastic net logistic regression model as we used for the single-omics models.
 Here, we show results using the top 5,000 principal components from each data type as predictive features, to ensure that feature count and scale is comparable among data types; results for raw features are shown in Supplementary Figure {@fig:multi_omics_raw_feats}.
+We additionally ran the same experiments using a 3-layer fully-connected neural network for classification, with principal components as input, and results are shown in Supplementary Figure {@fig:multi_omics_mlp}.
+In general, we found predictions using elastic net logistic regression to be more robust across cross-validation folds and hyperparameter choices than predictions using the neural network, although the neural network provided a slight performance improvement using multiple -omics types for some genes.
 
 For each of the six target genes, we observed comparable performance between the best single-omics classifier (blue boxes in Figure {@fig:multi_omics}A) and the best multi-omics classifier (orange boxes in Figure {@fig:multi_omics}A).
 Across all classifiers and data types, we found varied patterns based on the target gene.
@@ -672,6 +682,12 @@ Top plot: comparing the best-performing model (i.e. highest mean AUPR relative t
 The difference between single-omics and multi-omics performance for _TP53_ was statistically significant (_p_=0.0078), but other differences between single-omics and multi-omics models were not statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
 Bottom plots: classifier performance, relative to baseline with permuted labels, for individual genes. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).
 ](images/supp_figure_13.png){#fig:multi_omics_raw_feats width=90%}
+
+![
+Top plot: comparing the best-performing model (i.e. highest mean AUPR relative to permuted baseline) trained on a single data type against the best "multi-omics" model for each target gene, using a 3-layer fully-connected neural network. The top 5,000 principal components were used as predictive features for each data type.
+The difference between single-omics and multi-omics performance for _PIK3CA_ (_p_ = 0.0156, in favor of multi-omics) and _TP53_ (_p_ = 0.0391, in favor of single-omics) were statistically significant, but other differences between single-omics and multi-omics models were not statistically significant using paired-sample Wilcoxon tests across cross-validation folds, for a threshold of 0.05.
+Bottom plots: comparison of classifier performance between elastic net and fully-connected NN, relative to baseline with permuted labels, for individual genes. Each panel shows performance for one of the six target genes; box plots show performance distribution over 8 evaluation sets (4 cross-validation folds x 2 replicates).
+](images/supp_figure_14.png){#fig:multi_omics_mlp width=90%}
 
 
 ## References {.page_break_before}
