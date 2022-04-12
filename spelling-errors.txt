@@ -9,6 +9,7 @@ benchmarking
 Benjamini
 biomarker
 BioRender
+bisulfite
 BLCA
 BMIQ
 Bonferroni
@@ -95,7 +96,7 @@ NCI
 NHGRI
 NN
 NRAS
-Omics
+omics
 oncogenic
 OV
 overfitting
@@ -128,6 +129,7 @@ sigmoid
 sigs
 SKCM
 Slurm
+spectrometry
 STAD
 TCGA
 TGCT
@@ -135,6 +137,7 @@ THCA
 THYM
 TP
 tradeoff
+tradeoffs
 transcriptional
 transcriptomic
 translational
