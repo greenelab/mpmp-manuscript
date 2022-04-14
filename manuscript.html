@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-04-12" />
+  <meta name="dcterms.date" content="2022-04-14" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Widespread redundancy in -omics profiles of cancer mutation states</title>
   <style>
@@ -47,8 +47,8 @@
   <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
-  <meta name="dc.date" content="2022-04-12" />
-  <meta name="citation_publication_date" content="2022-04-12" />
+  <meta name="dc.date" content="2022-04-14" />
+  <meta name="citation_publication_date" content="2022-04-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -77,13 +77,13 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/af71d75aaac847324ef0598bda414d7d1c5836a7/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/af71d75aaac847324ef0598bda414d7d1c5836a7/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/e7a76835cc2707d1a053873298f1a87c0a77da06/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/e7a76835cc2707d1a053873298f1a87c0a77da06/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -98,10 +98,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/af71d75aaac847324ef0598bda414d7d1c5836a7">greenelab/mpmp-manuscript@af71d75</a>
-on April 12, 2022.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/e7a76835cc2707d1a053873298f1a87c0a77da06">greenelab/mpmp-manuscript@e7a7683</a>
+on April 14, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -226,7 +226,7 @@ In some cases, this resulted in genes with no valid cancer types, which we dropp
 Out of the 511 genes from the “merged” cancer gene set described in the previous section, for the analysis using {expression, mutation} data we retained 268 target genes, for the {expression, mutation, 27k methylation, 450k methylation} analysis we retained 272 genes, and for the analysis using all data types we retained 217 genes.</p>
 <p>We additionally explored mutation prediction from gene expression alone using three gene sets of equal size: the cancer-related genes from the merged dataset described previously, a set of frequently mutated genes in TCGA, and a set of random genes with mutations profiled by MC3.
 To match the size of the merged cancer gene set, we took the 268 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
-For the random gene set, we first filtered to the set of all genes with one or more valid cancer types by the above criteria, then sampled 268 of these genes uniformly at random.
+For the random gene set, we first filtered to the set of all genes with one or more valid cancer types by the same criteria (15 total samples mutated and at least 5% of samples mutated), then sampled 268 of the resulting 1,348 genes uniformly at random.
 Based on the results of the gene expression experiments, we used the merged cancer-related gene set for all subsequent experiments comparing -omics data types.</p>
 <h3 id="training-classifiers-to-detect-cancer-mutations">Training classifiers to detect cancer mutations</h3>
 <p>We trained logistic regression classifiers to predict whether or not a given sample had a mutational event in a given target gene using data from various -omics datasets as explanatory variables.
@@ -330,7 +330,7 @@ This reverses the primary direction of information flow shown in Panel A.
 <p>As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
 Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA <span class="citation" data-cites="NsW0qxZF">[<a href="#ref-NsW0qxZF" role="doc-biblioref">13</a>]</span>, and we sought to extend this to a broader list of gene sets.
 To evaluate whether using known cancer-related genes tends to improve prediction, we compiled a set of cancer-related genes (n=268) from Vogelstein et al. 2013 <span class="citation" data-cites="809OyWlC">[<a href="#ref-809OyWlC" role="doc-biblioref">38</a>]</span>, Bailey et al. 2018 <span class="citation" data-cites="A3VeCeaB">[<a href="#ref-A3VeCeaB" role="doc-biblioref">39</a>]</span>, and the COSMIC Cancer Gene Census <span class="citation" data-cites="DxovERyv">[<a href="#ref-DxovERyv" role="doc-biblioref">40</a>]</span>.
-We compared performance on this curated gene set with performance on an equal number of random genes (n=268) and an equal number of the most mutated genes in TCGA (n=268).
+We compared performance on this curated gene set with performance on an equal number of genes sampled randomly after applying a mutation frequency threshold (n=268, see Methods for sampling details) and an equal number of the most mutated genes in TCGA (n=268).
 For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples across all 33 cancer types.
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
 As an alternate approach, we tried including/excluding entire genes using similar filters, and the results were consistent across filtering strategies (Supplementary Figure <a href="#fig:all_volcano_filter">11</a>).

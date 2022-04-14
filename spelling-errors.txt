@@ -120,7 +120,7 @@ regresssion
 ReLU
 repo
 RPL
-RPPA
+rppa
 SARC
 SBS
 scikit

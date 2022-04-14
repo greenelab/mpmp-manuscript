@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2022-04-12'
+date-meta: '2022-04-14'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
-  <meta name="dc.date" content="2022-04-12" />
-  <meta name="citation_publication_date" content="2022-04-12" />
+  <meta name="dc.date" content="2022-04-14" />
+  <meta name="citation_publication_date" content="2022-04-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/af71d75aaac847324ef0598bda414d7d1c5836a7/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/af71d75aaac847324ef0598bda414d7d1c5836a7/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/e7a76835cc2707d1a053873298f1a87c0a77da06/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/e7a76835cc2707d1a053873298f1a87c0a77da06/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,10 +80,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/))
 was automatically generated
-from [greenelab/mpmp-manuscript@af71d75](https://github.com/greenelab/mpmp-manuscript/tree/af71d75aaac847324ef0598bda414d7d1c5836a7)
-on April 12, 2022.
+from [greenelab/mpmp-manuscript@e7a7683](https://github.com/greenelab/mpmp-manuscript/tree/e7a76835cc2707d1a053873298f1a87c0a77da06)
+on April 14, 2022.
 </em></small>
 
 ## Authors
@@ -239,7 +239,7 @@ Out of the 511 genes from the "merged" cancer gene set described in the previous
 
 We additionally explored mutation prediction from gene expression alone using three gene sets of equal size: the cancer-related genes from the merged dataset described previously, a set of frequently mutated genes in TCGA, and a set of random genes with mutations profiled by MC3.
 To match the size of the merged cancer gene set, we took the 268 most frequently mutated genes in TCGA as quantified by MC3, all of which had at least one valid cancer type.
-For the random gene set, we first filtered to the set of all genes with one or more valid cancer types by the above criteria, then sampled 268 of these genes uniformly at random.
+For the random gene set, we first filtered to the set of all genes with one or more valid cancer types by the same criteria (15 total samples mutated and at least 5% of samples mutated), then sampled 268 of the resulting 1,348 genes uniformly at random.
 Based on the results of the gene expression experiments, we used the merged cancer-related gene set for all subsequent experiments comparing -omics data types.
 
 ### Training classifiers to detect cancer mutations
@@ -372,7 +372,7 @@ This reverses the primary direction of information flow shown in Panel A.
 As a baseline, we evaluated prediction of mutation status from gene expression data across several different gene sets.
 Past work has evaluated mutation prediction for the top 50 most mutated genes in TCGA [@doi:10.1186/s13059-020-02021-3], and we sought to extend this to a broader list of gene sets.
 To evaluate whether using known cancer-related genes tends to improve prediction, we compiled a set of cancer-related genes (n=268) from Vogelstein et al. 2013 [@doi:10.1126/science.1235122], Bailey et al. 2018 [@doi:10.1016/j.cell.2018.02.060], and the COSMIC Cancer Gene Census [@doi:10.1038/s41568-018-0060-1].
-We compared performance on this curated gene set with performance on an equal number of random genes (n=268) and an equal number of the most mutated genes in TCGA (n=268).
+We compared performance on this curated gene set with performance on an equal number of genes sampled randomly after applying a mutation frequency threshold (n=268, see Methods for sampling details) and an equal number of the most mutated genes in TCGA (n=268).
 For all gene sets, we used only the set of TCGA samples for which both gene expression and somatic mutation data exists, resulting in a total of 9,074 samples across all 33 cancer types.
 This set of samples was further filtered for each target gene to cancer types containing at least 15 mutated samples and at least 5% of samples mutated for that cancer type.
 As an alternate approach, we tried including/excluding entire genes using similar filters, and the results were consistent across filtering strategies (Supplementary Figure {@fig:all_volcano_filter}).
