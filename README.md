@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/greenelab/mpmp-manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://greenelab.github.io/mpmp-manuscript/>.
-The permalink for this webpage version is <https://greenelab.github.io/mpmp-manuscript/v/af71d75aaac847324ef0598bda414d7d1c5836a7/>.
+The permalink for this webpage version is <https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://greenelab.github.io/mpmp-manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`af71d75aaac847324ef0598bda414d7d1c5836a7`](https://github.com/greenelab/mpmp-manuscript/commit/af71d75aaac847324ef0598bda414d7d1c5836a7).
+[`e7a76835cc2707d1a053873298f1a87c0a77da06`](https://github.com/greenelab/mpmp-manuscript/commit/e7a76835cc2707d1a053873298f1a87c0a77da06).
