@@ -453,7 +453,7 @@ content/06.declarations.md:31:CSG
 content/06.declarations.md:35:Heil
 content/06.declarations.md:35:Hippen
 content/06.declarations.md:35:Pividori
-content/06.declarations.md:36:BioRender
+content/06.declarations.md:37:BioRender
 content/07.supp_info.md:3:AUPR
 content/07.supp_info.md:3:AUROC
 content/07.supp_info.md:3:figshare

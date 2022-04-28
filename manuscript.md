@@ -8,7 +8,7 @@ keywords:
 - cancer
 - pan-cancer
 lang: en-US
-date-meta: '2022-04-14'
+date-meta: '2022-04-28'
 author-meta:
 - Jake Crawford
 - Brock C. Christensen
@@ -24,8 +24,8 @@ header-includes: |-
   <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
-  <meta name="dc.date" content="2022-04-14" />
-  <meta name="citation_publication_date" content="2022-04-14" />
+  <meta name="dc.date" content="2022-04-28" />
+  <meta name="citation_publication_date" content="2022-04-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -54,13 +54,13 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/e7a76835cc2707d1a053873298f1a87c0a77da06/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/e7a76835cc2707d1a053873298f1a87c0a77da06/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -80,10 +80,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/mpmp-manuscript/v/e7a76835cc2707d1a053873298f1a87c0a77da06/))
+([permalink](https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/))
 was automatically generated
-from [greenelab/mpmp-manuscript@e7a7683](https://github.com/greenelab/mpmp-manuscript/tree/e7a76835cc2707d1a053873298f1a87c0a77da06)
-on April 14, 2022.
+from [greenelab/mpmp-manuscript@3dda314](https://github.com/greenelab/mpmp-manuscript/tree/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a)
+on April 28, 2022.
 </em></small>
 
 ## Authors
@@ -602,6 +602,7 @@ CSG: conceptualization, funding acquisition, methodology, supervision, writing -
 ### Acknowledgements
 
 We would like to thank Alexandra Lee, Ariel Hippen, Ben Heil, Milton Pividori, and Natalie Davidson for reviewing the software associated with this work and providing insightful feedback.
+This research was supported in part by the University of Pittsburgh Center for Research Computing through the resources provided.
 Figure 1 (the schematic of the background and evaluation pipeline) was created using BioRender.com.
 
 
