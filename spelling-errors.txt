@@ -36,7 +36,6 @@ dimensionality
 DLBC
 dysregulation
 EGFR
-Entrez
 eQTLs
 ERBB
 ESCA
@@ -46,7 +45,7 @@ funders
 GBM
 GDC
 Geisel
-Genomic
+genomic
 germline
 GISTIC
 glioma
@@ -120,7 +119,7 @@ regresssion
 ReLU
 repo
 RPL
-rppa
+RPPA
 SARC
 SBS
 scikit
