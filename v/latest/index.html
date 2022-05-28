@@ -8,7 +8,7 @@
   <meta name="author" content="Brock C. Christensen" />
   <meta name="author" content="Maria Chikina" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-04-28" />
+  <meta name="dcterms.date" content="2022-05-28" />
   <meta name="keywords" content="machine learning, functional genomics, gene expression, epigenetics, cancer, pan-cancer" />
   <title>Widespread redundancy in -omics profiles of cancer mutation states</title>
   <style>
@@ -47,8 +47,8 @@
   <meta name="citation_title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="og:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
   <meta property="twitter:title" content="Widespread redundancy in -omics profiles of cancer mutation states" />
-  <meta name="dc.date" content="2022-04-28" />
-  <meta name="citation_publication_date" content="2022-04-28" />
+  <meta name="dc.date" content="2022-05-28" />
+  <meta name="citation_publication_date" content="2022-05-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -77,13 +77,13 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/mpmp-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/mpmp-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/mpmp-manuscript/v/266cf65e846c7c84bf2415d753b8585a1757d2bb/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/266cf65e846c7c84bf2415d753b8585a1757d2bb/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/mpmp-manuscript/v/266cf65e846c7c84bf2415d753b8585a1757d2bb/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/thumbnail.png" />
-  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/thumbnail.png" />
+  <meta property="og:image" content="https://github.com/greenelab/mpmp-manuscript/raw/266cf65e846c7c84bf2415d753b8585a1757d2bb/thumbnail.png" />
+  <meta property="twitter:image" content="https://github.com/greenelab/mpmp-manuscript/raw/266cf65e846c7c84bf2415d753b8585a1757d2bb/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -98,10 +98,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/mpmp-manuscript/v/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a/">permalink</a>)
+(<a href="https://greenelab.github.io/mpmp-manuscript/v/266cf65e846c7c84bf2415d753b8585a1757d2bb/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/mpmp-manuscript/tree/3dda3141e22f7d8b3ecd3e2c651da7c07695ed6a">greenelab/mpmp-manuscript@3dda314</a>
-on April 28, 2022.
+from <a href="https://github.com/greenelab/mpmp-manuscript/tree/266cf65e846c7c84bf2415d753b8585a1757d2bb">greenelab/mpmp-manuscript@266cf65</a>
+on May 28, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -540,8 +540,18 @@ Scaling up the gene set by combining cancer gene sets from the literature as des
 During the revision, we explored the difference between the genes in this gene set and the genes in the “merged” cancer-related gene set but not in the Vogelstein genes.
 GO analysis results for the Vogelstein genes are available at <a href="https://doi.org/10.6084/m9.figshare.19565890"><code>https://doi.org/10.6084/m9.figshare.19565890</code></a>, and results for the non-Vogelstein genes are available at <a href="https://doi.org/10.6084/m9.figshare.19565887"><code>https://doi.org/10.6084/m9.figshare.19565887</code></a>.
 We noticed that the non-Vogelstein genes tend to be enriched for terms relating to transcription factors and transcriptional regulation.</p>
-<p>As a data resource, coefficients and hyperparameter choices for final models fit using gene expression features are available on Figshare: coefficients are available at <a href="https://doi.org/10.6084/m9.figshare.19576012"><code>https://doi.org/10.6084/m9.figshare.19576012</code></a> and hyperparameters are at <a href="https://doi.org/10.6084/m9.figshare.19576048"><code>https://doi.org/10.6084/m9.figshare.19576048</code></a>. Columns in the coefficients dataset correspond to target genes (gene symbols), and rows correspond either to gene expression features (Entrez IDs) or covariates (cancer type indicator variables or log(mutation burden)). An ‘NA’ value in a cell indicates that feature was not used in the model for the corresponding gene (for a gene feature this means that gene was not in the top 8000 genes by MAD, for a cancer type feature this means that cancer type was not included in the training set based on our mutation filters). A 0 value in a cell indicates that feature was included in model training, but it was not selected by the elastic net feature selection algorithm. Columns in the hyperparameters dataset correspond to hyperparameters (alpha and l1_ratio for elastic net logistic regression) and rows correspond to target genes.</p>
-<p>Regarding the hyperparameters for the final models, recall that for the main figures in the paper, we evaluate each of our models using 2 replicates of 4-fold cross-validation. For each of these folds (train/test splits), we further split the training set into train and validation sets to select hyperparameters, independently for each fold, and evaluate the models on the test set to get the results in the paper. Because we are evaluating performance over multiple folds, it is not perfectly straightforward to get a single set of regression coefficients, since we have a (potentially different) set of coefficients for each cross-validation fold. In order to synthesize these results into a single model for each gene in each data type, we selected one of the 8 sets of hyperparameters (from the 8 best models, 1 per CV fold) at random, with probability proportional to performance (AUPR) on the validation set used to select the hyperparameters, described above (so test set performance is not used here). We then used the selected hyperparameters to train a single model on the entire dataset.</p>
+<p>As a data resource, coefficients and hyperparameter choices for final models fit using all data types are available on Figshare: coefficients are available at <a href="https://doi.org/10.6084/m9.figshare.19576012"><code>https://doi.org/10.6084/m9.figshare.19576012</code></a> and hyperparameters are at <a href="https://doi.org/10.6084/m9.figshare.19576048"><code>https://doi.org/10.6084/m9.figshare.19576048</code></a>.
+Columns in the coefficients dataset correspond to target genes (gene symbols), and rows correspond either to PCA components (for 27K and 450K methylation), -omics features (for all other data types), or covariates (cancer type indicator variables or log(mutation burden)).
+An ‘NA’ value in a cell indicates that feature was not used in the model for the corresponding gene (for an -omics feature this could mean it was not in the top 8000 features by MAD, for a cancer type feature this means that cancer type was not included in the training set based on our mutation filters).
+A 0 value in a cell indicates that feature was included in model training, but it was not selected by the elastic net feature selection algorithm.
+Columns in the hyperparameters dataset correspond to hyperparameters (alpha and l1_ratio for elastic net logistic regression) and rows correspond to target genes.
+For the methylation data types, PCA results (score and loading matrices) corresponding to the coefficients data are also available at <a href="https://doi.org/10.6084/m9.figshare.19908034"><code>https://doi.org/10.6084/m9.figshare.19908034</code></a>.
+These contain the top 5,000 principal components for each data type, which were used in the classifiers evaluated in the main paper.</p>
+<p>Regarding the hyperparameters for the final models, recall that for the main figures in the paper, we evaluate each of our models using 2 replicates of 4-fold cross-validation.
+For each of these folds (train/test splits), we further split the training set into train and validation sets to select hyperparameters, independently for each fold, and evaluate the models on the test set to get the results in the paper.
+Because we are evaluating performance over multiple folds, it is not perfectly straightforward to get a single set of regression coefficients, since we have a (potentially different) set of coefficients for each cross-validation fold.
+In order to synthesize these results into a single model for each gene in each data type, we selected one of the 8 sets of hyperparameters (from the 8 best models, 1 per CV fold) at random, with probability proportional to performance (AUPR) on the validation set used to select the hyperparameters, described above (so test set performance is not used here).
+We then used the selected hyperparameters to train a single model on the entire dataset.</p>
 <div id="fig:cancer_type_proportions" class="fignos">
 <figure>
 <img src="images/supp_figure_8.png" style="width:80.0%" alt="Figure 8: Proportion of samples from each TCGA cancer type that are “dropped” as more data types are added to our analyses. We started with gene expression data, and for each added data type, we took the intersection of samples that were profiled for that data type and the previous data types, dropping all samples that were missing 1 or more data types. Overall, at each step, the proportions of “dropped” samples appear to be fairly evenly spread between cancer types, showing that in general we are not disproportionately losing one or several cancer types as more data modalities are added to our analyses." />
@@ -1066,7 +1076,7 @@ Bottom plots: comparison of classifier performance between elastic net and fully
 <div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>A beta-mixture quantile normalization method for correcting probe design bias in Illumina Infinium 450 k DNA methylation data</strong> <div class="csl-block">Andrew E Teschendorff, Francesco Marabita, Matthias Lechner, Thomas Bartlett, Jesper Tegner, David Gomez-Cabrero, Stephan Beck</div> <em>Bioinformatics</em> (2012-11-21) <a href="https://doi.org/f25mvt">https://doi.org/f25mvt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bts680">10.1093/bioinformatics/bts680</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23175756">23175756</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3546795">PMC3546795</a></div></div>
 </div>
 <div id="ref-809OyWlC" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Cancer Genome Landscapes</strong> <div class="csl-block">B Vogelstein, N Papadopoulos, VE Velculescu, S Zhou, LA Diaz, KW Kinzler</div> <em>Science</em> (2013-03-29) <a href="https://doi.org/6rg">https://doi.org/6rg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1126/science.1235122">10.1126/science.1235122</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539594">23539594</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3749880">PMC3749880</a></div></div>
+<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Cancer Genome Landscapes</strong> <div class="csl-block">B Vogelstein, N Papadopoulos, VE Velculescu, S Zhou, LA Diaz, KW Kinzler</div> <em>Science</em> (2013-03-28) <a href="https://doi.org/6rg">https://doi.org/6rg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1126/science.1235122">10.1126/science.1235122</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539594">23539594</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3749880">PMC3749880</a></div></div>
 </div>
 <div id="ref-A3VeCeaB" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>Comprehensive Characterization of Cancer Driver Genes and Mutations</strong> <div class="csl-block">Matthew H Bailey, Collin Tokheim, Eduard Porta-Pardo, Sohini Sengupta, Denis Bertrand, Amila Weerasinghe, Antonio Colaprico, Michael C Wendl, Jaegil Kim, Brendan Reardon, … Armaz Mariamidze</div> <em>Cell</em> (2018-04) <a href="https://doi.org/gc7r88">https://doi.org/gc7r88</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.cell.2018.02.060">10.1016/j.cell.2018.02.060</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29625053">29625053</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6029450">PMC6029450</a></div></div>
