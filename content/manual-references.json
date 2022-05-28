@@ -18,5 +18,33 @@
       "family": "Himmelstein"
     }
   ]
+},
+{
+  "id": "mpmp_code",
+  "type": "webpage",
+  "URL": "https://doi.org/10.5281/zenodo.6590133",
+  "title": "Code for 'Widespread redundancy in -omics profiles of cancer mutation states'",
+  "container-title": "GitHub",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "author": [
+    {
+      "literal": "Jake Crawford"
+    },
+    {
+      "literal": "Brock C. Christensen"
+    },
+    {
+      "literal": "Maria Chikina"
+    },
+    {
+      "literal": "Casey S. Greene"
+    }
+  ]
 }
 ]
