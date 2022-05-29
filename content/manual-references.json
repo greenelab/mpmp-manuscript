@@ -46,5 +46,43 @@
       "literal": "Casey S. Greene"
     }
   ]
+},
+{
+  "id": "pancanatlas",
+  "type": "webpage",
+  "URL": "https://gdc.cancer.gov/about-data/publications/pancanatlas",
+  "title": "TCGA Pan-Cancer Atlas",
+  "container-title": "Webpage",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "author": [
+    {
+      "literal": "The Cancer Genome Atlas (TCGA) Research Network"
+    }
+  ]
+},
+{
+  "id": "mut_sigs",
+  "type": "webpage",
+  "URL": "https://dcc.icgc.org/releases/PCAWG/mutational_signatures",
+  "title": "ICGC/TCGA Mutational Signatures",
+  "container-title": "Webpage",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "author": [
+    {
+      "literal": "ICGC-TCGA Pan-Cancer Analysis Mutational Signatures Working Group"
+    }
+  ]
 }
 ]
