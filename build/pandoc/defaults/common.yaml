@@ -9,5 +9,5 @@ filters:
 - citeproc
 wrap: preserve
 metadata:
-  csl: build/assets/style.csl
+  csl: https://github.com/citation-style-language/styles/raw/f590dc1a5b46c3d7ea5bed0834d3c5d610155933/biomed-central.csl
   link-citations: true
