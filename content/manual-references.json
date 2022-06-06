@@ -20,11 +20,95 @@
   ]
 },
 {
-  "id": "mpmp_code",
+  "id": "mpmp_zenodo",
   "type": "webpage",
   "URL": "https://doi.org/10.5281/zenodo.6590133",
   "title": "Code for 'Widespread redundancy in -omics profiles of cancer mutation states'",
+  "container-title": "Zenodo",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "author": [
+    {
+      "literal": "Jake Crawford"
+    },
+    {
+      "literal": "Brock C. Christensen"
+    },
+    {
+      "literal": "Maria Chikina"
+    },
+    {
+      "literal": "Casey S. Greene"
+    }
+  ]
+},
+{
+  "id": "mpmp_code",
+  "type": "webpage",
+  "URL": "https://github.com/greenelab/mpmp",
+  "title": "Code for 'Widespread redundancy in -omics profiles of cancer mutation states'",
   "container-title": "GitHub",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "author": [
+    {
+      "literal": "Jake Crawford"
+    },
+    {
+      "literal": "Brock C. Christensen"
+    },
+    {
+      "literal": "Maria Chikina"
+    },
+    {
+      "literal": "Casey S. Greene"
+    }
+  ]
+},
+{
+  "id": "figshare_coefs",
+  "type": "webpage",
+  "URL": "https://doi.org/10.6084/m9.figshare.19576012",
+  "title": "Widespread redundancy in -omics profiles of cancer mutation states",
+  "container-title": "figshare",
+  "issued": {
+    "date-parts": [
+      [
+        2022
+      ]
+    ]
+  },
+  "author": [
+    {
+      "literal": "Jake Crawford"
+    },
+    {
+      "literal": "Brock C. Christensen"
+    },
+    {
+      "literal": "Maria Chikina"
+    },
+    {
+      "literal": "Casey S. Greene"
+    }
+  ]
+},
+{
+  "id": "figshare_params",
+  "type": "webpage",
+  "URL": "https://doi.org/10.6084/m9.figshare.19576048",
+  "title": "Widespread redundancy in -omics profiles of cancer mutation states",
+  "container-title": "figshare",
   "issued": {
     "date-parts": [
       [
